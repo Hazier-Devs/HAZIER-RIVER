@@ -1,0 +1,339 @@
+{
+  "version": "1.0.2",
+  "name": "Ashton Alleyway",
+  "props": [
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "AshtonAlleyway/bgstars",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "bgstars",
+      "position": [
+        -789,
+        -339
+      ],
+      "scale": 0.75,
+      "scroll": [
+        0.1,
+        0.1
+      ],
+      "startingAnimation": "",
+      "zIndex": 1
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "AshtonAlleyway/dayburn buildings",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "dayburn buildings",
+      "position": [
+        -784,
+        -345
+      ],
+      "scale": 0.75,
+      "scroll": [
+        0.35,
+        0.35
+      ],
+      "startingAnimation": "",
+      "zIndex": 2
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "AshtonAlleyway/hill asf",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "hill asf",
+      "position": [
+        -791,
+        -341
+      ],
+      "scale": 0.75,
+      "scroll": [
+        0.5,
+        0.5
+      ],
+      "startingAnimation": "",
+      "zIndex": 2
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "AshtonAlleyway/bench n road",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "bench n road",
+      "position": [
+        -783,
+        -341
+      ],
+      "scale": 0.75,
+      "scroll": [
+        0.6,
+        0.6
+      ],
+      "startingAnimation": "",
+      "zIndex": 3
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "AshtonAlleyway/mediocre cinema",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "mediocre cinema",
+      "position": [
+        -762,
+        -339
+      ],
+      "scale": 0.75,
+      "scroll": [
+        0.75,
+        0.75
+      ],
+      "startingAnimation": "",
+      "zIndex": 4
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "AshtonAlleyway/bg buildings",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "bg buldings",
+      "position": [
+        -792,
+        -347
+      ],
+      "scale": 0.75,
+      "scroll": [
+        0.85,
+        0.85
+      ],
+      "startingAnimation": "",
+      "zIndex": 6
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "AshtonAlleyway/blue ambient shader",
+      "blend": "add",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "blueshader",
+      "position": [
+        -733,
+        -398
+      ],
+      "scale": 0.75,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "",
+      "zIndex": 7
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "AshtonAlleyway/lampost",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "lamposts",
+      "position": [
+        -787,
+        -345
+      ],
+      "scale": 0.75,
+      "scroll": [
+        0.9,
+        0.9
+      ],
+      "startingAnimation": "",
+      "zIndex": 8
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "AshtonAlleyway/lamp lightsADD",
+      "blend": "add",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "lamp lights",
+      "position": [
+        -785,
+        -357
+      ],
+      "scale": 0.75,
+      "scroll": [
+        0.9,
+        0.9
+      ],
+      "startingAnimation": "",
+      "zIndex": 9
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "AshtonAlleyway/foreground",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "foreground",
+      "position": [
+        -792,
+        -340
+      ],
+      "scale": 0.75,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "",
+      "zIndex": 10
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "AshtonAlleyway/vingette i think",
+      "blend": "softlight",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "vingette",
+      "position": [
+        -781,
+        -340
+      ],
+      "scale": 0.75,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "",
+      "zIndex": 41
+    }
+  ],
+  "characters": {
+    "bf": {
+      "alpha": 1,
+      "angle": 0,
+      "cameraOffsets": [
+        -100,
+        -170
+      ],
+      "position": [
+        989.5,
+        785
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "zIndex": 40
+    },
+    "dad": {
+      "alpha": 1,
+      "angle": 0,
+      "cameraOffsets": [
+        350,
+        150
+      ],
+      "position": [
+        -100,
+        400
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "zIndex": 40
+    },
+    "gf": {
+      "alpha": 1,
+      "angle": 0,
+      "cameraOffsets": [
+        0,
+        0
+      ],
+      "position": [
+        651.5,
+        687
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "zIndex": 30
+    }
+  },
+  "cameraZoom": 0.9,
+  "directory": "shared"
+}

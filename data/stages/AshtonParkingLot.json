@@ -1,0 +1,317 @@
+{
+  "version": "1.0.2",
+  "name": "Ashton Parking Lot",
+  "props": [
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "AshtonParkingLot/skyshit",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "skyshit",
+      "position": [
+        -744,
+        -421
+      ],
+      "scale": 0.75,
+      "scroll": [
+        0.2,
+        0.2
+      ],
+      "startingAnimation": "",
+      "zIndex": 0
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "AshtonParkingLot/backbuildings",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "backbuildings",
+      "position": [
+        -727,
+        -398
+      ],
+      "scale": 0.75,
+      "scroll": [
+        0.6,
+        0.6
+      ],
+      "startingAnimation": "",
+      "zIndex": 1
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "AshtonParkingLot/buildings",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "buidlings",
+      "position": [
+        -650,
+        -370
+      ],
+      "scale": 0.7,
+      "scroll": [
+        0.7,
+        0.7
+      ],
+      "startingAnimation": "",
+      "zIndex": 2
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "AshtonParkingLot/colorseperatorthing",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "colorthing",
+      "position": [
+        -745,
+        -408
+      ],
+      "scale": 0.75,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "",
+      "zIndex": 3
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "AshtonParkingLot/roadnfence",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "roadandfence",
+      "position": [
+        -748,
+        -414
+      ],
+      "scale": 0.75,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "",
+      "zIndex": 4
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "AshtonParkingLot/lamplights",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "lamplights",
+      "position": [
+        -747,
+        -415
+      ],
+      "scale": 0.75,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "",
+      "zIndex": 5
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "AshtonParkingLot/lightinglamps",
+      "blend": "add",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "lightinglamps",
+      "position": [
+        -744,
+        -430
+      ],
+      "scale": 0.75,
+      "scroll": [
+        1,
+        1
+      ],
+      "startingAnimation": "",
+      "zIndex": 6
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "AshtonParkingLot/truck1",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "truck1",
+      "position": [
+        -626,
+        -315
+      ],
+      "scale": 0.75,
+      "scroll": [
+        1.2,
+        1.2
+      ],
+      "startingAnimation": "",
+      "zIndex": 310
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "AshtonParkingLot/truck2",
+      "blend": "",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "truck2",
+      "position": [
+        -856,
+        -321
+      ],
+      "scale": 0.75,
+      "scroll": [
+        1.2,
+        1.2
+      ],
+      "startingAnimation": "",
+      "zIndex": 320
+    },
+    {
+      "alpha": 1,
+      "angle": 0,
+      "animType": "sparrow",
+      "animations": [      ],
+      "assetPath": "AshtonParkingLot/vingettepart2",
+      "blend": "softlight",
+      "color": "#FFFFFF",
+      "danceEvery": 0,
+      "flipX": false,
+      "flipY": false,
+      "isPixel": false,
+      "name": "vingette",
+      "position": [
+        -1287,
+        -423
+      ],
+      "scale": [
+	1,
+	0.75
+],
+      "scroll": [
+        0.75,
+        1
+      ],
+      "startingAnimation": "",
+      "zIndex": 350
+    }
+  ],
+  "characters": {
+    "bf": {
+      "alpha": 1,
+      "angle": 0,
+      "cameraOffsets": [
+        -100,
+        -200
+      ],
+      "position": [
+        1200,
+        785
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "zIndex": 300
+    },
+    "dad": {
+      "alpha": 1,
+      "angle": 0,
+      "cameraOffsets": [
+        400,
+        200
+      ],
+      "position": [
+        -100,
+        355
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "zIndex": 200
+    },
+    "gf": {
+      "alpha": 1,
+      "angle": 0,
+      "cameraOffsets": [
+        0,
+        0
+      ],
+      "position": [
+        700,
+        687
+      ],
+      "scale": 1,
+      "scroll": [
+        1,
+        1
+      ],
+      "zIndex": 100
+    }
+  },
+  "cameraZoom": 0.7,
+  "directory": "shared"
+}

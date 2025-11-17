@@ -25,7 +25,7 @@
       "box": "default",
       "boxAnimation": "enter",
 
-      "text": ["HEY!"]
+      "text": ["GAH YOU THINK YOURE HOT STUFF?"]
     },
     {
       "speaker": "dad",
@@ -33,7 +33,7 @@
       "box": "default",
       "boxAnimation": "speaking",
 
-      "text": ["You think you can just sing with my daughter like that?"]
+      "text": ["If you can beat me here..."]
     },
     {
       "speaker": "dad",
@@ -41,15 +41,7 @@
       "box": "default",
       "boxAnimation": "speaking",
 
-      "text": ["If you want to date her..."]
-    },
-    {
-      "speaker": "dad",
-      "speakerAnimation": "talk",
-      "box": "default",
-      "boxAnimation": "speaking",
-
-      "text": ["You're going to have to go through ME first!"]
+      "text": ["Only then I will even CONSIDER letting you date my daughter!"]
     }
   ]
 }

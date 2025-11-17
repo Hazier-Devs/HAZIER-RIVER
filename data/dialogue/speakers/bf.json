@@ -1,0 +1,24 @@
+{
+  "version": "1.0.0",
+  "name": "BF",
+  "assetPath": "boyfriendPortrait",
+  "flipX": false,
+  "isPixel": false,
+  "scale": 1,
+  "offsets": [-20, 17],
+  "animations": [
+    {
+      "name": "talkEnter",
+      "prefix": "Portrait0",
+      "offsets": [0, 0],
+      "frameRate": 24,
+      "looped": false
+    },
+    {
+      "name": "talk",
+      "prefix": "Portrait0008",
+      "offsets": [0, 0],
+      "frameRate": 24
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0",
+  "name": "Garcello",
+  "assetPath": "garcellobox",
+  "isPixel": true,
+  "flipX": false,
+  "flipY": false,
+  "offsets": [-590, -30],
+  "scale": 1.02,
+
+  "text": {
+    "offsets": [100, 100],
+    "width": 900,
+    "color": "#ffffff",
+    "fontFamily": "Pixel Arial 11 Bold",
+    "shadowColor": "#000000",
+    "shadowWidth": 2
+  },
+
+  "animations": [
+    {
+      "name": "enter",
+      "prefix": "garcellotextbox",
+      "offsets": [0, 0],
+      "looped": true,
+      "frameRate": 24
+    },
+    {
+      "name": "speaking",
+      "prefix": "garcellotextbox",
+      "offsets": [0, 0],
+      "looped": true
+    }
+  ]
+}

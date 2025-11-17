@@ -8,7 +8,7 @@
   },
 
   "music": {
-    "asset": "daddiTalki",
+    "asset": "headachedialouge",
     "fadeTime": 2.0,
     "looped": true
   },
@@ -57,7 +57,7 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Yeah, its pretty cool looking, I have spare pack if you wanna try."]
+      "text": ["Yeah, its pretty cool looking, I have a spare pack if you wanna try."]
     },
     {
       "speaker": "bf",

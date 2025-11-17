@@ -21,7 +21,7 @@
   "dialogue": [
     {
       "speaker": "dad",
-      "speakerAnimation": "talkEnter",
+      "speakerAnimation": "talk",
       "box": "garcello",
       "boxAnimation": "enter",
 

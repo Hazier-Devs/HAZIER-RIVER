@@ -3,13 +3,13 @@
 
   "backdrop": {
     "type": "solid",
-    "fadeTime": 2.0,
+    "fadeTime": 1.0,
     "color": "#BFB3DFD8"
   },
 
   "music": {
     "asset": "headachedialouge",
-    "fadeTime": 2.0,
+    "fadeTime": 1.0,
     "looped": true
   },
 
@@ -21,7 +21,7 @@
   "dialogue": [
     {
       "speaker": "bf",
-      "speakerAnimation": "talkEnter",
+      "speakerAnimation": "talk",
       "box": "garcello",
       "boxAnimation": "enter",
 
@@ -61,7 +61,7 @@
     },
     {
       "speaker": "bf",
-      "speakerAnimation": "talk",
+      "speakerAnimation": "ehh",
       "box": "garcello",
       "boxAnimation": "speaking",
 
@@ -77,7 +77,7 @@
     },
     {
       "speaker": "bf",
-      "speakerAnimation": "talk",
+      "speakerAnimation": "cocky",
       "box": "garcello",
       "boxAnimation": "speaking",
 
@@ -117,7 +117,7 @@
     },
     {
       "speaker": "bf",
-      "speakerAnimation": "talk",
+      "speakerAnimation": "cocky",
       "box": "garcello",
       "boxAnimation": "speaking",
 

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="picodialouge.png">
+	<!-- Created using the Spritesheet and XML generator -->
+	<!-- https://uncertainprod.github.io/FNF-Spritesheet-XML-generator-Web -->
+	<SubTexture name="hype0000" x="0" y="1015" width="798" height="1015" frameX="-220" frameY="-37" frameWidth="1150" frameHeight="1050"/>
+	<SubTexture name="neutral0000" x="0" y="0" width="798" height="1015" frameX="-220" frameY="-37" frameWidth="1150" frameHeight="1050"/>
+	<SubTexture name="questioning0000" x="798" y="0" width="798" height="1015" frameX="-220" frameY="-37" frameWidth="1150" frameHeight="1050"/>
+	<SubTexture name="smug0000" x="1596" y="0" width="798" height="1015" frameX="-220" frameY="-37" frameWidth="1150" frameHeight="1050"/>
+</TextureAtlas>

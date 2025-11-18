@@ -28,15 +28,15 @@
       "text": ["Oh hey, wasn't expecting company at this hour, how are you two doing?"]
     },
     {
-      "speaker": "bf",
-      "speakerAnimation": "talk",
+      "speaker": "pico",
+      "speakerAnimation": "questioning",
       "box": "garcello",
       "boxAnimation": "speaking",
 
       "text": ["That cig you got..."]
     },
     {
-      "speaker": "bf",
+      "speaker": "pico",
       "speakerAnimation": "talk",
       "box": "garcello",
       "boxAnimation": "speaking",
@@ -52,16 +52,16 @@
       "text": ["Yeah, its pretty cool, mint flavored too"]
     },
     {
-      "speaker": "bf",
-      "speakerAnimation": "talk",
+      "speaker": "pico",
+      "speakerAnimation": "hype",
       "box": "garcello",
       "boxAnimation": "speaking",
 
       "text": ["That's SICK"]
     },
     {
-      "speaker": "bf",
-      "speakerAnimation": "talk",
+      "speaker": "pico",
+      "speakerAnimation": "questioning",
       "box": "garcello",
       "boxAnimation": "speaking",
 
@@ -92,15 +92,15 @@
       "text": ["Sound cool?"]
     },
     {
-      "speaker": "bf",
-      "speakerAnimation": "talk",
+      "speaker": "pico",
+      "speakerAnimation": "hype",
       "box": "garcello",
       "boxAnimation": "speaking",
 
       "text": ["Hell yeah!"]
     },
     {
-      "speaker": "bf",
+      "speaker": "nene",
       "speakerAnimation": "talk",
       "box": "garcello",
       "boxAnimation": "speaking",
@@ -108,15 +108,15 @@
       "text": ["Can i have one too?"]
     },
     {
-      "speaker": "bf",
-      "speakerAnimation": "talk",
+      "speaker": "pico",
+      "speakerAnimation": "questioning",
       "box": "garcello",
       "boxAnimation": "speaking",
 
       "text": ["Since when did you smoke?"]
     },
     {
-      "speaker": "bf",
+      "speaker": "nene",
       "speakerAnimation": "talk",
       "box": "garcello",
       "boxAnimation": "speaking",
@@ -132,8 +132,8 @@
       "text": ["Heh, you guys seem pretty hyped up. Guess it's settled then"]
     },
     {
-      "speaker": "bf",
-      "speakerAnimation": "talk",
+      "speaker": "pico",
+      "speakerAnimation": "smug",
       "box": "garcello",
       "boxAnimation": "speaking",
 

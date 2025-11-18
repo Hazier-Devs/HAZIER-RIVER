@@ -20,7 +20,7 @@
 
   "dialogue": [
     {
-      "speaker": "dad",
+      "speaker": "garcello",
       "speakerAnimation": "talk",
       "box": "garcello",
       "boxAnimation": "enter",
@@ -44,7 +44,7 @@
       "text": ["Is it like magical or something? Shit looks awesome."]
     },
     {
-      "speaker": "dad",
+      "speaker": "garcello",
       "speakerAnimation": "talk",
       "box": "garcello",
       "boxAnimation": "speaking",
@@ -68,7 +68,7 @@
       "text": ["So.. Do you sell them or-"]
     },
     {
-      "speaker": "dad",
+      "speaker": "garcello",
       "speakerAnimation": "talk",
       "box": "garcello",
       "boxAnimation": "speaking",
@@ -76,15 +76,15 @@
       "text": ["Well, they aren't really for sale, hell they aren't even mine.."]
     },
     {
-      "speaker": "dad",
-      "speakerAnimation": "talk",
+      "speaker": "garcello",
+      "speakerAnimation": "cmon",
       "box": "garcello",
       "boxAnimation": "speaking",
 
       "text": ["But... If you beat me in a friendly little rap battle, I'll give you a pack on the house.."]
     },
     {
-      "speaker": "dad",
+      "speaker": "garcello",
       "speakerAnimation": "talk",
       "box": "garcello",
       "boxAnimation": "speaking",
@@ -124,8 +124,8 @@
       "text": ["Now"]
     },
     {
-      "speaker": "dad",
-      "speakerAnimation": "talk",
+      "speaker": "garcello",
+      "speakerAnimation": "happy",
       "box": "garcello",
       "boxAnimation": "speaking",
 

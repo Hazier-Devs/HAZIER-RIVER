@@ -28,7 +28,7 @@
       "text": ["beep"]
     },
     {
-      "speaker": "dad",
+      "speaker": "garcello",
       "speakerAnimation": "talk",
       "box": "garcello",
       "boxAnimation": "speaking",
@@ -36,7 +36,7 @@
       "text": ["Hey there, little man."]
     },
     {
-      "speaker": "dad",
+      "speaker": "garcello",
       "speakerAnimation": "talk",
       "box": "garcello",
       "boxAnimation": "speaking",
@@ -52,7 +52,7 @@
       "text": ["bop bees ba"]
     },
     {
-      "speaker": "dad",
+      "speaker": "garcello",
       "speakerAnimation": "talk",
       "box": "garcello",
       "boxAnimation": "speaking",
@@ -68,8 +68,8 @@
       "text": ["beep bo bop.."]
     },
     {
-      "speaker": "dad",
-      "speakerAnimation": "talk",
+      "speaker": "garcello",
+      "speakerAnimation": "cmon",
       "box": "garcello",
       "boxAnimation": "speaking",
 
@@ -84,15 +84,15 @@
       "text": ["boop ba!"]
     },
     {
-      "speaker": "dad",
-      "speakerAnimation": "talk",
+      "speaker": "garcello",
+      "speakerAnimation": "hmm",
       "box": "garcello",
       "boxAnimation": "speaking",
 
       "text": ["Hmmm..."]
     },
     {
-      "speaker": "dad",
+      "speaker": "garcello",
       "speakerAnimation": "talk",
       "box": "garcello",
       "boxAnimation": "speaking",
@@ -100,7 +100,7 @@
       "text": ["Tell ya what,"]
     },
     {
-      "speaker": "dad",
+      "speaker": "garcello",
       "speakerAnimation": "talk",
       "box": "garcello",
       "boxAnimation": "speaking",
@@ -108,7 +108,7 @@
       "text": ["If you can beat me in a friendly little rap battle, I'll get off of your case."]
     },
     {
-      "speaker": "dad",
+      "speaker": "garcello",
       "speakerAnimation": "talk",
       "box": "garcello",
       "boxAnimation": "speaking",
@@ -124,15 +124,15 @@
       "text": ["beep!"]
     },
     {
-      "speaker": "dad",
-      "speakerAnimation": "talk",
+      "speaker": "garcello",
+      "speakerAnimation": "happy",
       "box": "garcello",
       "boxAnimation": "speaking",
 
       "text": ["Heh, that really got you hyped up didn't it? Guess it's settled then."]
     },
     {
-      "speaker": "dad",
+      "speaker": "garcello",
       "speakerAnimation": "talk",
       "box": "garcello",
       "boxAnimation": "speaking",
@@ -140,7 +140,7 @@
       "text": ["Though, I hope you two won't mind me smoking a bit"]
     },
     {
-      "speaker": "dad",
+      "speaker": "garcello",
       "speakerAnimation": "talk",
       "box": "garcello",
       "boxAnimation": "speaking",

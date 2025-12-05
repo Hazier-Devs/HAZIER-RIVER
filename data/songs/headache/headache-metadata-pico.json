@@ -19,8 +19,8 @@
       "hard"
     ],
     "characters": {
-      "player": "pico-playable",
-      "girlfriend": "nene",
+      "player": "pico-garcello",
+      "girlfriend": "nene-garcello",
       "opponent": "garcello",
       "instrumental": "pico",
       "altInstrumentals": [      ],

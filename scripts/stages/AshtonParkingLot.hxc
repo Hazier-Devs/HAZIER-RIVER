@@ -40,20 +40,20 @@ class AshtonParkingLotStage extends Stage
     colorShaderDad = new AdjustColorShader();
     colorShaderGf = new AdjustColorShader();
 
-    colorShaderBf.brightness = -10;
-    colorShaderBf.hue = -20;
-    colorShaderBf.contrast = 0;
-    colorShaderBf.saturation = -10;
+    colorShaderBf.brightness = -15;
+    colorShaderBf.hue = 15;
+    colorShaderBf.contrast = 15;
+    colorShaderBf.saturation = -15;
 
-    colorShaderGf.brightness = -10;
-    colorShaderGf.hue = -20;
-    colorShaderGf.contrast = 0;
-    colorShaderGf.saturation = -10;
+    colorShaderGf.brightness = -15;
+    colorShaderGf.hue = 15;
+    colorShaderGf.contrast = 15;
+    colorShaderGf.saturation = -15;
 
-    colorShaderDad.brightness = -10;
-    colorShaderDad.hue = -20;
-    colorShaderDad.contrast = 0;
-    colorShaderDad.saturation = 10;
+    colorShaderDad.brightness = -15;
+    colorShaderDad.hue = 15;
+    colorShaderDad.contrast = 15;
+    colorShaderDad.saturation = -15;
   }
 
   function onBeatHit(event:SongTimeScriptEvent):Void

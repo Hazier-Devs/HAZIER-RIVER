@@ -1,6 +1,6 @@
 {
+	"version": "1.0.0",
 	"renderType": "sparrow",
-	"version": "1.0.1",
 	"offsets": [
 		180,
 		190
@@ -13,71 +13,98 @@
 		-70
 	],
 	"flipX": false,
+	"startingAnimation": "idle",
 	"isPixel": false,
 	"singTime": 4,
-	"startingAnimation": "idle",
+	"flipY": false,
 	"healthIcon": {
-		"id": "garcello",
-		"isPixel": false
+		"isPixel": false,
+		"offsets": [
+			0,
+			0
+		],
+		"scale": 1,
+		"flipX": false,
+		"id": "garcello"
 	},
 	"assetPath": "characters/garcelloshader",
+	"generatedBy": "Nova Character Editor v3.0.1",
 	"animations": [
 		{
-			"frameIndices": [],
-			"prefix": "idle",
 			"offsets": [
 				0,
 				0
 			],
-			"frameRate": 24,
+			"frameIndices": [],
+			"prefix": "idle",
 			"name": "idle",
-			"looped": false
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
 		},
 		{
-			"frameIndices": [],
-			"prefix": "left",
 			"offsets": [
-				67,
+				59,
 				1
 			],
-			"frameRate": 24,
+			"frameIndices": [],
+			"prefix": "left",
 			"name": "singLEFT",
-			"looped": false
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
 		},
 		{
-			"frameIndices": [],
-			"prefix": "right",
 			"offsets": [
-				-39,
+				-34,
 				-2
 			],
-			"frameRate": 24,
+			"frameIndices": [],
+			"prefix": "right",
 			"name": "singRIGHT",
-			"looped": false
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
 		},
 		{
+			"offsets": [
+				23,
+				-17
+			],
 			"frameIndices": [],
 			"prefix": "down",
-			"offsets": [
-				25,
-				-18
-			],
-			"frameRate": 24,
 			"name": "singDOWN",
-			"looped": false
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
 		},
 		{
+			"offsets": [
+				5,
+				24
+			],
 			"frameIndices": [],
 			"prefix": "up",
-			"offsets": [
-				6,
-				27
-			],
-			"frameRate": 24,
 			"name": "singUP",
-			"looped": false
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
 		},
 		{
+			"offsets": [
+				-34,
+				-2
+			],
 			"frameIndices": [
 				10,
 				11,
@@ -90,15 +117,18 @@
 				18
 			],
 			"prefix": "right",
-			"offsets": [
-				-39,
-				-2
-			],
-			"frameRate": 24,
 			"name": "singRIGHT-hold",
-			"looped": true
+			"looped": true,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
 		},
 		{
+			"offsets": [
+				23,
+				-17
+			],
 			"frameIndices": [
 				10,
 				11,
@@ -111,15 +141,18 @@
 				18
 			],
 			"prefix": "down",
-			"offsets": [
-				25,
-				-18
-			],
-			"frameRate": 24,
 			"name": "singDOWN-hold",
-			"looped": true
+			"looped": true,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
 		},
 		{
+			"offsets": [
+				5,
+				24
+			],
 			"frameIndices": [
 				10,
 				11,
@@ -132,15 +165,18 @@
 				18
 			],
 			"prefix": "up",
-			"offsets": [
-				6,
-				27
-			],
-			"frameRate": 24,
 			"name": "singUP-hold",
-			"looped": false
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
 		},
 		{
+			"offsets": [
+				0,
+				0
+			],
 			"frameIndices": [
 				10,
 				11,
@@ -153,15 +189,18 @@
 				18
 			],
 			"prefix": "idle",
-			"offsets": [
-				0,
-				0
-			],
-			"frameRate": 24,
 			"name": "idle-hold",
-			"looped": true
+			"looped": true,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
 		},
 		{
+			"offsets": [
+				59,
+				1
+			],
 			"frameIndices": [
 				10,
 				11,
@@ -174,13 +213,12 @@
 				18
 			],
 			"prefix": "left",
-			"offsets": [
-				67,
-				1
-			],
-			"frameRate": 24,
 			"name": "singLEFT-hold",
-			"looped": true
+			"looped": true,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
 		}
 	]
 }

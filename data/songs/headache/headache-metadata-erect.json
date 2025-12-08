@@ -3,6 +3,7 @@
   "songName": "Headache Erect",
   "artist": "DigitLuck (ft. Cyber Tryzoid)",
   "charter": "Arthren",
+  "divisions": 96,
   "looped": false,
   "offsets": {
     "instrumental": 0,
@@ -21,16 +22,18 @@
       "girlfriend": "gf-garcello",
       "opponent": "garcello",
       "instrumental": "erect",
+      "altInstrumentals": [      ],
       "opponentVocals": [
         "garcello"
       ],
       "playerVocals": [
-        "bf"
+        "bf-garcello"
       ]
     },
     "stage": "AshtonParkingLot",
     "noteStyle": "funkin",
     "ratings": {
+      "erect": 6,
       "nightmare": 9
     },
     "album": "hazy",

@@ -28,12 +28,14 @@
         "garcello"
       ],
       "playerVocals": [
-        "pico"
+        "pico-garcello"
       ]
     },
     "stage": "AshtonParkingLot",
     "noteStyle": "funkin",
     "ratings": {
+      "easy": 2,
+      "normal": 3,
       "hard": 4
     },
     "album": "hazy",

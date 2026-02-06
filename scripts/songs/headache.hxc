@@ -10,6 +10,8 @@ import funkin.save.Save;
 import flixel.FlxSprite;
 import flixel.util.FlxTimer;
 import funkin.effects.RetroCameraFade;
+import funkin.play.cutscene.VideoCutscene;
+
 
 class HeadacheSong extends Song
 {
@@ -23,10 +25,8 @@ class HeadacheSong extends Song
   public override function onCountdownStart(event:CountdownScriptEvent):Void
   {
     super.onCountdownStart(event);
-
-    // Skip the cutscene unless we are in Story Mode, or Pico Mix specifically.
     if (!PlayStatePlaylist.isStoryMode) hasPlayedCutscene = true;
-
+    // Skip the cutscene unless we are in Story Mode, or Pico Mix specifically.
     // Skip the cutscene if we're playtesting in the Chart Editor.
     if (PlayState.instance.isChartingMode && !hasPlayedCutscene) hasPlayedCutscene = true;
 
@@ -40,9 +40,14 @@ class HeadacheSong extends Song
 
       //  pausing is breaking a lot in the erect stage for some reason disabling this for the sake of not running into issues atm
       //  PlayState.instance.currentStage.pause();
-
+      startVideo();
       transitionToDialogue();
     }
+  }
+
+    function startVideo()
+  {
+    VideoCutscene.play(Paths.videos('ughCutscene.mkv'));
   }
 
   function transitionToDialogue()

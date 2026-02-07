@@ -219,6 +219,20 @@
 			"flipY": false,
 			"frameRate": 24,
 			"assetPath": null
+		},
+		{
+			"offsets": [
+				10,
+				0
+			],
+			"frameIndices": [],
+			"prefix": "cough",
+			"name": "cough",
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
 		}
 	]
 }

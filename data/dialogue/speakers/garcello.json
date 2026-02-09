@@ -30,6 +30,30 @@
       "prefix": "happy",
       "offsets": [0, 0],
       "frameRate": 24
+    },
+    {
+      "name": "weak",
+      "prefix": "weak",
+      "offsets": [0, 0],
+      "frameRate": 24
+    },
+    {
+      "name": "proud",
+      "prefix": "proud",
+      "offsets": [0, 0],
+      "frameRate": 24
+    },
+    {
+      "name": "cough",
+      "prefix": "cough",
+      "offsets": [0, 0],
+      "frameRate": 24
+    },
+    {
+      "name": "concerned",
+      "prefix": "concerned",
+      "offsets": [0, 0],
+      "frameRate": 24
     }
   ]
 }

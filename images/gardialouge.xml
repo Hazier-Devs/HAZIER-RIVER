@@ -8,6 +8,6 @@
 	<SubTexture name="happy0000" x="0" y="1168" width="865" height="1183" frameX="-81" frameY="-99" frameWidth="1300" frameHeight="1280"/>
 	<SubTexture name="hmm0000" x="3030" y="0" width="856" height="1168" frameX="-81" frameY="-114" frameWidth="1300" frameHeight="1280"/>
 	<SubTexture name="neutral0000" x="865" y="1168" width="856" height="1168" frameX="-81" frameY="-114" frameWidth="1300" frameHeight="1280"/>
-	<SubTexture name="weak happy0000" x="2174" y="1168" width="856" height="1168" frameX="-81" frameY="-114" frameWidth="1300" frameHeight="1280"/>
+	<SubTexture name="proud0000" x="2174" y="1168" width="856" height="1168" frameX="-81" frameY="-114" frameWidth="1300" frameHeight="1280"/>
 	<SubTexture name="weak0000" x="3030" y="1168" width="856" height="1168" frameX="-81" frameY="-114" frameWidth="1300" frameHeight="1280"/>
 </TextureAtlas>

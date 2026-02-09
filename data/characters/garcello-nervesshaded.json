@@ -1,22 +1,23 @@
 {
-	"version": "1.0.0",
-	"renderType": "sparrow",
+	"danceEvery": 2,
 	"offsets": [
 		180,
 		190
 	],
-	"danceEvery": 2,
+	"renderType": "sparrow",
+	"version": "1.0.6",
 	"scale": 1.1,
-	"name": "Garcello (Nerves) (Shaded)",
+	"flipX": false,
 	"cameraOffsets": [
 		0,
 		-70
 	],
-	"flipX": false,
-	"startingAnimation": "idle",
-	"isPixel": false,
-	"singTime": 4,
+	"name": "Garcello (Nerves) (Shaded)",
 	"flipY": false,
+	"singTime": 4,
+	"isPixel": false,
+	"startingAnimation": "idle",
+	"assetPath": "characters/garcellonerves-shader",
 	"healthIcon": {
 		"isPixel": false,
 		"offsets": [
@@ -27,8 +28,6 @@
 		"flipX": false,
 		"id": "garcellonerves"
 	},
-	"assetPath": "characters/garcellonerves-shader",
-	"generatedBy": "Nova Character Editor v3.0.1",
 	"animations": [
 		{
 			"offsets": [
@@ -37,12 +36,12 @@
 			],
 			"frameIndices": [],
 			"prefix": "idle",
-			"name": "idle",
-			"looped": false,
 			"flipX": false,
+			"looped": false,
+			"name": "idle",
 			"flipY": false,
-			"frameRate": 24,
-			"assetPath": null
+			"assetPath": null,
+			"frameRate": 24
 		},
 		{
 			"offsets": [
@@ -51,12 +50,12 @@
 			],
 			"frameIndices": [],
 			"prefix": "left",
+			"flipX": false,
+			"looped": false,
 			"name": "singLEFT",
-			"looped": false,
-			"flipX": false,
 			"flipY": false,
-			"frameRate": 24,
-			"assetPath": null
+			"assetPath": null,
+			"frameRate": 24
 		},
 		{
 			"offsets": [
@@ -65,12 +64,12 @@
 			],
 			"frameIndices": [],
 			"prefix": "right",
+			"flipX": false,
+			"looped": false,
 			"name": "singRIGHT",
-			"looped": false,
-			"flipX": false,
 			"flipY": false,
-			"frameRate": 24,
-			"assetPath": null
+			"assetPath": null,
+			"frameRate": 24
 		},
 		{
 			"offsets": [
@@ -79,12 +78,12 @@
 			],
 			"frameIndices": [],
 			"prefix": "down",
-			"name": "singDOWN",
-			"looped": false,
 			"flipX": false,
+			"looped": false,
+			"name": "singDOWN",
 			"flipY": false,
-			"frameRate": 24,
-			"assetPath": null
+			"assetPath": null,
+			"frameRate": 24
 		},
 		{
 			"offsets": [
@@ -93,12 +92,12 @@
 			],
 			"frameIndices": [],
 			"prefix": "up",
-			"name": "singUP",
-			"looped": false,
 			"flipX": false,
+			"looped": false,
+			"name": "singUP",
 			"flipY": false,
-			"frameRate": 24,
-			"assetPath": null
+			"assetPath": null,
+			"frameRate": 24
 		},
 		{
 			"offsets": [
@@ -117,12 +116,12 @@
 				18
 			],
 			"prefix": "right",
-			"name": "singRIGHT-hold",
-			"looped": true,
 			"flipX": false,
+			"looped": true,
+			"name": "singRIGHT-hold",
 			"flipY": false,
-			"frameRate": 24,
-			"assetPath": null
+			"assetPath": null,
+			"frameRate": 24
 		},
 		{
 			"offsets": [
@@ -141,12 +140,12 @@
 				18
 			],
 			"prefix": "down",
-			"name": "singDOWN-hold",
-			"looped": true,
 			"flipX": false,
+			"looped": true,
+			"name": "singDOWN-hold",
 			"flipY": false,
-			"frameRate": 24,
-			"assetPath": null
+			"assetPath": null,
+			"frameRate": 24
 		},
 		{
 			"offsets": [
@@ -165,12 +164,12 @@
 				18
 			],
 			"prefix": "up",
-			"name": "singUP-hold",
-			"looped": false,
 			"flipX": false,
+			"looped": true,
+			"name": "singUP-hold",
 			"flipY": false,
-			"frameRate": 24,
-			"assetPath": null
+			"assetPath": null,
+			"frameRate": 24
 		},
 		{
 			"offsets": [
@@ -189,12 +188,12 @@
 				18
 			],
 			"prefix": "idle",
-			"name": "idle-hold",
-			"looped": true,
 			"flipX": false,
+			"looped": true,
+			"name": "idle-hold",
 			"flipY": false,
-			"frameRate": 24,
-			"assetPath": null
+			"assetPath": null,
+			"frameRate": 24
 		},
 		{
 			"offsets": [
@@ -213,26 +212,26 @@
 				18
 			],
 			"prefix": "left",
-			"name": "singLEFT-hold",
-			"looped": true,
 			"flipX": false,
+			"looped": true,
+			"name": "singLEFT-hold",
 			"flipY": false,
-			"frameRate": 24,
-			"assetPath": null
+			"assetPath": null,
+			"frameRate": 24
 		},
 		{
 			"offsets": [
-				10,
+				20,
 				0
 			],
 			"frameIndices": [],
 			"prefix": "cough",
-			"name": "cough",
-			"looped": false,
 			"flipX": false,
+			"looped": false,
+			"name": "cough",
 			"flipY": false,
-			"frameRate": 24,
-			"assetPath": null
+			"assetPath": null,
+			"frameRate": 24
 		}
 	]
 }

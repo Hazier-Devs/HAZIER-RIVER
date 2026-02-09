@@ -232,6 +232,30 @@
 			"flipY": false,
 			"assetPath": null,
 			"frameRate": 24
+		},
+		{
+			"offsets": [
+				20,
+				0
+			],
+			"frameIndices": [							
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18
+			],
+			"prefix": "cough",
+			"flipX": false,
+			"looped": false,
+			"name": "cough-hold",
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
 		}
 	]
 }

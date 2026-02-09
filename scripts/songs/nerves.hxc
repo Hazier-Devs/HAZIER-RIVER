@@ -1,15 +1,16 @@
-import flixel.tweens.FlxEase;
-import funkin.graphics.FunkinSprite;
-import flixel.tweens.FlxTween;
-import funkin.play.cutscene.dialogue.DialogueBox;
-import funkin.play.PlayState;
-import funkin.play.PlayStatePlaylist;
 import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.Preferences;
+import flixel.FlxSprite;
+import funkin.graphics.FunkinSprite;
 import flixel.FlxG;
 import funkin.save.Save;
-import flixel.FlxSprite;
-import flixel.util.FlxTimer;
-import funkin.effects.RetroCameraFade;
+import funkin.play.PlayStatePlaylist;
+import funkin.audio.FunkinSound;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import funkin.ui.options.PreferencesMenu;
+import funkin.util.HapticUtil;
 
 class NervesSong extends Song
 {
@@ -24,6 +25,9 @@ class NervesSong extends Song
   {
     super.onCountdownStart(event);
 
+    // Skip the cutscene unless we are in Story Mode, or Pico Mix specifically.
+    if (!PlayStatePlaylist.isStoryMode) hasPlayedCutscene = true;
+
     // Skip the cutscene if we're playtesting in the Chart Editor.
     if (PlayState.instance.isChartingMode && !hasPlayedCutscene) hasPlayedCutscene = true;
 
@@ -35,52 +39,23 @@ class NervesSong extends Song
 
       event.cancel(); // CANCEL THE COUNTDOWN!
 
-      //  pausing is breaking a lot in the erect stage for some reason disabling this for the sake of not running into issues atm
-      //  PlayState.instance.currentStage.pause();
+      // Play a SFX
+      FunkinSound.playOnce(Paths.sound('nervesouch'), 1.0);
 
-      transitionToDialogue();
+      HapticUtil.vibrate(0.1, 0.5, 1, 1);
+      // ERIC: There's a known bug where, on the School stage, pausing the stage animations then trying
+      // to restart them causes the animations to freeze.
+      // TODO: Commenting out this line causes the animations to work but they play even during the dialogue, which is supposed to pause everything.
+      // PlayState.instance.currentStage.pause();
+      startDialogue();
     }
-  }
-
-  function transitionToDialogue()
-  {
-    trace('Transitioning to dialogue.');
-
-    PlayState.instance.disableKeys = true;
-
-    PlayState.instance.camCutscene.visible = true;
-
-    var black:FlxSprite = new FunkinSprite(-20, -20).makeSolidColor(FlxG.width * 1.5, FlxG.height * 1.5, 0xFF000000);
-    black.cameras = [PlayState.instance.camCutscene];
-    black.zIndex = 1000000;
-    PlayState.instance.add(black);
-
-    black.alpha = 1.0;
-
-    var tweenFunction = function(x) {
-      var xSnapped = Math.floor(x * 8) / 8;
-      // black.alpha = 1.0 - xSnapped;
-    };
-
-    new FlxTimer().start(0.25, _ -> {
-      PlayState.instance.remove(black);
-      RetroCameraFade.fadeBlack(PlayState.instance.camGame, 12, 2);
-    });
-
-    FlxTween.num(0.0, 1.0, 2.0,
-      {
-        ease: FlxEase.linear,
-        startDelay: 0.25,
-        onComplete: function(input) {
-          startDialogue();
-        }
-      }, tweenFunction);
   }
 
   function startDialogue()
   {
-    PlayState.instance.disableKeys = false;
-    PlayState.instance.startConversation('nerves');
+    var targetDialogue = 'nerves';
+    trace('Playing dialogue...');
+    PlayState.instance.startConversation(targetDialogue);
   }
 
   /**
@@ -106,7 +81,6 @@ class NervesSong extends Song
   public override function onDialogueEnd()
   {
     // We may need to wait for the outro to play.
-    PlayState.instance.currentStage.resume();
     Countdown.performCountdown();
   }
 }

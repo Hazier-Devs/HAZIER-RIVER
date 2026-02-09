@@ -98,12 +98,13 @@ class HeadacheSong extends Song
   }
 
   override function onSongStart(event:ScriptEvent)
-  {
-    super.onSongStart(event);
+{
+  super.onSongStart(event);
 
-    PlayState.instance.isInCutscene = false;
-    PlayState.instance.mayPauseGame = true;
-  }
+  PlayState.instance.isInCutscene = false;
+  PlayState.instance.mayPauseGame = true;
+  PlayState.instance.togglePauseButton(true);
+}
 
 
   function introCutscene()
@@ -173,7 +174,7 @@ class HeadacheSong extends Song
     if (Constants.CENSOR_EXPLETIVES)
       videoPath += '-censored';
 
-    VideoCutscene.play(Paths.videos(videoPath));
+  VideoCutscene.play(Paths.videos('cutsceneplaceholder.mov'));
   }
 
   function onSongRetry(event:ScriptEvent)

@@ -1,119 +1,200 @@
-import flixel.tweens.FlxEase;
-import funkin.graphics.FunkinSprite;
-import flixel.tweens.FlxTween;
-import funkin.play.cutscene.dialogue.DialogueBox;
-import funkin.play.PlayState;
-import funkin.play.PlayStatePlaylist;
-import funkin.play.song.Song;
 import flixel.FlxG;
-import funkin.save.Save;
 import flixel.FlxSprite;
+import flixel.math.FlxBasePoint;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
 import flixel.util.FlxTimer;
-import funkin.effects.RetroCameraFade;
-import funkin.play.cutscene.VideoCutscene;
 
+import funkin.Conductor;
+import funkin.util.Constants;
+import funkin.graphics.FunkinSprite;
+import funkin.modding.base.ScriptedFunkinSprite;
+import funkin.data.song.SongRegistry;
+import funkin.play.GameOverSubState;
+import funkin.play.PlayState;
+import funkin.play.song.Song;
+import funkin.play.stage.StageProp;
+import funkin.save.Save;
+import funkin.audio.FunkinSound;
+import funkin.play.cutscene.VideoCutscene;
+import funkin.play.PlayStatePlaylist;
 
 class HeadacheSong extends Song
 {
   var hasPlayedCutscene:Bool;
+  var hasPlayedInGameCutscene:Bool;
+
+  var cutsceneMusic:FunkinSound;
+  var cutsceneConductor:Conductor;
+  var bgSprite:FunkinSprite;
 
   public function new()
   {
     super('headache');
+    hasPlayedCutscene = false;
+    hasPlayedInGameCutscene = false;
+  }
+
+  public override function listDifficulties(
+    variationId:String,
+    variationIds:Array<String>,
+    showLocked:Bool
+  ):Array<String>
+  {
+    if (showLocked || Save.instance.hasBeatenLevel('weekend1'))
+      return super.listDifficulties(variationId, variationIds);
+
+    return [];
+  }
+
+  public override function listAltInstrumentalIds(
+    difficultyId:String,
+    variationId:String
+  ):Array<String>
+  {
+    var results = super.listAltInstrumentalIds(difficultyId, variationId);
+
+    if (difficultyId == 'easy' || difficultyId == 'normal' || difficultyId == 'hard')
+      results = [for (id in results) if (id != 'bf') id];
+
+    return results;
   }
 
   public override function onCountdownStart(event:CountdownScriptEvent):Void
   {
     super.onCountdownStart(event);
 
-    // Skip the cutscene unless we are in Story Mode.
-    if (!PlayStatePlaylist.isStoryMode) hasPlayedCutscene = true;
+    if (!PlayStatePlaylist.isStoryMode)
+    {
+      hasPlayedCutscene = true;
+      hasPlayedInGameCutscene = true;
+    }
 
-    // Skip the cutscene if we're playtesting in the Chart Editor.
-    if (PlayState.instance.isChartingMode && !hasPlayedCutscene) hasPlayedCutscene = true;
+    if (hasPlayedCutscene && !hasPlayedInGameCutscene)
+    {
+      hasPlayedInGameCutscene = true;
+      event.cancel();
+
+      PlayState.instance.camHUD.visible = false;
+      introCutscene();
+      return;
+    }
 
     if (!hasPlayedCutscene)
     {
-      trace('Pausing countdown to play cutscene.');
-
       hasPlayedCutscene = true;
+      event.cancel();
+
+      bgSprite = new FunkinSprite(0, 0);
+      bgSprite.makeSolidColor(2000, 2500, 0xFF000000);
+      bgSprite.cameras = [PlayState.instance.camCutscene];
+      bgSprite.zIndex = -10000;
+
+      PlayState.instance.add(bgSprite);
+      PlayState.instance.refresh();
 
       startVideo();
-      event.cancel(); // CANCEL THE COUNTDOWN!
     }
   }
 
-    function startVideo()
+  override function onSongStart(event:ScriptEvent)
   {
-    VideoCutscene.play(Paths.videos('ughCutscene.mkv'));
-    transitionToDialogue();
+    super.onSongStart(event);
+
+    PlayState.instance.isInCutscene = false;
+    PlayState.instance.mayPauseGame = true;
   }
 
-  function transitionToDialogue()
+
+  function introCutscene()
   {
-    trace('Transitioning to dialogue.');
+    PlayState.instance.isInCutscene = true;
+    PlayState.instance.togglePauseButton(false);
+    PlayState.instance.mayPauseGame = false;
 
-    PlayState.instance.disableKeys = true;
+    cutsceneMusic = FunkinSound.load(
+      Paths.music("ughCutscene.mkv", "weekend1"),
+      true
+    );
+    cutsceneMusic.volume = 1;
 
-    PlayState.instance.camCutscene.visible = true;
+    cutsceneConductor = new Conductor();
 
-    var black:FlxSprite = new FunkinSprite(-20, -20).makeSolidColor(FlxG.width * 1.5, FlxG.height * 1.5, 0xFF000000);
-    black.cameras = [PlayState.instance.camCutscene];
-    black.zIndex = 1000000;
-    PlayState.instance.add(black);
+    var musicData = SongRegistry.instance.parseMusicData('ughCutscene.mkv');
+    if (musicData != null)
+      cutsceneConductor.mapTimeChanges(musicData.timeChanges);
 
-    black.alpha = 1.0;
-
-    var tweenFunction = function(x) {
-      var xSnapped = Math.floor(x * 8) / 8;
-      // black.alpha = 1.0 - xSnapped;
-    };
-
-    new FlxTimer().start(0.25, _ -> {
-      PlayState.instance.remove(black);
-      RetroCameraFade.fadeBlack(PlayState.instance.camGame, 12, 2);
+    new FlxTimer().start(0.7, _ -> {
+      cutsceneMusic.play(false);
+      FlxTween.tween(bgSprite, { alpha: 0 }, 1.5, {
+        onComplete: _ -> bgSprite.visible = false
+      });
     });
 
-    FlxTween.num(0.0, 1.0, 2.0,
-      {
-        ease: FlxEase.linear,
-        startDelay: 0.25,
-        onComplete: function(input) {
-          startDialogue();
-        }
-      }, tweenFunction);
+    // timer for dialogue to pop up ts
+    new FlxTimer().start(2, _ -> {
+      cutsceneMusic.stop();
+      startPostCutsceneDialogue();
+    });
   }
 
-  function startDialogue()
+  function resetCameraForGameplay()
   {
-    PlayState.instance.disableKeys = false;
-    PlayState.instance.startConversation('headache');
+    PlayState.instance.resetCamera();
   }
 
-  /**
-   * Don't replay the cutscene between restarts.
-   */
+  function startPostCutsceneDialogue()
+  {
+    PlayState.instance.resetCamera();
+
+    PlayState.instance.isInCutscene = true;
+    PlayState.instance.togglePauseButton(false);
+    PlayState.instance.mayPauseGame = false;
+
+    PlayState.instance.startConversation('headache', function() {
+
+      PlayState.instance.endConversation();
+
+      PlayState.instance.isInCutscene = false;
+
+      PlayState.instance.startCountdown();
+
+      new FlxTimer().start(0.01, _ -> {
+        PlayState.instance.togglePauseButton(true);
+        PlayState.instance.mayPauseGame = true;
+      });
+    });
+  }
+
+
+  function startVideo()
+  {
+    var videoPath = 'ughCutscene.mkv';
+    if (Constants.CENSOR_EXPLETIVES)
+      videoPath += '-censored';
+
+    VideoCutscene.play(Paths.videos(videoPath));
+  }
+
   function onSongRetry(event:ScriptEvent)
   {
     super.onSongRetry(event);
-
     hasPlayedCutscene = true;
+    hasPlayedInGameCutscene = true;
   }
 
-  /**
-   * Replay the cutscene after leaving the song.
-   */
-  function onCreate(event:ScriptEvent):Void
+  function onCreate(event:ScriptEvent)
   {
     super.onCreate(event);
-
     hasPlayedCutscene = false;
+    hasPlayedInGameCutscene = false;
   }
 
-  public override function onDialogueEnd()
+  function onUpdate(event:UpdateScriptEvent)
   {
-    // We may need to wait for the outro to play.
-    PlayState.instance.currentStage.resume();
-    Countdown.performCountdown();
+    super.onUpdate(event);
+
+    if (cutsceneConductor != null && cutsceneMusic != null)
+      cutsceneConductor.update(cutsceneMusic.time);
   }
 }

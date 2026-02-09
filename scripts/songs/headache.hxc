@@ -101,8 +101,8 @@ class HeadacheSong extends Song
 {
   super.onSongStart(event);
 
-  PlayState.instance.isInCutscene = false; // ← THIS was missing
-  PlayState.instance.canPause = true;
+  PlayState.instance.isInCutscene = false;
+  PlayState.instance.mayPauseGame = true;
   PlayState.instance.togglePauseButton(true);
 }
 
@@ -174,7 +174,7 @@ class HeadacheSong extends Song
     if (Constants.CENSOR_EXPLETIVES)
       videoPath += '-censored';
 
-  VideoCutscene.play(Paths.videos('diddy'));
+  VideoCutscene.play(Paths.videos('cutsceneplaceholder.mov'));
   }
 
   function onSongRetry(event:ScriptEvent)

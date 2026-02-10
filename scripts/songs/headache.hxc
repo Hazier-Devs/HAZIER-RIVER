@@ -35,31 +35,6 @@ class HeadacheSong extends Song
     hasPlayedInGameCutscene = false;
   }
 
-  public override function listDifficulties(
-    variationId:String,
-    variationIds:Array<String>,
-    showLocked:Bool
-  ):Array<String>
-  {
-    if (showLocked || Save.instance.hasBeatenLevel('weekend1'))
-      return super.listDifficulties(variationId, variationIds);
-
-    return [];
-  }
-
-  public override function listAltInstrumentalIds(
-    difficultyId:String,
-    variationId:String
-  ):Array<String>
-  {
-    var results = super.listAltInstrumentalIds(difficultyId, variationId);
-
-    if (difficultyId == 'easy' || difficultyId == 'normal' || difficultyId == 'hard')
-      results = [for (id in results) if (id != 'bf') id];
-
-    return results;
-  }
-
   public override function onCountdownStart(event:CountdownScriptEvent):Void
   {
     super.onCountdownStart(event);
@@ -113,20 +88,7 @@ class HeadacheSong extends Song
     PlayState.instance.togglePauseButton(false);
     PlayState.instance.mayPauseGame = false;
 
-    cutsceneMusic = FunkinSound.load(
-      Paths.music("ughCutscene.mkv", "weekend1"),
-      true
-    );
-    cutsceneMusic.volume = 1;
-
-    cutsceneConductor = new Conductor();
-
-    var musicData = SongRegistry.instance.parseMusicData('ughCutscene.mkv');
-    if (musicData != null)
-      cutsceneConductor.mapTimeChanges(musicData.timeChanges);
-
     new FlxTimer().start(0.7, _ -> {
-      cutsceneMusic.play(false);
       FlxTween.tween(bgSprite, { alpha: 0 }, 1.5, {
         onComplete: _ -> bgSprite.visible = false
       });
@@ -134,7 +96,6 @@ class HeadacheSong extends Song
 
     // timer for dialogue to pop up ts
     new FlxTimer().start(2, _ -> {
-      cutsceneMusic.stop();
       startPostCutsceneDialogue();
     });
   }
@@ -170,10 +131,6 @@ class HeadacheSong extends Song
 
   function startVideo()
   {
-    var videoPath = 'ughCutscene.mkv';
-    if (Constants.CENSOR_EXPLETIVES)
-      videoPath += '-censored';
-
   VideoCutscene.play(Paths.videos('cutsceneplaceholder.mov'));
   }
 

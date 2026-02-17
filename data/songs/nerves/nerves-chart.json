@@ -60,7 +60,7 @@
    "t": 4200,
    "e": "PlayAnimation",
    "v": {
-	"force": true,
+	"force": false,
 	"anim": "cough",
 	"target": "dad"
 }
@@ -419,7 +419,7 @@
    "t": 36600,
    "e": "PlayAnimation",
    "v": {
-	"force": true,
+	"force": false,
 	"anim": "cough",
 	"target": "dad"
 }
@@ -440,7 +440,7 @@
    "t": 37800,
    "e": "PlayAnimation",
    "v": {
-	"force": true,
+	"force": false,
 	"anim": "cough",
 	"target": "dad"
 }
@@ -467,7 +467,7 @@
    "t": 39000,
    "e": "PlayAnimation",
    "v": {
-	"force": true,
+	"force": false,
 	"anim": "cough",
 	"target": "dad"
 }
@@ -476,7 +476,7 @@
    "t": 40200,
    "e": "PlayAnimation",
    "v": {
-	"force": true,
+	"force": false,
 	"anim": "cough",
 	"target": "dad"
 }
@@ -485,7 +485,7 @@
    "t": 41400,
    "e": "PlayAnimation",
    "v": {
-	"force": true,
+	"force": false,
 	"anim": "cough",
 	"target": "dad"
 }
@@ -559,7 +559,7 @@
    "t": 51000,
    "e": "PlayAnimation",
    "v": {
-	"force": true,
+	"force": false,
 	"anim": "cough",
 	"target": "dad"
 }
@@ -590,7 +590,7 @@
    "t": 52200,
    "e": "PlayAnimation",
    "v": {
-	"force": true,
+	"force": false,
 	"anim": "cough",
 	"target": "dad"
 }
@@ -709,7 +709,7 @@
    "t": 60600,
    "e": "PlayAnimation",
    "v": {
-	"force": true,
+	"force": false,
 	"anim": "cough",
 	"target": "dad"
 }
@@ -718,7 +718,7 @@
    "t": 61800,
    "e": "PlayAnimation",
    "v": {
-	"force": true,
+	"force": false,
 	"anim": "cough",
 	"target": "dad"
 }
@@ -740,7 +740,7 @@
    "v": {
 	"target": "dad",
 	"anim": "cough",
-	"force": true
+	"force": false
 }
   },
   {
@@ -788,7 +788,7 @@
    "t": 66600,
    "e": "PlayAnimation",
    "v": {
-	"force": true,
+	"force": false,
 	"anim": "cough",
 	"target": "dad"
 }
@@ -1087,7 +1087,7 @@
    "v": {
 	"target": "dad",
 	"anim": "cough",
-	"force": true
+	"force": false
 }
   },
   {
@@ -1096,7 +1096,7 @@
    "v": {
 	"target": "dad",
 	"anim": "cough",
-	"force": true
+	"force": false
 }
   },
   {
@@ -1215,7 +1215,7 @@
    "v": {
 	"target": "dad",
 	"anim": "cough",
-	"force": true
+	"force": false
 }
   },
   {
@@ -1224,7 +1224,7 @@
    "v": {
 	"target": "dad",
 	"anim": "cough",
-	"force": true
+	"force": false
 }
   },
   {

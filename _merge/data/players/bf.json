@@ -1,0 +1,4 @@
+[
+  { "op": "add", "path": "/ownedChars/-", "value": "bf-garcello" },
+  { "op": "add", "path": "/ownedChars/-", "value": "bf-garcelloshaded" }
+]

@@ -1,8 +1,8 @@
 {
   "version": "1.0.0",
   "name": "Boyfriend (Erect Garcello Week)",
-  "renderType": "multisparrow",
-  "assetPath": "characters/BFGarcelloWeek",
+  "renderType": "multianimateatlas",
+  "assetPath": "shared:characters/bf-gar",
   "flipX": true,
   "healthIcon": {
     "id": "bf",
@@ -12,78 +12,63 @@
   "animations": [
     {
       "name": "idle",
-      "prefix": "BF idle dance",
-      "offsets": [-5, 0]
+      "prefix": "idle"
     },
     {
       "name": "singLEFT",
-      "prefix": "BF NOTE LEFT0",
-      "offsets": [12, -6]
+      "prefix": "left"
     },
     {
       "name": "singDOWN",
-      "prefix": "BF NOTE DOWN0",
-      "offsets": [-10, -50]
+      "prefix": "down"
     },
     {
       "name": "singUP",
-      "prefix": "BF NOTE UP0",
-      "offsets": [-29, 27]
+      "prefix": "up"
     },
     {
       "name": "singRIGHT",
-      "prefix": "BF NOTE RIGHT0",
-      "offsets": [-38, -7]
+      "prefix": "right"
     },
     {
       "name": "singLEFTmiss",
-      "prefix": "BF NOTE LEFT MISS",
-      "offsets": [12, 24]
+      "prefix": "missleft"
     },
     {
       "name": "singDOWNmiss",
-      "prefix": "BF NOTE DOWN MISS",
-      "offsets": [-11, -19]
+      "prefix": "missdown"
     },
     {
       "name": "singUPmiss",
-      "prefix": "BF NOTE UP MISS",
-      "offsets": [-29, 27]
+      "prefix": "missup"
     },
     {
       "name": "singRIGHTmiss",
-      "prefix": "BF NOTE RIGHT MISS",
-      "offsets": [-30, 21]
+      "prefix": "missright"
     },
     {
       "name": "hey",
-      "prefix": "BF HEY!!",
-      "offsets": [7, 4]
+      "prefix": "hey"
     },
     {
-      "name": "firstDeath",
-      "prefix": "BF dies",
-      "assetPath": "characters/BOYFRIEND",
-      "offsets": [-37, 11]
-    },
-    {
-      "name": "fakeoutDeath",
-      "prefix": "BF dies",
-      "assetPath": "characters/BOYFRIEND",
-      "offsets": [-37, 11]
-    },
-    {
+      "assetPath": "shared:characters/bf-death",
       "name": "deathLoop",
-      "prefix": "BF Dead Loop",
-      "assetPath": "characters/BOYFRIEND",
+      "prefix": "Death Loop",
       "looped": true,
-      "offsets": [-37, 5]
+      "offsets": [22, 15]
     },
     {
+      "asset": "shared:characters/bf-death",
       "name": "deathConfirm",
-      "prefix": "BF Dead confirm",
-      "assetPath": "characters/BOYFRIEND",
-      "offsets": [-37, 69]
+      "prefix": "Death Confirm",
+      "offsets": [22, 15]
+    },
+    {
+      "assetPath": "shared:characters/bfFakeOut",
+      "name": "fakeoutDeath",
+      "prefix": "fake out death BF",
+      "animType": "symbol",
+      "offsets": [-3, -65]
     }
   ]
 }

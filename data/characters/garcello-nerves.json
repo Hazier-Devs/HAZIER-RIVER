@@ -1,6 +1,6 @@
 {
 	"version": "1.0.0",
-	"renderType": "sparrow",
+	"renderType": "animateatlas",
 	"offsets": [
 		180,
 		190
@@ -27,7 +27,7 @@
 		"flipX": false,
 		"id": "garcellonerves"
 	},
-	"assetPath": "characters/garcellonerves",
+	"assetPath": "shared:characters/garcello-nerves",
 	"generatedBy": "Nova Character Editor v3.0.1",
 	"animations": [
 		{

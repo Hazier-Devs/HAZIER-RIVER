@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Pico (Garcello Week)",
-  "assetPath": "characters/PicoGarcelloWeek",
+  "assetPath": "shared:characters/pico-gar",
   "healthIcon": {
     "id": "pico",
     "flipX": false
@@ -11,7 +11,7 @@
     "cameraZoom": 1.0
   },
   "flipX": true,
-  "renderType": "multisparrow",
+  "renderType": "multianimateatlas",
   "animations": [
     {
       "name": "idle",

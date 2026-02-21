@@ -1,7 +1,8 @@
 {
   "version": "1.0.0",
   "name": "Girlfriend (Erect Garcello Week)",
-  "assetPath": "characters/GFGarcelloWeek",
+  "renderType": "animateatlas",
+  "assetPath": "shared:characters/gf-gar",
   "startingAnimation": "danceRight",
   "healthIcon": {
     "id": "gf",

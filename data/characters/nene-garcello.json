@@ -1,9 +1,9 @@
 {
   "version": "1.0.0",
   "name": "Nene (Garcello Week)",
-  "assetPath": "characters/NeneGarcelloWeek",
+  "assetPath": "shared:characters/nene-gar",
   "startingAnimation": "danceRight",
-  "renderType": "sparrow",
+  "renderType": "animateatlas",
   "offsets": [0, -100],
   "animations": [
     {

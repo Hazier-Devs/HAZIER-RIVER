@@ -47,7 +47,7 @@ class NeneGarcelloCharacter extends AnimateAtlasCharacter
       }
     });
 
-    abot = ScriptedFunkinSprite.init('ABotAtlasSprite', 0, 0);
+    abot = ScriptedFunkinSprite.init('ABotAtlasSpriteGar', 0, 0);
     abot.x = this.x;
     abot.y = this.y;
     abot.zIndex = this.zIndex - 1;
@@ -324,28 +324,28 @@ class NeneGarcelloCharacter extends AnimateAtlasCharacter
     if (!refershedLol)
     {
       abot.x = this.x - 95 - (-this.globalOffsets[0] * this.scale.x);
-      abot.y = this.y + 384 - (-this.globalOffsets[1] * this.scale.y);
+      abot.y = this.y + 309 - (-this.globalOffsets[1] * this.scale.y);
       abot.zIndex = this.zIndex - 10;
 
       PlayState.instance.currentStage.add(abot);
 
       abotViz.x = abot.x + 207;
-      abotViz.y = abot.y + 84;
+      abotViz.y = abot.y + 159;
       abotViz.zIndex = abot.zIndex - 1;
       PlayState.instance.currentStage.add(abotViz);
 
       eyeWhites.x = abot.x + 40;
-      eyeWhites.y = abot.y + 250;
+      eyeWhites.y = abot.y + 325;
       eyeWhites.zIndex = abot.zIndex - 10;
       PlayState.instance.currentStage.add(eyeWhites);
 
       pupil.x = abot.x + 50;
-      pupil.y = abot.y + 238;
+      pupil.y = abot.y + 313;
       pupil.zIndex = eyeWhites.zIndex + 5;
       PlayState.instance.currentStage.add(pupil);
 
       stereoBG.x = abot.x + 150;
-      stereoBG.y = abot.y + 30;
+      stereoBG.y = abot.y + 105;
       stereoBG.zIndex = abot.zIndex - 8;
       PlayState.instance.currentStage.add(stereoBG);
 

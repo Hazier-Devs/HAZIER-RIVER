@@ -11,47 +11,43 @@
     "cameraZoom": 1.0
   },
   "flipX": true,
-  "renderType": "multianimateatlas",
+  "renderType": "animateatlas",
   "animations": [
     {
       "name": "idle",
-      "prefix": "Pico Idle Dance"
+      "prefix": "idle"
     },
     {
       "name": "singRIGHT",
-      "prefix": "Pico Note Right0"
+      "prefix": "right"
     },
     {
       "name": "singDOWN",
-      "prefix": "Pico Down Note0"
+      "prefix": "down"
     },
     {
       "name": "singUP",
-      "prefix": "pico Up note0"
+      "prefix": "up"
     },
     {
       "name": "singLEFT",
-      "prefix": "Pico NOTE LEFT0"
+      "prefix": "left"
     },
     {
       "name": "singLEFTmiss",
-      "prefix": "Pico Left Note MISS",
-      "offsets": [68, 20]
+      "prefix": "missleft"
     },
     {
       "name": "singDOWNmiss",
-      "prefix": "Pico Down Note MISS",
-      "offsets": [80, -40]
+      "prefix": "missdown"
     },
     {
       "name": "singUPmiss",
-      "prefix": "Pico Up Note MISS",
-      "offsets": [29, 70]
+      "prefix": "missup"
     },
     {
       "name": "singRIGHTmiss",
-      "prefix": "Pico Right Note MISS",
-      "offsets": [-55, 45]
+      "prefix": "missright"
     }
   ]
 }

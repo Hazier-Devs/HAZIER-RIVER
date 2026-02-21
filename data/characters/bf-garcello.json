@@ -51,6 +51,15 @@
       "prefix": "hey"
     },
     {
+      "asset": "shared:characters/bf-death",
+      "name": "firstDeath",
+      "prefix": "Death Intro",
+      "offsets": [22, 15],
+      "atlasSettings": {
+        "uniqueInCache": true
+      }
+    },
+    {
       "assetPath": "shared:characters/bf-death",
       "name": "deathLoop",
       "prefix": "Death Loop",

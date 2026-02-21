@@ -31,10 +31,6 @@
 	"generatedBy": "Nova Character Editor v3.0.1",
 	"animations": [
 		{
-			"offsets": [
-				0,
-				0
-			],
 			"frameIndices": [],
 			"prefix": "idle",
 			"name": "idle",
@@ -45,10 +41,6 @@
 			"assetPath": null
 		},
 		{
-			"offsets": [
-				59,
-				1
-			],
 			"frameIndices": [],
 			"prefix": "left",
 			"name": "singLEFT",
@@ -59,10 +51,6 @@
 			"assetPath": null
 		},
 		{
-			"offsets": [
-				-34,
-				-2
-			],
 			"frameIndices": [],
 			"prefix": "right",
 			"name": "singRIGHT",
@@ -73,10 +61,6 @@
 			"assetPath": null
 		},
 		{
-			"offsets": [
-				23,
-				-17
-			],
 			"frameIndices": [],
 			"prefix": "down",
 			"name": "singDOWN",
@@ -87,10 +71,6 @@
 			"assetPath": null
 		},
 		{
-			"offsets": [
-				5,
-				24
-			],
 			"frameIndices": [],
 			"prefix": "up",
 			"name": "singUP",
@@ -101,10 +81,6 @@
 			"assetPath": null
 		},
 		{
-			"offsets": [
-				-34,
-				-2
-			],
 			"frameIndices": [
 				10,
 				11,
@@ -125,10 +101,7 @@
 			"assetPath": null
 		},
 		{
-			"offsets": [
-				23,
-				-17
-			],
+
 			"frameIndices": [
 				10,
 				11,
@@ -149,10 +122,6 @@
 			"assetPath": null
 		},
 		{
-			"offsets": [
-				5,
-				24
-			],
 			"frameIndices": [
 				10,
 				11,
@@ -173,10 +142,6 @@
 			"assetPath": null
 		},
 		{
-			"offsets": [
-				0,
-				0
-			],
 			"frameIndices": [
 				10,
 				11,
@@ -197,10 +162,6 @@
 			"assetPath": null
 		},
 		{
-			"offsets": [
-				59,
-				1
-			],
 			"frameIndices": [
 				10,
 				11,
@@ -219,6 +180,36 @@
 			"flipY": false,
 			"frameRate": 24,
 			"assetPath": null
+		},
+		{
+			"frameIndices": [],
+			"prefix": "cough",
+			"flipX": false,
+			"looped": false,
+			"name": "cough",
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
+		},
+		{
+			"frameIndices": [							
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18
+			],
+			"prefix": "cough",
+			"flipX": false,
+			"looped": false,
+			"name": "cough-hold",
+			"flipY": false,
+			"assetPath": null,
+			"frameRate": 24
 		}
 	]
 }

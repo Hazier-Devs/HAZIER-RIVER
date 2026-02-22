@@ -52,6 +52,12 @@
     {
       "name": "burp",
       "prefix": "burp"
+    },
+    {
+      "name": "burp-loop",
+      "prefix": "burp",
+      "looped": true,
+      "frameIndices": [17]
     }
   ]
 }

@@ -1,0 +1,223 @@
+import Std;
+
+import haxe.ui.core.Screen;
+import haxe.ui.containers.HBox;
+import haxe.ui.containers.VBox;
+import haxe.ui.containers.windows.Window;
+import haxe.ui.containers.windows.WindowManager;
+import haxe.ui.components.Label;
+import haxe.ui.components.CheckBox;
+import haxe.ui.components.Button;
+import haxe.ui.components.HorizontalSlider;
+
+import flixel.FlxG;
+import flixel.math.FlxMath;
+
+import funkin.Preferences;
+import funkin.Conductor;
+import funkin.play.PlayState;
+import funkin.play.song.Song;
+import funkin.modding.module.Module;
+import funkin.data.event.SongEventRegistry;
+
+class DebugModuleScript extends Module
+{ 
+	public function new()
+	{
+		super('Debug Module V2 by SangMzG / Artleys');
+	}
+
+	var windowManager = new WindowManager();
+	var debugWindow;
+	var debugBox;
+	
+	var botPlayCheckbox;
+	var practiceCheckbox;
+	var hudCheckbox;
+	var timeBarSlider;
+	var buttonBox;
+	var nextButton;
+	var prevButton;
+	var debugInfoText;
+
+	var helpText;
+
+	override function onStateChangeEnd(e)
+	{
+		super.onStateChangeEnd(e);
+
+		if (FlxG.state != PlayState.instance) return;
+		FlxG.mouse.visible = true;
+
+		debugWindow = new Window();
+		debugWindow.x = 10;
+		debugWindow.y = 220;
+		debugWindow.title = "DEBUG";
+		debugWindow.width = 300;
+		debugWindow.height = 390;
+		debugWindow.closable = false;  
+		debugWindow.minimizable = true; 
+		debugWindow.maximizable = false;
+		debugWindow.collapsable = false;
+		debugWindow.windowManager = windowManager;
+		debugWindow.camera = PlayState.instance.camCutscene;
+		
+		debugBox = new VBox();
+		debugBox.layout = "absolute";
+
+		botPlayCheckbox = new CheckBox();
+		botPlayCheckbox.text = "Bot Play";
+		botPlayCheckbox.selected = false;
+		botPlayCheckbox.onChange = function(_) {
+			PlayState.instance.isBotPlayMode = botPlayCheckbox.selected;
+			PlayState.instance.playerStrumline.isPlayer = !botPlayCheckbox.selected;
+		}
+		botPlayCheckbox.customStyle.fontName = "Monsterrat";
+		botPlayCheckbox.customStyle.fontSize = 12;
+		botPlayCheckbox.invalidateComponentStyle();
+
+		practiceCheckbox = new CheckBox();
+		practiceCheckbox.text = "Practice Mode";
+		practiceCheckbox.selected = false;
+		practiceCheckbox.onChange = function(_) {PlayState.instance.isPracticeMode = practiceCheckbox.selected;}
+		practiceCheckbox.customStyle.fontName = "Monsterrat";
+		practiceCheckbox.customStyle.fontSize = 12;
+		practiceCheckbox.invalidateComponentStyle();
+
+		hudCheckbox = new CheckBox();
+		hudCheckbox.text = "Hide HUD";
+		hudCheckbox.selected = false;
+		hudCheckbox.onChange = function(_) {PlayState.instance.camHUD.visible = !hudCheckbox.selected;}
+		hudCheckbox.customStyle.fontName = "Monsterrat";
+		hudCheckbox.customStyle.fontSize = 12;
+		hudCheckbox.invalidateComponentStyle();
+
+		timeBarSlider = new HorizontalSlider();
+		timeBarSlider.width = debugWindow.width - 40;
+		timeBarSlider.min = 0;
+		timeBarSlider.pos = 0;
+		timeBarSlider.onChange = function(_) {
+			if (timeBarSlider?.focus && (FlxG.mouse.justPressed || FlxG.mouse.pressed))
+			changeSongPos(timeBarSlider?.pos);
+		}
+
+		buttonBox = new HBox();
+		buttonBox.horizontalSpacing = 135;
+
+		prevButton = new Button();
+		prevButton.text = "<< 10s";
+		prevButton.onClick = function(_) {
+			changeSongPos(Conductor.instance.songPosition - 10000);
+		}
+
+		nextButton = new Button();
+		nextButton.text = "10s >>";
+		nextButton.onClick = function(_) {
+			changeSongPos(Conductor.instance.songPosition + 10000);
+		}
+
+		buttonBox.addComponent(prevButton);
+		buttonBox.addComponent(nextButton);
+
+		debugInfoText = new Label();
+		debugInfoText.customStyle.fontName = "Inconsolata Medium";
+		debugInfoText.invalidateComponentStyle();
+		debugInfoText.fontSize = 14;
+
+		helpText = new Label();
+		helpText.text = "\nPress F3 to HIDE this";
+		helpText.customStyle.fontName = "Monsterrat";
+		helpText.customStyle.fontBold = true;
+		helpText.fontSize = 13;
+		helpText.invalidateComponentStyle();
+
+		debugBox.addComponent(botPlayCheckbox);
+		debugBox.addComponent(practiceCheckbox);
+		debugBox.addComponent(hudCheckbox);
+		debugBox.addComponent(timeBarSlider);
+		debugBox.addComponent(buttonBox);
+		debugBox.addComponent(debugInfoText);
+		debugBox.addComponent(helpText);
+		debugWindow.addComponent(debugBox);
+
+		Screen.instance.addComponent(debugWindow);
+	}
+
+	override function onStepHit(e)
+	{
+		super.onStepHit(e);
+		if (FlxG.state != PlayState.instance || debugInfoText == null) return;
+
+		debugInfoText.text =
+			"SONG TIME (Minutes): " + msToMinutesAndSeconds(Conductor.instance.songPosition) + "/" + (msToMinutesAndSeconds(FlxG.sound.music != null ? FlxG.sound.music.length : 0)) + "\n" +
+			"SONG TIME (Miliseconds): " + Std.int(Conductor.instance.songPosition) + "\n\n" +
+			"CAMERA POSITION: x: " + Math.round(PlayState.instance.cameraFollowPoint.x) + ", y: " + Math.round(PlayState.instance.cameraFollowPoint.y) + "\n" +
+			"CURRENT HEALTH: " + PlayState.instance.health + "\n" +
+			"CURRENT CAMERA ZOOM: " + setprecition(PlayState.instance.currentCameraZoom) + "\n" +
+			"CURRENT BEAT: " + e.beat + "\n" +
+			"CURRENT STEP: " + e.step + "\n" +
+			"CURRENT BPM: " + Conductor.instance.bpm + "\n" +
+			"SCREEN RESOLUTION: " + FlxG.width + " : " + FlxG.height + "\n";
+	}
+
+	override function onSongStart(e) {
+		super.onSongStart(e);
+		timeBarSlider?.max = FlxG.sound.music.length;
+	}
+
+	override function onUpdate(e)
+	{
+		super.onUpdate(e);
+
+		if (PlayState.instance == null) return;
+
+		if (FlxG.mouse.wheel != 0) {
+			PlayState.instance.currentCameraZoom += 0.05 * FlxG.mouse.wheel;
+			PlayState.instance.cancelCameraZoomTween();
+		}
+
+		if (FlxG.mouse.pressed && !timeBarSlider?.focus) {
+			PlayState.instance.cameraFollowPoint.x -= FlxG.mouse.deltaX / FlxG.camera.zoom;
+			PlayState.instance.cameraFollowPoint.y -= FlxG.mouse.deltaY / FlxG.camera.zoom;
+		}
+
+		if (timeBarSlider != null && timeBarSlider?.max != 1) 
+			timeBarSlider?.pos = Conductor.instance.songPosition;
+
+		if (FlxG.keys.justPressed.F3) {
+			debugWindow.hidden = !debugWindow.hidden;
+			Preferences.set_debugDisplay(debugWindow.hidden ? 1 : 2);
+		}
+	}
+
+	function onNoteHit(e)
+	{
+		super.onNoteHit(e);
+		if (PlayState.instance == null) return;
+		if (e.note.noteData.getMustHitNote()) PlayState.instance.vocals.playerVolume = 1;
+	}
+
+	function changeSongPos(newPos)
+	{
+		var targetTimeMs = Math.max(0, newPos);
+
+		if (FlxG.sound.music != null) FlxG.sound.music.time = targetTimeMs;
+		PlayState.instance.handleSkippedNotes();
+		SongEventRegistry.handleSkippedEvents(PlayState.instance.songEvents, Conductor.instance.songPosition);      
+		Conductor.instance.update(FlxG.sound?.music?.time ?? 0.0);
+		PlayState.instance.resyncVocals();
+	}
+
+	function msToMinutesAndSeconds(ms)
+	{
+		var seconds = ms / 1000;
+		var minutes = Std.int(seconds / 60);
+		var remainingSeconds = Std.int(seconds % 60);
+		var formattedSeconds = (remainingSeconds < 10) ? "0" + remainingSeconds : remainingSeconds;     
+		return minutes + ":" + formattedSeconds;
+	}
+
+	function setprecition(a) {
+		return Math.round(a * 1000) / 1000;
+	}
+}

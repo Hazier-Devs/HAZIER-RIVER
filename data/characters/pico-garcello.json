@@ -48,6 +48,10 @@
     {
       "name": "singRIGHTmiss",
       "prefix": "missright"
+    },
+    {
+      "name": "burp",
+      "prefix": "burp"
     }
   ]
 }

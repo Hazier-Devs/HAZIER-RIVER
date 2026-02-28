@@ -1,34 +1,28 @@
 {
  "version": "2.2.4",
- "songName": "Nerves",
- "artist": "DigitLuck (ft. Cyber Tryzoid)",
- "charter": "Arthren",
+ "songName": "Nerves (Pico Mix)",
+ "artist": "PlantGamer09 (feat. DigitLuck)",
+ "charter": "EEssential",
  "offsets": { },
  "playData": {
-  "songVariations": [
-   "pico"
-  ],
   "difficulties": [
-   "easy",
-   "normal",
    "hard"
   ],
   "characters": {
-   "player": "bf-garcelloshaded",
-   "girlfriend": "gf-garcelloshaded",
-   "opponent": "garcello-nervesshaded",
+   "player": "pico-garcello",
+   "girlfriend": "nene-garcello",
+   "opponent": "garcello-nerves",
+   "instrumental": "pico",
    "opponentVocals": [
-    "garcello"
+    "garcello-nerves"
    ],
    "playerVocals": [
-    "bf"
+    "pico-garcello"
    ]
   },
-  "stage": "Ashton Alleyway",
+  "stage": "AshtonParkingLot",
   "noteStyle": "funkin",
   "ratings": {
-   "easy": 1,
-   "normal": 2,
    "hard": 3
   },
   "album": "hazy",

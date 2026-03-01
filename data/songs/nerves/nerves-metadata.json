@@ -14,14 +14,14 @@
    "hard"
   ],
   "characters": {
-   "player": "bf-garcelloshaded",
-   "girlfriend": "gf-garcelloshaded",
-   "opponent": "garcello-nervesshaded",
+   "player": "bf-garcello",
+   "girlfriend": "gf-garcello",
+   "opponent": "garcello-nerves",
    "opponentVocals": [
-    "garcello"
+    "garcello-nervesshaded"
    ],
    "playerVocals": [
-    "bf"
+    "bf-garcelloshaded"
    ]
   },
   "stage": "Ashton Alleyway",

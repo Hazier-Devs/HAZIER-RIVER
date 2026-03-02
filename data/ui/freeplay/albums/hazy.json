@@ -6,5 +6,6 @@
     "PlantGamer09"
   ],
   "albumArtAsset": "freeplay/albumRoll/HAZIERALBUMVOL1",
-  "albumTitleAsset": "freeplay/albumRoll/hazierriver-text"
+  "albumTitleAsset": "freeplay/albumRoll/hazierriver-text",
+  "albumTitleOffsets": [-45, 0]
 }

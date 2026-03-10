@@ -1,6 +1,6 @@
 {
 	"version": "1.0.0",
-	"renderType": "animateatlas",
+	"renderType": "multianimateatlas",
 	"offsets": [
 		180,
 		190
@@ -210,6 +210,26 @@
 			"flipY": false,
 			"assetPath": null,
 			"frameRate": 24
+		},
+		{
+			"frameIndices": [],
+			"prefix": "cigmiss",
+			"name": "cigmiss",
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath": null
+		},
+		{
+			"frameIndices": [],
+			"prefix": "ciglight",
+			"name": "ciglight",
+			"looped": false,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"assetPath":"shared:characters/nervespicocutsceneshit"
 		}
 	]
 }

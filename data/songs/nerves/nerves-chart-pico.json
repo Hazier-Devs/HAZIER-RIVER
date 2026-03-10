@@ -7,6 +7,13 @@
  },
  "events": [
   {
+   "t": 0,
+   "e": "FocusCamera",
+   "v": {
+	"char": 1
+}
+  },
+  {
    "t": 9600,
    "e": "FocusCamera",
    "v": {

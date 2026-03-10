@@ -10,10 +10,17 @@ import funkin.save.Save;
 import flixel.FlxSprite;
 import flixel.util.FlxTimer;
 import funkin.effects.RetroCameraFade;
+import funkin.play.character.CharacterType;
+import funkin.audio.FunkinSound;
+import funkin.FunkinMemory;
+import funkin.util.SongSequence;
+import funkin.Conductor;
 
 class NervesPicoMixSong extends Song
 {
   var hasPlayedCutscene:Bool;
+  var garcDead:Bool = false;
+  var sequence:SongSequence;
 
   public function new()
   {
@@ -101,6 +108,11 @@ class NervesPicoMixSong extends Song
     super.onSongRetry(event);
 
     hasPlayedCutscene = true;
+
+    if (garcDead)
+    {
+      PlayState.instance.currentStage.getDad().playAnimation('cigmiss-hold', true, true);
+    }
   }
 
   /**
@@ -111,6 +123,10 @@ class NervesPicoMixSong extends Song
     super.onCreate(event);
 
     hasPlayedCutscene = false;
+    garcDead = false;
+
+    FunkinMemory.cacheSound(Paths.sound('ciglight'));
+    FunkinMemory.cacheSound(Paths.sound('lightmiss'));
   }
 
   public override function onDialogueEnd()
@@ -118,5 +134,73 @@ class NervesPicoMixSong extends Song
     // We may need to wait for the outro to play.
     PlayState.instance.currentStage.resume();
     Countdown.performCountdown();
+  }
+
+  function onSongStart()
+  {
+    if (garcDead) return PlayState.instance.vocals.opponentVolume = 0;
+
+    PlayState.instance.currentStage.getBoyfriend().playAnimation('singDOWN', true, true); // No Shoot Animation Yet
+
+    if (FlxG.random.bool(8))
+    {
+      // L Puffs
+      PlayState.instance.currentStage.getDad().playAnimation('cigmiss', true, true);
+      PlayState.instance.vocals.opponentVolume = 0;
+      garcDead = true;
+    }
+    else
+    {
+      // W Puffs
+      PlayState.instance.currentStage.getDad().playAnimation('ciglight', true, true);
+    }
+  }
+
+  function onNoteHit(event:HitNoteScriptEvent)
+  {
+    if (!event.note.noteData.getMustHitNote() && garcDead)
+    {
+      event.cancel();
+    }
+
+    super.onNoteHit(event);
+  }
+
+  function onGameOver(event:ScriptEvent):Void
+  {
+    super.onGameOver(event);
+    sequence?.destroy();
+  }
+
+  function onSongLoaded(event:SongLoadScriptEvent)
+  {
+    sequence?.destroy();
+    if (garcDead) return;
+
+    var sequenceData = [
+      {
+        time: 0.45,
+        callback: () -> {
+          if (!garcDead)
+          {
+            FunkinSound.playOnce(Paths.sound('ciglight'), 1);
+          }
+          else
+          {
+            FunkinSound.playOnce(Paths.sound('lightmiss'), 1);
+          }
+        }
+      },
+    ];
+
+    sequence = new SongSequence(sequenceData);
+    sequence.startTime = 0;
+  }
+
+  function onDestroy(event:ScriptEvent):Void
+  {
+    super.onDestroy(event);
+
+    sequence?.destroy();
   }
 }

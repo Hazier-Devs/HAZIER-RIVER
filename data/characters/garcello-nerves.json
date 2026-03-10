@@ -135,7 +135,7 @@
 			],
 			"prefix": "up",
 			"name": "singUP-hold",
-			"looped": false,
+			"looped": true,
 			"flipX": false,
 			"flipY": false,
 			"frameRate": 24,
@@ -205,7 +205,7 @@
 			],
 			"prefix": "cough",
 			"flipX": false,
-			"looped": false,
+			"looped": true,
 			"name": "cough-hold",
 			"flipY": false,
 			"assetPath": null,
@@ -213,22 +213,35 @@
 		},
 		{
 			"frameIndices": [],
-			"prefix": "cigmiss",
+			"prefix": "nerves pico anims/cigmiss",
 			"name": "cigmiss",
 			"looped": false,
 			"flipX": false,
 			"flipY": false,
 			"frameRate": 24,
+			"animType": "symbol",
+			"assetPath":"shared:characters/nervespicocutscenegar"
+		},
+		{
+			"frameIndices": [104],
+			"prefix": "nerves pico anims/cigmiss",
+			"name": "cigmiss-hold",
+			"looped": true,
+			"flipX": false,
+			"flipY": false,
+			"frameRate": 24,
+			"animType": "symbol",
 			"assetPath":"shared:characters/nervespicocutscenegar"
 		},
 		{
 			"frameIndices": [],
-			"prefix": "ciglight",
+			"prefix": "nerves pico anims/ciglight",
 			"name": "ciglight",
 			"looped": false,
 			"flipX": false,
 			"flipY": false,
 			"frameRate": 24,
+			"animType": "symbol",
 			"assetPath":"shared:characters/nervespicocutscenegar"
 		}
 	]

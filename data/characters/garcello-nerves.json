@@ -219,7 +219,7 @@
 			"flipX": false,
 			"flipY": false,
 			"frameRate": 24,
-			"assetPath": null
+			"assetPath":"shared:characters/nervespicocutscenegar"
 		},
 		{
 			"frameIndices": [],

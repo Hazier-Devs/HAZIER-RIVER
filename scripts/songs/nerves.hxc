@@ -11,6 +11,7 @@ import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import funkin.ui.options.PreferencesMenu;
 import funkin.util.HapticUtil;
+import flixel.util.FlxTimer;
 
 class NervesSong extends Song
 {
@@ -41,21 +42,19 @@ class NervesSong extends Song
 
       // Play a SFX
       FunkinSound.playOnce(Paths.sound('nervesouch'), 1.0);
-
       HapticUtil.vibrate(0.1, 0.5, 1, 1);
-      // ERIC: There's a known bug where, on the School stage, pausing the stage animations then trying
-      // to restart them causes the animations to freeze.
-      // TODO: Commenting out this line causes the animations to work but they play even during the dialogue, which is supposed to pause everything.
-      // PlayState.instance.currentStage.pause();
-      startDialogue();
+      PlayState.instance.disableKeys = true;
+
+      new FlxTimer().start(1, _ -> {
+        startDialogue();
+      });
     }
   }
 
   function startDialogue()
   {
-    var targetDialogue = 'nerves';
-    trace('Playing dialogue...');
-    PlayState.instance.startConversation(targetDialogue);
+    PlayState.instance.disableKeys = false;
+    PlayState.instance.startConversation('nerves');
   }
 
   /**

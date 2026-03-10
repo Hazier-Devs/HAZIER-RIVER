@@ -15,6 +15,7 @@ import funkin.audio.FunkinSound;
 import funkin.FunkinMemory;
 import funkin.util.SongSequence;
 import funkin.Conductor;
+import funkin.util.HapticUtil;
 
 class NervesPicoMixSong extends Song
 {
@@ -57,43 +58,15 @@ class NervesPicoMixSong extends Song
         PlayState.instance.currentStage.getDad().playAnimation('cig-intro', true, false);
       }
 
-      transitionToDialogue();
+      // Play a SFX
+      FunkinSound.playOnce(Paths.sound('nervesouch'), 1.0);
+      HapticUtil.vibrate(0.1, 0.5, 1, 1);
+      PlayState.instance.disableKeys = true;
+
+      new FlxTimer().start(1, _ -> {
+        startDialogue();
+      });
     }
-  }
-
-  function transitionToDialogue()
-  {
-    trace('Transitioning to dialogue.');
-
-    PlayState.instance.disableKeys = true;
-
-    PlayState.instance.camCutscene.visible = true;
-
-    var black:FlxSprite = new FunkinSprite(-20, -20).makeSolidColor(FlxG.width * 1.5, FlxG.height * 1.5, 0xFF000000);
-    black.cameras = [PlayState.instance.camCutscene];
-    black.zIndex = 1000000;
-    PlayState.instance.add(black);
-
-    black.alpha = 1.0;
-
-    var tweenFunction = function(x) {
-      var xSnapped = Math.floor(x * 8) / 8;
-      // black.alpha = 1.0 - xSnapped;
-    };
-
-    new FlxTimer().start(0.25, _ -> {
-      PlayState.instance.remove(black);
-      RetroCameraFade.fadeBlack(PlayState.instance.camGame, 12, 2);
-    });
-
-    FlxTween.num(0.0, 1.0, 2.0,
-      {
-        ease: FlxEase.linear,
-        startDelay: 0.25,
-        onComplete: function(input) {
-          startDialogue();
-        }
-      }, tweenFunction);
   }
 
   function startDialogue()
@@ -102,9 +75,6 @@ class NervesPicoMixSong extends Song
     PlayState.instance.startConversation('nerves-pico');
   }
 
-  /**
-   * Don't replay the cutscene between restarts.
-   */
   function onSongRetry(event:ScriptEvent)
   {
     super.onSongRetry(event);
@@ -121,9 +91,6 @@ class NervesPicoMixSong extends Song
     }
   }
 
-  /**
-   * Replay the cutscene after leaving the song.
-   */
   function onCreate(event:ScriptEvent):Void
   {
     super.onCreate(event);

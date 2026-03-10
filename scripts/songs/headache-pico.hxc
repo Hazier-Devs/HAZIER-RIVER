@@ -74,7 +74,7 @@ class HeadachePicoMixSong extends Song
 
     new FlxTimer().start(0.25, _ -> {
       PlayState.instance.remove(black);
-      RetroCameraFade.fadeBlack(PlayState.instance.camGame, 12, 2);
+      PlayState.instance.camGame.fade(0xFF000000, 1.5, true, null, false);
     });
 
     FlxTween.num(0.0, 1.0, 2.0,

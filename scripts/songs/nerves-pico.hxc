@@ -140,7 +140,7 @@ class NervesPicoMixSong extends Song
   {
     if (garcDead) return PlayState.instance.vocals.opponentVolume = 0;
 
-    PlayState.instance.currentStage.getBoyfriend().playAnimation('singDOWN', true, true); // No Shoot Animation Yet
+    PlayState.instance.currentStage.getBoyfriend().playAnimation('cigshoot', true, true); // No Shoot Animation Yet
 
     if (FlxG.random.bool(8))
     {

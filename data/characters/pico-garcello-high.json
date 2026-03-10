@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+  "name": "Pico (Garcello Week) (High)",
+  "assetPath": "shared:characters/pico-garhigh",
+  "healthIcon": {
+    "id": "pico",
+    "flipX": false
+  },
+  "death": {
+    "cameraOffsets": [10, -40],
+    "cameraZoom": 1.0
+  },
+  "flipX": true,
+  "renderType": "animateatlas",
+  "animations": [
+    {
+      "name": "idle",
+      "prefix": "idle"
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right"
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down"
+    },
+    {
+      "name": "singUP",
+      "prefix": "up"
+    },
+    {
+      "name": "singLEFT",
+      "prefix": "left"
+    },
+    {
+      "name": "singLEFTmiss",
+      "prefix": "missleft"
+    },
+    {
+      "name": "singDOWNmiss",
+      "prefix": "missdown"
+    },
+    {
+      "name": "singUPmiss",
+      "prefix": "missup"
+    },
+    {
+      "name": "singRIGHTmiss",
+      "prefix": "missright"
+    },
+    {
+      "name": "burp",
+      "prefix": "burp"
+    },
+    {
+      "name": "burp-loop",
+      "prefix": "burp",
+      "looped": true,
+      "frameIndices": [17]
+    },
+    {
+      "name": "cigshoot",
+      "prefix": "cigshoot"
+    },
+    {
+      "name": "ohshit",
+      "prefix": "ohshit"
+    }
+  ]
+}

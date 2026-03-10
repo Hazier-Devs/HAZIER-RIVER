@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "name": "Boyfriend (Erect Garcello Week)",
+  "name": "Boyfriend (Garcello Week)",
   "renderType": "multianimateatlas",
   "assetPath": "shared:characters/bf-gar",
   "flipX": true,

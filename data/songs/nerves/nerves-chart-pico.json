@@ -21,66 +21,75 @@
 }
   },
   {
-   "t": 33600.02,
+   "t": 33600,
    "e": "PlayAnimation",
    "v": {
 	"target": "dad",
 	"anim": "cough",
+	"force": false
+}
+  },
+  {
+   "t": 34200,
+   "e": "PlayAnimation",
+   "v": {
+	"target": "boyfriend",
+	"anim": "ohshit",
 	"force": true
 }
   },
   {
-   "t": 34800.02,
+   "t": 34800,
    "e": "PlayAnimation",
    "v": {
-	"force": true,
+	"target": "dad",
 	"anim": "cough",
-	"target": "dad"
+	"force": false
 }
   },
   {
-   "t": 36600.02,
+   "t": 36600,
    "e": "PlayAnimation",
    "v": {
-	"force": true,
+	"target": "dad",
 	"anim": "cough",
-	"target": "dad"
+	"force": false
 }
   },
   {
-   "t": 37800.02,
+   "t": 37800,
    "e": "PlayAnimation",
    "v": {
-	"force": true,
+	"target": "dad",
 	"anim": "cough",
-	"target": "dad"
+	"force": false
 }
   },
   {
-   "t": 39000.02,
+   "t": 39000,
    "e": "PlayAnimation",
    "v": {
-	"force": true,
+	"target": "dad",
 	"anim": "cough",
-	"target": "dad"
+	"force": false
 }
   },
   {
-   "t": 40200.02,
+   "t": 40200,
    "e": "PlayAnimation",
    "v": {
-	"force": true,
+	"target": "dad",
 	"anim": "cough",
-	"target": "dad"
+	"force": false
 }
   },
   {
-   "t": 41400.02,
+   "t": 41400,
    "e": "PlayAnimation",
    "v": {
-	"force": true,
+	"target": "dad",
 	"anim": "cough",
-	"target": "dad"
+	"force": false
 }
   },
   {
@@ -94,9 +103,9 @@
    "t": 60600.02,
    "e": "PlayAnimation",
    "v": {
-	"force": true,
+	"target": "dad",
 	"anim": "cough",
-	"target": "dad"
+	"force": true
 }
   }
  ],
@@ -4015,27 +4024,12 @@
     "k": "noanim"
    },
    {
-    "t": 41100.02,
-    "d": 1,
-    "k": "noanim"
-   },
-   {
     "t": 41400.02,
     "d": 5,
     "k": "noanim"
    },
    {
-    "t": 41700.02,
-    "d": 5,
-    "k": "noanim"
-   },
-   {
     "t": 42000.02,
-    "d": 1,
-    "k": "noanim"
-   },
-   {
-    "t": 42300.02,
     "d": 1,
     "k": "noanim"
    },

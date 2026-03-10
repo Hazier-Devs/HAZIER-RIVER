@@ -1,0 +1,31 @@
+import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.play.character.CharacterType;
+import funkin.util.HapticUtil;
+
+class GarcelloNervesCharacter extends MultiAnimateAtlasCharacter
+{
+  function new()
+  {
+    super('garcello-nerves');
+  }
+
+  function onNoteHit(event:HitNoteScriptEvent)
+  {
+    // onNoteHit event was cancelled by the gameplay module.
+    if (event.eventCanceled) return;
+
+    if (!event.note.noteData.getMustHitNote() && characterType == CharacterType.DAD)
+    {
+      // Override the hit note animation.
+      switch (event.note.kind)
+      {
+        case "cough":
+          holdTimer = 0;
+          this.playAnimation('cough', true, true);
+          if (HapticUtil.hapticsAvailable) HapticUtil.vibrate(0, 0.1, 0.1, 1);
+        default:
+          super.onNoteHit(event);
+      }
+    }
+  }
+}

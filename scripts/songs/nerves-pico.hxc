@@ -52,8 +52,10 @@ class NervesPicoMixSong extends Song
 
       event.cancel(); // CANCEL THE COUNTDOWN!
 
-      //  pausing is breaking a lot in the erect stage for some reason disabling this for the sake of not running into issues atm
-      //  PlayState.instance.currentStage.pause();
+      if (!garcDead)
+      {
+        PlayState.instance.currentStage.getDad().playAnimation('cig-intro', true, false);
+      }
 
       transitionToDialogue();
     }
@@ -109,7 +111,11 @@ class NervesPicoMixSong extends Song
 
     hasPlayedCutscene = true;
 
-    if (garcDead)
+    if (!garcDead)
+    {
+      PlayState.instance.currentStage.getDad().playAnimation('cig-intro', true, false);
+    }
+    else
     {
       PlayState.instance.currentStage.getDad().playAnimation('cigmiss-hold', true, true);
     }
@@ -140,19 +146,19 @@ class NervesPicoMixSong extends Song
   {
     if (garcDead) return PlayState.instance.vocals.opponentVolume = 0;
 
-    PlayState.instance.currentStage.getBoyfriend().playAnimation('cigshoot', true, true); // No Shoot Animation Yet
+    PlayState.instance.currentStage.getBoyfriend().playAnimation('cigshoot', true, false);
 
     if (FlxG.random.bool(8))
     {
       // L Puffs
-      PlayState.instance.currentStage.getDad().playAnimation('cigmiss', true, true);
+      PlayState.instance.currentStage.getDad().playAnimation('cigmiss', true, false);
       PlayState.instance.vocals.opponentVolume = 0;
       garcDead = true;
     }
     else
     {
       // W Puffs
-      PlayState.instance.currentStage.getDad().playAnimation('ciglight', true, true);
+      PlayState.instance.currentStage.getDad().playAnimation('ciglight', true, false);
     }
   }
 
@@ -181,6 +187,7 @@ class NervesPicoMixSong extends Song
       {
         time: 0.45,
         callback: () -> {
+          if (HapticUtil.hapticsAvailable) HapticUtil.vibrate(0, 0.1, 0.1, 1);
           if (!garcDead)
           {
             FunkinSound.playOnce(Paths.sound('ciglight'), 1);

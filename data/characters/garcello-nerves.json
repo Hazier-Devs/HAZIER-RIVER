@@ -324,6 +324,21 @@
 			"flipY": false,
 			"assetPath": "shared:characters/nervespicocutscenegar",
 			"frameRate": 24
+		},
+		{
+			"offsets": [
+				224,
+				71
+			],
+			"frameIndices": [0],
+			"prefix": "nerves pico anims/cigmiss",
+			"animType": "symbol",
+			"flipX": false,
+			"name": "cig-intro",
+			"looped": true,
+			"flipY": false,
+			"assetPath": "shared:characters/nervespicocutscenegar",
+			"frameRate": 24
 		}
 	]
 }

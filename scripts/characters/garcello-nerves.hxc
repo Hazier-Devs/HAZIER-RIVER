@@ -21,7 +21,7 @@ class GarcelloNervesCharacter extends MultiAnimateAtlasCharacter
       {
         case "cough":
           holdTimer = 0;
-          this.playAnimation('cough', true, true);
+          this.playAnimation('cough', true, false);
           if (HapticUtil.hapticsAvailable) HapticUtil.vibrate(0, 0.1, 0.1, 1);
         default:
           super.onNoteHit(event);

@@ -21,7 +21,9 @@ import funkin.util.FlxTweenUtil;
 class NervesPicoMixSong extends Song
 {
   var hasPlayedCutscene:Bool;
+  var miss:Bool = false;
   var garcDead:Bool = false;
+  var puff:Bool = true;
   var sequence:SongSequence;
 
   public function new()
@@ -92,11 +94,12 @@ class NervesPicoMixSong extends Song
 
     if (!garcDead)
     {
-      PlayState.instance.currentStage.getDad().playAnimation('cig-intro', true, false);
+      PlayState.instance.currentStage.getDad().playAnimation('cig-intro', true, false); // Repeat Intro
     }
     else
     {
-      PlayState.instance.currentStage.getDad().playAnimation('cigmiss-hold', true, true);
+      PlayState.instance.currentStage.getDad().playAnimation('cigmiss-hold', true, true); // Bros fucking dead
+      puff = false;
     }
   }
 
@@ -105,10 +108,14 @@ class NervesPicoMixSong extends Song
     super.onCreate(event);
 
     hasPlayedCutscene = false;
+    miss = false;
     garcDead = false;
+    puff = true;
 
     FunkinMemory.cacheSound(Paths.sound('ciglight'));
     FunkinMemory.cacheSound(Paths.sound('lightmiss'));
+    FunkinMemory.cacheSound(Paths.sound('Gun_Prep', 'weekend1'));
+    FunkinMemory.cacheSound(Paths.sound('spin and puff'));
     PlayState.instance.camHUD.alpha = 0;
   }
 
@@ -142,9 +149,9 @@ class NervesPicoMixSong extends Song
     if (FlxG.random.bool(8))
     {
       // L Puffs
-      PlayState.instance.currentStage.getDad().playAnimation('cigmiss', true, false);
+      PlayState.instance.currentStage.getDad().playAnimation('cigmiss', true, true);
       PlayState.instance.vocals.opponentVolume = 0;
-      garcDead = true;
+      miss = true;
     }
     else
     {
@@ -167,26 +174,46 @@ class NervesPicoMixSong extends Song
   {
     super.onGameOver(event);
     sequence?.destroy();
+
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+    PlayState.instance.camHUD.alpha = 0;
   }
 
   function onSongLoaded(event:SongLoadScriptEvent)
   {
     sequence?.destroy();
-    if (garcDead) return;
 
     var sequenceData = [
       {
+        time: Conductor.instance.getBeatTimeInMs(-1) / 1000,
+        callback: () -> {
+          if (garcDead) return;
+          PlayState.instance.currentStage.getBoyfriend().playAnimation('reload', true, false);
+          FunkinSound.playOnce(Paths.sound('Gun_Prep', 'weekend1'), 1);
+        }
+      },
+
+      {
         time: 0.45,
         callback: () -> {
+          if (garcDead) return;
           if (HapticUtil.hapticsAvailable) HapticUtil.vibrate(0, 0.1, 0.1, 1);
-          if (!garcDead)
+          if (!miss)
           {
             FunkinSound.playOnce(Paths.sound('ciglight'), 1);
           }
           else
           {
             FunkinSound.playOnce(Paths.sound('lightmiss'), 1);
+            garcDead = true;
           }
+        }
+      },
+
+      {
+        time: 1,
+        callback: () -> {
+          if (puff) FunkinSound.playOnce(Paths.sound('spin and puff'), 1);
         }
       },
 

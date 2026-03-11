@@ -87,7 +87,14 @@ class PicoGarcelloCharacter extends AnimateAtlasCharacter
 
   function onNoteMiss(event:HitNoteScriptEvent)
   {
-    if (event.note.noteData.getMustHitNote() && burp) event.cancelEvent();
+    if (event.note.noteData.getMustHitNote() && burp)
+    {
+      event.cancelEvent();
+    }
+    else
+    {
+      super.onNoteMiss(event);
+    }
   }
 
   override public function onAnimationFrame(name:String = "", frameNumber:Int = -1, frameIndex:Int = -1):Void

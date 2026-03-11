@@ -258,7 +258,7 @@
       "animType": "sparrow",
       "animations": [      ],
       "assetPath": "AshtonAlleyway/vingette i think",
-      "blend": "softlight",
+      "blend": "hardlight",
       "color": "#FFFFFF",
       "danceEvery": 0,
       "flipX": false,

@@ -233,7 +233,7 @@
       "animType": "sparrow",
       "animations": [      ],
       "assetPath": "AshtonParkingLot/vingettepart2",
-      "blend": "softlight",
+      "blend": "hardlight",
       "color": "#FFFFFF",
       "danceEvery": 0,
       "flipX": false,

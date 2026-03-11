@@ -190,6 +190,17 @@ class NervesPicoMixSong extends Song
           if (garcDead) return;
           PlayState.instance.currentStage.getBoyfriend().playAnimation('reload', true, false);
           FunkinSound.playOnce(Paths.sound('Gun_Prep', 'weekend1'), 1);
+          if (PlayState.instance.isChartingMode) return;
+          PlayState.instance.tweenCameraToPosition(PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x + 150, PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.y + 150, 0.5, FlxEase.expoOut);
+          PlayState.instance.tweenCameraZoom(1.1, 0.5, false, FlxEase.expoOut);
+        }
+      },
+      {
+        time: 0,
+        callback: () -> {
+        if (PlayState.instance.isChartingMode) return;
+        PlayState.instance.tweenCameraToPosition(PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.x + 100, PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.y, 0.8, FlxEase.sineOut);
+        PlayState.instance.tweenCameraZoom(0.8, 0.8, false, FlxEase.sineOut);
         }
       },
 
@@ -201,6 +212,7 @@ class NervesPicoMixSong extends Song
           if (!miss)
           {
             FunkinSound.playOnce(Paths.sound('ciglight'), 1);
+            
           }
           else
           {

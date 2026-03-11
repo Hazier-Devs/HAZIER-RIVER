@@ -16,6 +16,7 @@ import funkin.FunkinMemory;
 import funkin.util.SongSequence;
 import funkin.Conductor;
 import funkin.util.HapticUtil;
+import funkin.util.FlxTweenUtil;
 
 class NervesPicoMixSong extends Song
 {
@@ -67,6 +68,10 @@ class NervesPicoMixSong extends Song
         startDialogue();
       });
     }
+    else
+    {
+      PlayState.instance.disableKeys = true;
+    }
   }
 
   function startDialogue()
@@ -80,6 +85,10 @@ class NervesPicoMixSong extends Song
     super.onSongRetry(event);
 
     hasPlayedCutscene = true;
+
+    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+    if (!PlayState.instance.disableKeys) PlayState.instance.disableKeys = true;
+    if (PlayState.instance.camHUD.alpha > 0) FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.expoIn});
 
     if (!garcDead)
     {
@@ -100,6 +109,7 @@ class NervesPicoMixSong extends Song
 
     FunkinMemory.cacheSound(Paths.sound('ciglight'));
     FunkinMemory.cacheSound(Paths.sound('lightmiss'));
+    PlayState.instance.camHUD.alpha = 0;
   }
 
   public override function onDialogueEnd()
@@ -107,6 +117,20 @@ class NervesPicoMixSong extends Song
     // We may need to wait for the outro to play.
     PlayState.instance.currentStage.resume();
     Countdown.performCountdown();
+  }
+
+  function onPause(event:PauseScriptEvent):Void
+  {
+    super.onPause(event);
+
+    FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
+  }
+
+  function onResume(event:ScriptEvent):Void
+  {
+    super.onResume(event);
+
+    FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
   }
 
   function onSongStart()
@@ -163,6 +187,14 @@ class NervesPicoMixSong extends Song
           {
             FunkinSound.playOnce(Paths.sound('lightmiss'), 1);
           }
+        }
+      },
+
+      {
+        time: Conductor.instance.getBeatTimeInMs(6.50) / 1000,
+        callback: () -> {
+          FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.9);
+          PlayState.instance.disableKeys = false;
         }
       },
     ];

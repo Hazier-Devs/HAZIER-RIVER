@@ -74,7 +74,7 @@
     {
       "name": "shit",
       "prefix": "ohshit",
-      "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16 ,17]
+      "frameIndices": [7, 8, 9, 10, 11, 12, 13, 14, 15, 16 ,17]
     },
     {
       "name": "cough",
@@ -87,6 +87,6 @@
     {
       "name": "3cough",
       "prefix": "3cough"
-    },
+    }
   ]
 }

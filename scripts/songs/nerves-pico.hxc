@@ -199,8 +199,8 @@ class NervesPicoMixSong extends Song
         time: 0,
         callback: () -> {
         if (PlayState.instance.isChartingMode) return;
-        PlayState.instance.tweenCameraToPosition(PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.x + 100, PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.y, 0.8, FlxEase.sineOut);
-        PlayState.instance.tweenCameraZoom(0.8, 0.8, false, FlxEase.sineOut);
+        PlayState.instance.tweenCameraToPosition(PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.x + 100, PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.y, 1, FlxEase.cubeOut);
+        PlayState.instance.tweenCameraZoom(0.8, 1, false, FlxEase.cubeOut);
         }
       },
 

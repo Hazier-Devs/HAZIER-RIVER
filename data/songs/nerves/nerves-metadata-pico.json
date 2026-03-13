@@ -2,7 +2,7 @@
  "version": "2.2.4",
  "songName": "Nerves (Pico Mix)",
  "artist": "PlantGamer09 (feat. DigitLuck)",
- "charter": "EEssential",
+ "charter": "EEssential + Idk's FNF Stuff",
  "offsets": { },
  "playData": {
   "difficulties": [
@@ -17,7 +17,7 @@
     "garcello-nerves"
    ],
    "playerVocals": [
-    "pico-garcello"
+    "pico-garcello-high"
    ]
   },
   "stage": "AshtonParkingLot",
@@ -25,7 +25,6 @@
   "ratings": {
    "hard": 5
   },
-  "stickerPack": "standard-hazier",
   "album": "hazy",
   "previewEnd": 0
  },

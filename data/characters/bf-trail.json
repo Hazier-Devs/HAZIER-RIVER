@@ -1,0 +1,30 @@
+{
+  "version": "1.0.0",
+  "name": "Boyfriend (Garcello Trail)",
+  "renderType": "sparrow",
+  "assetPath": "shared:characters",
+  "flipX": true,
+  "healthIcon": {
+    "id": "bf",
+    "isPixel": false
+  },
+  "singTime": 8.0,
+  "animations": [
+    {
+      "name": "singLEFT",
+      "prefix": "left"
+    },
+    {
+      "name": "singDOWN",
+      "prefix": "down"
+    },
+    {
+      "name": "singUP",
+      "prefix": "up"
+    },
+    {
+      "name": "singRIGHT",
+      "prefix": "right"
+    }
+  ]
+}

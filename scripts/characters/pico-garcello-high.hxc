@@ -80,7 +80,7 @@ class PicoGarcelloHighCharacter extends AnimateAtlasCharacter
         default:
           super.onNoteHit(event);
 
-          if (FlxG.random.bool(0.1)) // BURP
+          if (FlxG.random.bool(0.01)) // BURP
           {
             PlayState.instance.disableKeys = true;
             holdTimer = 0;

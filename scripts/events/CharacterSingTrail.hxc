@@ -76,7 +76,6 @@ class CharacterSingTrailsModule extends Module {
 
         trace('[HAZIER RIVER] Found Character Trail Event, creating trails.');
         var curStage = PlayState.instance.currentStage;
-
         // create trails
         if (curStage.getBoyfriend() != null) {
             var char = curStage.getBoyfriend();
@@ -85,17 +84,25 @@ class CharacterSingTrailsModule extends Module {
 
             bfTrail = new FunkTrail(char, null, 8, 4, 0.35, 0.25);
             bfTrail.zIndex = curStage.getBoyfriend().zIndex - 1; bfTrail.alpha = 0;
-            curStage.add(bfTrail); bfTrail.color = 0xFFFF0000;
+            curStage.add(bfTrail); bfTrail.color = 0xFF00FFFF;
         }
 
         if (curStage.getGirlfriend() != null) {
-            gfTrail = new FunkTrail(curStage.getGirlfriend(), null, 8, 4, 0.35, 0.05);
+            var char = curStage.getGirlfriend();
+            if (char.trailChar != null)
+                char = curStage.getGirlfriend().trailChar;
+            
+            gfTrail = new FunkTrail(char, null, 8, 4, 0.35, 0.25);
             gfTrail.zIndex = curStage.getGirlfriend().zIndex - 1; gfTrail.alpha = 0;
             curStage.add(gfTrail);
         }
 
         if (curStage.getDad() != null) {
-            dadTrail = new FunkTrail(curStage.getDad(), null, 8, 4, 0.35, 0.05);
+            var char = curStage.getDad();
+            if (char.trailChar != null)
+                char = curStage.getDad().trailChar;
+            
+            dadTrail = new FunkTrail(char, null, 8, 4, 0.35, 0.25);
             dadTrail.zIndex = curStage.getDad().zIndex - 1; dadTrail.alpha = 0;
             curStage.add(dadTrail);
         }
@@ -118,6 +125,35 @@ class CharacterSingTrailsModule extends Module {
                 case 'dad':
                     dadTrail.alpha = (isActive ? 0.35 : 0);
             }
+        }
+    }
+
+    // function onNoteHit(ev) {
+    //     if (!shouldBeActive) return;
+
+    //     if (ev.note.noteData.getMustHitNote()) {
+    //         bfTrail?.color = Constants.COLOR_NOTES[ev.note.noteData.getDirection()];
+    //     }
+    // }
+
+    function onDestroy() {
+        if (!shouldBeActive) return;
+        // for some reason when the stage destroys it, it crashes
+        // so we remove it from the stage (if it exists) then destroy it
+
+        if (bfTrail != null) {
+            PlayState.instance.currentStage.remove(bfTrail);
+            bfTrail.destroy(); bfTrail = null;
+        }
+        
+        if (gfTrail != null) {
+            PlayState.instance.currentStage.remove(gfTrail);
+            gfTrail.destroy(); gfTrail = null;
+        }
+        
+        if (dadTrail != null) {
+            PlayState.instance.currentStage.remove(dadTrail);
+            dadTrail.destroy(); dadTrail = null;
         }
     }
 }

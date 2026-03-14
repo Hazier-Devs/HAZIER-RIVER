@@ -4,6 +4,7 @@ import flixel.math.FlxBasePoint;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import flixel.util.FlxTimer;
+import flixel.addons.display.FlxRuntimeShader;
 
 import funkin.Conductor;
 import funkin.util.Constants;
@@ -141,8 +142,12 @@ class HeadacheSong extends Song
     hasPlayedInGameCutscene = true;
   }
 
+  var characterShader:FlxRuntimeShader;
   function onCreate(event:ScriptEvent)
   {
+    // characterShader = new FlxRuntimeShader(Assets.getText(Paths.frag('headacheShader')));
+    // PlayState.instance.currentStage.getBoyfriend().shader = characterShader;
+
     super.onCreate(event);
     hasPlayedCutscene = false;
     hasPlayedInGameCutscene = false;

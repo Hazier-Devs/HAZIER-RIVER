@@ -1,0 +1,18 @@
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+
+class HeadacheErectSong extends Song {
+    function new() {
+        super('headache', { variation: 'erect' });
+    }
+
+    // offset the combo when the trail is active
+    function onSongEvent(ev) {
+        if (ev.eventData.eventKind == 'CharacterSingTrails') {
+            if (ev.eventData.getBool('isActive') ?? false)
+                PlayState.instance.comboPopUps.offsets = [0, -160];
+            else
+                PlayState.instance.comboPopUps.offsets = [0, 0];
+        }
+    }
+}

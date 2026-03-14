@@ -15,7 +15,7 @@ class BoyfriendGarcelloCharacter extends MultiAnimateAtlasCharacter {
         if (this.debug) return; // "debug" means character/chart editor
 
         trailChar = CharacterDataParser.fetchCharacter('bf-trail');
-        trailChar.alpha = 0.001; trailChar.color = 0xFFFFFF00;
+        trailChar.alpha = 0.001;
         trailChar.flipX = false;
         currentStage.add(trailChar);
 

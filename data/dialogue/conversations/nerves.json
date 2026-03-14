@@ -109,7 +109,7 @@
     },
     {
       "speaker": "garcello",
-      "speakerAnimation": "hmm",
+      "speakerAnimation": "thought",
       "box": "garcello",
       "boxAnimation": "speaking",
 
@@ -117,7 +117,7 @@
     },
     {
       "speaker": "gf",
-      "speakerAnimation": "concerned ",
+      "speakerAnimation": "concerned",
       "box": "garcello",
       "boxAnimation": "speaking",
 
@@ -125,7 +125,7 @@
     },
     {
       "speaker": "garcello",
-      "speakerAnimation": "cough",
+      "speakerAnimation": "one more",
       "box": "garcello",
       "boxAnimation": "speaking",
 
@@ -133,7 +133,7 @@
     },
     {
       "speaker": "garcello",
-      "speakerAnimation": "weak",
+      "speakerAnimation": "one more",
       "box": "garcello",
       "boxAnimation": "speaking",
 
@@ -141,7 +141,7 @@
     },
     {
       "speaker": "garcello",
-      "speakerAnimation": "concerned",
+      "speakerAnimation": "fine",
       "box": "garcello",
       "boxAnimation": "speaking",
 

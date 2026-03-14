@@ -45,7 +45,7 @@
     },
     {
       "speaker": "garcello",
-      "speakerAnimation": "weak",
+      "speakerAnimation": "one more",
       "box": "garcello",
       "boxAnimation": "speaking",
 
@@ -53,7 +53,7 @@
     },
     {
       "speaker": "garcello",
-      "speakerAnimation": "weak",
+      "speakerAnimation": "offer",
       "box": "garcello",
       "boxAnimation": "speaking",
 
@@ -61,11 +61,19 @@
     },
     {
       "speaker": "pico",
-      "speakerAnimation": "talk",
+      "speakerAnimation": "uneasy",
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Actually.... Maybe one more match? Plus, i got a pack of my own, snagged these from a locker when I was little.."]
+      "text": ["Actually.... Maybe one more match?"]
+    },
+    {
+      "speaker": "pico",
+      "speakerAnimation": "showoff",
+      "box": "garcello",
+      "boxAnimation": "speaking",
+
+      "text": ["Plus, I got a pack of my own, snagged these from a locker when I was little.."]
     },
     {
       "speaker": "garcello",
@@ -77,7 +85,7 @@
     },
     {
       "speaker": "pico",
-      "speakerAnimation": "hype",
+      "speakerAnimation": "showoff",
       "box": "garcello",
       "boxAnimation": "speaking",
 
@@ -85,7 +93,7 @@
     },
     {
       "speaker": "pico",
-      "speakerAnimation": "talk",
+      "speakerAnimation": "huff",
       "box": "garcello",
       "boxAnimation": "speaking",
 
@@ -93,7 +101,7 @@
     },
     {
       "speaker": "pico",
-      "speakerAnimation": "smug",
+      "speakerAnimation": "high",
       "box": "garcello",
       "boxAnimation": "speaking",
 
@@ -101,7 +109,7 @@
     },
     {
       "speaker": "nene",
-      "speakerAnimation": "talk",
+      "speakerAnimation": "pissed",
       "box": "garcello",
       "boxAnimation": "speaking",
 
@@ -109,7 +117,7 @@
     },
     {
       "speaker": "pico",
-      "speakerAnimation": "smug",
+      "speakerAnimation": "cocky",
       "box": "garcello",
       "boxAnimation": "speaking",
 
@@ -117,7 +125,7 @@
     },
     {
       "speaker": "garcello",
-      "speakerAnimation": "hmm",
+      "speakerAnimation": "thought",
       "box": "garcello",
       "boxAnimation": "speaking",
 
@@ -125,7 +133,7 @@
     },
     {
       "speaker": "garcello",
-      "speakerAnimation": "hmm",
+      "speakerAnimation": "think",
       "box": "garcello",
       "boxAnimation": "speaking",
 
@@ -141,7 +149,7 @@
     },
     {
       "speaker": "pico",
-      "speakerAnimation": "smug",
+      "speakerAnimation": "cocky",
       "box": "garcello",
       "boxAnimation": "speaking",
 
@@ -149,7 +157,7 @@
     },
     {
       "speaker": "garcello",
-      "speakerAnimation": "cmon",
+      "speakerAnimation": "one more",
       "box": "garcello",
       "boxAnimation": "speaking",
 
@@ -157,11 +165,19 @@
     },
     {
       "speaker": "garcello",
-      "speakerAnimation": "concerned",
+      "speakerAnimation": "fine",
       "box": "garcello",
       "boxAnimation": "speaking",
 
       "text": ["I'll be fine..."]
+    },
+    {
+      "speaker": "pico",
+      "speakerAnimation": "standstill",
+      "box": "garcello",
+      "boxAnimation": "speaking",
+
+      "text": ["Oh yeah, could you stand really still for me? I wanna try something..."]
     }
   ]
 }

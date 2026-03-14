@@ -54,6 +54,36 @@
       "prefix": "concerned",
       "offsets": [0, 0],
       "frameRate": 24
+    },
+    {
+      "name": "thought",
+      "prefix": "thought",
+      "offsets": [0, 0],
+      "frameRate": 24
+    },
+    {
+      "name": "think",
+      "prefix": "think",
+      "offsets": [0, 0],
+      "frameRate": 24
+    },
+    {
+      "name": "fine",
+      "prefix": "fine",
+      "offsets": [0, 0],
+      "frameRate": 24
+    },
+    {
+      "name": "offer",
+      "prefix": "offer",
+      "offsets": [0, 0],
+      "frameRate": 24
+    },
+    {
+      "name": "one more",
+      "prefix": "one more",
+      "offsets": [0, 0],
+      "frameRate": 24
     }
   ]
 }

@@ -12,6 +12,12 @@
       "prefix": "neutral",
       "offsets": [0, 0],
       "frameRate": 24
+    },
+    {
+      "name": "pissed",
+      "prefix": "pissed",
+      "offsets": [0, 0],
+      "frameRate": 24
     }
   ]
 }

@@ -84,7 +84,7 @@ class CharacterSingTrailsModule extends Module {
 
             bfTrail = new FunkTrail(char, null, 8, 4, 0.35, 0.25);
             bfTrail.zIndex = curStage.getBoyfriend().zIndex - 1; bfTrail.alpha = 0;
-            curStage.add(bfTrail); bfTrail.color = 0xFF00FFFF;
+            curStage.add(bfTrail); bfTrail.color = 0x66FFFF;
         }
 
         if (curStage.getGirlfriend() != null) {

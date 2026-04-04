@@ -1,6 +1,9 @@
 {
   "version": "1.0.0",
-  "name": "SMOKE 'EM OUT STRUGGLE",
+  "name": "SMOKE 'EM OUT STRUGGLE (DEMO)",
+  "capsule": {
+    "name": "WEEK G"
+  },
   "titleAsset": "storymenu/titles/weekg",
   "props": [
     {
@@ -53,5 +56,5 @@
     }
   ],
   "background": "#52F9A2",
-  "songs": ["headache", "nerves", "release"]
+  "songs": ["headache", "nerves"]
 }

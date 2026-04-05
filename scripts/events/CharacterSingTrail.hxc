@@ -1,7 +1,14 @@
 import funkin.play.event.SongEvent;
 import funkin.play.PlayState;
 import funkin.modding.module.Module;
-import funkin.effects.FunkTrail;
+import funkin.graphics.FunkinSprite;
+import funkin.Conductor;
+
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.group.FlxTypedSpriteGroup;
+
+using funkin.util.AnsiUtil;
 
 // this adds a toggleable trail effect
 
@@ -17,7 +24,89 @@ class CharacterSingTrails extends SongEvent { // so it shows up as an event, thi
         return 'Character Trail Event';
     }
 
-    override function handleEvent(ev) {}
+    var bfSpawnTimer:Float = 0;
+    var bfTrail:FlxTypedGroup;
+    var bfChar:BaseCharacter;
+
+    function onCountdownStart() {
+        var curStage = PlayState.instance.currentStage;
+
+        if (curStage.getBoyfriend() != null) {
+            var char = curStage.getBoyfriend();
+            if (char.trailChar != null)
+                char = curStage.getBoyfriend().trailChar;
+
+            bfChar = char;
+
+            bfTrail = new FlxTypedSpriteGroup();
+            bfTrail.zIndex = curStage.getBoyfriend().zIndex - 1;
+            curStage.add(bfTrail);
+        }
+    }
+
+    override function handleEvent(ev) {
+        var target = ev.getString('target') ?? DEFAULT_TARGET;
+        var isActive = ev.getBool('isActive');
+         trace('${" HAZIER RIVER ".bold().bg_bright_cyan()} Set ${target}Trail to ${(isActive ? 'visible' : 'invisible')}');
+
+        switch (target) {
+            case 'bf':
+                spawnBFClone();
+                bfSpawnTimer = (isActive ? 0.25 : 0);
+            //     bfTrail.alpha = (isActive ? 0.35 : 0);
+            // case 'gf':
+            //     gfTrail.alpha = (isActive ? 0.35 : 0);
+            // case 'dad':
+            //     dadTrail.alpha = (isActive ? 0.35 : 0);
+            
+        }
+    }
+
+    var bfElapsed:Float = 0;
+
+    function onUpdate(ev) {
+        if (bfSpawnTimer > 0) {
+            bfElapsed += ev.elapsed;
+
+            if (bfElapsed >= bfSpawnTimer) {
+                bfElapsed = 0;
+
+                spawnBFClone();
+            }
+        }
+    }
+
+    function spawnBFClone() {
+        var copy:FunkinSprite;
+        var recycled:Bool = false;
+
+        for (i in bfTrail.members) {
+            if (!i.alive) {
+                recycled = true;
+                copy = i;
+                i.revive();
+                // trace('recycled sprite! ${bfTrail.length}');
+            }
+        }
+
+        if (!recycled) {
+            copy = new FunkinSprite(bfChar.x, bfChar.y);
+            copy.frames = bfChar.frames;
+            copy.color = 0x66FFFF;
+            bfTrail.add(copy);
+        }
+
+        var curOffsets = bfChar.animationOffsets[bfChar.animation.curAnim.name];
+        copy.x = bfChar.x; copy.offset.x = curOffsets[0];
+        copy.y = bfChar.y; copy.offset.y = curOffsets[1];
+
+        copy.animation.frameIndex = bfChar.animation.frameIndex;
+        copy.alpha = 0.6;
+
+        FlxTween.tween(copy, {alpha: 0}, Conductor.instance.beatLengthMs / 1000 * 4, {ease: FlxEase.sineOut, onComplete: function () {
+            copy.kill(); // can't destroy it for some reason so now we recycling them >:(
+        }});
+    }
 
     function getEventSchema() {
         return [
@@ -44,6 +133,8 @@ class CharacterSingTrails extends SongEvent { // so it shows up as an event, thi
 
 // V-Slice doesn't currently have events such as note hit, on create, etc
 // since were not using the dev build, we need to do this work around
+
+/*
 
 class CharacterSingTrailsModule extends Module {
     function new() {
@@ -82,7 +173,7 @@ class CharacterSingTrailsModule extends Module {
             if (char.trailChar != null)
                 char = curStage.getBoyfriend().trailChar;
 
-            bfTrail = new FunkTrail(char, null, 8, 4, 0.35, 0.25);
+            bfTrail = new FlxTrail(char, null, 8, 0.4, 0.35, 0.25);
             bfTrail.zIndex = curStage.getBoyfriend().zIndex - 1; bfTrail.alpha = 0;
             curStage.add(bfTrail); bfTrail.color = 0x66FFFF;
         }
@@ -157,3 +248,4 @@ class CharacterSingTrailsModule extends Module {
         }
     }
 }
+    */

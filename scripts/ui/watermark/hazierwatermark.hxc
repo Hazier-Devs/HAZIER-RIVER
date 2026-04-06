@@ -1,26 +1,15 @@
 import funkin.modding.module.Module;
-import funkin.util.ReflectUtil;
-import flixel.FlxG;
-import funkin.util.Constants;
+import funkin.ui.mainmenu.MainMenuState;
 
 class hazierwatermark extends Module
 {
-
-    public function new()
-    {
-        super('hazierwatermark');
+    public function new() {
+        super('hazierwatermark', 0, {state: MainMenuState});
     }
 
-    override function onUpdate(event:UpdateScriptEvent)
-    {
-        super.onUpdate(event);
-        if (ReflectUtil.getClassNameOf(FlxG.state) == "funkin.ui.mainmenu.MainMenuState")
-        {   
-            FlxG.mouse.visible = false;
-            FlxG.state.leftWatermarkText.text = Constants.VERSION + "\nHazier River DEMO";
-            FlxG.state.leftWatermarkText.y = 685;
-            // adds main menu watermark
-        }
+    function onStateChangeEnd() {
+        FlxG.mouse.visible = false;
+        FlxG.state.leftWatermarkText.y -= FlxG.state.leftWatermarkText.height;
+        FlxG.state.leftWatermarkText.text += "\nHazier River DEMO";
     }
-
 }

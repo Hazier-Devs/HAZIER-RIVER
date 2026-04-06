@@ -6,23 +6,52 @@
     "hard": 2.3
   },
   "events": [
-    {
-      "t": 0,
-      "e": "ZoomCamera",
-      "v": {
-	"ease": "quintOut",
-	"duration": 8,
+	  {
+   "t": 0,
+   "e": "FocusCamera",
+   "v": {
+	"x": 0,
+	"duration": 0,
+	"y": -800,
+	"char": 2,
+	"ease": "linear",
+	"easeDir": "In"
+}
+  },
+  {
+   "t": 0,
+   "e": "ZoomCamera",
+   "v": {
+	"duration": 0,
+	"ease": "linear",
+	"zoom": 2.3,
+	"easeDir": "Out",
+	"mode": "stage"
+}
+  },
+  {
+   "t": 100,
+   "e": "FocusCamera",
+   "v": {
+	"x": 0,
+	"duration": 47.5,
+	"y": 0,
+	"char": 2,
+	"ease": "linear",
+	"easeDir": "In"
+}
+  },
+  {
+   "t": 100,
+   "e": "ZoomCamera",
+   "v": {
+	"duration": 47.5,
+	"ease": "linear",
 	"mode": "stage",
-	"zoom": 0.7
+	"zoom": 0.7,
+	"easeDir": "In"
 }
-    },
-    {
-      "t": 4000,
-      "e": "FocusCamera",
-      "v": {
-	"char": 0
-}
-    },
+  },
     {
       "t": 6000,
       "e": "ZoomCamera",
@@ -7756,5 +7785,5 @@
       }
     ]
   },
-  "generatedBy": "Friday Night Funkin' - v0.7.5"
+  "generatedBy": "nobody stop file sweeping sneaky"
 }

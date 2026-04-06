@@ -28,6 +28,7 @@ class HeadacheSong extends Song
   var cutsceneMusic:FunkinSound;
   var cutsceneConductor:Conductor;
   var bgSprite:FunkinSprite;
+  var bgs:FunkinSprite;
 
   public function new()
   {
@@ -39,7 +40,8 @@ class HeadacheSong extends Song
   public override function onCountdownStart(event:CountdownScriptEvent):Void
   {
     super.onCountdownStart(event);
-
+    bgs.alpha = 1;
+    // i promise this is not a typo, this just makes it fade again on restart
     if (!PlayStatePlaylist.isStoryMode)
     {
       hasPlayedCutscene = true;
@@ -80,6 +82,8 @@ class HeadacheSong extends Song
   PlayState.instance.isInCutscene = false;
   PlayState.instance.mayPauseGame = true;
   PlayState.instance.togglePauseButton(true);
+  FlxTween.tween(bgs, {alpha: 0}, 7);
+  // who needs easing? linear works just fine
 }
 
 
@@ -151,6 +155,12 @@ class HeadacheSong extends Song
     super.onCreate(event);
     hasPlayedCutscene = false;
     hasPlayedInGameCutscene = false;
+    //camera fade event.. kinda lazy tbh.
+    bgs = new FunkinSprite(0, 0);
+    bgs.makeSolidColor(2000, 2500, 0xFF000000);
+    bgs.cameras = [PlayState.instance.camHUD];
+    bgs.zIndex = 10000;
+    PlayState.instance.add(bgs);
   }
 
   function onUpdate(event:UpdateScriptEvent)

@@ -19,6 +19,7 @@ class hazierwatermark extends Module
             FlxG.mouse.visible = false;
             FlxG.state.leftWatermarkText.text = Constants.VERSION + "\nHazier River DEMO";
             FlxG.state.leftWatermarkText.y = 685;
+            // adds main menu watermark
         }
     }
 

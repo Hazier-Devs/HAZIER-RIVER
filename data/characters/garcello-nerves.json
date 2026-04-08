@@ -1,344 +1,225 @@
 {
-	"renderType": "multianimateatlas",
-	"offsets": [
-		180,
-		190
-	],
-	"applyStageMatrix": false,
-	"startingAnimation": "idle",
-	"assetPath": "shared:characters/garcello-nerves",
-	"healthIcon": {
-		"offsets": [
-			0,
-			0
-		],
-		"isPixel": false,
-		"scale": 1,
-		"id": "garcellonerves",
-		"flipX": false
-	},
-	"generatedBy": "Nova Character Editor v3.0.1",
-	"version": "1.0.0",
-	"danceEvery": 2,
-	"scale": 1.1,
-	"name": "Garcello (Nerves)",
-	"cameraOffsets": [
-		0,
-		-70
-	],
-	"flipX": false,
-	"isPixel": false,
-	"singTime": 4,
-	"flipY": false,
-	"atlasSettings": {
-		"applyStageMatrix": false,
-		"useRenderTexture": false,
-		"filterQuality": 1,
-		"cacheOnLoad": false,
-		"swfMode": true
-	},
-	"animations": [
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"frameIndices": [],
-			"prefix": "idle",
-			"animType": "framelabel",
-			"flipX": false,
-			"name": "idle",
-			"looped": false,
-			"flipY": false,
-			"frameRate": 24,
-			"assetPath": null
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"frameIndices": [],
-			"prefix": "left",
-			"animType": "framelabel",
-			"flipX": false,
-			"name": "singLEFT",
-			"looped": false,
-			"flipY": false,
-			"frameRate": 24,
-			"assetPath": null
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"frameIndices": [],
-			"prefix": "right",
-			"animType": "framelabel",
-			"flipX": false,
-			"name": "singRIGHT",
-			"looped": false,
-			"flipY": false,
-			"frameRate": 24,
-			"assetPath": null
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"frameIndices": [],
-			"prefix": "down",
-			"animType": "framelabel",
-			"flipX": false,
-			"name": "singDOWN",
-			"looped": false,
-			"flipY": false,
-			"frameRate": 24,
-			"assetPath": null
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"frameIndices": [],
-			"prefix": "up",
-			"animType": "framelabel",
-			"flipX": false,
-			"name": "singUP",
-			"looped": false,
-			"flipY": false,
-			"frameRate": 24,
-			"assetPath": null
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"frameIndices": [
-				9,
-				10,
-				11,
-				12,
-				13,
-				14,
-				15,
-				16,
-				17
-			],
-			"prefix": "right",
-			"animType": "framelabel",
-			"flipX": false,
-			"name": "singRIGHT-hold",
-			"looped": true,
-			"flipY": false,
-			"frameRate": 24,
-			"assetPath": null
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"frameIndices": [
-				9,
-				10,
-				11,
-				12,
-				13,
-				14,
-				15,
-				16,
-				17
-			],
-			"prefix": "down",
-			"animType": "framelabel",
-			"flipX": false,
-			"name": "singDOWN-hold",
-			"looped": true,
-			"flipY": false,
-			"frameRate": 24,
-			"assetPath": null
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"frameIndices": [
-				9,
-				10,
-				11,
-				12,
-				13,
-				14,
-				15,
-				16,
-				17
-			],
-			"prefix": "up",
-			"animType": "framelabel",
-			"flipX": false,
-			"name": "singUP-hold",
-			"looped": true,
-			"flipY": false,
-			"frameRate": 24,
-			"assetPath": null
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"frameIndices": [
-				9,
-				10,
-				11,
-				12,
-				13,
-				14,
-				15,
-				16,
-				17
-			],
-			"prefix": "idle",
-			"animType": "framelabel",
-			"flipX": false,
-			"name": "idle-hold",
-			"looped": true,
-			"flipY": false,
-			"frameRate": 24,
-			"assetPath": null
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"frameIndices": [
-				9,
-				10,
-				11,
-				12,
-				13,
-				14,
-				15,
-				16,
-				17
-			],
-			"prefix": "left",
-			"animType": "framelabel",
-			"flipX": false,
-			"name": "singLEFT-hold",
-			"looped": true,
-			"flipY": false,
-			"frameRate": 24,
-			"assetPath": null
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"frameIndices": [],
-			"prefix": "cough",
-			"animType": "framelabel",
-			"name": "cough",
-			"flipX": false,
-			"looped": false,
-			"flipY": false,
-			"assetPath": null,
-			"frameRate": 24
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"frameIndices": [
-				6,
-				7,
-				8,
-				9,
-				10,
-				11,
-				12,
-				13,
-				14
-			],
-			"prefix": "cough",
-			"animType": "framelabel",
-			"name": "cough-hold",
-			"flipX": false,
-			"looped": true,
-			"flipY": false,
-			"assetPath": null,
-			"frameRate": 24
-		},
-		{
-			"offsets": [
-				224,
-				71
-			],
-			"frameIndices": [],
-			"prefix": "nerves pico anims/cigmiss",
-			"animType": "symbol",
-			"flipX": false,
-			"name": "cigmiss",
-			"looped": false,
-			"flipY": false,
-			"assetPath": "shared:characters/nervespicocutscenegar",
-			"frameRate": 24
-		},
-		{
-			"offsets": [
-				224,
-				71
-			],
-			"frameIndices": [
-				104
-			],
-			"prefix": "nerves pico anims/cigmiss",
-			"animType": "symbol",
-			"flipX": false,
-			"name": "cigmiss-hold",
-			"looped": true,
-			"flipY": false,
-			"assetPath": "shared:characters/nervespicocutscenegar",
-			"frameRate": 24
-		},
-		{
-			"offsets": [
-				-66,
-				-75
-			],
-			"frameIndices": [],
-			"prefix": "nerves pico anims/ciglight",
-			"animType": "symbol",
-			"flipX": false,
-			"name": "ciglight",
-			"looped": false,
-			"flipY": false,
-			"assetPath": "shared:characters/nervespicocutscenegar",
-			"frameRate": 24
-		},
-		{
-			"offsets": [
-				224,
-				71
-			],
-			"frameIndices": [0],
-			"prefix": "nerves pico anims/cigmiss",
-			"animType": "symbol",
-			"flipX": false,
-			"name": "cig-intro",
-			"looped": true,
-			"flipY": false,
-			"assetPath": "shared:characters/nervespicocutscenegar",
-			"frameRate": 24
-		}
-	]
+  "renderType": "multianimateatlas",
+  "offsets": [180, 190],
+  "applyStageMatrix": false,
+  "startingAnimation": "idle",
+  "assetPath": "shared:characters/garcello-nerves",
+  "healthIcon": {
+    "offsets": [0, 0],
+    "isPixel": false,
+    "scale": 1,
+    "id": "garcellonerves",
+    "flipX": false
+  },
+  "generatedBy": "Nova Character Editor v3.0.1",
+  "version": "1.0.0",
+  "danceEvery": 2,
+  "scale": 1.1,
+  "name": "Garcello (Nerves)",
+  "cameraOffsets": [0, -70],
+  "flipX": false,
+  "isPixel": false,
+  "singTime": 4,
+  "flipY": false,
+  "atlasSettings": {
+    "applyStageMatrix": false,
+    "useRenderTexture": false,
+    "filterQuality": 1,
+    "cacheOnLoad": false,
+    "swfMode": true
+  },
+  "animations": [
+    {
+      "offsets": [0, 0],
+      "frameIndices": [],
+      "prefix": "idle",
+      "animType": "framelabel",
+      "flipX": false,
+      "name": "idle",
+      "looped": false,
+      "flipY": false,
+      "frameRate": 24,
+      "assetPath": null
+    },
+    {
+      "offsets": [0, 0],
+      "frameIndices": [],
+      "prefix": "left",
+      "animType": "framelabel",
+      "flipX": false,
+      "name": "singLEFT",
+      "looped": false,
+      "flipY": false,
+      "frameRate": 24,
+      "assetPath": null
+    },
+    {
+      "offsets": [0, 0],
+      "frameIndices": [],
+      "prefix": "right",
+      "animType": "framelabel",
+      "flipX": false,
+      "name": "singRIGHT",
+      "looped": false,
+      "flipY": false,
+      "frameRate": 24,
+      "assetPath": null
+    },
+    {
+      "offsets": [0, 0],
+      "frameIndices": [],
+      "prefix": "down",
+      "animType": "framelabel",
+      "flipX": false,
+      "name": "singDOWN",
+      "looped": false,
+      "flipY": false,
+      "frameRate": 24,
+      "assetPath": null
+    },
+    {
+      "offsets": [0, 0],
+      "frameIndices": [],
+      "prefix": "up",
+      "animType": "framelabel",
+      "flipX": false,
+      "name": "singUP",
+      "looped": false,
+      "flipY": false,
+      "frameRate": 24,
+      "assetPath": null
+    },
+    {
+      "offsets": [0, 0],
+      "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+      "prefix": "right",
+      "animType": "framelabel",
+      "flipX": false,
+      "name": "singRIGHT-hold",
+      "looped": true,
+      "flipY": false,
+      "frameRate": 24,
+      "assetPath": null
+    },
+    {
+      "offsets": [0, 0],
+      "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+      "prefix": "down",
+      "animType": "framelabel",
+      "flipX": false,
+      "name": "singDOWN-hold",
+      "looped": true,
+      "flipY": false,
+      "frameRate": 24,
+      "assetPath": null
+    },
+    {
+      "offsets": [0, 0],
+      "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+      "prefix": "up",
+      "animType": "framelabel",
+      "flipX": false,
+      "name": "singUP-hold",
+      "looped": true,
+      "flipY": false,
+      "frameRate": 24,
+      "assetPath": null
+    },
+    {
+      "offsets": [0, 0],
+      "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+      "prefix": "idle",
+      "animType": "framelabel",
+      "flipX": false,
+      "name": "idle-hold",
+      "looped": true,
+      "flipY": false,
+      "frameRate": 24,
+      "assetPath": null
+    },
+    {
+      "offsets": [0, 0],
+      "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+      "prefix": "left",
+      "animType": "framelabel",
+      "flipX": false,
+      "name": "singLEFT-hold",
+      "looped": true,
+      "flipY": false,
+      "frameRate": 24,
+      "assetPath": null
+    },
+    {
+      "offsets": [0, 0],
+      "frameIndices": [],
+      "prefix": "cough",
+      "animType": "framelabel",
+      "name": "cough",
+      "flipX": false,
+      "looped": false,
+      "flipY": false,
+      "assetPath": null,
+      "frameRate": 24
+    },
+    {
+      "offsets": [0, 0],
+      "frameIndices": [6, 7, 8, 9, 10, 11, 12, 13, 14],
+      "prefix": "cough",
+      "animType": "framelabel",
+      "name": "cough-hold",
+      "flipX": false,
+      "looped": true,
+      "flipY": false,
+      "assetPath": null,
+      "frameRate": 24
+    },
+    {
+      "offsets": [224, 71],
+      "frameIndices": [],
+      "prefix": "nerves pico anims/cigmiss",
+      "animType": "symbol",
+      "flipX": false,
+      "name": "cigmiss",
+      "looped": false,
+      "flipY": false,
+      "assetPath": "shared:characters/nervespicocutscenegar",
+      "frameRate": 24
+    },
+    {
+      "offsets": [224, 71],
+      "frameIndices": [104],
+      "prefix": "nerves pico anims/cigmiss",
+      "animType": "symbol",
+      "flipX": false,
+      "name": "cigmiss-hold",
+      "looped": true,
+      "flipY": false,
+      "assetPath": "shared:characters/nervespicocutscenegar",
+      "frameRate": 24
+    },
+    {
+      "offsets": [-66, -75],
+      "frameIndices": [],
+      "prefix": "nerves pico anims/ciglight",
+      "animType": "symbol",
+      "flipX": false,
+      "name": "ciglight",
+      "looped": false,
+      "flipY": false,
+      "assetPath": "shared:characters/nervespicocutscenegar",
+      "frameRate": 24
+    },
+    {
+      "offsets": [224, 71],
+      "frameIndices": [0],
+      "prefix": "nerves pico anims/cigmiss",
+      "animType": "symbol",
+      "flipX": false,
+      "name": "cig-intro",
+      "looped": true,
+      "flipY": false,
+      "assetPath": "shared:characters/nervespicocutscenegar",
+      "frameRate": 24
+    }
+  ]
 }

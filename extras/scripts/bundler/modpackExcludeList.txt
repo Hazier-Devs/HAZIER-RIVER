@@ -1,0 +1,9 @@
+.vscode
+astc-textures
+extras
+.editorconfig
+.prettierrc.js
+LICENSE
+astc-compression-data.json
+hxformat.json
+README.md

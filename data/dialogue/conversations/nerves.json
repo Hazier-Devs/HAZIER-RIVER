@@ -49,7 +49,9 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["That was fun, but I can feel my chest starting to give in a bit..."]
+      "text": [
+        "That was fun, but I can feel my chest starting to give in a bit..."
+      ]
     },
     {
       "speaker": "bf",
@@ -65,7 +67,9 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Oh no, I'm not giving up that easy. You've got some tight bars, little man."]
+      "text": [
+        "Oh no, I'm not giving up that easy. You've got some tight bars, little man."
+      ]
     },
     {
       "speaker": "garcello",
@@ -73,7 +77,9 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["In fact...I didn't really win that last one did I? I think that calls for a little *cough* rematch!"]
+      "text": [
+        "In fact...I didn't really win that last one did I? I think that calls for a little *cough* rematch!"
+      ]
     },
     {
       "speaker": "bf",
@@ -113,7 +119,9 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["(Man i REALLY got caught up in this.. I didn't even tell them my name yet...)"]
+      "text": [
+        "(Man i REALLY got caught up in this.. I didn't even tell them my name yet...)"
+      ]
     },
     {
       "speaker": "gf",
@@ -121,7 +129,9 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Right.. Garcello? I don't think you should be smoking that if you're coughing this much..."]
+      "text": [
+        "Right.. Garcello? I don't think you should be smoking that if you're coughing this much..."
+      ]
     },
     {
       "speaker": "garcello",
@@ -129,7 +139,9 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Oh this? I've been smoking these for *cough* god knows how long.. I'll be fine, I promise!"]
+      "text": [
+        "Oh this? I've been smoking these for *cough* god knows how long.. I'll be fine, I promise!"
+      ]
     },
     {
       "speaker": "garcello",

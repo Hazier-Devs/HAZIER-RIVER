@@ -25,7 +25,9 @@
       "box": "garcello",
       "boxAnimation": "enter",
 
-      "text": ["*COUGH* Heh... Looks like you beat me. You're not half bad at this!"]
+      "text": [
+        "*COUGH* Heh... Looks like you beat me. You're not half bad at this!"
+      ]
     },
     {
       "speaker": "pico",
@@ -33,7 +35,9 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Jeez, you look like shit now.. I swear you were fine like.. a minute ago..."]
+      "text": [
+        "Jeez, you look like shit now.. I swear you were fine like.. a minute ago..."
+      ]
     },
     {
       "speaker": "pico",
@@ -49,7 +53,9 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Well, as safe as a cigarette can be I guess. Not like i can *COUGH* get off of em-"]
+      "text": [
+        "Well, as safe as a cigarette can be I guess. Not like i can *COUGH* get off of em-"
+      ]
     },
     {
       "speaker": "garcello",
@@ -73,7 +79,9 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Plus, I got a pack of my own, snagged these from a locker when I was little.."]
+      "text": [
+        "Plus, I got a pack of my own, snagged these from a locker when I was little.."
+      ]
     },
     {
       "speaker": "garcello",
@@ -89,7 +97,9 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Hell yeah it is! And they're totally good for you! My buddies call it a medicinal herb, It's awesome."]
+      "text": [
+        "Hell yeah it is! And they're totally good for you! My buddies call it a medicinal herb, It's awesome."
+      ]
     },
     {
       "speaker": "pico",
@@ -121,7 +131,9 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Nah... We're doin' double or nothing! I get TWO packs if i beat you this time!"]
+      "text": [
+        "Nah... We're doin' double or nothing! I get TWO packs if i beat you this time!"
+      ]
     },
     {
       "speaker": "garcello",
@@ -129,7 +141,9 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["(Two..? I can't even get this one pack off my hands... how the hell am i gonna get two?)"]
+      "text": [
+        "(Two..? I can't even get this one pack off my hands... how the hell am i gonna get two?)"
+      ]
     },
     {
       "speaker": "garcello",
@@ -177,7 +191,9 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Oh yeah, could you stand really still for me? I wanna try something..."]
+      "text": [
+        "Oh yeah, could you stand really still for me? I wanna try something..."
+      ]
     }
   ]
 }

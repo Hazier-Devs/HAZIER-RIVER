@@ -11,131 +11,139 @@ import flixel.addons.display.FlxBackdrop;
 
 class AshtonAlleywayStage extends Stage
 {
-    var colorShader:AdjustColorShader;
-    var tankmanRim:DropShadowShader;
+  var colorShader:AdjustColorShader;
+  var tankmanRim:DropShadowShader;
 
-var smokingKillsScroll:FlxBackdrop;
-var tightBarsScroll:FlxBackdrop;
-var helpsCalmTheNervesScroll:FlxBackdrop;
-var blackScreen:FlxSprite;
+  var smokingKillsScroll:FlxBackdrop;
+  var tightBarsScroll:FlxBackdrop;
+  var helpsCalmTheNervesScroll:FlxBackdrop;
+  var blackScreen:FlxSprite;
 
-    public function new()
+  public function new()
+  {
+    super('Ashton Alleyway');
+  }
+
+  override function onCreate()
+  {
+    super.onCreate();
+
+    // keep cached so lower end doesn't lag on rendering
+    // why cant i have this only render on headache.. ugh
+    blackScreen = new FlxSprite().makeGraphic(9999, 9999, 0xFF000000);
+    add(blackScreen);
+    blackScreen.zIndex = 34;
+    blackScreen.scale.set(5, 5);
+    blackScreen.alpha = 0.001;
+    tightBarsScroll = new FlxBackdrop(Paths.image('AshtonAlleyway/TightBarsScroll'));
+    tightBarsScroll.velocity.set(50, 0);
+    add(tightBarsScroll);
+    tightBarsScroll.y += 500;
+    tightBarsScroll.zIndex = 35;
+    tightBarsScroll.alpha = 0.001;
+    smokingKillsScroll = new FlxBackdrop(Paths.image('AshtonAlleyway/DontYouKnowSmokingKillsScroll'));
+    smokingKillsScroll.velocity.set(-50, 0);
+    add(smokingKillsScroll);
+    smokingKillsScroll.y += -180;
+    smokingKillsScroll.zIndex = 35;
+    smokingKillsScroll.alpha = 0.001;
+    helpsCalmTheNervesScroll = new FlxBackdrop(Paths.image('AshtonAlleyway/HelpsCalmTheNervesScroll'));
+    helpsCalmTheNervesScroll.velocity.set(50, 0);
+    add(helpsCalmTheNervesScroll);
+    helpsCalmTheNervesScroll.y += 200;
+    helpsCalmTheNervesScroll.zIndex = 35;
+    helpsCalmTheNervesScroll.alpha = 0.001;
+    PlayState.instance.currentStage.refresh();
+  }
+
+  public function onGameOver(event:ScriptEvent)
+  {
+    super.onGameOver(event);
+    getBoyfriend().shader = null;
+  }
+
+  override function addCharacter(character:BaseCharacter, charType:CharacterType):Void
+  {
+    // Apply the shader automatically to each character as it gets added.
+    character.shader = colorShader;
+    super.addCharacter(character, charType);
+    trace('Applied stage shader to ' + character.characterName);
+
+    var rim = new DropShadowShader();
+    rim.color = 0xFFFD9A;
+    character.shader = rim;
+    rim.attachedSprite = character;
+
+    switch (charType)
     {
-        super('Ashton Alleyway');
-    }
+      case CharacterType.BF:
+        rim.angle = 80;
+        rim.setAdjustColor(-70, 0, -50, 0);
+        character.animation.onFrameChange.add(function() {
+          if (getBoyfriend() != null)
+          {
+            rim.updateFrameInfo(getBoyfriend().frame);
+          }
+        });
+      case CharacterType.GF:
+        rim.angle = 90;
+        rim.setAdjustColor(-70, 0, -50, 0);
+        character.animation.onFrameChange.add(function() {
+          rim.updateFrameInfo(getGirlfriend().frame);
+        });
 
-    override function onCreate() {
-        super.onCreate();
-
-// keep cached so lower end doesn't lag on rendering
-// why cant i have this only render on headache.. ugh
-blackScreen = new FlxSprite().makeGraphic(9999, 9999, 0xFF000000);
-add(blackScreen);
-blackScreen.zIndex = 34;
-blackScreen.scale.set(5,5);
-blackScreen.alpha = 0.001;
-tightBarsScroll = new FlxBackdrop(Paths.image('AshtonAlleyway/TightBarsScroll'));
-tightBarsScroll.velocity.set(50, 0);
-add(tightBarsScroll);
-tightBarsScroll.y += 500;
-tightBarsScroll.zIndex = 35;
-tightBarsScroll.alpha = 0.001;
-smokingKillsScroll = new FlxBackdrop(Paths.image('AshtonAlleyway/DontYouKnowSmokingKillsScroll'));
-smokingKillsScroll.velocity.set(-50, 0);
-add(smokingKillsScroll);
-smokingKillsScroll.y += -180;
-smokingKillsScroll.zIndex = 35;
-smokingKillsScroll.alpha = 0.001;
-helpsCalmTheNervesScroll = new FlxBackdrop(Paths.image('AshtonAlleyway/HelpsCalmTheNervesScroll'));
-helpsCalmTheNervesScroll.velocity.set(50, 0);
-add(helpsCalmTheNervesScroll);
-helpsCalmTheNervesScroll.y += 200;
-helpsCalmTheNervesScroll.zIndex = 35;
-helpsCalmTheNervesScroll.alpha = 0.001;
-PlayState.instance.currentStage.refresh();
-
-    }
-
-    public function onGameOver(event:ScriptEvent) {
-        super.onGameOver(event);
-        getBoyfriend().shader = null;
-    }
-
-    override function addCharacter(character:BaseCharacter, charType:CharacterType):Void {
-        // Apply the shader automatically to each character as it gets added.
-        character.shader = colorShader;
-        super.addCharacter(character, charType);
-        trace('Applied stage shader to ' + character.characterName);
-
-        var rim = new DropShadowShader();
-        rim.color = 0xFFFD9A;
-        character.shader = rim;
-        rim.attachedSprite = character;
-
-        switch(charType){
-            case CharacterType.BF:
-                rim.angle = 80;
-                rim.setAdjustColor(-70, 0, -50, 0);
-                character.animation.onFrameChange.add(function() {
-                    if (getBoyfriend() != null) {
-                        rim.updateFrameInfo(getBoyfriend().frame);
-                    }
-                });
-            case CharacterType.GF:
-                rim.angle = 90;
-                rim.setAdjustColor(-70, 0, -50, 0);
-                character.animation.onFrameChange.add(function() {
-                    rim.updateFrameInfo(getGirlfriend().frame);
-                });
-
-            case CharacterType.DAD:
-                rim.angle = 80;
-                rim.setAdjustColor(-70, 0, -50, 0);
-                if (getDad().characterId == 'garcello')
-              {
-                rim.loadAltMask(Paths.image('garcello_mask'));
-                rim.useAltMask = true;
-                rim.maskThreshold = 1;
-              }
-                character.animation.onFrameChange.add(function() {
-                    rim.updateFrameInfo(getDad().frame);
-                });
-                
+      case CharacterType.DAD:
+        rim.angle = 80;
+        rim.setAdjustColor(-70, 0, -50, 0);
+        if (getDad().characterId == 'garcello')
+        {
+          rim.loadAltMask(Paths.image('garcello_mask'));
+          rim.useAltMask = true;
+          rim.maskThreshold = 1;
         }
+        character.animation.onFrameChange.add(function() {
+          rim.updateFrameInfo(getDad().frame);
+        });
     }
-    override public function onCountdownStart()
-    {
-        // add null checks because vslice bitches at me wah wah doesnt exist could be null wahhhhh
-	    // set invisible on song restart pretty much lol
-	    // im sure theres actually a function for this but.. meh idrc rn
-        if (helpsCalmTheNervesScroll != null) helpsCalmTheNervesScroll.alpha = 0.001;
-        if (smokingKillsScroll != null) smokingKillsScroll.alpha = 0.001;
-        if (tightBarsScroll != null) tightBarsScroll.alpha = 0.001;
-	    if (blackScreen != null) blackScreen.alpha = 0.001;
-    }
-    override function buildStage()
-    {
-        super.buildStage();
+  }
 
+  override public function onCountdownStart()
+  {
+    // add null checks because vslice bitches at me wah wah doesnt exist could be null wahhhhh
+    // set invisible on song restart pretty much lol
+    // im sure theres actually a function for this but.. meh idrc rn
+    if (helpsCalmTheNervesScroll != null) helpsCalmTheNervesScroll.alpha = 0.001;
+    if (smokingKillsScroll != null) smokingKillsScroll.alpha = 0.001;
+    if (tightBarsScroll != null) tightBarsScroll.alpha = 0.001;
+    if (blackScreen != null) blackScreen.alpha = 0.001;
+  }
+
+  override function buildStage()
+  {
+    super.buildStage();
+  }
+
+  override function onBeatHit(event)
+  {
+    super.onBeatHit(event);
+    if (PlayState.instance.currentSong.id.toLowerCase() == "headache")
+    {
+      switch (event.beat)
+      {
+        case 112:
+          PlayState.instance.camGame.flash(0xFFFFFFFF, 1.0);
+          if (helpsCalmTheNervesScroll != null) helpsCalmTheNervesScroll.alpha = 1;
+          if (smokingKillsScroll != null) smokingKillsScroll.alpha = 1;
+          if (tightBarsScroll != null) tightBarsScroll.alpha = 1;
+          if (blackScreen != null) blackScreen.alpha = 1;
+        case 144:
+          PlayState.instance.camGame.flash(0xFFFFFFFF, 1.0);
+          // keep cached so lower end doesn't lag on re-rendering
+          if (helpsCalmTheNervesScroll != null) helpsCalmTheNervesScroll.alpha = 0.001;
+          if (smokingKillsScroll != null) smokingKillsScroll.alpha = 0.001;
+          if (tightBarsScroll != null) tightBarsScroll.alpha = 0.001;
+          if (blackScreen != null) blackScreen.alpha = 0.001;
+      }
     }
-override function onBeatHit(event) {
-		super.onBeatHit(event);
-if(PlayState.instance.currentSong.id.toLowerCase() == "headache"){
-		switch (event.beat) {
-case 112:
-	    PlayState.instance.camGame.flash(0xFFFFFFFF, 1.0);
-        if (helpsCalmTheNervesScroll != null) helpsCalmTheNervesScroll.alpha = 1;
-        if (smokingKillsScroll != null) smokingKillsScroll.alpha = 1;
-        if (tightBarsScroll != null) tightBarsScroll.alpha = 1;
-	    if (blackScreen != null) blackScreen.alpha = 1;
-case 144:
-	    PlayState.instance.camGame.flash(0xFFFFFFFF, 1.0);
-	    // keep cached so lower end doesn't lag on re-rendering
-        if (helpsCalmTheNervesScroll != null) helpsCalmTheNervesScroll.alpha = 0.001;
-        if (smokingKillsScroll != null) smokingKillsScroll.alpha = 0.001;
-        if (tightBarsScroll != null) tightBarsScroll.alpha = 0.001;
-	    if (blackScreen != null) blackScreen.alpha = 0.001;
-}
-}
-}
+  }
 }

@@ -5,7 +5,6 @@ import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import flixel.util.FlxTimer;
 import flixel.addons.display.FlxRuntimeShader;
-
 import funkin.Conductor;
 import funkin.util.Constants;
 import funkin.graphics.FunkinSprite;
@@ -76,16 +75,15 @@ class HeadacheSong extends Song
   }
 
   override function onSongStart(event:ScriptEvent)
-{
-  super.onSongStart(event);
+  {
+    super.onSongStart(event);
 
-  PlayState.instance.isInCutscene = false;
-  PlayState.instance.mayPauseGame = true;
-  PlayState.instance.togglePauseButton(true);
-  FlxTween.tween(bgs, {alpha: 0}, 7);
-  // who needs easing? linear works just fine
-}
-
+    PlayState.instance.isInCutscene = false;
+    PlayState.instance.mayPauseGame = true;
+    PlayState.instance.togglePauseButton(true);
+    FlxTween.tween(bgs, {alpha: 0}, 7);
+    // who needs easing? linear works just fine
+  }
 
   function introCutscene()
   {
@@ -94,9 +92,10 @@ class HeadacheSong extends Song
     PlayState.instance.mayPauseGame = false;
 
     new FlxTimer().start(0.7, _ -> {
-      FlxTween.tween(bgSprite, { alpha: 0 }, 1.5, {
-        onComplete: _ -> bgSprite.visible = false
-      });
+      FlxTween.tween(bgSprite, {alpha: 0}, 1.5,
+        {
+          onComplete: _ -> bgSprite.visible = false
+        });
     });
 
     // timer for dialogue to pop up ts
@@ -119,7 +118,6 @@ class HeadacheSong extends Song
     PlayState.instance.mayPauseGame = false;
 
     PlayState.instance.startConversation('headache', function() {
-
       PlayState.instance.endConversation();
 
       PlayState.instance.isInCutscene = false;
@@ -133,10 +131,9 @@ class HeadacheSong extends Song
     });
   }
 
-
   function startVideo()
   {
-  VideoCutscene.play(Paths.videos('cutsceneplaceholder.mov'));
+    VideoCutscene.play(Paths.videos('cutsceneplaceholder.mov'));
   }
 
   function onSongRetry(event:ScriptEvent)
@@ -147,6 +144,7 @@ class HeadacheSong extends Song
   }
 
   var characterShader:FlxRuntimeShader;
+
   function onCreate(event:ScriptEvent)
   {
     // characterShader = new FlxRuntimeShader(Assets.getText(Paths.frag('headacheShader')));
@@ -155,7 +153,7 @@ class HeadacheSong extends Song
     super.onCreate(event);
     hasPlayedCutscene = false;
     hasPlayedInGameCutscene = false;
-    //camera fade event.. kinda lazy tbh.
+    // camera fade event.. kinda lazy tbh.
     bgs = new FunkinSprite(0, 0);
     bgs.makeSolidColor(2000, 2500, 0xFF000000);
     bgs.cameras = [PlayState.instance.camHUD];
@@ -167,7 +165,6 @@ class HeadacheSong extends Song
   {
     super.onUpdate(event);
 
-    if (cutsceneConductor != null && cutsceneMusic != null)
-      cutsceneConductor.update(cutsceneMusic.time);
+    if (cutsceneConductor != null && cutsceneMusic != null) cutsceneConductor.update(cutsceneMusic.time);
   }
 }

@@ -57,7 +57,9 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Yeah, its pretty cool looking, I have a spare pack if you wanna try."]
+      "text": [
+        "Yeah, its pretty cool looking, I have a spare pack if you wanna try."
+      ]
     },
     {
       "speaker": "bf",
@@ -105,7 +107,9 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["If you can beat me in a friendly little rap battle, I'll get off of your case."]
+      "text": [
+        "If you can beat me in a friendly little rap battle, I'll get off of your case."
+      ]
     },
     {
       "speaker": "garcello",
@@ -129,7 +133,9 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Heh, that really got you hyped up didn't it? Guess it's settled then."]
+      "text": [
+        "Heh, that really got you hyped up didn't it? Guess it's settled then."
+      ]
     },
     {
       "speaker": "garcello",

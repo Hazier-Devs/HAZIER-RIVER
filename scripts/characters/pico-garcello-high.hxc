@@ -18,7 +18,7 @@ class PicoGarcelloHighCharacter extends AnimateAtlasCharacter
     super('pico-garcello-high');
   }
 
-    function onCreate(event:ScriptEvent):Void
+  function onCreate(event:ScriptEvent):Void
   {
     super.onCreate(event);
 
@@ -51,8 +51,7 @@ class PicoGarcelloHighCharacter extends AnimateAtlasCharacter
     deathSpriteNene.y = gf.originalPosition.y;
     deathSpriteNene.zIndex = this.zIndex - 5;
     deathSpriteNene.animation.addByPrefix('throw', "knife toss0", 24, false);
-    deathSpriteNene.animation.onFinish.add(function(name:String)
-    {
+    deathSpriteNene.animation.onFinish.add(function(name:String) {
       deathSpriteNene.kill();
     });
   }
@@ -152,7 +151,8 @@ class PicoGarcelloHighCharacter extends AnimateAtlasCharacter
     }
 
     if (!burp) return;
-    if (name == 'singLEFTmiss' || name == 'singDOWNmiss' || name == 'singUPmiss' || name == 'singRIGHTmiss') this.playAnimation('burp-loop', true, false); // Force burp loop if a miss animation gets played
+    if (name == 'singLEFTmiss' || name == 'singDOWNmiss' || name == 'singUPmiss' || name == 'singRIGHTmiss') this.playAnimation('burp-loop', true,
+      false); // Force burp loop if a miss animation gets played
   }
 
   function onSongRetry(event:ScriptEvent)
@@ -160,7 +160,7 @@ class PicoGarcelloHighCharacter extends AnimateAtlasCharacter
     super.onSongRetry(event);
 
     if (!burp) return;
-      PlayState.instance.disableKeys = false;
-      burp = false;
+    PlayState.instance.disableKeys = false;
+    burp = false;
   }
 }

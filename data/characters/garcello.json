@@ -1,223 +1,134 @@
 {
-	"danceEvery": 2,
-	"offsets": [
-		180,
-		190
-	],
-	"renderType": "animateatlas",
-	"version": "1.0.0",
-	"scale": 1.1,
-	"flipX": false,
-	"cameraOffsets": [
-		0,
-		-70
-	],
-	"name": "Garcello",
-	"flipY": false,
-	"singTime": 4,
-	"isPixel": false,
-	"startingAnimation": "idle",
-	"assetPath": "shared:characters/garcello",
-	"healthIcon": {
-		"offsets": [
-			0,
-			0
-		],
-		"isPixel": false,
-		"scale": 1,
-		"id": "garcello",
-		"flipX": false
-	},
-	"animations": [
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"frameIndices": [],
-			"prefix": "idle",
-			"flipX": false,
-			"looped": false,
-			"name": "idle",
-			"flipY": false,
-			"assetPath": null,
-			"frameRate": 24
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"frameIndices": [],
-			"prefix": "left",
-			"flipX": false,
-			"looped": false,
-			"name": "singLEFT",
-			"flipY": false,
-			"assetPath": null,
-			"frameRate": 24
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"frameIndices": [],
-			"prefix": "right",
-			"flipX": false,
-			"looped": false,
-			"name": "singRIGHT",
-			"flipY": false,
-			"assetPath": null,
-			"frameRate": 24
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"frameIndices": [],
-			"prefix": "down",
-			"flipX": false,
-			"looped": false,
-			"name": "singDOWN",
-			"flipY": false,
-			"assetPath": null,
-			"frameRate": 24
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"frameIndices": [],
-			"prefix": "up",
-			"flipX": false,
-			"looped": false,
-			"name": "singUP",
-			"flipY": false,
-			"assetPath": null,
-			"frameRate": 24
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"frameIndices": [
-				9,
-				10,
-				11,
-				12,
-				13,
-				14,
-				15,
-				16,
-				17
-			],
-			"prefix": "right",
-			"flipX": false,
-			"looped": true,
-			"name": "singRIGHT-hold",
-			"flipY": false,
-			"assetPath": null,
-			"frameRate": 24
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"frameIndices": [
-				9,
-				10,
-				11,
-				12,
-				13,
-				14,
-				15,
-				16,
-				17
-			],
-			"prefix": "down",
-			"flipX": false,
-			"looped": true,
-			"name": "singDOWN-hold",
-			"flipY": false,
-			"assetPath": null,
-			"frameRate": 24
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"frameIndices": [
-				9,
-				10,
-				11,
-				12,
-				13,
-				14,
-				15,
-				16,
-				17
-			],
-			"prefix": "up",
-			"flipX": false,
-			"looped": true,
-			"name": "singUP-hold",
-			"flipY": false,
-			"assetPath": null,
-			"frameRate": 24
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"frameIndices": [
-				9,
-				10,
-				11,
-				12,
-				13,
-				14,
-				15,
-				16,
-				17
-			],
-			"prefix": "idle",
-			"flipX": false,
-			"looped": true,
-			"name": "idle-hold",
-			"flipY": false,
-			"assetPath": null,
-			"frameRate": 24
-		},
-		{
-			"offsets": [
-				0,
-				0
-			],
-			"frameIndices": [
-				9,
-				10,
-				11,
-				12,
-				13,
-				14,
-				15,
-				16,
-				17
-			],
-			"prefix": "left",
-			"flipX": false,
-			"looped": true,
-			"name": "singLEFT-hold",
-			"flipY": false,
-			"assetPath": null,
-			"frameRate": 24
-		}
-	]
+  "danceEvery": 2,
+  "offsets": [180, 190],
+  "renderType": "animateatlas",
+  "version": "1.0.0",
+  "scale": 1.1,
+  "flipX": false,
+  "cameraOffsets": [0, -70],
+  "name": "Garcello",
+  "flipY": false,
+  "singTime": 4,
+  "isPixel": false,
+  "startingAnimation": "idle",
+  "assetPath": "shared:characters/garcello",
+  "healthIcon": {
+    "offsets": [0, 0],
+    "isPixel": false,
+    "scale": 1,
+    "id": "garcello",
+    "flipX": false
+  },
+  "animations": [
+    {
+      "offsets": [0, 0],
+      "frameIndices": [],
+      "prefix": "idle",
+      "flipX": false,
+      "looped": false,
+      "name": "idle",
+      "flipY": false,
+      "assetPath": null,
+      "frameRate": 24
+    },
+    {
+      "offsets": [0, 0],
+      "frameIndices": [],
+      "prefix": "left",
+      "flipX": false,
+      "looped": false,
+      "name": "singLEFT",
+      "flipY": false,
+      "assetPath": null,
+      "frameRate": 24
+    },
+    {
+      "offsets": [0, 0],
+      "frameIndices": [],
+      "prefix": "right",
+      "flipX": false,
+      "looped": false,
+      "name": "singRIGHT",
+      "flipY": false,
+      "assetPath": null,
+      "frameRate": 24
+    },
+    {
+      "offsets": [0, 0],
+      "frameIndices": [],
+      "prefix": "down",
+      "flipX": false,
+      "looped": false,
+      "name": "singDOWN",
+      "flipY": false,
+      "assetPath": null,
+      "frameRate": 24
+    },
+    {
+      "offsets": [0, 0],
+      "frameIndices": [],
+      "prefix": "up",
+      "flipX": false,
+      "looped": false,
+      "name": "singUP",
+      "flipY": false,
+      "assetPath": null,
+      "frameRate": 24
+    },
+    {
+      "offsets": [0, 0],
+      "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+      "prefix": "right",
+      "flipX": false,
+      "looped": true,
+      "name": "singRIGHT-hold",
+      "flipY": false,
+      "assetPath": null,
+      "frameRate": 24
+    },
+    {
+      "offsets": [0, 0],
+      "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+      "prefix": "down",
+      "flipX": false,
+      "looped": true,
+      "name": "singDOWN-hold",
+      "flipY": false,
+      "assetPath": null,
+      "frameRate": 24
+    },
+    {
+      "offsets": [0, 0],
+      "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+      "prefix": "up",
+      "flipX": false,
+      "looped": true,
+      "name": "singUP-hold",
+      "flipY": false,
+      "assetPath": null,
+      "frameRate": 24
+    },
+    {
+      "offsets": [0, 0],
+      "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+      "prefix": "idle",
+      "flipX": false,
+      "looped": true,
+      "name": "idle-hold",
+      "flipY": false,
+      "assetPath": null,
+      "frameRate": 24
+    },
+    {
+      "offsets": [0, 0],
+      "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
+      "prefix": "left",
+      "flipX": false,
+      "looped": true,
+      "name": "singLEFT-hold",
+      "flipY": false,
+      "assetPath": null,
+      "frameRate": 24
+    }
+  ]
 }

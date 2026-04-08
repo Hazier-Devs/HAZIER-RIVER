@@ -25,7 +25,9 @@
       "box": "garcello",
       "boxAnimation": "enter",
 
-      "text": ["Oh hey, wasn't expecting company at this hour, how are you two doing?"]
+      "text": [
+        "Oh hey, wasn't expecting company at this hour, how are you two doing?"
+      ]
     },
     {
       "speaker": "pico",
@@ -73,7 +75,9 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Well, they aren't really for sale, hell they aren't even mine.."]
+      "text": [
+        "Well, they aren't really for sale, hell they aren't even mine.."
+      ]
     },
     {
       "speaker": "garcello",
@@ -81,7 +85,9 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["But... If you beat me in a friendly little rap battle, I'll give you a pack on the house.."]
+      "text": [
+        "But... If you beat me in a friendly little rap battle, I'll give you a pack on the house.."
+      ]
     },
     {
       "speaker": "garcello",

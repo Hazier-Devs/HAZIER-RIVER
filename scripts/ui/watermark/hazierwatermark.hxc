@@ -3,13 +3,15 @@ import funkin.ui.mainmenu.MainMenuState;
 
 class hazierwatermark extends Module
 {
-    public function new() {
-        super('hazierwatermark', 0, {state: MainMenuState});
-    }
+  public function new()
+  {
+    super('hazierwatermark', 0, {state: MainMenuState});
+  }
 
-    function onStateChangeEnd() {
-        FlxG.mouse.visible = false;
-        FlxG.state.leftWatermarkText.y -= FlxG.state.leftWatermarkText.height;
-        FlxG.state.leftWatermarkText.text += "\nHazier River DEMO";
-    }
+  function onStateChangeEnd()
+  {
+    FlxG.mouse.visible = false;
+    FlxG.state.leftWatermarkText.y -= FlxG.state.leftWatermarkText.height;
+    FlxG.state.leftWatermarkText.text += "\nHazier River DEMO";
+  }
 }

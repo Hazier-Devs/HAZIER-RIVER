@@ -1,42 +1,35 @@
 {
- "version": "2.2.4",
- "songName": "Headache Erect",
- "artist": "DigitLuck (ft. Cyber Tryzoid)",
- "charter": "Arthren (ft. Idk's FNF Stuff)",
- "offsets": { },
- "playData": {
-  "difficulties": [
-   "erect",
-   "nightmare"
-  ],
-  "characters": {
-   "player": "bf-garcello",
-   "girlfriend": "gf-garcello",
-   "opponent": "garcello",
-   "instrumental": "erect",
-   "opponentVocals": [
-    "garcello"
-   ],
-   "playerVocals": [
-    "bf-garcello"
-   ]
+  "version": "2.2.4",
+  "songName": "Headache Erect",
+  "artist": "DigitLuck (ft. Cyber Tryzoid)",
+  "charter": "Arthren (ft. Idk's FNF Stuff)",
+  "offsets": {},
+  "playData": {
+    "difficulties": ["erect", "nightmare"],
+    "characters": {
+      "player": "bf-garcello",
+      "girlfriend": "gf-garcello",
+      "opponent": "garcello",
+      "instrumental": "erect",
+      "opponentVocals": ["garcello"],
+      "playerVocals": ["bf-garcello"]
+    },
+    "stage": "AshtonParkingLot",
+    "noteStyle": "funkin",
+    "ratings": {
+      "erect": 6,
+      "nightmare": 9
+    },
+    "album": "hazy",
+    "previewEnd": 0
   },
-  "stage": "AshtonParkingLot",
-  "noteStyle": "funkin",
-  "ratings": {
-   "erect": 6,
-   "nightmare": 9
-  },
-  "album": "hazy",
-  "previewEnd": 0
- },
- "generatedBy": "Friday Night Funkin' - v0.8.3",
- "timeChanges": [
-  {
-   "t": 0,
-   "b": 0,
-   "bpm": 120,
-   "bt": [4, 4, 4, 4]
-  }
- ]
+  "generatedBy": "Friday Night Funkin' - v0.8.3",
+  "timeChanges": [
+    {
+      "t": 0,
+      "b": 0,
+      "bpm": 120,
+      "bt": [4, 4, 4, 4]
+    }
+  ]
 }

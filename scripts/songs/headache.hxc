@@ -1,170 +1,105 @@
-import flixel.FlxG;
-import flixel.FlxSprite;
-import flixel.math.FlxBasePoint;
+import funkin.play.cutscene.VideoCutscene;
+import funkin.play.cutscene.CutsceneType;
+import funkin.graphics.FunkinSprite;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
-import flixel.util.FlxTimer;
-import flixel.addons.display.FlxRuntimeShader;
-import funkin.Conductor;
-import funkin.util.Constants;
-import funkin.graphics.FunkinSprite;
-import funkin.modding.base.ScriptedFunkinSprite;
-import funkin.data.song.SongRegistry;
-import funkin.play.GameOverSubState;
 import funkin.play.PlayState;
 import funkin.play.song.Song;
-import funkin.play.stage.StageProp;
-import funkin.save.Save;
-import funkin.audio.FunkinSound;
-import funkin.play.cutscene.VideoCutscene;
-import funkin.play.PlayStatePlaylist;
+import flixel.util.FlxTimer;
 
 class HeadacheSong extends Song
 {
-  var hasPlayedCutscene:Bool;
-  var hasPlayedInGameCutscene:Bool;
+  public var playedCutscene:Bool = false;
+  public var playedConversation:Bool = false;
 
-  var cutsceneMusic:FunkinSound;
-  var cutsceneConductor:Conductor;
-  var bgSprite:FunkinSprite;
-  var bgs:FunkinSprite;
+  var backgroundSprite:FunkinSprite;
+  var backgroundSpriteTween:FlxTween;
 
   public function new()
   {
     super('headache');
-    hasPlayedCutscene = false;
-    hasPlayedInGameCutscene = false;
   }
 
-  public override function onCountdownStart(event:CountdownScriptEvent):Void
+  override public function onCreate(event:ScriptEvent)
+  {
+    playedCutscene = false;
+    playedConversation = false;
+
+    super.onCreate(event);
+  }
+
+  override public function onCountdownStart(event:CountdownScriptEvent):Void
   {
     super.onCountdownStart(event);
-    bgs.alpha = 1;
-    // i promise this is not a typo, this just makes it fade again on restart
-    if (!PlayStatePlaylist.isStoryMode)
+
+    if (backgroundSprite == null)
     {
-      hasPlayedCutscene = true;
-      hasPlayedInGameCutscene = true;
+      backgroundSprite = new FunkinSprite();
+      backgroundSprite.makeSolidColor(FlxG.width * 2, FlxG.height * 2, 0xFF000000);
+      backgroundSprite.screenCenter();
+      backgroundSprite.cameras = [PlayState.instance?.camHUD];
+      backgroundSprite.zIndex = 10000;
+      PlayState.instance?.add(backgroundSprite);
     }
 
-    if (hasPlayedCutscene && !hasPlayedInGameCutscene)
+    if (!playedCutscene)
     {
-      hasPlayedInGameCutscene = true;
       event.cancel();
+      playedCutscene = true;
 
-      PlayState.instance.camHUD.visible = false;
-      introCutscene();
-      return;
+      startCutscene();
     }
-
-    if (!hasPlayedCutscene)
+    else if (!playedConversation)
     {
-      hasPlayedCutscene = true;
       event.cancel();
+      playedConversation = true;
 
-      bgSprite = new FunkinSprite(0, 0);
-      bgSprite.makeSolidColor(2000, 2500, 0xFF000000);
-      bgSprite.cameras = [PlayState.instance.camCutscene];
-      bgSprite.zIndex = -10000;
-
-      PlayState.instance.add(bgSprite);
-      PlayState.instance.refresh();
-
-      startVideo();
+      startConversation();
     }
   }
 
-  override function onSongStart(event:ScriptEvent)
+  public function startCutscene():Void
+  {
+    // TODO: it's called a placeholder for a reason!
+    VideoCutscene.play(Paths.videos('cutsceneplaceholder.mov'), CutsceneType.STARTING);
+  }
+
+  public function startConversation():Void
+  {
+    PlayState.instance?.startConversation('headache');
+  }
+
+  override public function onSongStart(event:ScriptEvent):Void
   {
     super.onSongStart(event);
 
-    PlayState.instance.isInCutscene = false;
-    PlayState.instance.mayPauseGame = true;
-    PlayState.instance.togglePauseButton(true);
-    FlxTween.tween(bgs, {alpha: 0}, 7);
-    // who needs easing? linear works just fine
+    var durationMs:Float = PlayState.instance?.conductorInUse?.getBeatTimeInMs(16) ?? 0;
+    backgroundSpriteTween = FlxTween.tween(backgroundSprite, {alpha: 0}, durationMs / 1000, {onComplete: (_) -> {
+      backgroundSpriteTween = null;
+    }});
   }
 
-  function introCutscene()
-  {
-    PlayState.instance.isInCutscene = true;
-    PlayState.instance.togglePauseButton(false);
-    PlayState.instance.mayPauseGame = false;
-
-    new FlxTimer().start(0.7, _ -> {
-      FlxTween.tween(bgSprite, {alpha: 0}, 1.5,
-        {
-          onComplete: _ -> bgSprite.visible = false
-        });
-    });
-
-    // timer for dialogue to pop up ts
-    new FlxTimer().start(2, _ -> {
-      startPostCutsceneDialogue();
-    });
-  }
-
-  function resetCameraForGameplay()
-  {
-    PlayState.instance.resetCamera();
-  }
-
-  function startPostCutsceneDialogue()
-  {
-    PlayState.instance.resetCamera();
-
-    PlayState.instance.isInCutscene = true;
-    PlayState.instance.togglePauseButton(false);
-    PlayState.instance.mayPauseGame = false;
-
-    PlayState.instance.startConversation('headache', function() {
-      PlayState.instance.endConversation();
-
-      PlayState.instance.isInCutscene = false;
-
-      PlayState.instance.startCountdown();
-
-      new FlxTimer().start(0.01, _ -> {
-        PlayState.instance.togglePauseButton(true);
-        PlayState.instance.mayPauseGame = true;
-      });
-    });
-  }
-
-  function startVideo()
-  {
-    VideoCutscene.play(Paths.videos('cutsceneplaceholder.mov'));
-  }
-
-  function onSongRetry(event:ScriptEvent)
+  override public function onSongRetry(event:ScriptEvent):Void
   {
     super.onSongRetry(event);
-    hasPlayedCutscene = true;
-    hasPlayedInGameCutscene = true;
+
+    backgroundSpriteTween?.cancel();
+    backgroundSpriteTween = FlxTween.tween(backgroundSprite, {alpha: 1}, 0.5, {ease: FlxEase.expoOut, onComplete: (_) -> {
+      backgroundSpriteTween = null;
+    }});
   }
 
-  var characterShader:FlxRuntimeShader;
-
-  function onCreate(event:ScriptEvent)
+  override public function onPause(event:ScriptEvent):Void
   {
-    // characterShader = new FlxRuntimeShader(Assets.getText(Paths.frag('headacheShader')));
-    // PlayState.instance.currentStage.getBoyfriend().shader = characterShader;
+    super.onPause(event);
 
-    super.onCreate(event);
-    hasPlayedCutscene = false;
-    hasPlayedInGameCutscene = false;
-    // camera fade event.. kinda lazy tbh.
-    bgs = new FunkinSprite(0, 0);
-    bgs.makeSolidColor(2000, 2500, 0xFF000000);
-    bgs.cameras = [PlayState.instance.camHUD];
-    bgs.zIndex = 10000;
-    PlayState.instance.add(bgs);
+    backgroundSpriteTween?.active = false;
   }
 
-  function onUpdate(event:UpdateScriptEvent)
+  override public function onResume(event:ScriptEvent):Void
   {
-    super.onUpdate(event);
+    super.onResume(event);
 
-    if (cutsceneConductor != null && cutsceneMusic != null) cutsceneConductor.update(cutsceneMusic.time);
+    backgroundSpriteTween?.active = true;
   }
 }

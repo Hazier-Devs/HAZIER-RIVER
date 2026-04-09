@@ -4,5 +4,6 @@
   "artists": ["DigitLuck", "PlantGamer09"],
   "albumArtAsset": "freeplay/albumRoll/HAZIERALBUMVOL1",
   "albumTitleAsset": "freeplay/albumRoll/hazierriver-text",
-  "albumTitleOffsets": [-45, 0]
+  "albumTitleOffsets": [-45, 0],
+  "albumOSTName": "HAZIER OST"
 }

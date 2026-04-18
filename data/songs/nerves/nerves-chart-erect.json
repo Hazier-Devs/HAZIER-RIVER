@@ -1,0 +1,16 @@
+{
+ "version": "2.0.0",
+ "scrollSpeed": {
+  "nightmare": 2.4
+ },
+ "events": [],
+ "notes": {
+  "nightmare": [
+   {
+    "t": 4800,
+    "d": 6
+   }
+  ]
+ },
+ "generatedBy": "Friday Night Funkin' - v0.8.4"
+}

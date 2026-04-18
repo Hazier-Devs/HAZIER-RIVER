@@ -1,11 +1,11 @@
 {
   "version": "2.2.4",
   "songName": "Nerves",
-  "artist": "DigitLuck (ft. Cyber Tryzoid)",
+  "artist": "DigitLuck (feat. Cyber Tryzoid)",
   "charter": "Arthren",
   "offsets": {},
   "playData": {
-    "songVariations": ["pico"],
+    "songVariations": ["pico", "erect"],
     "difficulties": ["easy", "normal", "hard"],
     "characters": {
       "player": "bf-garcello",

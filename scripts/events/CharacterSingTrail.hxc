@@ -11,7 +11,7 @@ using funkin.util.AnsiUtil;
 
 // this adds a toggleable trail effect
 class CharacterSingTrails extends SongEvent
-{ // so it shows up as an event, this doesnt really do much
+{
   function new()
   {
     super('CharacterSingTrails');
@@ -46,6 +46,13 @@ class CharacterSingTrails extends SongEvent
     }
   }
 
+  function onSongRetry() {
+    var curStage = PlayState.instance.currentStage;
+    bfTrail.zIndex = curStage.getBoyfriend().zIndex - 1;
+
+    curStage.refresh();
+  }
+
   override function handleEvent(ev)
   {
     var target = ev.getString('target') ?? DEFAULT_TARGET;
@@ -73,7 +80,7 @@ class CharacterSingTrails extends SongEvent
     {
       bfElapsed += ev.elapsed;
 
-      if (bfElapsed >= bfSpawnTimer)
+      if (bfElapsed >= Conductor.instance.stepLengthMs / 1000)
       {
         bfElapsed = 0;
 
@@ -115,7 +122,7 @@ class CharacterSingTrails extends SongEvent
     copy.animation.frameIndex = bfChar.animation.frameIndex;
     copy.alpha = 0.6;
 
-    FlxTween.tween(copy, {alpha: 0}, Conductor.instance.beatLengthMs / 1000 * 4,
+    FlxTween.tween(copy, {alpha: 0}, Conductor.instance.beatLengthMs / 1000 * 3,
       {
         ease: FlxEase.sineOut,
         onComplete: function() {

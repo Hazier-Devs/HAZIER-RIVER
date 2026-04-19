@@ -3,6 +3,7 @@ import funkin.play.PlayState;
 import funkin.graphics.FunkinSprite;
 import funkin.Conductor;
 import funkin.Highscore;
+import funkin.data.story.level.LevelRegistry;
 
 import flixel.group.FlxTypedSpriteGroup;
 import flixel.tweens.FlxTween;
@@ -17,6 +18,9 @@ class HazierWorldCombo extends Module {
     var noteStyle:NoteStyle;
 
     function onSongLoaded() {
+        var hazyweek = LevelRegistry.instance.fetchEntry('weekg').getSongs(); // get all songs on the garcello week
+        if (!hazyweek.contains(PlayState.instance.currentSong.id)) return; // check to see if were playing a garcello song
+
         if (comboGroup == null) {
             PlayState.instance.comboPopUps.visible = false; comboGroup = new FlxTypedSpriteGroup();
             comboGroup.x = PlayState.instance.currentStage.getGirlfriend().feetPosition.x;
@@ -29,6 +33,7 @@ class HazierWorldCombo extends Module {
     }
 
     function onNoteHit(ev) {
+        if (comboGroup == null) return;
         if (!ev.note.noteData.getMustHitNote()) return;
 
         displayRating(ev.judgement);

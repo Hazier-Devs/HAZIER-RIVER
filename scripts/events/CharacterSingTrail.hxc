@@ -88,6 +88,11 @@ class CharacterSingTrails extends SongEvent
     }
   }
 
+  function onDestroy()
+  {
+    bfTrail = null;
+  }
+
   function spawnBFClone()
   {
     var copy:FunkinSprite;

@@ -249,4 +249,10 @@ class NervesPicoMixSong extends Song
 
     sequence?.destroy();
   }
+
+  function onUpdate(event):Void
+  {
+    super.onUpdate(event);
+    if (garcDead) PlayState.instance.subtitles?.visible = false; // hide subtitles if garcello is dead
+  }
 }

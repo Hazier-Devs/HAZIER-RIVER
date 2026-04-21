@@ -104,6 +104,22 @@
 }
   },
   {
+   "t": 62400,
+   "e": "CharacterSingTrails",
+   "v": {
+	"isActive": true,
+	"target": "bf"
+}
+  },
+  {
+   "t": 62400,
+   "e": "HazierGarcelloVignetteEvent",
+   "v": {
+	"isActive": true,
+	"strength": 20
+}
+  },
+  {
    "t": 67200,
    "e": "FocusCamera",
    "v": {
@@ -129,6 +145,22 @@
    "e": "FocusCamera",
    "v": {
 	"char": 1
+}
+  },
+  {
+   "t": 81600,
+   "e": "HazierGarcelloVignetteEvent",
+   "v": {
+	"isActive": false,
+	"strength": 20
+}
+  },
+  {
+   "t": 81600,
+   "e": "CharacterSingTrails",
+   "v": {
+	"isActive": false,
+	"target": "bf"
 }
   },
   {
@@ -168,6 +200,7 @@
   }
  ],
  "notes": {
+  "normal": [],
   "erect": [
    {
     "t": 4800,

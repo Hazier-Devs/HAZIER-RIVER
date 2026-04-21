@@ -8,6 +8,7 @@ import funkin.play.character.CharacterType;
 import openfl.display.BitmapData;
 import flixel.graphics.FlxGraphic;
 import flixel.addons.display.FlxBackdrop;
+import flixel.effects.FlxFlicker;
 
 class AshtonAlleywayStage extends Stage
 {
@@ -123,9 +124,19 @@ class AshtonAlleywayStage extends Stage
     super.buildStage();
   }
 
+  var lightFlicker:FlxFlicker = null;
+
   override function onBeatHit(event)
   {
     super.onBeatHit(event);
+
+    if (FlxG.random.bool(1.5))
+    {
+      lightFlicker = FlxFlicker.flicker(getNamedProp('lamp lights'), 0.3, 1 / FlxG.random.int(10, 20), true, true, function(_) {
+        lightFlicker = null;
+      });
+    }
+
     if (PlayState.instance.currentSong.id.toLowerCase() == "headache")
     {
       switch (event.beat)
@@ -145,5 +156,17 @@ class AshtonAlleywayStage extends Stage
           if (blackScreen != null) blackScreen.alpha = 0.001;
       }
     }
+  }
+
+  override function onPause(event:ScriptEvent):Void
+  {
+    super.onPause(event);
+    if (lightFlicker != null) lightFlicker.pause();
+  }
+
+  override function onResume(event:ScriptEvent):Void
+  {
+    super.onResume(event);
+    if (lightFlicker != null) lightFlicker.resume();
   }
 }

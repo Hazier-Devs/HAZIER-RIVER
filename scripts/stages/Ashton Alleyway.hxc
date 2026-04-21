@@ -65,6 +65,9 @@ class AshtonAlleywayStage extends Stage
 
   override function addCharacter(character:BaseCharacter, charType:CharacterType):Void
   {
+    // Fixes a polymod bug!
+    var character:BaseCharacter = character;
+
     // Apply the shader automatically to each character as it gets added.
     character.shader = colorShader;
     super.addCharacter(character, charType);
@@ -75,37 +78,25 @@ class AshtonAlleywayStage extends Stage
     character.shader = rim;
     rim.attachedSprite = character;
 
+    rim.setAdjustColor(-70, 0, -50, 0);
+
     switch (charType)
     {
-      case CharacterType.BF:
-        rim.angle = 80;
-        rim.setAdjustColor(-70, 0, -50, 0);
-        character.animation.onFrameChange.add(function() {
-          if (getBoyfriend() != null)
-          {
-            rim.updateFrameInfo(getBoyfriend().frame);
-          }
-        });
       case CharacterType.GF:
         rim.angle = 90;
-        rim.setAdjustColor(-70, 0, -50, 0);
-        character.animation.onFrameChange.add(function() {
-          rim.updateFrameInfo(getGirlfriend().frame);
-        });
-
-      case CharacterType.DAD:
+      case CharacterType.BF, CharacterType.DAD:
         rim.angle = 80;
-        rim.setAdjustColor(-70, 0, -50, 0);
-        if (getDad().characterId == 'garcello')
+        if (character.characterId == 'garcello')
         {
           rim.loadAltMask(Paths.image('garcello_mask'));
           rim.useAltMask = true;
           rim.maskThreshold = 1;
         }
-        character.animation.onFrameChange.add(function() {
-          rim.updateFrameInfo(getDad().frame);
-        });
     }
+
+    character.animation.onFrameChange.add(function() {
+      rim.updateFrameInfo(character.frame);
+    });
   }
 
   override public function onCountdownStart()

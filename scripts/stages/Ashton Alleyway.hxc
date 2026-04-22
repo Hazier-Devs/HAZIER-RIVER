@@ -31,6 +31,7 @@ class AshtonAlleywayStage extends Stage
 
     // keep cached so lower end doesn't lag on rendering
     // why cant i have this only render on headache.. ugh
+    return; // disabled for now
     blackScreen = new FlxSprite().makeGraphic(9999, 9999, 0xFF000000);
     add(blackScreen);
     blackScreen.zIndex = 34;
@@ -124,7 +125,15 @@ class AshtonAlleywayStage extends Stage
     if (FlxG.random.bool(1.5))
     {
       lightFlicker = FlxFlicker.flicker(getNamedProp('lamp lights'), 0.3, 1 / FlxG.random.int(10, 20), true, true, function(_) {
+        // called on finish
         lightFlicker = null;
+        getBoyfriend()?.shader?.distance = 15;
+        getGirlfriend()?.shader?.distance = 15;
+        getDad()?.shader?.distance = 15;
+      }, function(v) { // on progress, called almost every time (except the last one)
+        getBoyfriend()?.shader?.distance = (getNamedProp('lamp lights').visible ? 15 : 0);
+        getGirlfriend()?.shader?.distance = (getNamedProp('lamp lights').visible ? 15 : 0);
+        getDad()?.shader?.distance = (getNamedProp('lamp lights').visible ? 15 : 0);
       });
     }
 

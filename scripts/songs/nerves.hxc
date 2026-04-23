@@ -12,6 +12,10 @@ import flixel.tweens.FlxEase;
 import funkin.ui.options.PreferencesMenu;
 import funkin.util.HapticUtil;
 import flixel.util.FlxTimer;
+import funkin.Conductor;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.tweens.FlxTweenManager;
 
 class NervesSong extends Song
 {
@@ -22,9 +26,14 @@ class NervesSong extends Song
     super('nerves');
   }
 
+  var stepEventTime:Array<Int> = [];
+  var stepEventAction:Array<Dynamic> = [];
+  var nervesTweenManager:FlxTweenManager; // used to store the tweens we use, separate from globalTweenManager to allow us to pause tweens
+
   public override function onCountdownStart(event:CountdownScriptEvent):Void
   {
     super.onCountdownStart(event);
+    PlayState.instance.camHUD.alpha = 0;
 
     // Skip the cutscene unless we are in Story Mode, or Pico Mix specifically.
     if (!PlayStatePlaylist.isStoryMode) hasPlayedCutscene = true;
@@ -49,6 +58,44 @@ class NervesSong extends Song
         startDialogue();
       });
     }
+
+    var playerStrumline:Strumline = PlayState.instance.playerStrumline;
+    var opponentStrumline:Strumline = PlayState.instance.opponentStrumline;
+    var hudArray = [PlayState.instance.healthBar, PlayState.instance.healthBarBG, PlayState.instance.iconP1, PlayState.instance.iconP2, PlayState.instance.scoreText];
+    stepEventTime.push(16); stepEventAction.push(function () {
+      for (i in hudArray) i.visible = false;
+      // playerStrumline.visible = false;
+      for (i in 0...4) {
+        playerStrumline.getByIndex(i).visible = false;
+        opponentStrumline.getByIndex(i).visible = false;
+      }
+      opponentStrumline.getByIndex(0).visible = true;
+      opponentStrumline.getByIndex(1).visible = true;
+      PlayState.instance.camHUD.alpha = 1;
+    });
+
+    stepEventTime.push(20); stepEventAction.push(function () {
+      opponentStrumline.getByIndex(2).visible = true;
+      opponentStrumline.getByIndex(3).visible = true;
+    });
+
+    stepEventTime.push(24); stepEventAction.push(function () {
+      playerStrumline.getByIndex(0).visible = true;
+      playerStrumline.getByIndex(1).visible = true;
+    });
+
+    stepEventTime.push(28); stepEventAction.push(function () {
+      playerStrumline.getByIndex(2).visible = true;
+      playerStrumline.getByIndex(3).visible = true;
+    });
+
+    stepEventTime.push(32); stepEventAction.push(function () {
+      for (i in hudArray) {
+        i.visible = true;
+        i.alpha = 0;
+        nervesTweenManager.tween(i, {alpha: 1}, Conductor.instance.stepLengthMs / 1000 * 4, {ease: FlxEase.quadOut});
+      }
+    });
   }
 
   function startDialogue()
@@ -65,6 +112,33 @@ class NervesSong extends Song
     super.onSongRetry(event);
 
     hasPlayedCutscene = true;
+    nervesTweenManager.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.quadOut});
+  }
+
+  public function onPause() {
+    super.onPause();
+
+    for (i in nervesTweenManager._tweens) {
+      nervesTweenManager.forEachTweensOf(i, null, function (tween) {
+        tween.active = false;
+      });
+    }
+  }
+
+  public function onResume() {
+    super.onResume();
+
+    for (i in nervesTweenManager._tweens) {
+      nervesTweenManager.forEachTweensOf(i, null, function (tween) {
+        tween.active = true;
+      });
+    }
+  }
+
+  public function onUpdate(ev) {
+    super.onUpdate(ev);
+
+    nervesTweenManager?.update(ev.elapsed);
   }
 
   /**
@@ -75,11 +149,26 @@ class NervesSong extends Song
     super.onCreate(event);
 
     hasPlayedCutscene = false;
+    nervesTweenManager = new FlxTweenManager();
   }
 
   public override function onDialogueEnd()
   {
     // We may need to wait for the outro to play.
     Countdown.performCountdown();
+  }
+
+  function onStepHit() {
+    super.onStepHit();
+    if (stepEventTime?.length == 0) return;
+    var curStep = Conductor.instance.currentStep;
+
+    if (curStep >= stepEventTime[0]) { // we have step function to run
+      while (curStep >= stepEventTime[0]) {
+      stepEventTime.shift();
+      var action:Dynamic = stepEventAction.shift();
+        action();
+      }
+    }
   }
 }

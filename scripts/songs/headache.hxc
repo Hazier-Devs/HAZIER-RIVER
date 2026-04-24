@@ -7,6 +7,7 @@ import flixel.tweens.FlxEase;
 import funkin.play.PlayState;
 import funkin.play.song.Song;
 import flixel.util.FlxTimer;
+import funkin.save.Save;
 
 class HeadacheSong extends Song
 {
@@ -27,6 +28,16 @@ class HeadacheSong extends Song
     playedConversation = false;
 
     super.onCreate(event);
+  }
+
+  override public function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  {
+    if (currentVariation == 'default')
+    {
+      return !Save.instance.hasBeatenSong(this.id, null, this.variation);
+    }
+
+    return super.isSongNew(currentDifficulty, currentVariation);
   }
 
   override public function onCountdownStart(event:CountdownScriptEvent):Void

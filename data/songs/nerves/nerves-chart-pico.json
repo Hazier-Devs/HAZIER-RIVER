@@ -7,6 +7,29 @@
   },
   "events": [
     {
+      "t": 0,
+      "e": "FocusCamera",
+      "v": {
+        "char": 2,
+        "duration": 6.664,
+        "ease": "cube",
+        "easeDir": "Out",
+        "x": 100,
+        "y": 0
+      }
+    },
+    {
+      "t": 0,
+      "e": "ZoomCamera",
+      "v": {
+        "duration": 6.664,
+        "ease": "cube",
+        "easeDir": "Out",
+        "mode": "stage",
+        "zoom": 0.8
+      }
+    },
+    {
       "t": 4800,
       "e": "FocusCamera",
       "v": {

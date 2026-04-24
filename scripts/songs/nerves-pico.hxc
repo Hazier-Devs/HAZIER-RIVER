@@ -1,30 +1,34 @@
-import flixel.tweens.FlxEase;
-import funkin.graphics.FunkinSprite;
-import flixel.tweens.FlxTween;
-import funkin.play.cutscene.dialogue.DialogueBox;
-import funkin.play.PlayState;
-import funkin.play.PlayStatePlaylist;
-import funkin.play.song.Song;
-import flixel.FlxG;
-import funkin.save.Save;
-import flixel.FlxSprite;
-import flixel.util.FlxTimer;
-import funkin.effects.RetroCameraFade;
-import funkin.play.character.CharacterType;
 import funkin.audio.FunkinSound;
-import funkin.FunkinMemory;
 import funkin.util.SongSequence;
-import funkin.Conductor;
 import funkin.util.HapticUtil;
-import funkin.util.FlxTweenUtil;
+import funkin.play.song.Song;
+import funkin.play.PlayState;
+import funkin.save.Save;
+import funkin.Conductor;
+
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+import flixel.util.FlxTimer;
+
+using StringTools;
 
 class NervesPicoMixSong extends Song
 {
-  var hasPlayedCutscene:Bool;
-  var miss:Bool = false;
-  var garcDead:Bool = false;
-  var puff:Bool = true;
-  var sequence:SongSequence;
+  /**
+   * The chance of Garcello being killed by Pico.
+   * This is determined when you enter or restart the song.
+   */
+  public static final GARCELLO_KILL_CHANCE:Float = 8;
+
+  /**
+   * If we are currently awaitng Garcello's Death.
+   */
+  public var awaitingGarcelloDeath:Bool = false;
+
+  /**
+   * If Garcello is currently dead.
+   */
+  public var isGarcelloDead:Bool = false;
 
   public function new()
   {
@@ -34,135 +38,186 @@ class NervesPicoMixSong extends Song
       });
   }
 
-  public override function isSongNew(currentDifficulty:String, currentVariation:String):Bool
+  override public function isSongNew(currentDifficulty:String, currentVariation:String):Bool
   {
-    if (currentVariation == 'pico') return !Save.instance.hasBeatenSong(this.id, null, this.variation);
+    if (currentVariation == 'pico')
+    {
+      return !Save.instance.hasBeatenSong(this.id, null, this.variation);
+    }
 
-    return false;
+    return super.isSongNew(currentDifficulty, currentVariation);
   }
 
-  public override function onCountdownStart(event:CountdownScriptEvent):Void
+  /**
+   * Garcello doesn't feel too well...
+   * Let the player know when entering the song.
+   */
+  public function startGarcelloHurt():Void
   {
-    super.onCountdownStart(event);
+    FunkinSound.playOnce(Paths.sound('nervesouch'), 1.0);
+    HapticUtil.vibrate(0.1, 0.5, 1, 1);
+  }
 
-    // Skip the cutscene if we're playtesting in the Chart Editor.
-    if (PlayState.instance.isChartingMode && !hasPlayedCutscene) hasPlayedCutscene = true;
+  /**
+   * Starts the conversation that happens when entering the song.
+   */
+  public function startConversation():Void
+  {
+    PlayState.instance?.startConversation('nerves-pico');
+    PlayState.instance?.mayPauseGame = true;
+  }
 
-    if (!hasPlayedCutscene)
-    {
-      trace('Pausing countdown to play cutscene.');
-
-      hasPlayedCutscene = true;
-
-      event.cancel(); // CANCEL THE COUNTDOWN!
-
-      if (!garcDead)
+  /**
+   * Gets the `SequenceEvent` list to use for lighting Garcello's cigarette.
+   * This will not be executed if Garcello is already dead.
+   *
+   * @return Sequence List
+   */
+  public function getLightSequence():Array<SequenceEvent>
+  {
+    return [
       {
-        PlayState.instance.currentStage.getDad().playAnimation('cig-intro', true, false);
-      }
+        time: getBeatTime(-2),
+        callback: () -> {
+          if (PlayState.instance?.camHUD == null) return;
 
-      // Play a SFX
-      FunkinSound.playOnce(Paths.sound('nervesouch'), 1.0);
-      HapticUtil.vibrate(0.1, 0.5, 1, 1);
-      PlayState.instance.disableKeys = true;
+          var duration:Float = -(Conductor.instance?.songPosition ?? 0);
+          FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, -getBeatTime(-2));
+        }
+      },
+      {
+        time: getBeatTime(-1),
+        callback: () -> {
+          FunkinSound.playOnce(Paths.sound('Gun_Prep', 'weekend1'), 1);
+          pico?.playAnimation('reload', true, false);
 
-      new FlxTimer().start(1, _ -> {
-        startDialogue();
-      });
-    }
-    else
-    {
-      PlayState.instance.disableKeys = true;
-    }
+          var camX:Float = pico?.cameraFocusPoint?.x ?? 0;
+          var camY:Float = pico?.cameraFocusPoint?.y ?? 0;
+          PlayState.instance?.tweenCameraToPosition(camX + 150, camY + 150, 0.5, FlxEase.expoOut);
+          PlayState.instance?.tweenCameraZoom(1.1, 0.5, false, FlxEase.expoOut);
+        }
+      },
+      {
+        time: 0,
+        callback: () -> {
+          pico?.playAnimation('cigshoot', true, false);
+          garcello?.playAnimation('cig${awaitingGarcelloDeath ? 'miss' : 'light'}', true, false);
+        }
+      },
+      {
+        time: 0.45,
+        callback: () -> {
+          FunkinSound.playOnce(Paths.sound(awaitingGarcelloDeath ? 'lightmiss' : 'ciglight'), 1);
+          HapticUtil.vibrate(0, 0.1, 0.1, 1);
+          if (awaitingGarcelloDeath) killGarcello();
+        }
+      },
+      {
+        time: 1,
+        callback: () -> {
+          FunkinSound.playOnce(Paths.sound('spin and puff'), 1);
+        }
+      },
+      {
+        time: getBeatTime(6.50),
+        callback: () -> {
+          if (PlayState.instance?.camHUD != null)
+          {
+            FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.9);
+          }
+        }
+      },
+    ];
   }
 
-  function startDialogue()
+  /**
+   * Kill Garcello.
+   */
+  public function killGarcello():Void
   {
-    PlayState.instance.disableKeys = false;
-    PlayState.instance.startConversation('nerves-pico');
+    isGarcelloDead = true;
+
+    PlayState.instance?.vocals?.opponentVolume = 0;
+    PlayState.instance?.subtitles?.subtitlesData = null;
   }
 
-  function onSongRetry(event:ScriptEvent)
-  {
-    super.onSongRetry(event);
+  var hasPlayedCutscene:Bool = false;
+  var sequence:SongSequence;
 
-    hasPlayedCutscene = true;
-
-    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
-    if (!PlayState.instance.disableKeys) PlayState.instance.disableKeys = true;
-    if (PlayState.instance.camHUD.alpha > 0) FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.expoIn});
-
-    if (!garcDead)
-    {
-      PlayState.instance.currentStage.getDad().playAnimation('cig-intro', true, false); // Repeat Intro
-    }
-    else
-    {
-      PlayState.instance.currentStage.getDad().playAnimation('cigmiss-hold', true, true); // Bros fucking dead
-      puff = false;
-    }
-  }
-
-  function onCreate(event:ScriptEvent):Void
+  override public function onCreate(event:ScriptEvent):Void
   {
     super.onCreate(event);
 
     hasPlayedCutscene = false;
-    miss = false;
-    garcDead = false;
-    puff = true;
 
-    FunkinMemory.cacheSound(Paths.sound('ciglight'));
-    FunkinMemory.cacheSound(Paths.sound('lightmiss'));
-    FunkinMemory.cacheSound(Paths.sound('Gun_Prep', 'weekend1'));
-    FunkinMemory.cacheSound(Paths.sound('spin and puff'));
-    PlayState.instance.camHUD.alpha = 0;
+    // Seal Garcello's fate.
+    awaitingGarcelloDeath = FlxG.random.bool(GARCELLO_KILL_CHANCE);
+    isGarcelloDead = false;
   }
 
-  public override function onDialogueEnd()
+  override public function onCountdownStart(event:CountdownScriptEvent):Void
   {
-    // We may need to wait for the outro to play.
-    PlayState.instance.currentStage.resume();
-    Countdown.performCountdown();
-  }
+    super.onCountdownStart(event);
 
-  function onPause(event:PauseScriptEvent):Void
-  {
-    super.onPause(event);
-
-    FlxTweenUtil.pauseTweensOf(PlayState.instance.camHUD);
-  }
-
-  function onResume(event:ScriptEvent):Void
-  {
-    super.onResume(event);
-
-    FlxTweenUtil.resumeTweensOf(PlayState.instance.camHUD);
-  }
-
-  function onSongStart()
-  {
-    if (garcDead) return PlayState.instance.vocals.opponentVolume = 0;
-
-    PlayState.instance.currentStage.getBoyfriend().playAnimation('cigshoot', true, false);
-
-    if (FlxG.random.bool(8))
+    // Play the `cig-intro` animation unless Garcello is dead.
+    if (!isGarcelloDead)
     {
-      // L Puffs
-      PlayState.instance.currentStage.getDad().playAnimation('cigmiss', true, true);
-      PlayState.instance.vocals.opponentVolume = 0;
-      miss = true;
+      garcello?.playAnimation('cig-intro', true, false);
+    }
+
+    // Reset HUD opacity.
+    if (PlayState.instance?.camHUD != null)
+    {
+      FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+      PlayState.instance.camHUD.alpha = 1;
+    }
+
+    // Don't play any cutscenes in the Chart Editor.
+    if (PlayState.instance?.isChartingMode ?? false) return;
+
+    if (!hasPlayedCutscene)
+    {
+      trace('Pausing countdown to play cutscene.');
+      hasPlayedCutscene = true;
+
+      PlayState.instance?.isInCutscene = true;
+      PlayState.instance?.mayPauseGame = false;
+      event.cancel();
+
+      startGarcelloHurt();
+
+      // Wait 1 second before playing the conversation..
+      FlxTimer.wait(1, () -> startConversation());
+    }
+  }
+
+  override public function onSongRetry(event:SongRetryEvent):Void
+  {
+    super.onSongRetry(event);
+
+    if (isGarcelloDead)
+    {
+      // Make sure Garcello still shows dead when restarting.
+      garcello?.playAnimation('cigmiss-hold', true, true);
     }
     else
     {
-      // W Puffs
-      PlayState.instance.currentStage.getDad().playAnimation('ciglight', true, false);
+      // Allow a re-roll.
+      awaitingGarcelloDeath = FlxG.random.bool(GARCELLO_KILL_CHANCE);
     }
   }
 
-  function onNoteHit(event:HitNoteScriptEvent)
+  override public function onSongStart(event:onSongStart):Void
   {
-    if (!event.note.noteData.getMustHitNote() && garcDead)
+    // Make sure Garcello is still dead.
+    if (isGarcelloDead) killGarcello();
+
+    trace('Awaiting Death: ${awaitingGarcelloDeath}');
+  }
+
+  override public function onNoteHit(event:HitNoteScriptEvent)
+  {
+    if (isGarcelloDead && !event.note.noteData.getMustHitNote())
     {
       event.cancel();
     }
@@ -170,89 +225,44 @@ class NervesPicoMixSong extends Song
     super.onNoteHit(event);
   }
 
-  function onGameOver(event:ScriptEvent):Void
-  {
-    super.onGameOver(event);
-    sequence?.destroy();
-
-    FlxTween.cancelTweensOf(PlayState.instance.camHUD);
-    PlayState.instance.camHUD.alpha = 0;
-  }
-
-  function onSongLoaded(event:SongLoadScriptEvent)
+  override public function onSongLoaded(event:SongLoadScriptEvent):Void
   {
     sequence?.destroy();
 
-    var sequenceData = [
-      {
-        time: Conductor.instance.getBeatTimeInMs(-1) / 1000,
-        callback: () -> {
-          if (garcDead) return;
-          PlayState.instance.currentStage.getBoyfriend().playAnimation('reload', true, false);
-          FunkinSound.playOnce(Paths.sound('Gun_Prep', 'weekend1'), 1);
-          if (PlayState.instance.isChartingMode) return;
-          PlayState.instance.tweenCameraToPosition(PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.x + 150,
-            PlayState.instance.currentStage.getBoyfriend().cameraFocusPoint.y + 150, 0.5, FlxEase.expoOut);
-          PlayState.instance.tweenCameraZoom(1.1, 0.5, false, FlxEase.expoOut);
-        }
-      },
-      {
-        time: 0,
-        callback: () -> {
-          if (PlayState.instance.isChartingMode) return;
-          PlayState.instance.tweenCameraToPosition(PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.x + 100,
-            PlayState.instance.currentStage.getGirlfriend().cameraFocusPoint.y, 1, FlxEase.cubeOut);
-          PlayState.instance.tweenCameraZoom(0.8, 1, false, FlxEase.cubeOut);
-        }
-      },
-
-      {
-        time: 0.45,
-        callback: () -> {
-          if (garcDead) return;
-          if (HapticUtil.hapticsAvailable) HapticUtil.vibrate(0, 0.1, 0.1, 1);
-          if (!miss)
-          {
-            FunkinSound.playOnce(Paths.sound('ciglight'), 1);
-          }
-          else
-          {
-            FunkinSound.playOnce(Paths.sound('lightmiss'), 1);
-            garcDead = true;
-          }
-        }
-      },
-
-      {
-        time: 1,
-        callback: () -> {
-          if (puff) FunkinSound.playOnce(Paths.sound('spin and puff'), 1);
-        }
-      },
-
-      {
-        time: Conductor.instance.getBeatTimeInMs(6.50) / 1000,
-        callback: () -> {
-          FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.9);
-          PlayState.instance.disableKeys = false;
-        }
-      },
-    ];
-
-    sequence = new SongSequence(sequenceData);
-    sequence.startTime = 0;
+    if (!isGarcelloDead)
+    {
+      var events:Array<SequenceEvent> = getLightSequence();
+      sequence = new SongSequence(events);
+      sequence.startTime = 0;
+    }
   }
 
-  function onDestroy(event:ScriptEvent):Void
+  override public function onDestroy(event:ScriptEvent):Void
   {
     super.onDestroy(event);
 
     sequence?.destroy();
+    sequence = null;
   }
 
-  function onUpdate(event):Void
+  // My favorite party trick:
+  // Helper variables and function!
+
+  var garcello(get, never):BaseCharacter;
+  function get_garcello():BaseCharacter
   {
-    super.onUpdate(event);
-    if (garcDead) PlayState.instance.subtitles?.visible = false; // hide subtitles if garcello is dead
+    return PlayState.instance?.currentStage?.getDad();
+  }
+
+  var pico(get, never):BaseCharacter;
+  function get_pico():BaseCharacter
+  {
+    return PlayState.instance?.currentStage?.getBoyfriend();
+  }
+
+  function getBeatTime(beatTime:Float):Float
+  {
+    var beatTimeMs:Float = Conductor.instance?.getBeatTimeInMs(beatTime) ?? 0;
+    return beatTimeMs / Constants.MS_PER_SEC;
   }
 }

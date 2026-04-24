@@ -1,5 +1,6 @@
 import funkin.play.cutscene.VideoCutscene;
 import funkin.play.cutscene.CutsceneType;
+import funkin.play.PlayStatePlaylist;
 import funkin.graphics.FunkinSprite;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
@@ -41,6 +42,9 @@ class HeadacheSong extends Song
       backgroundSprite.zIndex = 10000;
       PlayState.instance?.add(backgroundSprite);
     }
+
+    // Don't play any cutscenes in Freeplay.
+    if (!PlayStatePlaylist.isStoryMode) return;
 
     if (!playedCutscene)
     {

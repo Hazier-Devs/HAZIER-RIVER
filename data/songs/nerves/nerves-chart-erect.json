@@ -97,10 +97,11 @@
 }
   },
   {
-   "t": 62400,
-   "e": "FocusCamera",
+   "t": 62100,
+   "e": "HazierGarcelloVignetteEvent",
    "v": {
-	"char": 1
+	"isActive": true,
+	"strength": 20
 }
   },
   {
@@ -113,10 +114,9 @@
   },
   {
    "t": 62400,
-   "e": "HazierGarcelloVignetteEvent",
+   "e": "FocusCamera",
    "v": {
-	"isActive": true,
-	"strength": 20
+	"char": 1
 }
   },
   {

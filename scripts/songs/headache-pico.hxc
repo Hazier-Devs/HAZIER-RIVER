@@ -1,5 +1,6 @@
 import flixel.tweens.FlxEase;
 import funkin.graphics.FunkinSprite;
+import flixel.text.FlxText;
 import flixel.tweens.FlxTween;
 import funkin.play.cutscene.dialogue.DialogueBox;
 import funkin.play.PlayState;
@@ -48,24 +49,35 @@ class HeadachePicoMixSong extends Song
       //  pausing is breaking a lot in the erect stage for some reason disabling this for the sake of not running into issues atm
       //  PlayState.instance.currentStage.pause();
 
-      transitionToDialogue();
+       playTextIntro();
     }
+  }
+
+  var black:FunkinSprite;
+  function playTextIntro() {
+    PlayState.instance.disableKeys = true;
+    black = new FunkinSprite(-20, -20).makeSolidColor(FlxG.width * 1.5, FlxG.height * 1.5, 0xFF000000);
+    black.cameras = [PlayState.instance.camCutscene];
+    black.zIndex = 1000000;
+    PlayState.instance.add(black);
+
+    var cutsceneText = new FlxText(0, 0, 850); cutsceneText.text = 'Pico and Nene were gonna get a late night snack...\nThen saw a strange glow from the parking lot.';
+    cutsceneText.setFormat(Paths.font('Quantico-Bold.ttf'), 48); cutsceneText.alignment = 'center'; cutsceneText.screenCenter();
+    cutsceneText.cameras = [PlayState.instance.camCutscene]; cutsceneText.alpha = 0.001;
+    cutsceneText.zIndex = 1000001;
+    PlayState.instance.add(cutsceneText);
+
+    FlxTween.tween(cutsceneText, {alpha: 1}, 1);
+    FlxTween.tween(cutsceneText, {alpha: 0}, 1, {startDelay: 7,  onComplete: function () {
+      transitionToDialogue();
+    }});
   }
 
   function transitionToDialogue()
   {
     trace('Transitioning to dialogue.');
 
-    PlayState.instance.disableKeys = true;
-
     PlayState.instance.camCutscene.visible = true;
-
-    var black:FlxSprite = new FunkinSprite(-20, -20).makeSolidColor(FlxG.width * 1.5, FlxG.height * 1.5, 0xFF000000);
-    black.cameras = [PlayState.instance.camCutscene];
-    black.zIndex = 1000000;
-    PlayState.instance.add(black);
-
-    black.alpha = 1.0;
 
     var tweenFunction = function(x) {
       var xSnapped = Math.floor(x * 8) / 8;

@@ -91,6 +91,7 @@ class CharacterSingTrails extends SongEvent
   function onDestroy()
   {
     bfTrail = null;
+    bfSpawnTimer = 0;
   }
 
   function spawnBFClone()

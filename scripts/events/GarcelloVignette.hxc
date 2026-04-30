@@ -17,7 +17,9 @@ class HazierGarcelloVignetteEvent extends SongEvent {
 
     function onDestroy()
     {
+        pulseSprite?.alpha = 0;
         pulseSprite = null;
+        pulseActive = false;
     }
 
     function onSongRetry()
@@ -40,6 +42,8 @@ class HazierGarcelloVignetteEvent extends SongEvent {
     }
 
     function onUpdate(ev) {
+        if (pulseSprite == null) return;
+
         var zoomRate = PlayState.instance.cameraZoomRate;
 
         if (zoomRate > 0.0) {

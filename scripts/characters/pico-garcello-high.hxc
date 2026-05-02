@@ -7,11 +7,11 @@ import funkin.graphics.FunkinSprite;
 import funkin.audio.FunkinSound;
 import funkin.util.HapticUtil;
 import funkin.FunkinMemory;
-import flixel.FlxG;
 
 class PicoGarcelloHighCharacter extends AnimateAtlasCharacter
 {
-  var burp:Bool = false;
+  var burpReal:Bool = false;
+  var burp:FunkinSound;
 
   function new()
   {
@@ -29,7 +29,8 @@ class PicoGarcelloHighCharacter extends AnimateAtlasCharacter
     GameOverSubState.animationSuffix = '';
     PauseSubState.musicSuffix = '-pico';
 
-    burp = false;
+    burp = FunkinSound.load(Paths.sound('burp'), 1);
+    burpReal = false;
   }
 
   var deathSpriteNene:FunkinSprite;
@@ -63,6 +64,14 @@ class PicoGarcelloHighCharacter extends AnimateAtlasCharacter
 
     if (event.note.noteData.getMustHitNote() && characterType == CharacterType.BF)
     {
+      if (burpReal)
+      {
+        PlayState.instance.playerVocalsVolume = 1;
+        if (burp?.isPlaying) burp.stop();
+
+        burpReal = false;
+      }
+
       switch (event.note.kind)
       {
         case "cough":
@@ -81,11 +90,11 @@ class PicoGarcelloHighCharacter extends AnimateAtlasCharacter
 
           if (FlxG.random.bool(0.01)) // BURP
           {
-            PlayState.instance.disableKeys = true;
             holdTimer = 0;
             this.playAnimation('burp', true, false);
-            FunkinSound.playOnce(Paths.sound('burp'), 1);
-            burp = true;
+            PlayState.instance.playerVocalsVolume = 0;
+            burp.play();
+            burpReal = true;
           }
       }
 
@@ -100,13 +109,14 @@ class PicoGarcelloHighCharacter extends AnimateAtlasCharacter
 
   function onNoteMiss(event:HitNoteScriptEvent)
   {
-    if (event.note.noteData.getMustHitNote() && burp)
+    super.onNoteMiss(event);
+
+    if (event.note.noteData.getMustHitNote() && characterType == CharacterType.BF)
     {
-      event.cancelEvent();
-    }
-    else
-    {
-      super.onNoteMiss(event);
+      if (burpReal)
+      {
+        if (burp?.isPlaying) burp.stop();
+      }
     }
   }
 
@@ -149,18 +159,5 @@ class PicoGarcelloHighCharacter extends AnimateAtlasCharacter
       GameOverSubState.instance.add(deathSpriteNene);
       deathSpriteNene.animation.play("throw");
     }
-
-    if (!burp) return;
-    if (name == 'singLEFTmiss' || name == 'singDOWNmiss' || name == 'singUPmiss' || name == 'singRIGHTmiss') this.playAnimation('burp-loop', true,
-      false); // Force burp loop if a miss animation gets played
-  }
-
-  function onSongRetry(event:ScriptEvent)
-  {
-    super.onSongRetry(event);
-
-    if (!burp) return;
-    PlayState.instance.disableKeys = false;
-    burp = false;
   }
 }

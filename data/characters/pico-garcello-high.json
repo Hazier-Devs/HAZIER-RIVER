@@ -11,6 +11,7 @@
     "cameraZoom": 1.0
   },
   "flipX": true,
+  "offsets": [0, 23],
   "renderType": "animateatlas",
   "animations": [
     {

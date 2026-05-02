@@ -124,11 +124,4 @@ class HeadachePicoMixSong extends Song
 
     hasPlayedCutscene = false;
   }
-
-  public override function onDialogueEnd()
-  {
-    // We may need to wait for the outro to play.
-    PlayState.instance.currentStage.resume();
-    Countdown.performCountdown();
-  }
 }

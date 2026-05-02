@@ -3,6 +3,7 @@ import funkin.play.PlayState;
 import funkin.Preferences;
 import flixel.FlxSprite;
 import funkin.graphics.FunkinSprite;
+import funkin.util.SongSequence;
 import flixel.FlxG;
 import funkin.save.Save;
 import funkin.play.PlayStatePlaylist;
@@ -15,11 +16,12 @@ import flixel.util.FlxTimer;
 import funkin.Conductor;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
-import flixel.tweens.FlxTweenManager;
+import funkin.util.FlxTweenUtil;
 
 class NervesSong extends Song
 {
   var hasPlayedCutscene:Bool;
+  var sequence:SongSequence;
 
   public function new()
   {
@@ -36,11 +38,7 @@ class NervesSong extends Song
     return super.isSongNew(currentDifficulty, currentVariation);
   }
 
-  var stepEventTime:Array<Int> = [];
-  var stepEventAction:Array<Dynamic> = [];
-  var nervesTweenManager:FlxTweenManager; // used to store the tweens we use, separate from globalTweenManager to allow us to pause tweens
-
-  public override function onCountdownStart(event:CountdownScriptEvent):Void
+  override public function onCountdownStart(event:CountdownScriptEvent):Void
   {
     super.onCountdownStart(event);
     PlayState.instance.camHUD.alpha = 0;
@@ -68,44 +66,6 @@ class NervesSong extends Song
         startDialogue();
       });
     }
-
-    var playerStrumline:Strumline = PlayState.instance.playerStrumline;
-    var opponentStrumline:Strumline = PlayState.instance.opponentStrumline;
-    var hudArray = [PlayState.instance.healthBar, PlayState.instance.healthBarBG, PlayState.instance.iconP1, PlayState.instance.iconP2, PlayState.instance.scoreText];
-    stepEventTime.push(16); stepEventAction.push(function () {
-      for (i in hudArray) i.visible = false;
-      // playerStrumline.visible = false;
-      for (i in 0...4) {
-        playerStrumline.getByIndex(i).visible = false;
-        opponentStrumline.getByIndex(i).visible = false;
-      }
-      opponentStrumline.getByIndex(0).visible = true;
-      opponentStrumline.getByIndex(1).visible = true;
-      PlayState.instance.camHUD.alpha = 1;
-    });
-
-    stepEventTime.push(20); stepEventAction.push(function () {
-      opponentStrumline.getByIndex(2).visible = true;
-      opponentStrumline.getByIndex(3).visible = true;
-    });
-
-    stepEventTime.push(24); stepEventAction.push(function () {
-      playerStrumline.getByIndex(0).visible = true;
-      playerStrumline.getByIndex(1).visible = true;
-    });
-
-    stepEventTime.push(28); stepEventAction.push(function () {
-      playerStrumline.getByIndex(2).visible = true;
-      playerStrumline.getByIndex(3).visible = true;
-    });
-
-    stepEventTime.push(32); stepEventAction.push(function () {
-      for (i in hudArray) {
-        i.visible = true;
-        i.alpha = 0;
-        nervesTweenManager.tween(i, {alpha: 1}, Conductor.instance.stepLengthMs / 1000 * 4, {ease: FlxEase.quadOut});
-      }
-    });
   }
 
   function startDialogue()
@@ -121,34 +81,13 @@ class NervesSong extends Song
   {
     super.onSongRetry(event);
 
+    for (sprite in hudArray.concat([PlayState.instance?.camHUD]))
+    {
+      if (sprite != null) FlxTween.cancelTweensOf(sprite);
+    }
+
     hasPlayedCutscene = true;
-    nervesTweenManager.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.quadOut});
-  }
-
-  public function onPause() {
-    super.onPause();
-
-    for (i in nervesTweenManager._tweens) {
-      nervesTweenManager.forEachTweensOf(i, null, function (tween) {
-        tween.active = false;
-      });
-    }
-  }
-
-  public function onResume() {
-    super.onResume();
-
-    for (i in nervesTweenManager._tweens) {
-      nervesTweenManager.forEachTweensOf(i, null, function (tween) {
-        tween.active = true;
-      });
-    }
-  }
-
-  public function onUpdate(ev) {
-    super.onUpdate(ev);
-
-    nervesTweenManager?.update(ev.elapsed);
+    FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.quadOut});
   }
 
   /**
@@ -159,26 +98,113 @@ class NervesSong extends Song
     super.onCreate(event);
 
     hasPlayedCutscene = false;
-    nervesTweenManager = new FlxTweenManager();
   }
 
-  public override function onDialogueEnd()
+  override public function onPause(event:PauseScriptEvent):Void
   {
-    // We may need to wait for the outro to play.
-    Countdown.performCountdown();
+    super.onPause(event);
+
+    for (sprite in hudArray.concat([PlayState.instance?.camHUD]))
+    {
+      if (sprite != null) FlxTweenUtil.pauseTweensOf(sprite);
+    }
   }
 
-  function onStepHit() {
-    super.onStepHit();
-    if (stepEventTime?.length == 0) return;
-    var curStep = Conductor.instance.currentStep;
+  override public function onResume(event:ScriptEvent):Void
+  {
+    super.onResume(event);
 
-    if (curStep >= stepEventTime[0]) { // we have step function to run
-      while (curStep >= stepEventTime[0]) {
-      stepEventTime.shift();
-      var action:Dynamic = stepEventAction.shift();
-        action();
-      }
+    for (sprite in hudArray.concat([PlayState.instance?.camHUD]))
+    {
+      if (sprite != null) FlxTweenUtil.resumeTweensOf(sprite);
     }
+  }
+
+  override public function onSongLoaded(event:SongLoadScriptEvent):Void
+  {
+    sequence?.destroy();
+
+    var events:Array<SequenceEvent> = [
+      {
+        time: getStepTime(16),
+        callback: () -> {
+          for (i in hudArray) i.visible = false;
+
+          for (i in 0...4)
+          {
+            playerStrumline?.getByIndex(i)?.visible = false;
+            opponentStrumline?.getByIndex(i)?.visible = false;
+          }
+
+          opponentStrumline?.getByIndex(0)?.visible = true;
+          opponentStrumline?.getByIndex(1)?.visible = true;
+          PlayState.instance?.camHUD.alpha = 1;
+        }
+      },
+      {
+        time: getStepTime(20),
+        callback: () -> {
+          opponentStrumline?.getByIndex(2)?.visible = true;
+          opponentStrumline?.getByIndex(3)?.visible = true;
+        }
+      },
+      {
+        time: getStepTime(24),
+        callback: () -> {
+          playerStrumline?.getByIndex(0)?.visible = true;
+          playerStrumline?.getByIndex(1)?.visible = true;
+        }
+      },
+      {
+        time: getStepTime(28),
+        callback: () -> {
+          playerStrumline?.getByIndex(2)?.visible = true;
+          playerStrumline?.getByIndex(3)?.visible = true;
+        }
+      },
+      {
+        time: getStepTime(32),
+        callback: () -> {
+          var duration:Float = 4 * (Conductor.instance.stepLengthMs / 1000);
+
+          for (sprite in hudArray)
+          {
+            sprite.visible = true;
+            sprite.alpha = 0;
+            FlxTween.tween(sprite, {alpha: 1}, duration, {ease: FlxEase.quadOut});
+          }
+        }
+      }
+    ];
+
+    sequence = new SongSequence(events);
+    sequence.startTime = 0;
+  }
+
+  var playerStrumline(get, never):Strumline;
+  var opponentStrumline(get, never):Strumline;
+  var hudArray(get, never):Array<FlxSprite>;
+
+  function get_playerStrumline():Strumline
+  {
+    return PlayState.instance?.playerStrumline;
+  }
+
+  function get_opponentStrumline():Strumline
+  {
+    return PlayState.instance?.opponentStrumline;
+  }
+
+  function get_hudArray():Array<FlxSprite>
+  {
+    if (PlayState.instance == null) return [];
+
+    return [PlayState.instance.healthBar, PlayState.instance.healthBarBG, PlayState.instance.iconP1, PlayState.instance.iconP2, PlayState.instance.scoreText];
+  }
+
+  function getStepTime(stepTime:Float):Float
+  {
+    var stepTimeMs:Float = Conductor.instance?.getStepTimeInMs(stepTime) ?? 0;
+    return stepTimeMs / Constants.MS_PER_SEC;
   }
 }

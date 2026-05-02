@@ -220,6 +220,46 @@
       "flipY": false,
       "assetPath": "shared:characters/nervespicocutscenegar",
       "frameRate": 24
+    },
+    {
+      "offsets": [-36, -66],
+      "prefix": "nerves pico anims/hardcough",
+      "animType": "symbol",
+      "flipX": false,
+      "name": "hardCough",
+      "flipY": false,
+      "assetPath": "shared:characters/nervespicocutscenegar",
+      "frameRate": 24
+    },
+    {
+      "offsets": [-36, -66],
+      "prefix": "nerves pico anims/hardcough",
+      "animType": "symbol",
+      "frameIndices": [10, 11, 12, 13, 14, 15],
+      "name": "hardCough-hold",
+      "looped": true,
+      "assetPath": "shared:characters/nervespicocutscenegar",
+      "frameRate": 24
+    },
+    {
+      "offsets": [-67, -75],
+      "prefix": "nerves pico anims/we gotta stop",
+      "animType": "symbol",
+      "flipX": false,
+      "name": "outro",
+      "flipY": false,
+      "assetPath": "shared:characters/nervespicocutscenegar",
+      "frameRate": 24
+    },
+    {
+      "offsets": [-67, -75],
+      "prefix": "nerves pico anims/we gotta stop",
+      "animType": "symbol",
+      "flipX": false,
+      "name": "outro",
+      "flipY": false,
+      "assetPath": "shared:characters/nervespicocutscenegar",
+      "frameRate": 24
     }
   ]
 }

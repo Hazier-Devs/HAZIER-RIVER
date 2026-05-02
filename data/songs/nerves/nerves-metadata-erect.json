@@ -24,9 +24,9 @@
   "stage": "AshtonParkingLot",
   "noteStyle": "funkin",
   "ratings": {
+   "erect": 5,
    "nightmare": 7
   },
-  "stickerPack": "standard-hazier",
   "album": "hazy",
   "previewEnd": 0
  },

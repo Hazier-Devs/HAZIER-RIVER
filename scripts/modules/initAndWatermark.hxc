@@ -1,0 +1,121 @@
+import funkin.modding.module.Module;
+import funkin.ui.mainmenu.MainMenuState;
+import funkin.ui.credits.CreditsDataHandler;
+
+/*
+  used to patch the credits and
+  also to add the hazier watermark
+*/
+
+class hazierwatermark extends Module
+{
+  var creditsData:Array<CreditsData> = [
+    {
+      header: 'Hazier River',
+      body: [
+        { line: 'A fanmade remake of HAZY RIVER.' },
+        { line: 'By the fans, for the fans' }
+      ]
+    },
+    {
+      header: 'Direction, Art and Music Lead',
+      body: [
+        { line: 'DigitLuck' }
+      ]
+    },
+    {
+      header: 'Artists',
+      body: [
+        { line: 'DigitLuck' },
+        { line: 'PlantGamer09' },
+        { line: 'artalogue.' }
+      ]
+    },
+    {
+      header: 'Pixel Art',
+      body: [
+        { line: 'CoolJ4334' }
+      ]
+    },
+    {
+      header: 'Music Production',
+      body: [
+        { line: 'Cyber Tryzoid' },
+        { line: 'PlantGamer09' },
+        { line: 'EEssential' },
+        { line: 'LexyDoesStuff' },
+        { line: 'SojaWooz' },
+        { line: 'Lunarznova' }
+      ]
+    },
+    {
+      header: 'Voice Actors',
+      body: [
+        { line: 'amothfurry' },
+        { line: 'SojaWooz' },
+        { line: 'amothfurry' },
+        { line: 'amothfurry' },
+      ]
+    },
+    {
+      header: 'Programming',
+      body: [
+        { line: 'Sammy The Goog' },
+        { line: 'Kludge54n5' },
+        { line: 'Arthren' },
+        { line: 'TechnikTil' },
+        { line: 'Idk\'s FNF Stuff' }
+      ]
+    },
+    {
+      header: 'Charting',
+      body: [
+        { line: 'Arthren' },
+        { line: 'Idk\'s FNF Stuff' },
+        { line: 'DigitLuck' },
+        { line: 'EEssential' },
+        { line: 'Sammy The Goog' },
+        { line: 'HazedPhantom' }
+      ]
+    },
+    {
+      header: 'Playtesting',
+      body: [
+        { line: 'PTLC118' },
+        { line: 'SPG64' },
+        { line: 'Arthren' },
+        { line: 'amothfurry' },
+        { line: 'EEssential' },
+        { line: 'peakcinnamon' }
+      ]
+    },
+    {
+      header: 'Special Thanks',
+      body: [
+        { line: 'atsuover' },
+        { line: 'Guyy!!' },
+        { line: 'llwoodstockll' }
+      ]
+    }
+  ];
+
+  public function new()
+  {
+    super('hazierwatermark', 0, {state: MainMenuState});
+
+    // patch the credits
+    FlxG.signals.postGameStart.addOnce(function() {
+      creditsData.reverse(); // since use "unshift", all the values will be added at the start of the credits (in a reverse order)
+      for (i in creditsData) {
+        CreditsDataHandler.CREDITS_DATA.entries.unshift(i);
+      }
+    });
+  }
+
+  function onStateChangeEnd()
+  {
+    FlxG.mouse.visible = false;
+    FlxG.state.leftWatermarkText.y -= FlxG.state.leftWatermarkText.height;
+    FlxG.state.leftWatermarkText.text += "\nHazier River DEMO";
+  }
+}

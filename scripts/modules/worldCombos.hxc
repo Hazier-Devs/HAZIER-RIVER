@@ -1,0 +1,29 @@
+import funkin.modding.module.Module;
+import funkin.play.PlayState;
+import funkin.graphics.FunkinSprite;
+import funkin.Conductor;
+import funkin.Highscore;
+import funkin.data.story.level.LevelRegistry;
+
+import flixel.group.FlxTypedSpriteGroup;
+import flixel.tweens.FlxTween;
+import flixel.tweens.FlxEase;
+
+class HazierWorldCombo extends Module {
+    function new() {
+        super('HazierWorldCombo', 0, {state: PlayState});
+    }
+
+    function onSongLoaded() {
+        var hazyweek = LevelRegistry.instance.fetchEntry('weekg').getSongs(); // get all songs on the garcello week
+        if (!hazyweek.contains(PlayState.instance.currentSong.id)) return; // check to see if were playing a garcello song
+           
+        if (PlayState.instance.currentStage?.getGirlfriend() == null) return; // if the stage is null or gf is not in the stage, we dont do anything
+
+        PlayState.instance.comboPopUps.cameras = null;
+        PlayState.instance.comboPopUps.offsets = [PlayState.instance.currentStage.getGirlfriend().x, PlayState.instance.currentStage.getGirlfriend().y];
+        PlayState.instance.comboPopUps.memberAdded.add(function(combo) {
+            combo.scrollFactor.set(1, 1);
+        });
+    }
+}

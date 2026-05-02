@@ -1,4 +1,4 @@
-import funkin.play.cutscene.VideoCutscene;
+//import funkin.play.cutscene.VideoCutscene;
 import funkin.play.cutscene.CutsceneType;
 import funkin.play.PlayStatePlaylist;
 import funkin.graphics.FunkinSprite;
@@ -75,8 +75,10 @@ class HeadacheSong extends Song
 
   public function startCutscene():Void
   {
-    // TODO: it's called a placeholder for a reason!
-    VideoCutscene.play(Paths.videos('cutsceneplaceholder.mov'), CutsceneType.STARTING);
+    // TODO: Finish the cutscene Lucky!
+    // VideoCutscene.play(Paths.videos('cutsceneplaceholder.mov'), CutsceneType.STARTING);
+
+    PlayState.instance.startCountdown();
   }
 
   public function startConversation():Void

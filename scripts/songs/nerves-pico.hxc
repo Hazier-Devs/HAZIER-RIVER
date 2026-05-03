@@ -9,6 +9,7 @@ import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import flixel.util.FlxTimer;
 
+using funkin.util.AnsiUtil;
 using StringTools;
 
 class NervesPicoMixSong extends Song
@@ -215,7 +216,7 @@ class NervesPicoMixSong extends Song
     // Make sure Garcello is still dead.
     if (isGarcelloDead) killGarcello();
 
-    trace('Awaiting Death: ${awaitingGarcelloDeath}');
+    trace('${" HAZIER RIVER ".bold().bg_bright_cyan()} Awaiting Death: ${awaitingGarcelloDeath}');
   }
 
   override public function onNoteHit(event:HitNoteScriptEvent)

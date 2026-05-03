@@ -63,6 +63,7 @@ class hazierwatermark extends Module
         { line: 'Sammy The Goog' },
         { line: 'Kludge54n5' },
         { line: 'Arthren' },
+        { line: 'c1tcher' },
         { line: 'TechnikTil' },
         { line: 'Idk\'s FNF Stuff' }
       ]

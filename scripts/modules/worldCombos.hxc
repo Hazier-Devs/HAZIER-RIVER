@@ -20,7 +20,7 @@ class HazierWorldCombo extends Module {
 		super.onCountdownStart(event);
 		if (PlayState.instance.healthBar != null)
 		{
-            //garcello purple healthbar
+            //garcello purple healthbar, yay
 			PlayState.instance.healthBar.createFilledBar(0xFF8E40A5, Constants.COLOR_HEALTH_BAR_GREEN);
 			PlayState.instance.healthBar.updateBar();
 		}

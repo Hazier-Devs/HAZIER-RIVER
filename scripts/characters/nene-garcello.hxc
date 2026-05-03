@@ -6,4 +6,16 @@ class NeneGarcelloCharacter extends NeneBaseCharacter
   {
     super('nene-garcello');
   }
+
+  override public function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+    abot.loadTextureAtlas('characters/abot/gar/abotSystem', 'shared');
+  }
+
+  override function setupAbot():Void
+  {
+    super.setupAbot();
+    abot.y = y + 309 - (-globalOffsets[1] * scale.y);
+  }
 }

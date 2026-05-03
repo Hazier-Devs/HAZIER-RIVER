@@ -3,14 +3,13 @@ import funkin.ui.mainmenu.MainMenuState;
 import funkin.ui.credits.CreditsDataHandler;
 
 /*
-  used to patch the credits and
-  also to add the hazier watermark
+  patches credits and adds the hazier watermark on MainMenuState
  */
 class hazierwatermark extends Module
 {
   var creditsData:Array<CreditsData> = [
     {
-      header: 'Hazier River',
+      header: 'HAZIER RIVER',
       body: [
         {line: 'A fanmade remake of HAZY RIVER.'}, {line: 'By the fans, for the fans'}]
     },
@@ -43,11 +42,7 @@ class hazierwatermark extends Module
     {
       header: 'Voice Actors',
       body: [
-        {line: 'amothfurry'},
-        {line: 'SojaWooz'},
-        {line: 'amothfurry'},
-        {line: 'amothfurry'},
-      ]
+        {line: 'amothfurry'}, {line: 'SojaWooz'}]
     },
     {
       header: 'Programming',
@@ -79,8 +74,14 @@ class hazierwatermark extends Module
         {line: 'Arthren'},
         {line: 'amothfurry'},
         {line: 'EEssential'},
+        {line: 'c1tcher'},
         {line: 'peakcinnamon'}
       ]
+    },
+    {
+      header: 'Trailer Editor',
+      body: [
+        {line: 'MarkedAman'}]
     },
     {
       header: 'Special Thanks',
@@ -92,10 +93,8 @@ class hazierwatermark extends Module
   public function new()
   {
     super('hazierwatermark', 0, {state: MainMenuState});
-
-    // patch the credits
     FlxG.signals.postGameStart.addOnce(function() {
-      creditsData.reverse(); // since use "unshift", all the values will be added at the start of the credits (in a reverse order)
+      creditsData.reverse();
       for (i in creditsData)
       {
         CreditsDataHandler.CREDITS_DATA.entries.unshift(i);
@@ -105,7 +104,7 @@ class hazierwatermark extends Module
 
   function onStateChangeEnd()
   {
-    FlxG.mouse.visible = false;
+    FlxG.mouse.visible = false; // do we even need this line? lol
     FlxG.state.leftWatermarkText.y -= FlxG.state.leftWatermarkText.height;
     FlxG.state.leftWatermarkText.text += "\nHazier River DEMO";
   }

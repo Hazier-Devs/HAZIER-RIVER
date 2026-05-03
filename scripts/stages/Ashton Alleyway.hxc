@@ -27,7 +27,7 @@ class AshtonAlleywayStage extends Stage
   {
     var colorShader:AdjustColorShader = new AdjustColorShader();
 
-    switch(charType)
+    switch (charType)
     {
       case CharacterType.BF, CharacterType.DAD:
         colorShader.brightness = -40;

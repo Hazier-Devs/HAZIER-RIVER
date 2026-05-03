@@ -1,4 +1,4 @@
-//import funkin.play.cutscene.VideoCutscene;
+// import funkin.play.cutscene.VideoCutscene;
 import funkin.play.cutscene.CutsceneType;
 import funkin.play.PlayStatePlaylist;
 import funkin.graphics.FunkinSprite;
@@ -91,9 +91,12 @@ class HeadacheSong extends Song
     super.onSongStart(event);
 
     var durationMs:Float = PlayState.instance?.conductorInUse?.getBeatTimeInMs(16) ?? 0;
-    backgroundSpriteTween = FlxTween.tween(backgroundSprite, {alpha: 0}, durationMs / 1000, {onComplete: (_) -> {
-      backgroundSpriteTween = null;
-    }});
+    backgroundSpriteTween = FlxTween.tween(backgroundSprite, {alpha: 0}, durationMs / 1000,
+      {
+        onComplete: (_) -> {
+          backgroundSpriteTween = null;
+        }
+      });
   }
 
   override public function onSongRetry(event:ScriptEvent):Void
@@ -101,9 +104,13 @@ class HeadacheSong extends Song
     super.onSongRetry(event);
 
     backgroundSpriteTween?.cancel();
-    backgroundSpriteTween = FlxTween.tween(backgroundSprite, {alpha: 1}, 0.5, {ease: FlxEase.expoOut, onComplete: (_) -> {
-      backgroundSpriteTween = null;
-    }});
+    backgroundSpriteTween = FlxTween.tween(backgroundSprite, {alpha: 1}, 0.5,
+      {
+        ease: FlxEase.expoOut,
+        onComplete: (_) -> {
+          backgroundSpriteTween = null;
+        }
+      });
   }
 
   override public function onPause(event:ScriptEvent):Void

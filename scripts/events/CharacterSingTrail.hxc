@@ -40,7 +40,8 @@ class CharacterSingTrails extends SongEvent
 
       bfChar = char;
 
-      if (bfTrail == null) {
+      if (bfTrail == null)
+      {
         bfTrail = new FlxTypedSpriteGroup();
         bfTrail.zIndex = curStage.getBoyfriend().zIndex - 1;
         curStage.add(bfTrail);
@@ -48,7 +49,8 @@ class CharacterSingTrails extends SongEvent
     }
   }
 
-  function onSongRetry() {
+  function onSongRetry()
+  {
     bfSpawnTimer = 0;
   }
 
@@ -130,7 +132,8 @@ class CharacterSingTrails extends SongEvent
     var xx = 0;
     var yy = 0;
 
-    switch (bfChar.animation.curAnim.name) {
+    switch (bfChar.animation.curAnim.name)
+    {
       case 'singDOWN':
         yy = moveAmount;
       case 'singUP':

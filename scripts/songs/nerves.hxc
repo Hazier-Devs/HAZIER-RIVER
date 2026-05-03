@@ -128,7 +128,8 @@ class NervesSong extends Song
       {
         time: getStepTime(16),
         callback: () -> {
-          for (i in hudArray) i.visible = false;
+          for (i in hudArray)
+            i.visible = false;
 
           for (i in 0...4)
           {
@@ -199,7 +200,13 @@ class NervesSong extends Song
   {
     if (PlayState.instance == null) return [];
 
-    return [PlayState.instance.healthBar, PlayState.instance.healthBarBG, PlayState.instance.iconP1, PlayState.instance.iconP2, PlayState.instance.scoreText];
+    return [
+      PlayState.instance.healthBar,
+      PlayState.instance.healthBarBG,
+      PlayState.instance.iconP1,
+      PlayState.instance.iconP2,
+      PlayState.instance.scoreText
+    ];
   }
 
   function getStepTime(stepTime:Float):Float

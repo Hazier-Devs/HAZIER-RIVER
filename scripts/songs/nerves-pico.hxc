@@ -5,7 +5,6 @@ import funkin.play.song.Song;
 import funkin.play.PlayState;
 import funkin.save.Save;
 import funkin.Conductor;
-
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import flixel.util.FlxTimer;
@@ -247,14 +246,15 @@ class NervesPicoMixSong extends Song
 
   // My favorite party trick:
   // Helper variables and function!
-
   var garcello(get, never):BaseCharacter;
+
   function get_garcello():BaseCharacter
   {
     return PlayState.instance?.currentStage?.getDad();
   }
 
   var pico(get, never):BaseCharacter;
+
   function get_pico():BaseCharacter
   {
     return PlayState.instance?.currentStage?.getBoyfriend();

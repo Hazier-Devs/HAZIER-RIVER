@@ -1,5 +1,5 @@
 MOD_ROOT="../../.."
-MOD_NAME="HazierRiver"
+MOD_NAME="HazierRiver-SEOS-DEMO"
 EXCLUDE_LIST="modpackExcludeList.txt"
 
 rm -fr modpack

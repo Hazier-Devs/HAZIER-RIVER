@@ -3,7 +3,7 @@ import flixel.FlxSprite;
 import flixel.math.FlxAngle;
 import funkin.play.PlayState;
 import funkin.play.stage.Stage;
-import funkin.graphics.shaders.DropShadowShader;
+import funkin.graphics.shaders.AdjustColorShader;
 import funkin.play.character.CharacterType;
 import openfl.display.BitmapData;
 import flixel.graphics.FlxGraphic;
@@ -12,50 +12,9 @@ import flixel.effects.FlxFlicker;
 
 class AshtonAlleywayStage extends Stage
 {
-  var colorShader:AdjustColorShader;
-  var tankmanRim:DropShadowShader;
-
-  var smokingKillsScroll:FlxBackdrop;
-  var tightBarsScroll:FlxBackdrop;
-  var helpsCalmTheNervesScroll:FlxBackdrop;
-  var blackScreen:FlxSprite;
-
   public function new()
   {
     super('Ashton Alleyway');
-  }
-
-  override function onCreate()
-  {
-    super.onCreate();
-
-    // keep cached so lower end doesn't lag on rendering
-    // why cant i have this only render on headache.. ugh
-    return; // disabled for now
-    blackScreen = new FlxSprite().makeGraphic(9999, 9999, 0xFF000000);
-    add(blackScreen);
-    blackScreen.zIndex = 34;
-    blackScreen.scale.set(5, 5);
-    blackScreen.alpha = 0.001;
-    tightBarsScroll = new FlxBackdrop(Paths.image('AshtonAlleyway/TightBarsScroll'));
-    tightBarsScroll.velocity.set(50, 0);
-    add(tightBarsScroll);
-    tightBarsScroll.y += 500;
-    tightBarsScroll.zIndex = 35;
-    tightBarsScroll.alpha = 0.001;
-    smokingKillsScroll = new FlxBackdrop(Paths.image('AshtonAlleyway/DontYouKnowSmokingKillsScroll'));
-    smokingKillsScroll.velocity.set(-50, 0);
-    add(smokingKillsScroll);
-    smokingKillsScroll.y += -180;
-    smokingKillsScroll.zIndex = 35;
-    smokingKillsScroll.alpha = 0.001;
-    helpsCalmTheNervesScroll = new FlxBackdrop(Paths.image('AshtonAlleyway/HelpsCalmTheNervesScroll'));
-    helpsCalmTheNervesScroll.velocity.set(50, 0);
-    add(helpsCalmTheNervesScroll);
-    helpsCalmTheNervesScroll.y += 200;
-    helpsCalmTheNervesScroll.zIndex = 35;
-    helpsCalmTheNervesScroll.alpha = 0.001;
-    PlayState.instance.currentStage.refresh();
   }
 
   public function onGameOver(event:ScriptEvent)
@@ -66,54 +25,20 @@ class AshtonAlleywayStage extends Stage
 
   override function addCharacter(character:BaseCharacter, charType:CharacterType):Void
   {
-    // Fixes a polymod bug!
-    var character:BaseCharacter = character;
+    var colorShader:AdjustColorShader = new AdjustColorShader();
 
-    // Apply the shader automatically to each character as it gets added.
-    character.shader = colorShader;
-    super.addCharacter(character, charType);
-    trace('Applied stage shader to ' + character.characterName);
-
-    var rim = new DropShadowShader();
-    rim.color = 0xFFFD9A;
-    character.shader = rim;
-    rim.attachedSprite = character;
-
-    rim.setAdjustColor(-70, 0, -50, 0);
-
-    switch (charType)
+    switch(charType)
     {
-      case CharacterType.GF:
-        rim.angle = 90;
       case CharacterType.BF, CharacterType.DAD:
-        rim.angle = 80;
-        if (character.characterId == 'garcello')
-        {
-          rim.loadAltMask(Paths.image('garcello_mask'));
-          rim.useAltMask = true;
-          rim.maskThreshold = 1;
-        }
+        colorShader.brightness = -40;
+        colorShader.contrast = -30;
+      case CharacterType.GF:
+        colorShader.brightness = -40;
+        colorShader.contrast = -40;
     }
 
-    character.animation.onFrameChange.add(function() {
-      rim.updateFrameInfo(character.frame);
-    });
-  }
-
-  override public function onCountdownStart()
-  {
-    // add null checks because vslice bitches at me wah wah doesnt exist could be null wahhhhh
-    // set invisible on song restart pretty much lol
-    // im sure theres actually a function for this but.. meh idrc rn
-    if (helpsCalmTheNervesScroll != null) helpsCalmTheNervesScroll.alpha = 0.001;
-    if (smokingKillsScroll != null) smokingKillsScroll.alpha = 0.001;
-    if (tightBarsScroll != null) tightBarsScroll.alpha = 0.001;
-    if (blackScreen != null) blackScreen.alpha = 0.001;
-  }
-
-  override function buildStage()
-  {
-    super.buildStage();
+    character.shader = colorShader;
+    super.addCharacter(character, charType);
   }
 
   var lightFlicker:FlxFlicker = null;
@@ -127,34 +52,9 @@ class AshtonAlleywayStage extends Stage
       lightFlicker = FlxFlicker.flicker(getNamedProp('lamp lights'), 0.3, 1 / FlxG.random.int(10, 20), true, true, function(_) {
         // called on finish
         lightFlicker = null;
-        getBoyfriend()?.shader?.distance = 15;
-        getGirlfriend()?.shader?.distance = 15;
-        getDad()?.shader?.distance = 15;
       }, function(v) { // on progress, called almost every time (except the last one)
-        getBoyfriend()?.shader?.distance = (getNamedProp('lamp lights').visible ? 15 : 0);
-        getGirlfriend()?.shader?.distance = (getNamedProp('lamp lights').visible ? 15 : 0);
-        getDad()?.shader?.distance = (getNamedProp('lamp lights').visible ? 15 : 0);
+        // yeah
       });
-    }
-
-    if (PlayState.instance.currentSong.id.toLowerCase() == "headache")
-    {
-      switch (event.beat)
-      {
-        case 112:
-          PlayState.instance.camGame.flash(0xFFFFFFFF, 1.0);
-          if (helpsCalmTheNervesScroll != null) helpsCalmTheNervesScroll.alpha = 1;
-          if (smokingKillsScroll != null) smokingKillsScroll.alpha = 1;
-          if (tightBarsScroll != null) tightBarsScroll.alpha = 1;
-          if (blackScreen != null) blackScreen.alpha = 1;
-        case 144:
-          PlayState.instance.camGame.flash(0xFFFFFFFF, 1.0);
-          // keep cached so lower end doesn't lag on re-rendering
-          if (helpsCalmTheNervesScroll != null) helpsCalmTheNervesScroll.alpha = 0.001;
-          if (smokingKillsScroll != null) smokingKillsScroll.alpha = 0.001;
-          if (tightBarsScroll != null) tightBarsScroll.alpha = 0.001;
-          if (blackScreen != null) blackScreen.alpha = 0.001;
-      }
     }
   }
 

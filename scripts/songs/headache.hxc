@@ -27,6 +27,7 @@ class HeadacheSong extends Song
   {
     playedCutscene = false;
     playedConversation = false;
+    backgroundSprite = null;
 
     super.onCreate(event);
   }

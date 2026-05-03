@@ -1,4 +1,4 @@
-import funkin.play.character.AnimateAtlasCharacter;
+import funkin.play.character.MultiAnimateAtlasCharacter;
 import funkin.play.character.CharacterType;
 import funkin.play.GameOverSubState;
 import funkin.play.PauseSubState;
@@ -8,7 +8,7 @@ import funkin.audio.FunkinSound;
 import funkin.util.HapticUtil;
 import funkin.FunkinMemory;
 
-class PicoGarcelloCharacter extends AnimateAtlasCharacter
+class PicoGarcelloCharacter extends MultiAnimateAtlasCharacter
 {
   var burpReal:Bool = false;
   var burp:FunkinSound;

@@ -11,7 +11,7 @@
     "cameraZoom": 1.0
   },
   "flipX": true,
-  "renderType": "animateatlas",
+  "renderType": "multianimateatlas",
   "animations": [
     {
       "name": "idle",
@@ -58,6 +58,25 @@
       "prefix": "burp",
       "looped": true,
       "frameIndices": [17]
+    },
+    {
+      "assetPath": "shared:characters/pico/death",
+      "name": "firstDeath",
+      "prefix": "Death Intro",
+      "offsets": [100, 195]
+    },
+    {
+      "assetPath": "shared:characters/pico/death",
+      "name": "deathLoop",
+      "prefix": "Death Loop",
+      "looped": true,
+      "offsets": [100, 195]
+    },
+    {
+      "assetPath": "shared:characters/pico/death",
+      "name": "deathConfirm",
+      "prefix": "Death Confirm",
+      "offsets": [100, 195]
     }
   ]
 }

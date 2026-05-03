@@ -12,7 +12,7 @@
   },
   "flipX": true,
   "offsets": [0, 23],
-  "renderType": "animateatlas",
+  "renderType": "multianimateatlas",
   "animations": [
     {
       "name": "idle",
@@ -88,6 +88,25 @@
     {
       "name": "3cough",
       "prefix": "3cough"
+    },
+    {
+      "assetPath": "shared:characters/pico/death",
+      "name": "firstDeath",
+      "prefix": "Death Intro",
+      "offsets": [100, 195]
+    },
+    {
+      "assetPath": "shared:characters/pico/death",
+      "name": "deathLoop",
+      "prefix": "Death Loop",
+      "looped": true,
+      "offsets": [100, 195]
+    },
+    {
+      "assetPath": "shared:characters/pico/death",
+      "name": "deathConfirm",
+      "prefix": "Death Confirm",
+      "offsets": [100, 195]
     }
   ]
 }

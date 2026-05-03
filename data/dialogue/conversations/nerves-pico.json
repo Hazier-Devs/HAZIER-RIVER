@@ -26,7 +26,10 @@
       "boxAnimation": "enter",
 
       "text": [
-        "*COUGH* Heh... Looks like you beat me. You're not half bad at this!"
+        "*COUGH*",
+        " Heh...",
+        " looks like you beat me.",
+        " You're not half bad at this!"
       ]
     },
     {
@@ -36,16 +39,10 @@
       "boxAnimation": "speaking",
 
       "text": [
-        "Jeez, you look like shit now.. I swear you were fine like.. a minute ago..."
+        "Jeez, you look like shit now..",
+        " I swear you were fine like.. a minute ago...",
+        " You sure that thing's safe?"
       ]
-    },
-    {
-      "speaker": "pico",
-      "speakerAnimation": "questioning",
-      "box": "garcello",
-      "boxAnimation": "speaking",
-
-      "text": ["You sure that thing's safe?"]
     },
     {
       "speaker": "garcello",
@@ -54,7 +51,9 @@
       "boxAnimation": "speaking",
 
       "text": [
-        "Well, as safe as a cigarette can be I guess. Not like i can *COUGH* get off of em-"
+        "Well, as safe as a cigarette can be I guess.",
+        " Not like I can *COUGH*",
+        " get off of em-"
       ]
     },
     {
@@ -63,7 +62,7 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Well, anyways. You earned these. Have fun with em'"]
+      "text": ["Well anyways, you earned these.", " Have fun with em'"]
     },
     {
       "speaker": "pico",
@@ -71,7 +70,7 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Actually.... Maybe one more match?"]
+      "text": ["Actually...", " maybe one more match?"]
     },
     {
       "speaker": "pico",
@@ -80,7 +79,8 @@
       "boxAnimation": "speaking",
 
       "text": [
-        "Plus, I got a pack of my own, snagged these from a locker when I was little.."
+        "Plus, I got a pack of my own.",
+        " Snagged these from a locker when I was little.."
       ]
     },
     {
@@ -89,7 +89,7 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["...Is that a blunt?"]
+      "text": ["...", "Is that a blunt?"]
     },
     {
       "speaker": "pico",
@@ -98,7 +98,8 @@
       "boxAnimation": "speaking",
 
       "text": [
-        "Hell yeah it is! And they're totally good for you! My buddies call it a medicinal herb, It's awesome."
+        "Hell yeah it is, and they're totally good for you!",
+        " My buddies call it a medicinal herb. It's awesome."
       ]
     },
     {
@@ -115,7 +116,7 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Yeeeeeeahh.. THIS is the shit, man"]
+      "text": ["Yeeeeeeahh...", " THIS is the shit, man"]
     },
     {
       "speaker": "nene",
@@ -123,7 +124,7 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Hey! I said I wanted one too, asshole!"]
+      "text": ["Hey!", " I said I wanted one too, asshole!"]
     },
     {
       "speaker": "pico",
@@ -132,7 +133,9 @@
       "boxAnimation": "speaking",
 
       "text": [
-        "Nah... We're doin' double or nothing! I get TWO packs if i beat you this time!"
+        "Nah...",
+        " We're doin' double or nothing!",
+        " I get TWO packs if I beat you this time!"
       ]
     },
     {
@@ -142,7 +145,9 @@
       "boxAnimation": "speaking",
 
       "text": [
-        "(Two..? I can't even get this one pack off my hands... how the hell am i gonna get two?)"
+        "(Two..?",
+        " I can't even get this one pack off my hands...",
+        " how the hell am I gonna get two?)"
       ]
     },
     {
@@ -151,7 +156,7 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["(You know what... I'll go along with it, he's high)"]
+      "text": ["(You know what...", " I'll go along with it, he's high)"]
     },
     {
       "speaker": "garcello",
@@ -159,7 +164,11 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Sounds cool to me... *COUGH* I..I've been having fun atleast"]
+      "text": [
+        "Sounds cool to me... *COUGH*",
+        " I..",
+        "I've been having fun atleast"
+      ]
     },
     {
       "speaker": "pico",
@@ -192,7 +201,8 @@
       "boxAnimation": "speaking",
 
       "text": [
-        "Oh yeah, could you stand really still for me? I wanna try something..."
+        "Oh yeah, could you stand really still for me? ",
+        "I wanna try something..."
       ]
     }
   ]

@@ -33,7 +33,7 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Nice!... *COUGH*"]
+      "text": ["Nice!...", " *COUGH*"]
     },
     {
       "speaker": "garcello",
@@ -41,7 +41,7 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Hhh... Hey."]
+      "text": ["Hhh...", " Hey."]
     },
     {
       "speaker": "garcello",
@@ -68,7 +68,8 @@
       "boxAnimation": "speaking",
 
       "text": [
-        "Oh no, I'm not giving up that easy. You've got some tight bars, little man."
+        "Oh no, I'm not giving up that easy. ",
+        "You've got some tight bars, little man."
       ]
     },
     {
@@ -78,7 +79,10 @@
       "boxAnimation": "speaking",
 
       "text": [
-        "In fact...I didn't really win that last one did I? I think that calls for a little *cough* rematch!"
+        "In fact...",
+        " I didn't really win that last one did I?",
+        " I think that calls for a little *COUGH*",
+        " rematch!"
       ]
     },
     {
@@ -95,7 +99,7 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Heh, yeah! *COUGH* yeah, that's the spirit!"]
+      "text": ["Heh, yeah! *COUGH*", " yeah, that's the spirit!"]
     },
     {
       "speaker": "gf",
@@ -103,7 +107,7 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Um... Mr.."]
+      "text": ["Um...", " Mr.."]
     },
     {
       "speaker": "garcello",
@@ -111,7 +115,7 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["It's Garcello, little lady"]
+      "text": ["It's Garcello, little lady."]
     },
     {
       "speaker": "garcello",
@@ -120,7 +124,8 @@
       "boxAnimation": "speaking",
 
       "text": [
-        "(Man i REALLY got caught up in this.. I didn't even tell them my name yet...)"
+        "(Man I REALLY got caught up in this...",
+        " I didn't even tell them my name yet...)"
       ]
     },
     {
@@ -130,7 +135,8 @@
       "boxAnimation": "speaking",
 
       "text": [
-        "Right.. Garcello? I don't think you should be smoking that if you're coughing this much..."
+        "Right.. Garcello?",
+        " I don't think you should be smoking that if you're coughing this much..."
       ]
     },
     {
@@ -140,7 +146,10 @@
       "boxAnimation": "speaking",
 
       "text": [
-        "Oh this? I've been smoking these for *cough* god knows how long.. I'll be fine, I promise!"
+        "Oh this?",
+        " I've been smoking these for *COUGH*",
+        " god knows how long...",
+        " I'll be fine, I promise!"
       ]
     },
     {

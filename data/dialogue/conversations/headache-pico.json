@@ -26,7 +26,8 @@
       "boxAnimation": "enter",
 
       "text": [
-        "Oh hey, wasn't expecting company at this hour, how are you two doing?"
+        "Oh hey, wasn't expecting company at this hour.",
+        " How are you two doing?"
       ]
     },
     {
@@ -35,15 +36,11 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["That cig you got..."]
-    },
-    {
-      "speaker": "pico",
-      "speakerAnimation": "talk",
-      "box": "garcello",
-      "boxAnimation": "speaking",
-
-      "text": ["Is it like magical or something? Shit looks awesome."]
+      "text": [
+        "That cig you got...",
+        " Is it like magical or something?",
+        " Shit looks awesome."
+      ]
     },
     {
       "speaker": "garcello",
@@ -51,7 +48,7 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Yeah, its pretty cool, mint flavored too"]
+      "text": ["Yeah, its pretty cool. ", "Mint flavored too."]
     },
     {
       "speaker": "pico",
@@ -67,7 +64,7 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["So.. Do you sell them or-"]
+      "text": ["So..", " Do you sell them or-"]
     },
     {
       "speaker": "garcello",
@@ -76,7 +73,8 @@
       "boxAnimation": "speaking",
 
       "text": [
-        "Well, they aren't really for sale, hell they aren't even mine.."
+        "Well, they aren't really for sale,",
+        " hell they aren't even mine.."
       ]
     },
     {
@@ -86,7 +84,8 @@
       "boxAnimation": "speaking",
 
       "text": [
-        "But... If you beat me in a friendly little rap battle, I'll give you a pack on the house.."
+        "But... If you beat me in a friendly little rap battle,",
+        " I'll give you a pack on the house.."
       ]
     },
     {
@@ -111,7 +110,7 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Can i have one too?"]
+      "text": ["Can I have one too?"]
     },
     {
       "speaker": "pico",
@@ -135,7 +134,10 @@
       "box": "garcello",
       "boxAnimation": "speaking",
 
-      "text": ["Heh, you guys seem pretty hyped up. Guess it's settled then"]
+      "text": [
+        "Heh, you guys seem pretty hyped up.",
+        " Guess it's settled then."
+      ]
     },
     {
       "speaker": "pico",

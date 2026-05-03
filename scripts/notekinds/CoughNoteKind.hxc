@@ -13,7 +13,7 @@ class CoughNoteKind extends NoteKind
   override public function onNoteHit(event:HitNoteScriptEvent):Void
   {
     super.onNoteHit(event);
-    if (event.note.noteData.getMustHitNote()) return;
+    if (event.eventCanceled || event.note.noteData.getMustHitNote()) return;
 
     var dad:BaseCharacter = PlayState.instance?.currentStage?.getDad();
     dad?.playAnimation('cough', true);

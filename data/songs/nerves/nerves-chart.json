@@ -112,15 +112,6 @@
       }
     },
     {
-      "t": 4200,
-      "e": "PlayAnimation",
-      "v": {
-        "target": "dad",
-        "anim": "cough",
-        "force": false
-      }
-    },
-    {
       "t": 4800,
       "e": "FocusCamera",
       "v": {
@@ -426,15 +417,6 @@
     },
     {
       "t": 36600,
-      "e": "PlayAnimation",
-      "v": {
-        "target": "dad",
-        "anim": "cough",
-        "force": false
-      }
-    },
-    {
-      "t": 36600,
       "e": "ZoomCamera",
       "v": {
         "duration": 32,
@@ -457,15 +439,6 @@
       }
     },
     {
-      "t": 37800,
-      "e": "PlayAnimation",
-      "v": {
-        "target": "dad",
-        "anim": "cough",
-        "force": false
-      }
-    },
-    {
       "t": 37950,
       "e": "SetCameraBop",
       "v": {
@@ -481,33 +454,6 @@
         "rate": 2,
         "intensity": 1,
         "offset": 1
-      }
-    },
-    {
-      "t": 39000,
-      "e": "PlayAnimation",
-      "v": {
-        "target": "dad",
-        "anim": "cough",
-        "force": false
-      }
-    },
-    {
-      "t": 40200,
-      "e": "PlayAnimation",
-      "v": {
-        "target": "dad",
-        "anim": "cough",
-        "force": false
-      }
-    },
-    {
-      "t": 41400,
-      "e": "PlayAnimation",
-      "v": {
-        "target": "dad",
-        "anim": "cough",
-        "force": false
       }
     },
     {
@@ -565,15 +511,6 @@
     },
     {
       "t": 51000,
-      "e": "PlayAnimation",
-      "v": {
-        "target": "dad",
-        "anim": "cough",
-        "force": false
-      }
-    },
-    {
-      "t": 51000,
       "e": "ZoomCamera",
       "v": {
         "duration": 4,
@@ -604,15 +541,6 @@
         "zoom": 1,
         "mode": "direct",
         "easeDir": "Out"
-      }
-    },
-    {
-      "t": 52200,
-      "e": "PlayAnimation",
-      "v": {
-        "target": "dad",
-        "anim": "cough",
-        "force": false
       }
     },
     {
@@ -715,15 +643,6 @@
     },
     {
       "t": 60600,
-      "e": "PlayAnimation",
-      "v": {
-        "target": "dad",
-        "anim": "cough",
-        "force": false
-      }
-    },
-    {
-      "t": 60600,
       "e": "FocusCamera",
       "v": {
         "duration": 4,
@@ -732,15 +651,6 @@
         "char": 1,
         "ease": "INSTANT",
         "easeDir": "Out"
-      }
-    },
-    {
-      "t": 61800,
-      "e": "PlayAnimation",
-      "v": {
-        "target": "dad",
-        "anim": "cough",
-        "force": false
       }
     },
     {
@@ -793,15 +703,6 @@
         "zoom": 0.6,
         "mode": "direct",
         "easeDir": "InOut"
-      }
-    },
-    {
-      "t": 66600,
-      "e": "PlayAnimation",
-      "v": {
-        "target": "dad",
-        "anim": "cough",
-        "force": false
       }
     },
     {
@@ -1082,24 +983,6 @@
       }
     },
     {
-      "t": 94200,
-      "e": "PlayAnimation",
-      "v": {
-        "force": false,
-        "anim": "cough",
-        "target": "dad"
-      }
-    },
-    {
-      "t": 95400,
-      "e": "PlayAnimation",
-      "v": {
-        "force": false,
-        "anim": "cough",
-        "target": "dad"
-      }
-    },
-    {
       "t": 95400,
       "e": "ZoomCamera",
       "v": {
@@ -1210,33 +1093,6 @@
       }
     },
     {
-      "t": 107400,
-      "e": "PlayAnimation",
-      "v": {
-        "force": false,
-        "anim": "cough",
-        "target": "dad"
-      }
-    },
-    {
-      "t": 108600,
-      "e": "PlayAnimation",
-      "v": {
-        "force": false,
-        "anim": "cough",
-        "target": "dad"
-      }
-    },
-    {
-      "t": 109800,
-      "e": "PlayAnimation",
-      "v": {
-        "target": "dad",
-        "anim": "cough",
-        "force": false
-      }
-    },
-    {
       "t": 110250,
       "e": "SetCameraBop",
       "v": {
@@ -1283,12 +1139,12 @@
       {
         "t": 4200,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 4500,
         "d": 6,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 4800,
@@ -1733,22 +1589,22 @@
       {
         "t": 36600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 36900,
         "d": 6,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 37800,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 38100,
         "d": 7,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 39000,
@@ -1757,7 +1613,7 @@
       {
         "t": 39000,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 39300,
@@ -1766,7 +1622,7 @@
       {
         "t": 39300,
         "d": 4,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 40200,
@@ -1775,7 +1631,7 @@
       {
         "t": 40200,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 40500,
@@ -1784,7 +1640,7 @@
       {
         "t": 40500,
         "d": 6,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 41400,
@@ -1793,7 +1649,7 @@
       {
         "t": 41400,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 41700,
@@ -1802,7 +1658,7 @@
       {
         "t": 41700,
         "d": 6,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 42600,
@@ -1993,7 +1849,7 @@
       {
         "t": 51000,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 51300,
@@ -2002,7 +1858,7 @@
       {
         "t": 51300,
         "d": 7,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 51450,
@@ -2023,7 +1879,7 @@
       {
         "t": 52200,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 52500,
@@ -2032,7 +1888,7 @@
       {
         "t": 52500,
         "d": 6,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 52800,
@@ -2211,7 +2067,7 @@
       {
         "t": 60600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 60900,
@@ -2220,7 +2076,7 @@
       {
         "t": 60900,
         "d": 6,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 61050,
@@ -2245,7 +2101,7 @@
       {
         "t": 61800,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 61950,
@@ -2258,7 +2114,7 @@
       {
         "t": 62100,
         "d": 4,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 62250,
@@ -2297,12 +2153,12 @@
       {
         "t": 66600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 66900,
         "d": 6,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 68100,
@@ -2996,7 +2852,7 @@
       {
         "t": 94200,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 94500,
@@ -3005,7 +2861,7 @@
       {
         "t": 94500,
         "d": 6,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 94650,
@@ -3026,7 +2882,7 @@
       {
         "t": 95400,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 95550,
@@ -3039,7 +2895,7 @@
       {
         "t": 95700,
         "d": 4,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 95850,
@@ -3277,7 +3133,7 @@
       {
         "t": 107400,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 107700,
@@ -3286,7 +3142,7 @@
       {
         "t": 107700,
         "d": 6,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 108000,
@@ -3300,7 +3156,7 @@
       {
         "t": 108600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 108900,
@@ -3309,7 +3165,7 @@
       {
         "t": 108900,
         "d": 6,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 109200,
@@ -3330,7 +3186,7 @@
       {
         "t": 109800,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 110100,
@@ -3339,7 +3195,7 @@
       {
         "t": 110100,
         "d": 6,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 110400,
@@ -3351,12 +3207,12 @@
       {
         "t": 4200,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 4500,
         "d": 6,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 4800,
@@ -3801,22 +3657,22 @@
       {
         "t": 36600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 36900,
         "d": 6,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 37800,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 38100,
         "d": 7,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 39000,
@@ -3825,7 +3681,7 @@
       {
         "t": 39000,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 39300,
@@ -3834,7 +3690,7 @@
       {
         "t": 39300,
         "d": 4,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 40200,
@@ -3843,7 +3699,7 @@
       {
         "t": 40200,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 40500,
@@ -3852,7 +3708,7 @@
       {
         "t": 40500,
         "d": 6,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 41400,
@@ -3861,7 +3717,7 @@
       {
         "t": 41400,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 41700,
@@ -3870,7 +3726,7 @@
       {
         "t": 41700,
         "d": 6,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 42600,
@@ -4061,7 +3917,7 @@
       {
         "t": 51000,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 51300,
@@ -4070,7 +3926,7 @@
       {
         "t": 51300,
         "d": 7,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 51450,
@@ -4091,7 +3947,7 @@
       {
         "t": 52200,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 52500,
@@ -4100,7 +3956,7 @@
       {
         "t": 52500,
         "d": 6,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 52800,
@@ -4279,7 +4135,7 @@
       {
         "t": 60600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 60900,
@@ -4288,7 +4144,7 @@
       {
         "t": 60900,
         "d": 6,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 61050,
@@ -4313,7 +4169,7 @@
       {
         "t": 61800,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 61950,
@@ -4326,7 +4182,7 @@
       {
         "t": 62100,
         "d": 4,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 62250,
@@ -4365,12 +4221,12 @@
       {
         "t": 66600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 66900,
         "d": 6,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 68100,
@@ -5064,7 +4920,7 @@
       {
         "t": 94200,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 94500,
@@ -5073,7 +4929,7 @@
       {
         "t": 94500,
         "d": 6,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 94650,
@@ -5094,7 +4950,7 @@
       {
         "t": 95400,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 95550,
@@ -5107,7 +4963,7 @@
       {
         "t": 95700,
         "d": 4,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 95850,
@@ -5345,7 +5201,7 @@
       {
         "t": 107400,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 107700,
@@ -5354,7 +5210,7 @@
       {
         "t": 107700,
         "d": 6,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 108000,
@@ -5368,7 +5224,7 @@
       {
         "t": 108600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 108900,
@@ -5377,7 +5233,7 @@
       {
         "t": 108900,
         "d": 6,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 109200,
@@ -5398,7 +5254,7 @@
       {
         "t": 109800,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 110100,
@@ -5407,7 +5263,7 @@
       {
         "t": 110100,
         "d": 6,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 110400,
@@ -5419,7 +5275,7 @@
       {
         "t": 4200,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 4800,
@@ -5864,12 +5720,12 @@
       {
         "t": 36600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 37800,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 39000,
@@ -5878,7 +5734,7 @@
       {
         "t": 39000,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 39300,
@@ -5891,7 +5747,7 @@
       {
         "t": 40200,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 40500,
@@ -5904,7 +5760,7 @@
       {
         "t": 41400,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 41700,
@@ -6099,7 +5955,7 @@
       {
         "t": 51000,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 51300,
@@ -6124,7 +5980,7 @@
       {
         "t": 52200,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 52500,
@@ -6307,7 +6163,7 @@
       {
         "t": 60600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 60900,
@@ -6336,7 +6192,7 @@
       {
         "t": 61800,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 61950,
@@ -6383,7 +6239,7 @@
       {
         "t": 66600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 68100,
@@ -7077,7 +6933,7 @@
       {
         "t": 94200,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 94500,
@@ -7102,7 +6958,7 @@
       {
         "t": 95400,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 95550,
@@ -7348,7 +7204,7 @@
       {
         "t": 107400,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 107700,
@@ -7366,7 +7222,7 @@
       {
         "t": 108600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 108900,
@@ -7391,7 +7247,7 @@
       {
         "t": 109800,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 110100,

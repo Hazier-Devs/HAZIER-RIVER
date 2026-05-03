@@ -76,7 +76,6 @@ class PicoGarcelloHighCharacter extends AnimateAtlasCharacter
       {
         case "cough":
           holdTimer = 0;
-          // this.playAnimation('cough', true, true); // No cough anim yet
           this.playAnimation('cough', true, false);
           if (HapticUtil.hapticsAvailable) HapticUtil.vibrate(0, 0.1, 0.1, 1);
         case "shit":

@@ -167,8 +167,12 @@ class NervesPicoMixSong extends Song
     // Reset HUD opacity.
     if (PlayState.instance?.camHUD != null)
     {
-      FlxTween.cancelTweensOf(PlayState.instance.camHUD);
-      PlayState.instance.camHUD.alpha = 1;
+      try
+      {
+        FlxTween.cancelTweensOf(PlayState.instance.camHUD);
+        PlayState.instance.camHUD.alpha = 1;
+      }
+      catch(e:Exception) {}
     }
 
     // Don't play any cutscenes in the Chart Editor.
@@ -206,7 +210,7 @@ class NervesPicoMixSong extends Song
     }
   }
 
-  override public function onSongStart(event:onSongStart):Void
+  override public function onSongStart(event:ScriptEvent):Void
   {
     // Make sure Garcello is still dead.
     if (isGarcelloDead) killGarcello();
@@ -222,6 +226,19 @@ class NervesPicoMixSong extends Song
     }
 
     super.onNoteHit(event);
+  }
+
+  override public function onSongEvent(event:SongEventScriptEvent):Void
+  {
+    super.onSongEvent(event);
+    if (!isGarcelloDead || event.eventData?.eventKind != 'PlayAnimation') return;
+
+    var targetName:String = event.eventData?.getString('target');
+    if (['dad', 'opponent'].contains(targetName))
+    {
+      event.eventData?.activated = true;
+      event?.cancel();
+    }
   }
 
   override public function onSongLoaded(event:SongLoadScriptEvent):Void

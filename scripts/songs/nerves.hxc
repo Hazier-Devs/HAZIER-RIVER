@@ -182,6 +182,12 @@ class NervesSong extends Song
     sequence.startTime = 0;
   }
 
+  override public function onDestroy(event:ScriptEvent):Void
+  {
+    sequence?.destroy();
+    super.onDestroy(event);
+  }
+
   var playerStrumline(get, never):Strumline;
   var opponentStrumline(get, never):Strumline;
   var hudArray(get, never):Array<FlxSprite>;

@@ -350,15 +350,6 @@
       }
     },
     {
-      "t": 33600,
-      "e": "PlayAnimation",
-      "v": {
-        "force": false,
-        "anim": "cough",
-        "target": "dad"
-      }
-    },
-    {
       "t": 34200,
       "e": "FocusCamera",
       "v": {
@@ -391,15 +382,6 @@
         "zoom": 1.4,
         "mode": "stage",
         "easeDir": "Out"
-      }
-    },
-    {
-      "t": 34800,
-      "e": "PlayAnimation",
-      "v": {
-        "force": false,
-        "anim": "cough",
-        "target": "dad"
       }
     },
     {
@@ -460,15 +442,6 @@
       }
     },
     {
-      "t": 36600,
-      "e": "PlayAnimation",
-      "v": {
-        "force": false,
-        "anim": "cough",
-        "target": "dad"
-      }
-    },
-    {
       "t": 37800,
       "e": "ZoomCamera",
       "v": {
@@ -489,15 +462,6 @@
         "char": 1,
         "ease": "INSTANT",
         "easeDir": "In"
-      }
-    },
-    {
-      "t": 37800,
-      "e": "PlayAnimation",
-      "v": {
-        "force": false,
-        "anim": "cough",
-        "target": "dad"
       }
     },
     {
@@ -547,15 +511,6 @@
       }
     },
     {
-      "t": 39000,
-      "e": "PlayAnimation",
-      "v": {
-        "force": false,
-        "anim": "cough",
-        "target": "dad"
-      }
-    },
-    {
       "t": 39600,
       "e": "ZoomCamera",
       "v": {
@@ -599,15 +554,6 @@
         "zoom": 1.6,
         "mode": "stage",
         "easeDir": "Out"
-      }
-    },
-    {
-      "t": 40200,
-      "e": "PlayAnimation",
-      "v": {
-        "force": false,
-        "anim": "cough",
-        "target": "dad"
       }
     },
     {
@@ -865,15 +811,6 @@
       }
     },
     {
-      "t": 60600,
-      "e": "PlayAnimation",
-      "v": {
-        "force": false,
-        "anim": "cough",
-        "target": "dad"
-      }
-    },
-    {
       "t": 61800,
       "e": "ZoomCamera",
       "v": {
@@ -916,15 +853,6 @@
         "mode": "stage",
         "easeDir": "Out",
         "zoom": 1.2
-      }
-    },
-    {
-      "t": 66600,
-      "e": "PlayAnimation",
-      "v": {
-        "force": false,
-        "anim": "cough",
-        "target": "dad"
       }
     },
     {
@@ -1290,15 +1218,6 @@
       }
     },
     {
-      "t": 107400,
-      "e": "PlayAnimation",
-      "v": {
-        "force": false,
-        "anim": "cough",
-        "target": "dad"
-      }
-    },
-    {
       "t": 108600,
       "e": "ZoomCamera",
       "v": {
@@ -1307,15 +1226,6 @@
         "easeDir": "Out",
         "zoom": 1.3,
         "mode": "stage"
-      }
-    },
-    {
-      "t": 108600,
-      "e": "PlayAnimation",
-      "v": {
-        "force": false,
-        "anim": "cough",
-        "target": "dad"
       }
     },
     {
@@ -1877,7 +1787,7 @@
       {
         "t": 33600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 34200,
@@ -1887,7 +1797,7 @@
       {
         "t": 34800,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 35400,
@@ -1905,7 +1815,7 @@
       {
         "t": 36600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 36900.02,
@@ -1922,7 +1832,7 @@
       {
         "t": 37800,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 38400,
@@ -1932,7 +1842,7 @@
       {
         "t": 39000,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 39600,
@@ -1942,7 +1852,7 @@
       {
         "t": 40200,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 40800,
@@ -1957,12 +1867,12 @@
       {
         "t": 41400,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 41700,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 42000,
@@ -2423,7 +2333,7 @@
       {
         "t": 60600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 60900,
@@ -2534,7 +2444,7 @@
       {
         "t": 66600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 67200,
@@ -3445,7 +3355,7 @@
       {
         "t": 107400,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 107700,
@@ -3470,7 +3380,7 @@
       {
         "t": 108600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 108900,
@@ -4139,7 +4049,7 @@
       {
         "t": 33600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 34200,
@@ -4149,7 +4059,7 @@
       {
         "t": 34800,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 35400,
@@ -4167,7 +4077,7 @@
       {
         "t": 36600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 36600.02,
@@ -4188,7 +4098,7 @@
       {
         "t": 37800,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 37800.02,
@@ -4203,7 +4113,7 @@
       {
         "t": 39000,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 39600,
@@ -4213,7 +4123,7 @@
       {
         "t": 40200,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 40800,
@@ -4228,12 +4138,12 @@
       {
         "t": 41400,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 41700,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 42000,
@@ -4758,7 +4668,7 @@
       {
         "t": 60600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 60900,
@@ -4878,7 +4788,7 @@
       {
         "t": 66600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 67200,
@@ -5889,7 +5799,7 @@
       {
         "t": 107400,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 107700,
@@ -5914,7 +5824,7 @@
       {
         "t": 108600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 108900,
@@ -6665,7 +6575,7 @@
       {
         "t": 33600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 34200,
@@ -6675,7 +6585,7 @@
       {
         "t": 34800,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 35400,
@@ -6697,7 +6607,7 @@
       {
         "t": 36600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 36600.02,
@@ -6722,7 +6632,7 @@
       {
         "t": 37800,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 37800.02,
@@ -6737,7 +6647,7 @@
       {
         "t": 39000,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 39600,
@@ -6747,7 +6657,7 @@
       {
         "t": 40200,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 40800,
@@ -6762,12 +6672,12 @@
       {
         "t": 41400,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 41700,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 42000,
@@ -7361,7 +7271,7 @@
       {
         "t": 60600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 60900,
@@ -7515,7 +7425,7 @@
       {
         "t": 66600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 67200,
@@ -8665,7 +8575,7 @@
       {
         "t": 107400,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 107700,
@@ -8694,7 +8604,7 @@
       {
         "t": 108600,
         "d": 5,
-        "k": "HazierMissNote"
+        "k": "cough"
       },
       {
         "t": 108900,

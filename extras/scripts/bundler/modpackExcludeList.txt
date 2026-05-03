@@ -6,4 +6,3 @@ extras
 LICENSE
 astc-compression-data.json
 hxformat.json
-README.md

@@ -10,23 +10,31 @@ import flixel.group.FlxTypedSpriteGroup;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 
+using StringTools;
+
 class HazierWorldCombo extends Module {
+    /**
+     * The color used by the health bar when Garcello is in the mix.
+     */
+    public static final COLOR_HEALTH_BAR_PURPLE:FlxColor = 0xFF8E40A5;
+
     function new() {
         super('HazierWorldCombo', 0, {state: PlayState});
     }
 
-    override function onCountdownStart(event)
+    override public function onCountdownStart(event:CountdownScriptEvent):Void
 	{
 		super.onCountdownStart(event);
-		if (PlayState.instance.healthBar != null)
+
+		if (PlayState.instance.healthBar != null && (PlayState.instance?.currentStage?.getDad()?.characterId ?? '').startsWith('garcello'))
 		{
-            //garcello purple healthbar, yay
-			PlayState.instance.healthBar.createFilledBar(0xFF8E40A5, Constants.COLOR_HEALTH_BAR_GREEN);
+			PlayState.instance.healthBar.createFilledBar(COLOR_HEALTH_BAR_PURPLE, Constants.COLOR_HEALTH_BAR_GREEN);
 			PlayState.instance.healthBar.updateBar();
 		}
     }
 
-    function onSongLoaded() {
+    override public function onSongLoaded(event:SongLoadScriptEvent):Void
+    {
         var hazyweek = LevelRegistry.instance.fetchEntry('weekg').getSongs(); // get all songs on the garcello week
         if (!hazyweek.contains(PlayState.instance.currentSong.id)) return; // check to see if were playing a garcello song
            

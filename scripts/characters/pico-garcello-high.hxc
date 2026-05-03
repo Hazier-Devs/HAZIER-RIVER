@@ -1,14 +1,10 @@
-import funkin.play.character.MultiAnimateAtlasCharacter;
+import funkin.play.character.PicoPlayerBaseCharacter;
 import funkin.play.character.CharacterType;
-import funkin.play.GameOverSubState;
-import funkin.play.PauseSubState;
 import funkin.play.PlayState;
-import funkin.graphics.FunkinSprite;
 import funkin.audio.FunkinSound;
 import funkin.util.HapticUtil;
-import funkin.FunkinMemory;
 
-class PicoGarcelloHighCharacter extends MultiAnimateAtlasCharacter
+class PicoGarcelloHighCharacter extends PicoPlayerBaseCharacter
 {
   var burpReal:Bool = false;
   var burp:FunkinSound;
@@ -22,39 +18,8 @@ class PicoGarcelloHighCharacter extends MultiAnimateAtlasCharacter
   {
     super.onCreate(event);
 
-    FunkinMemory.cacheTexture(Paths.image("characters/NeneKnifeToss"));
-
-    GameOverSubState.musicSuffix = '-pico';
-    GameOverSubState.blueBallSuffix = '-pico';
-    GameOverSubState.animationSuffix = '';
-    PauseSubState.musicSuffix = '-pico';
-
     burp = FunkinSound.load(Paths.sound('burp'), 1);
     burpReal = false;
-  }
-
-  var deathSpriteNene:FunkinSprite;
-
-  /**
-   * Initialize the death sprites.
-   */
-  function createDeathSprites():Void
-  {
-    var gf:BaseCharacter = currentStage.getGirlfriend();
-
-    if (deathSpriteNene != null && !deathSpriteNene.alive)
-    {
-      deathSpriteNene.revive();
-    }
-
-    deathSpriteNene = FunkinSprite.createSparrow(0, 0, "characters/NeneKnifeToss");
-    deathSpriteNene.x = gf.originalPosition.x + 120;
-    deathSpriteNene.y = gf.originalPosition.y;
-    deathSpriteNene.zIndex = this.zIndex - 5;
-    deathSpriteNene.animation.addByPrefix('throw', "knife toss0", 24, false);
-    deathSpriteNene.animation.onFinish.add(function(name:String) {
-      deathSpriteNene.kill();
-    });
   }
 
   function onNoteHit(event:HitNoteScriptEvent)
@@ -96,13 +61,6 @@ class PicoGarcelloHighCharacter extends MultiAnimateAtlasCharacter
             burpReal = true;
           }
       }
-
-      if (burp) // Cancel player notes
-      {
-        event.cancelEvent();
-        PlayState.instance.vocals.playerVolume = 0;
-        if (characterType != CharacterType.BF) return super.onNoteHit(event);
-      }
     }
   }
 
@@ -121,42 +79,8 @@ class PicoGarcelloHighCharacter extends MultiAnimateAtlasCharacter
 
   override public function onAnimationFrame(name:String = "", frameNumber:Int = -1, frameIndex:Int = -1):Void
   {
-    if (name == "firstDeath" && frameNumber == 36 - 1)
-    {
-      GameOverSubState.instance.startDeathMusic(1, false);
-      GameOverSubState.instance.boyfriend.playAnimation('deathLoop');
-    }
-
     if (name == "burp" && frameNumber == 17) this.playAnimation('burp-loop', true, false); // Start the burp loop
 
-    if (!HapticUtil.hapticsAvailable || GameOverSubState.blueBallSuffix == '-pico-explode') return;
-
-    // Pico falls on his back.
-    if (name == 'firstDeath' && frameNumber == 20)
-    {
-      HapticUtil.vibrate(0, 0.1, 0.1, 1);
-    }
-
-    // Blood firework woohoo!!!!
-    if (name == 'deathLoop' && frameNumber % 2 == 0)
-    {
-      final randomAmplitude:Float = FlxG.random.float(0.1, 0.5);
-      final randomDuration:Float = FlxG.random.float(0.1, 0.3);
-
-      HapticUtil.vibrate(0, randomDuration, randomAmplitude);
-    }
-  }
-
-  override function playAnimation(name:String, restart:Bool, ignoreOther:Bool)
-  {
-    super.playAnimation(name, restart, ignoreOther);
-
-    if (name == "firstDeath")
-    {
-      createDeathSprites();
-
-      GameOverSubState.instance.add(deathSpriteNene);
-      deathSpriteNene.animation.play("throw");
-    }
+    super.onAnimationFrame(name, frameNumber, frameIndex);
   }
 }

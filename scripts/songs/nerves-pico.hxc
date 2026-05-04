@@ -21,14 +21,14 @@ class NervesPicoMixSong extends Song
   public static final GARCELLO_KILL_CHANCE:Float = 8;
 
   /**
+   * If Garcello is currently dead.
+   */
+  public static var isGarcelloDead:Bool = false;
+
+  /**
    * If we are currently awaitng Garcello's Death.
    */
   public var awaitingGarcelloDeath:Bool = false;
-
-  /**
-   * If Garcello is currently dead.
-   */
-  public var isGarcelloDead:Bool = false;
 
   public function new()
   {

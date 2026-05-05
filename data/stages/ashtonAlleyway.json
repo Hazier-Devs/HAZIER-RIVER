@@ -205,8 +205,8 @@
       "flipY": false,
       "isPixel": false,
       "name": "vingette",
-      "position": [-781, -340],
-      "scale": 0.75,
+      "position": [-781, -360],
+      "scale": [0.75, 1],
       "scroll": [1, 1],
       "startingAnimation": "",
       "zIndex": 60

@@ -1,66 +1,70 @@
 import funkin.play.event.SongEvent;
-import funkin.play.PlayState;
 import funkin.graphics.FunkinSprite;
-import funkin.Conductor;
+import funkin.play.PlayState;
 import flixel.math.FlxMath;
+import funkin.Conductor;
 
 class HazierGarcelloVignetteEvent extends SongEvent
 {
-  function new()
+  public var pulseSprite:FunkinSprite;
+
+  var pulseStrength:Float = 0;
+  var pulseActive:Bool = false;
+
+  public function new()
   {
     super('HazierGarcelloVignetteEvent');
   }
 
-  var pulseStrength:Float = 0;
-  var pulseActive:Bool = false;
-  var pulseSprite:FunkinSprite;
-
-  function onDestroy()
-  {
-    pulseSprite?.alpha = 0;
-    pulseSprite = null;
-    pulseActive = false;
-  }
-
-  function onSongRetry()
-  {
-    pulseSprite.alpha = 0;
-    pulseActive = false;
-  }
-
-  function getTitle()
+  override public function getTitle():String
   {
     return 'Garello Vignette (Hazier River)';
   }
 
-  function onCountdownStart()
+  override public function onDestroy(event:ScriptEvent):Void
   {
-    if (pulseSprite != null) return;
-    pulseSprite = FunkinSprite.create(0, 0, 'gameplay/garvignette');
-    pulseSprite.setGraphicSize(FlxG.width);
-    pulseSprite.updateHitbox();
-    PlayState.instance.add(pulseSprite);
-    pulseSprite.camera = PlayState.instance.camCutscene;
-    pulseSprite.alpha = 0.0001;
-    pulseSprite.color = 0xFF00FF90;
+    super.onDestroy(event);
+
+    pulseSprite = null;
+    pulseActive = false;
   }
 
-  function onUpdate(ev)
+  override public function onSongRetry(event:SongRetryEvent):Void
   {
-    if (pulseSprite == null) return;
+    super.onSongRetry(event);
 
-    var zoomRate = PlayState.instance.cameraZoomRate;
+    pulseSprite.alpha = 0;
+    pulseActive = false;
+  }
+
+  override public function onUpdate(event:SongRetryEvent):Void
+  {
+    final zoomRate:Float = PlayState.instance?.cameraZoomRate ?? 0.0;
+
+    if (pulseSprite == null)
+    {
+      pulseSprite = FunkinSprite.create(0, 0, 'gameplay/garvignette');
+      pulseSprite.setGraphicSize(FlxG.width);
+      pulseSprite.updateHitbox();
+      pulseSprite.color = 0xFF00FF90;
+      pulseSprite.camera = PlayState.instance?.camCutscene;
+      pulseSprite.alpha = 0.0001;
+      pulseSprite.zIndex = 100;
+      PlayState.instance?.add(pulseSprite);
+    }
 
     if (zoomRate > 0.0)
     {
       var decayRate:Float = 0.95;
-      var dt:Float = ev.elapsed * 60;
+      var dt:Float = event.elapsed * 60;
 
       pulseSprite.alpha = FlxMath.lerp(0, pulseSprite.alpha, Math.pow(decayRate, dt));
     }
+
+    super.onUpdate(event);
   }
 
-  function onStepHit(ev)
+  override public function onStepHit(event:SongTimeScriptEvent):Void
   {
     if (!pulseActive) return;
 
@@ -70,18 +74,20 @@ class HazierGarcelloVignetteEvent extends SongEvent
     {
       pulseSprite.alpha += pulseStrength;
     }
+
+    super.onStepHit(event);
   }
 
-  override function handleEvent(ev)
+  override public function handleEvent(data:SongEventData):Void
   {
-    var isActive = ev.getBool('isActive');
-    var tempStrength = ev.getInt('strength');
+    var isActive:Bool = data.getBool('isActive');
+    var tempStrength:Int = data.getInt('strength');
 
     pulseActive = isActive;
     pulseStrength = tempStrength / 100;
   }
 
-  function getEventSchema()
+  override public function getEventSchema():SongEventSchema
   {
     return [
       {

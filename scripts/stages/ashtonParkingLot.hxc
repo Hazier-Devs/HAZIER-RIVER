@@ -1,15 +1,5 @@
-import flixel.FlxG;
-import flixel.FlxSprite;
-import flixel.addons.display.FlxRuntimeShader;
-import flixel.sound.FlxSound;
-import funkin.Conductor;
-import funkin.modding.base.ScriptedFlxRuntimeShader;
 import funkin.graphics.shaders.AdjustColorShader;
-import funkin.graphics.shaders.DropShadowShader;
-import funkin.play.PlayState;
 import funkin.play.stage.Stage;
-import funkin.graphics.adobeanimate.FlxAtlasSprite;
-import funkin.modding.base.ScriptedFlxAtlasSprite;
 import funkin.play.character.CharacterType;
 
 class AshtonParkingLotStage extends Stage
@@ -25,65 +15,22 @@ class AshtonParkingLotStage extends Stage
     getBoyfriend().shader = null;
   }
 
-  var colorShaderBf:AdjustColorShader;
-  var colorShaderDad:AdjustColorShader;
-  var colorShaderGf:AdjustColorShader;
-
-  public override function onCountdownStart(event:CountdownScriptEvent):Void
-  {
-    super.onCountdownStart(event);
-  }
+  var colorShader:AdjustColorShader;
 
   function buildStage()
   {
     super.buildStage();
-
-    colorShaderBf = new AdjustColorShader();
-    colorShaderDad = new AdjustColorShader();
-    colorShaderGf = new AdjustColorShader();
-
-    colorShaderBf.brightness = -15;
-    colorShaderBf.hue = 15;
-    colorShaderBf.contrast = 15;
-    colorShaderBf.saturation = -15;
-
-    colorShaderGf.brightness = -15;
-    colorShaderGf.hue = 15;
-    colorShaderGf.contrast = 15;
-    colorShaderGf.saturation = -15;
-
-    colorShaderDad.brightness = -15;
-    colorShaderDad.hue = 15;
-    colorShaderDad.contrast = 15;
-    colorShaderDad.saturation = -15;
+    colorShader = new AdjustColorShader();
+    colorShader.brightness = -15;
+    colorShader.hue = 15;
+    colorShader.contrast = 15;
+    colorShader.saturation = -15;
   }
 
-  function onBeatHit(event:SongTimeScriptEvent):Void
-  {
-    super.onBeatHit(event);
-  }
-
-  function onStepHit(event:SongTimeScriptEvent):Void
-  {
-    super.onStepHit(event);
-  }
-
-  /**
-   * Apply the shader to the character as it is added.
-   */
   override function addCharacter(character:BaseCharacter, charType:CharacterType):Void
   {
-    // Apply the shader automatically to each character as it gets added.
     super.addCharacter(character, charType);
     trace('Applied stage shader to ' + character.characterName);
-    switch (charType)
-    {
-      case CharacterType.BF:
-        character.shader = colorShaderBf;
-      case CharacterType.DAD:
-        character.shader = colorShaderDad;
-      case CharacterType.GF:
-        character.shader = colorShaderGf;
-    }
+    character.shader = colorShader;
   }
 }

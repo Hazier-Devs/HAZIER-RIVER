@@ -14,7 +14,7 @@
       "opponentVocals": ["garcello"],
       "playerVocals": ["pico"]
     },
-    "stage": "AshtonParkingLot",
+    "stage": "ashtonParkingLot",
     "noteStyle": "funkin",
     "ratings": {
       "easy": 2,

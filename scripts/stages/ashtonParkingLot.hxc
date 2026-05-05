@@ -16,7 +16,7 @@ class AshtonParkingLotStage extends Stage
 {
   function new()
   {
-    super('AshtonParkingLot');
+    super('ashtonParkingLot');
   }
 
   public function onGameOver(event:ScriptEvent)

@@ -14,7 +14,7 @@ class AshtonAlleywayStage extends Stage
 {
   public function new()
   {
-    super('Ashton Alleyway');
+    super('ashtonAlleyway');
   }
 
   public function onGameOver(event:ScriptEvent)
@@ -49,11 +49,9 @@ class AshtonAlleywayStage extends Stage
 
     if (FlxG.random.bool(1.5))
     {
-      lightFlicker = FlxFlicker.flicker(getNamedProp('lamp lights'), 0.3, 1 / FlxG.random.int(10, 20), true, true, function(_) {
+      lightFlicker = FlxFlicker.flicker(getNamedProp('lamp lights'), 0.3, 1 / FlxG.random.int(10, 20), true, true, (_) -> {
         // called on finish
         lightFlicker = null;
-      }, function(v) { // on progress, called almost every time (except the last one)
-        // yeah
       });
     }
   }

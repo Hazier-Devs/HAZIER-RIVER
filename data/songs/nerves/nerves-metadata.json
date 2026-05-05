@@ -14,7 +14,7 @@
       "opponentVocals": ["garcello-nerves"],
       "playerVocals": ["bf-garcello"]
     },
-    "stage": "Ashton Alleyway",
+    "stage": "ashtonAlleyway",
     "noteStyle": "funkin",
     "ratings": {
       "easy": 1,

@@ -14,7 +14,7 @@
       "opponentVocals": ["garcello-nerves"],
       "playerVocals": ["bf-garcello"]
     },
-    "stage": "AshtonParkingLot",
+    "stage": "ashtonParkingLot",
     "noteStyle": "funkin",
     "ratings": {
       "erect": 5,

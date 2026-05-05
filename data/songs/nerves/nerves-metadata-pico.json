@@ -14,7 +14,7 @@
       "opponentVocals": ["garcello-nerves"],
       "playerVocals": ["pico-garcello-high"]
     },
-    "stage": "AshtonParkingLot",
+    "stage": "ashtonParkingLot",
     "noteStyle": "funkin",
     "ratings": {
       "easy": 3,

@@ -173,7 +173,7 @@ class NervesPicoMixSong extends Song
         FlxTween.cancelTweensOf(PlayState.instance.camHUD);
         PlayState.instance.camHUD.alpha = 1;
       }
-      catch(e:Exception) {}
+      catch (e:Exception) {}
     }
 
     // Don't play any cutscenes in the Chart Editor.

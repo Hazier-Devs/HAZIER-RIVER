@@ -21,7 +21,11 @@ class hazierwatermark extends Module
     {
       header: 'Artists',
       body: [
-        {line: 'DigitLuck'}, {line: 'LeGooey'}, {line: 'PlantGamer09'}, {line: 'artalogue.'}]
+        {line: 'DigitLuck'},
+        {line: 'LeGooey'},
+        {line: 'PlantGamer09'},
+        {line: 'artalogue.'}
+      ]
     },
     {
       header: 'Pixel Art',

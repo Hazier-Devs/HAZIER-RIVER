@@ -37,49 +37,52 @@ class NervesSong extends Song
     return super.isSongNew(currentDifficulty, currentVariation);
   }
 
-   function onCreate(event:ScriptEvent):Void {
-		super.onCreate(event);
-        hasPlayedCutscene = false;
-		if (!FlxG.onMobile) {
-			PlayState.instance.discordRPCAlbum = "https://raw.githubusercontent.com/LeGooeyy/GooeyMixDiscordIcons/refs/heads/main/assets/album-covers/"
-				+ PlayState.instance.currentChart.album
-				+ ".png?raw=true";
-			PlayState.instance.discordRPCIcon = "https://raw.githubusercontent.com/LeGooeyy/GooeyMixDiscordIcons/refs/heads/main/assets/icons/"
-				+ PlayState.instance.currentChart.characters.opponent
-				+ ".png?raw=true?t="
-				+ Date.now().getTime();
-		}
-	}
+  function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+    hasPlayedCutscene = false;
+    if (!FlxG.onMobile)
+    {
+      PlayState.instance.discordRPCAlbum = "https://raw.githubusercontent.com/LeGooeyy/GooeyMixDiscordIcons/refs/heads/main/assets/album-covers/"
+        + PlayState.instance.currentChart.album
+        + ".png?raw=true";
+      PlayState.instance.discordRPCIcon = "https://raw.githubusercontent.com/LeGooeyy/GooeyMixDiscordIcons/refs/heads/main/assets/icons/"
+        + PlayState.instance.currentChart.characters.opponent
+        + ".png?raw=true?t="
+        + Date.now().getTime();
+    }
+  }
 
   override public function onCountdownStart(event:CountdownScriptEvent):Void
   {
     super.onCountdownStart(event);
-    if (!PlayState.instance.isChartingMode){
-    PlayState.instance.camHUD.alpha = 0;
-
-    // Skip the cutscene unless we are in Story Mode, or Pico Mix specifically.
-    if (!PlayStatePlaylist.isStoryMode) hasPlayedCutscene = true;
-
-    // Skip the cutscene if we're playtesting in the Chart Editor.
-    if (PlayState.instance.isChartingMode && !hasPlayedCutscene) hasPlayedCutscene = true;
-
-    if (!hasPlayedCutscene)
+    if (!PlayState.instance.isChartingMode)
     {
-      trace('Pausing countdown to play cutscene.');
+      PlayState.instance.camHUD.alpha = 0;
 
-      hasPlayedCutscene = true;
+      // Skip the cutscene unless we are in Story Mode, or Pico Mix specifically.
+      if (!PlayStatePlaylist.isStoryMode) hasPlayedCutscene = true;
 
-      event.cancel(); // CANCEL THE COUNTDOWN!
+      // Skip the cutscene if we're playtesting in the Chart Editor.
+      if (PlayState.instance.isChartingMode && !hasPlayedCutscene) hasPlayedCutscene = true;
 
-      // Play a SFX
-      FunkinSound.playOnce(Paths.sound('nervesouch'), 1.0);
-      HapticUtil.vibrate(0.1, 0.5, 1, 1);
-      PlayState.instance.disableKeys = true;
+      if (!hasPlayedCutscene)
+      {
+        trace('Pausing countdown to play cutscene.');
 
-      new FlxTimer().start(1, _ -> {
-        startDialogue();
-      });
-    }
+        hasPlayedCutscene = true;
+
+        event.cancel(); // CANCEL THE COUNTDOWN!
+
+        // Play a SFX
+        FunkinSound.playOnce(Paths.sound('nervesouch'), 1.0);
+        HapticUtil.vibrate(0.1, 0.5, 1, 1);
+        PlayState.instance.disableKeys = true;
+
+        new FlxTimer().start(1, _ -> {
+          startDialogue();
+        });
+      }
     }
   }
 
@@ -102,19 +105,16 @@ class NervesSong extends Song
 
     hasPlayedCutscene = true;
     FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.quadOut});
-    
   }
 
   override public function onPause(event:PauseScriptEvent):Void
   {
     super.onPause(event);
 
-
     for (sprite in hudArray.concat([PlayState.instance?.camHUD]))
     {
       if (sprite != null) FlxTweenUtil.pauseTweensOf(sprite);
     }
-  
   }
 
   override public function onResume(event:ScriptEvent):Void
@@ -126,45 +126,50 @@ class NervesSong extends Song
     }
   }
 
+  function onStepHit(event:SongTimeScriptEvent):Void
+  {
+    super.onStepHit(event);
+    if (event.step == 16)
+    {
+      for (i in hudArray)
+        i.visible = false;
 
-  function onStepHit(event:SongTimeScriptEvent):Void {
-		super.onStepHit(event);
-		if (event.step == 16) {
-			for (i in hudArray)
-            i.visible = false;
+      for (i in 0...4)
+      {
+        playerStrumline?.getByIndex(i)?.visible = false;
+        opponentStrumline?.getByIndex(i)?.visible = false;
+      }
 
-          for (i in 0...4)
-          {
-            playerStrumline?.getByIndex(i)?.visible = false;
-            opponentStrumline?.getByIndex(i)?.visible = false;
-          }
-
-          opponentStrumline?.getByIndex(0)?.visible = true;
-          opponentStrumline?.getByIndex(1)?.visible = true;
-          PlayState.instance?.camHUD.alpha = 1;
-		}
-		else if (event.step == 20) {
-			opponentStrumline?.getByIndex(2)?.visible = true;
+      opponentStrumline?.getByIndex(0)?.visible = true;
+      opponentStrumline?.getByIndex(1)?.visible = true;
+      PlayState.instance?.camHUD.alpha = 1;
+    }
+    else if (event.step == 20)
+    {
+      opponentStrumline?.getByIndex(2)?.visible = true;
       opponentStrumline?.getByIndex(3)?.visible = true;
-		}
-    else if (event.step == 24) {
-			playerStrumline?.getByIndex(0)?.visible = true;
+    }
+    else if (event.step == 24)
+    {
+      playerStrumline?.getByIndex(0)?.visible = true;
       playerStrumline?.getByIndex(1)?.visible = true;
-		}
-    else if (event.step == 28) {
-			playerStrumline?.getByIndex(2)?.visible = true;
+    }
+    else if (event.step == 28)
+    {
+      playerStrumline?.getByIndex(2)?.visible = true;
       playerStrumline?.getByIndex(3)?.visible = true;
-		}
-     else if (event.step == 32) {
-			 var duration:Float = 4 * (Conductor.instance.stepLengthMs / 1000);
+    }
+    else if (event.step == 32)
+    {
+      var duration:Float = 4 * (Conductor.instance.stepLengthMs / 1000);
 
-          for (sprite in hudArray)
-          {
-            sprite.visible = true;
-            sprite.alpha = 0;
-            FlxTween.tween(sprite, {alpha: 1}, duration, {ease: FlxEase.quadOut});
-          }
-		}
+      for (sprite in hudArray)
+      {
+        sprite.visible = true;
+        sprite.alpha = 0;
+        FlxTween.tween(sprite, {alpha: 1}, duration, {ease: FlxEase.quadOut});
+      }
+    }
   }
 
   var playerStrumline(get, never):Strumline;

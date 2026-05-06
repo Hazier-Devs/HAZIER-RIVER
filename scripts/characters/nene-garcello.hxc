@@ -23,35 +23,40 @@ class NeneGarcelloCharacter extends NeneBaseCharacter
 
   var adjustColor:AdjustColorShader;
 
-	function synchronizeShader():Void {
-		if (currentShader == this.shader)
-			return;
+  function synchronizeShader():Void
+  {
+    if (currentShader == this.shader) return;
 
-		currentShader = this.shader;
+    currentShader = this.shader;
 
-		if (Std.isOfType(this.shader, DropShadowShader)) {
-			adjustColor = new AdjustColorShader();
-			adjustColor.brightness = this.shader.baseBrightness;
-			adjustColor.hue = this.shader.baseHue;
-			adjustColor.contrast = this.shader.baseContrast;
-			adjustColor.saturation = this.shader.baseSaturation;
-			abot.shader = adjustColor;
+    if (Std.isOfType(this.shader, DropShadowShader))
+    {
+      adjustColor = new AdjustColorShader();
+      adjustColor.brightness = this.shader.baseBrightness;
+      adjustColor.hue = this.shader.baseHue;
+      adjustColor.contrast = this.shader.baseContrast;
+      adjustColor.saturation = this.shader.baseSaturation;
+      abot.shader = adjustColor;
 
-			stereoBG.shader = adjustColor;
-			eyeWhites.shader = adjustColor;
-			for (member in abotViz.members) {
-				member.shader = adjustColor;
-			}
-		} else {
-			abot.shader = this.shader;
+      stereoBG.shader = adjustColor;
+      eyeWhites.shader = adjustColor;
+      for (member in abotViz.members)
+      {
+        member.shader = adjustColor;
+      }
+    }
+    else
+    {
+      abot.shader = this.shader;
 
-			stereoBG.shader = this.shader;
-			eyeWhites.shader = this.shader;
-			for (member in abotViz.members) {
-				member.shader = this.shader;
-			}
-		}
+      stereoBG.shader = this.shader;
+      eyeWhites.shader = this.shader;
+      for (member in abotViz.members)
+      {
+        member.shader = this.shader;
+      }
+    }
 
-		trace("Synchronized shader between children!");
-	}
+    trace("Synchronized shader between children!");
+  }
 }

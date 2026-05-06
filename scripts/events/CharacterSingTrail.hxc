@@ -2,7 +2,6 @@ import funkin.data.character.CharacterDataParser;
 import funkin.play.event.SongEvent;
 import funkin.play.PlayState;
 import funkin.Conductor;
-
 import flixel.group.FlxTypedSpriteGroup;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
@@ -96,7 +95,7 @@ class CharacterSingTrailSongEvent extends SongEvent
       {
         trailElapsed -= stepLength;
 
-        var newOffset:Array<Float> = switch(currentStage.getBoyfriend()?.getCurrentAnimation() ?? '')
+        var newOffset:Array<Float> = switch (currentStage.getBoyfriend()?.getCurrentAnimation() ?? '')
         {
           case 'singLEFT':
             [-MOVE_AMOUNT, 0];

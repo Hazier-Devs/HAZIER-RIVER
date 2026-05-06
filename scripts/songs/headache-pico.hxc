@@ -81,7 +81,7 @@ class HeadachePicoMixSong extends Song
     PlayState.instance.add(black);
 
     var cutsceneText = new FlxText(0, 0, 850);
-    cutsceneText.text = 'Pico and Nene were out grabbing a late-night snack...\nSuddenly, they saw a strange glow emitting from the parking lot.';
+    cutsceneText.text = 'Pico and Nene were out grabbing a late-night snack...\nSuddenly, a strange glow emitted from the parking lot.';
     cutsceneText.setFormat(Paths.font('Quantico-Bold.ttf'), 48);
     cutsceneText.alignment = 'center';
     cutsceneText.screenCenter();

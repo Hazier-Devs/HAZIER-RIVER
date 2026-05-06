@@ -60,7 +60,27 @@
 },{
 "N":"nervesCough",
 "I":180,
-"DU":18,
+"DU":15,
+"E":[]
+},{
+"N":"bigBoiCough",
+"I":195,
+"DU":16,
+"E":[]
+},{
+"N":"releaseCameEarly",
+"I":211,
+"DU":105,
+"E":[]
+},{
+"N":"thatsNeat",
+"I":316,
+"DU":115,
+"E":[]
+},{
+"N":"weGottaStop",
+"I":431,
+"DU":87,
 "E":[]
 }
 ]},{
@@ -178,10 +198,54 @@
 "MX":[1,0,0,1,-147,-1163.9]
 }}]},{
 "I":180,
-"DU":18,
+"DU":15,
 "E":[
 {"SI":{
 "SN":"animations/cough",
+"FF":0,
+"ST":"G",
+"TRP":{"x":-22.1,"y":-502.4},
+"LP":"LP",
+"MX":[1,0,0,1,-149.2,-1163.95]
+}}]},{
+"I":195,
+"DU":16,
+"E":[
+{"SI":{
+"SN":"animations/hardcough",
+"FF":0,
+"ST":"G",
+"TRP":{"x":-22.1,"y":-502.4},
+"LP":"LP",
+"MX":[1,0,0,1,-149.2,-1163.95]
+}}]},{
+"I":211,
+"DU":105,
+"E":[
+{"SI":{
+"SN":"animations/cigmiss",
+"FF":0,
+"ST":"G",
+"TRP":{"x":-22.1,"y":-502.4},
+"LP":"LP",
+"MX":[1,0,0,1,-149.2,-1163.95]
+}}]},{
+"I":316,
+"DU":115,
+"E":[
+{"SI":{
+"SN":"animations/ciglight",
+"FF":0,
+"ST":"G",
+"TRP":{"x":-22.1,"y":-502.4},
+"LP":"LP",
+"MX":[1,0,0,1,-149.2,-1163.95]
+}}]},{
+"I":431,
+"DU":87,
+"E":[
+{"SI":{
+"SN":"animations/we gotta stop",
 "FF":0,
 "ST":"G",
 "TRP":{"x":-22.1,"y":-502.4},
@@ -204,7 +268,7 @@
 "DU":17,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke",
+"SN":"smokeGlow/smoke",
 "FF":0,
 "ST":"G",
 "TRP":{"x":61.1,"y":30.1},
@@ -215,7 +279,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke",
+"SN":"smokeGlow/smoke",
 "FF":8,
 "ST":"G",
 "TRP":{"x":61.1,"y":30.1},
@@ -230,7 +294,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig",
+"SN":"everything else/hands and arms/handIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":206.8,"y":1070.8},
@@ -241,7 +305,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig",
+"SN":"everything else/hands and arms/handIdle",
 "FF":2,
 "ST":"G",
 "TRP":{"x":204.1,"y":1067.6},
@@ -252,7 +316,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig",
+"SN":"everything else/hands and arms/handIdle",
 "FF":4,
 "ST":"G",
 "TRP":{"x":203,"y":1061.35},
@@ -263,7 +327,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig",
+"SN":"everything else/hands and arms/handIdle",
 "FF":6,
 "ST":"G",
 "TRP":{"x":201.65,"y":1058.5},
@@ -274,7 +338,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig",
+"SN":"everything else/hands and arms/handIdle",
 "FF":8,
 "ST":"G",
 "TRP":{"x":244.4,"y":1082.5},
@@ -285,7 +349,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig",
+"SN":"everything else/hands and arms/handIdle",
 "FF":1,
 "ST":"G",
 "TRP":{"x":244.4,"y":1082.5},
@@ -296,7 +360,7 @@
 "DU":6,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig",
+"SN":"everything else/hands and arms/handIdle",
 "FF":3,
 "ST":"G",
 "TRP":{"x":244.4,"y":1082.5},
@@ -311,7 +375,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/heads/head",
+"SN":"everything else/heads/headIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":121.6,"y":1064.65},
@@ -322,7 +386,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/heads/head",
+"SN":"everything else/heads/headIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":129.95,"y":1029.85},
@@ -333,7 +397,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/heads/head",
+"SN":"everything else/heads/headIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":128.8,"y":1026.9},
@@ -344,7 +408,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/heads/head",
+"SN":"everything else/heads/headIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":140.45,"y":1032.2},
@@ -355,7 +419,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/heads/head",
+"SN":"everything else/heads/headIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":156.55,"y":996.15},
@@ -366,7 +430,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/heads/head",
+"SN":"everything else/heads/headIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":156.55,"y":996.15},
@@ -377,7 +441,7 @@
 "DU":6,
 "E":[
 {"SI":{
-"SN":"everything else/heads/head",
+"SN":"everything else/heads/headIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":156.55,"y":996.15},
@@ -392,7 +456,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody",
+"SN":"everything else/bodies/idleBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":72.95,"y":-34.6},
@@ -403,7 +467,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody",
+"SN":"everything else/bodies/idleBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":72.95,"y":-34.6},
@@ -414,7 +478,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody",
+"SN":"everything else/bodies/idleBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":72.95,"y":-34.6},
@@ -425,7 +489,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody",
+"SN":"everything else/bodies/idleBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":72.95,"y":-34.6},
@@ -436,7 +500,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody",
+"SN":"everything else/bodies/idleBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":72.95,"y":-34.6},
@@ -447,7 +511,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody",
+"SN":"everything else/bodies/idleBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":72.95,"y":-34.6},
@@ -458,7 +522,7 @@
 "DU":6,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody",
+"SN":"everything else/bodies/idleBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":72.95,"y":-34.6},
@@ -473,7 +537,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":175.75,"y":135.85},
@@ -484,7 +548,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":175.7,"y":135.75},
@@ -495,7 +559,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":175.55,"y":135.7},
@@ -506,7 +570,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":175.55,"y":135.7},
@@ -517,7 +581,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":175.55,"y":135.7},
@@ -528,7 +592,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":175.55,"y":135.7},
@@ -539,7 +603,7 @@
 "DU":6,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":175.55,"y":135.7},
@@ -635,7 +699,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":237.65,"y":1144.5},
@@ -646,7 +710,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":237.65,"y":1141.7},
@@ -657,7 +721,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":237.65,"y":1140.5},
@@ -668,7 +732,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":237.65,"y":1140.5},
@@ -679,7 +743,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":237.65,"y":1140.5},
@@ -690,7 +754,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":237.65,"y":1140.5},
@@ -701,7 +765,7 @@
 "DU":6,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":237.65,"y":1140.5},
@@ -716,7 +780,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.5,"y":1468.95},
@@ -727,7 +791,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.4,"y":1469},
@@ -738,7 +802,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.35,"y":1336.75},
@@ -749,7 +813,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.35,"y":1336.75},
@@ -760,7 +824,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.35,"y":1336.75},
@@ -771,7 +835,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.35,"y":1336.75},
@@ -782,7 +846,7 @@
 "DU":6,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.35,"y":1336.75},
@@ -845,7 +909,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow purple",
+"SN":"smokeGlow/smoke glow purple",
 "ST":"MC",
 "TRP":{"x":195.6,"y":1067},
 "MX":[1.156,0,0,1.131,161.6,1038.55],
@@ -863,7 +927,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow purple",
+"SN":"smokeGlow/smoke glow purple",
 "ST":"MC",
 "TRP":{"x":210.75,"y":1067.05},
 "MX":[1.665,0,0,1.839,161.65,1020.7],
@@ -881,7 +945,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow purple",
+"SN":"smokeGlow/smoke glow purple",
 "ST":"MC",
 "TRP":{"x":213.4,"y":1065.3},
 "C":{
@@ -903,7 +967,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow purple",
+"SN":"smokeGlow/smoke glow purple",
 "ST":"MC",
 "TRP":{"x":213.5,"y":1043.75},
 "C":{
@@ -925,7 +989,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow purple",
+"SN":"smokeGlow/smoke glow purple",
 "ST":"MC",
 "TRP":{"x":213.5,"y":1043.75},
 "C":{
@@ -955,7 +1019,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke left",
+"SN":"smokeGlow/smoke left",
 "FF":0,
 "ST":"G",
 "TRP":{"x":305.85,"y":1189.75},
@@ -966,7 +1030,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke left",
+"SN":"smokeGlow/smoke left",
 "FF":2,
 "ST":"G",
 "TRP":{"x":307.4,"y":1201.75},
@@ -977,7 +1041,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke left",
+"SN":"smokeGlow/smoke left",
 "FF":4,
 "ST":"G",
 "TRP":{"x":305.75,"y":1201.6},
@@ -992,7 +1056,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthleft",
+"SN":"everything else/mouths/mouthLeft",
 "FF":0,
 "ST":"G",
 "TRP":{"x":140.5,"y":156.95},
@@ -1003,7 +1067,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthleft",
+"SN":"everything else/mouths/mouthLeft",
 "FF":0,
 "ST":"G",
 "TRP":{"x":154.65,"y":149.1},
@@ -1014,7 +1078,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthleft",
+"SN":"everything else/mouths/mouthLeft",
 "FF":2,
 "ST":"G",
 "TRP":{"x":140.7,"y":157.1},
@@ -1029,7 +1093,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/heads/head left",
+"SN":"everything else/heads/headLeft",
 "FF":0,
 "ST":"G",
 "TRP":{"x":82,"y":1038.05},
@@ -1040,7 +1104,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/heads/head left",
+"SN":"everything else/heads/headLeft",
 "FF":0,
 "ST":"G",
 "TRP":{"x":116.4,"y":996.95},
@@ -1051,7 +1115,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/heads/head left",
+"SN":"everything else/heads/headLeft",
 "FF":0,
 "ST":"G",
 "TRP":{"x":116.8,"y":996.2},
@@ -1066,7 +1130,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody",
+"SN":"everything else/bodies/idleBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":80.75,"y":1219.65},
@@ -1077,7 +1141,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody",
+"SN":"everything else/bodies/idleBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":86.8,"y":1219.7},
@@ -1088,7 +1152,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody",
+"SN":"everything else/bodies/idleBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":87.95,"y":1219.65},
@@ -1103,7 +1167,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair left",
+"SN":"everything else/hair/backHairLeft",
 "FF":0,
 "ST":"G",
 "TRP":{"x":175.55,"y":135.7},
@@ -1114,7 +1178,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair left",
+"SN":"everything else/hair/backHairLeft",
 "FF":0,
 "ST":"G",
 "TRP":{"x":175.55,"y":135.7},
@@ -1125,7 +1189,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair left",
+"SN":"everything else/hair/backHairLeft",
 "FF":0,
 "ST":"G",
 "TRP":{"x":175.55,"y":135.7},
@@ -1140,7 +1204,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/arm left",
+"SN":"everything else/hands and arms/armLeft",
 "FF":0,
 "ST":"G",
 "TRP":{"x":160.9,"y":1098.1},
@@ -1151,7 +1215,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/arm left",
+"SN":"everything else/hands and arms/armLeft",
 "FF":2,
 "ST":"G",
 "TRP":{"x":175.6,"y":1105},
@@ -1162,7 +1226,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/arm left",
+"SN":"everything else/hands and arms/armLeft",
 "FF":4,
 "ST":"G",
 "TRP":{"x":237.7,"y":1190.85},
@@ -1177,7 +1241,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.5,"y":1468.85},
@@ -1188,7 +1252,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.5,"y":1468.85},
@@ -1199,7 +1263,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.45,"y":1468.85},
@@ -1262,7 +1326,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow red",
+"SN":"smokeGlow/smoke glow red",
 "ST":"MC",
 "TRP":{"x":323.5,"y":1059.15},
 "MX":[1.156,0,0,1.131,289.5,1030.7],
@@ -1280,7 +1344,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow red",
+"SN":"smokeGlow/smoke glow red",
 "ST":"MC",
 "TRP":{"x":338.65,"y":1059.2},
 "MX":[1.665,0,0,1.839,289.55,1012.85],
@@ -1298,7 +1362,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow red",
+"SN":"smokeGlow/smoke glow red",
 "ST":"MC",
 "TRP":{"x":341.3,"y":1057.45},
 "C":{
@@ -1320,7 +1384,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow red",
+"SN":"smokeGlow/smoke glow red",
 "ST":"MC",
 "TRP":{"x":341.4,"y":1035.9},
 "C":{
@@ -1342,7 +1406,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow red",
+"SN":"smokeGlow/smoke glow red",
 "ST":"MC",
 "TRP":{"x":341.4,"y":1035.9},
 "C":{
@@ -1372,7 +1436,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke right",
+"SN":"smokeGlow/smoke right",
 "FF":0,
 "ST":"G",
 "TRP":{"x":362.15,"y":1126.1},
@@ -1383,7 +1447,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke right",
+"SN":"smokeGlow/smoke right",
 "FF":2,
 "ST":"G",
 "TRP":{"x":345,"y":1121.85},
@@ -1394,7 +1458,7 @@
 "DU":13,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke right",
+"SN":"smokeGlow/smoke right",
 "FF":4,
 "ST":"G",
 "TRP":{"x":341.9,"y":1120.85},
@@ -1405,7 +1469,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke right",
+"SN":"smokeGlow/smoke right",
 "FF":8,
 "ST":"G",
 "TRP":{"x":341.9,"y":1120.85},
@@ -1420,7 +1484,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig right",
+"SN":"everything else/hands and arms/handRight",
 "FF":0,
 "ST":"G",
 "TRP":{"x":299.4,"y":1151.35},
@@ -1431,7 +1495,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig right",
+"SN":"everything else/hands and arms/handRight",
 "FF":2,
 "ST":"G",
 "TRP":{"x":282.15,"y":1144.55},
@@ -1442,7 +1506,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig right",
+"SN":"everything else/hands and arms/handRight",
 "FF":4,
 "ST":"G",
 "TRP":{"x":277.95,"y":1141.5},
@@ -1457,7 +1521,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthright",
+"SN":"everything else/mouths/mouthRight",
 "FF":0,
 "ST":"G",
 "TRP":{"x":121.9,"y":141.95},
@@ -1468,7 +1532,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthright",
+"SN":"everything else/mouths/mouthRight",
 "FF":0,
 "ST":"G",
 "TRP":{"x":121.1,"y":142.35},
@@ -1479,7 +1543,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthright",
+"SN":"everything else/mouths/mouthRight",
 "FF":3,
 "ST":"G",
 "TRP":{"x":121.9,"y":141.95},
@@ -1494,7 +1558,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/heads/head right",
+"SN":"everything else/heads/headRght",
 "FF":0,
 "ST":"G",
 "TRP":{"x":206.75,"y":1058.7},
@@ -1505,7 +1569,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/heads/head right",
+"SN":"everything else/heads/headRght",
 "FF":0,
 "ST":"G",
 "TRP":{"x":194.7,"y":1058.8},
@@ -1516,7 +1580,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/heads/head right",
+"SN":"everything else/heads/headRght",
 "FF":0,
 "ST":"G",
 "TRP":{"x":190.95,"y":1058.65},
@@ -1531,7 +1595,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody right",
+"SN":"everything else/bodies/rightBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":166.95,"y":1219.9},
@@ -1542,7 +1606,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody right",
+"SN":"everything else/bodies/rightBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":145.05,"y":1300.4},
@@ -1553,7 +1617,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody right",
+"SN":"everything else/bodies/rightBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":144.4,"y":1300.35},
@@ -1568,7 +1632,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair right",
+"SN":"everything else/hair/backHairRight",
 "FF":0,
 "ST":"G",
 "TRP":{"x":287.2,"y":1052.35},
@@ -1579,7 +1643,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair right",
+"SN":"everything else/hair/backHairRight",
 "FF":0,
 "ST":"G",
 "TRP":{"x":275.4,"y":1054.95},
@@ -1590,7 +1654,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair right",
+"SN":"everything else/hair/backHairRight",
 "FF":0,
 "ST":"G",
 "TRP":{"x":271.6,"y":1055.45},
@@ -1642,7 +1706,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":247.75,"y":1144.05},
@@ -1653,7 +1717,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":234.85,"y":1212.95},
@@ -1664,7 +1728,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":230.35,"y":1212.95},
@@ -1679,7 +1743,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":155.7,"y":1469.75},
@@ -1690,7 +1754,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":155.85,"y":1463.15},
@@ -1701,7 +1765,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":155.75,"y":1463.15},
@@ -1764,7 +1828,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow blue",
+"SN":"smokeGlow/smoke glow blue",
 "ST":"MC",
 "TRP":{"x":222.1,"y":1126.6},
 "MX":[0.693,0.926,-0.906,0.678,224.45,1082.3],
@@ -1782,7 +1846,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow blue",
+"SN":"smokeGlow/smoke glow blue",
 "ST":"MC",
 "TRP":{"x":231.1,"y":1138.75},
 "MX":[0.997,1.333,-1.472,1.101,238.8,1071.65],
@@ -1800,7 +1864,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow blue",
+"SN":"smokeGlow/smoke glow blue",
 "ST":"MC",
 "TRP":{"x":234.05,"y":1139.8},
 "C":{
@@ -1822,7 +1886,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow blue",
+"SN":"smokeGlow/smoke glow blue",
 "ST":"MC",
 "TRP":{"x":251.4,"y":1126.95},
 "C":{
@@ -1844,7 +1908,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow blue",
+"SN":"smokeGlow/smoke glow blue",
 "ST":"MC",
 "TRP":{"x":251.4,"y":1126.95},
 "C":{
@@ -1874,7 +1938,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke down",
+"SN":"smokeGlow/smoke down",
 "FF":0,
 "ST":"G",
 "TRP":{"x":343.3,"y":1223.35},
@@ -1885,7 +1949,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke down",
+"SN":"smokeGlow/smoke down",
 "FF":2,
 "ST":"G",
 "TRP":{"x":346.75,"y":1230.45},
@@ -1896,7 +1960,7 @@
 "DU":13,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke down",
+"SN":"smokeGlow/smoke down",
 "FF":4,
 "ST":"G",
 "TRP":{"x":346.75,"y":1230.4},
@@ -1907,7 +1971,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke down",
+"SN":"smokeGlow/smoke down",
 "FF":8,
 "ST":"G",
 "TRP":{"x":346.75,"y":1230.4},
@@ -1922,7 +1986,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/downhand",
+"SN":"everything else/hands and arms/handDown",
 "FF":0,
 "ST":"G",
 "TRP":{"x":283.6,"y":1236.05},
@@ -1933,7 +1997,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/downhand",
+"SN":"everything else/hands and arms/handDown",
 "FF":2,
 "ST":"G",
 "TRP":{"x":283.6,"y":1239.55},
@@ -1944,7 +2008,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/downhand",
+"SN":"everything else/hands and arms/handDown",
 "FF":4,
 "ST":"G",
 "TRP":{"x":283.6,"y":1239.55},
@@ -1959,7 +2023,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouth down",
+"SN":"everything else/mouths/mouthDown",
 "FF":0,
 "ST":"G",
 "TRP":{"x":129.95,"y":157.4},
@@ -1970,7 +2034,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouth down",
+"SN":"everything else/mouths/mouthDown",
 "FF":0,
 "ST":"G",
 "TRP":{"x":139.3,"y":143.5},
@@ -1981,7 +2045,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouth down",
+"SN":"everything else/mouths/mouthDown",
 "FF":3,
 "ST":"G",
 "TRP":{"x":127.3,"y":154.65},
@@ -1996,7 +2060,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/heads/head down",
+"SN":"everything else/heads/headDown",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.7,"y":1020.6},
@@ -2007,7 +2071,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/heads/head down",
+"SN":"everything else/heads/headDown",
 "FF":0,
 "ST":"G",
 "TRP":{"x":177.95,"y":1014.75},
@@ -2018,7 +2082,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/heads/head down",
+"SN":"everything else/heads/headDown",
 "FF":0,
 "ST":"G",
 "TRP":{"x":179.5,"y":1013.3},
@@ -2033,7 +2097,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody down",
+"SN":"everything else/bodies/downBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":110.35,"y":1228.6},
@@ -2044,7 +2108,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody down",
+"SN":"everything else/bodies/downBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":124.2,"y":1171.9},
@@ -2055,7 +2119,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody down",
+"SN":"everything else/bodies/downBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":124.15,"y":1170.05},
@@ -2070,7 +2134,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair down",
+"SN":"everything else/hair/backHairDown",
 "FF":0,
 "ST":"G",
 "TRP":{"x":241.15,"y":1064.05},
@@ -2081,7 +2145,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair down",
+"SN":"everything else/hair/backHairDown",
 "FF":0,
 "ST":"G",
 "TRP":{"x":237.6,"y":1061.95},
@@ -2092,7 +2156,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair down",
+"SN":"everything else/hair/backHairDown",
 "FF":0,
 "ST":"G",
 "TRP":{"x":238.55,"y":1061.25},
@@ -2107,7 +2171,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/forearmdown",
+"SN":"everything else/hands and arms/forearmDown",
 "FF":0,
 "ST":"G",
 "TRP":{"x":282.8,"y":1242.65},
@@ -2118,7 +2182,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/forearmdown",
+"SN":"everything else/hands and arms/forearmDown",
 "FF":0,
 "ST":"G",
 "TRP":{"x":267.9,"y":1235.2},
@@ -2129,7 +2193,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/forearmdown",
+"SN":"everything else/hands and arms/forearmDown",
 "FF":0,
 "ST":"G",
 "TRP":{"x":267.9,"y":1235.2},
@@ -2144,7 +2208,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/right arm down",
+"SN":"everything else/hands and arms/downArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":217,"y":1157.8},
@@ -2155,7 +2219,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/right arm down",
+"SN":"everything else/hands and arms/downArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":217.05,"y":1153.25},
@@ -2166,7 +2230,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/right arm down",
+"SN":"everything else/hands and arms/downArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":217,"y":1152.3},
@@ -2181,7 +2245,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.3,"y":1468.85},
@@ -2192,7 +2256,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.25,"y":1468.95},
@@ -2203,7 +2267,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.3,"y":1468.85},
@@ -2266,7 +2330,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow green",
+"SN":"smokeGlow/smoke glow green",
 "ST":"MC",
 "TRP":{"x":214.45,"y":989.4},
 "MX":[0.88,-0.751,0.735,0.861,170.1,989.8],
@@ -2284,7 +2348,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow green",
+"SN":"smokeGlow/smoke glow green",
 "ST":"MC",
 "TRP":{"x":221.05,"y":984.6},
 "MX":[1.266,-1.081,1.194,1.398,153.55,981.2],
@@ -2302,7 +2366,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow green",
+"SN":"smokeGlow/smoke glow green",
 "ST":"MC",
 "TRP":{"x":221.85,"y":981.55},
 "C":{
@@ -2324,7 +2388,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow green",
+"SN":"smokeGlow/smoke glow green",
 "ST":"MC",
 "TRP":{"x":213.05,"y":970.1},
 "C":{
@@ -2346,7 +2410,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow green",
+"SN":"smokeGlow/smoke glow green",
 "ST":"MC",
 "TRP":{"x":209.55,"y":965.1},
 "C":{
@@ -2376,7 +2440,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke",
+"SN":"smokeGlow/smoke",
 "FF":0,
 "ST":"G",
 "TRP":{"x":370.25,"y":1125.35},
@@ -2387,7 +2451,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke",
+"SN":"smokeGlow/smoke",
 "FF":2,
 "ST":"G",
 "TRP":{"x":363.8,"y":1117.3},
@@ -2398,7 +2462,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke",
+"SN":"smokeGlow/smoke",
 "FF":4,
 "ST":"G",
 "TRP":{"x":360.25,"y":1113.7},
@@ -2450,7 +2514,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouth up",
+"SN":"everything else/mouths/mouthUp",
 "FF":0,
 "ST":"G",
 "TRP":{"x":129.7,"y":156.65},
@@ -2461,7 +2525,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouth up",
+"SN":"everything else/mouths/mouthUp",
 "FF":0,
 "ST":"G",
 "TRP":{"x":130.4,"y":156.55},
@@ -2472,7 +2536,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouth up",
+"SN":"everything else/mouths/mouthUp",
 "FF":3,
 "ST":"G",
 "TRP":{"x":125.65,"y":148.2},
@@ -2487,7 +2551,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/heads/head up",
+"SN":"everything else/heads/headUp",
 "FF":0,
 "ST":"G",
 "TRP":{"x":136.45,"y":986.45},
@@ -2498,7 +2562,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/heads/head up",
+"SN":"everything else/heads/headUp",
 "FF":0,
 "ST":"G",
 "TRP":{"x":135.15,"y":1056.15},
@@ -2509,7 +2573,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/heads/head up",
+"SN":"everything else/heads/headUp",
 "FF":0,
 "ST":"G",
 "TRP":{"x":143.45,"y":988.45},
@@ -2524,7 +2588,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody",
+"SN":"everything else/bodies/idleBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":137.6,"y":1286.35},
@@ -2535,7 +2599,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody",
+"SN":"everything else/bodies/idleBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":136.65,"y":1289},
@@ -2546,7 +2610,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody",
+"SN":"everything else/bodies/idleBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":146.15,"y":1042.85},
@@ -2561,7 +2625,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":209,"y":1003.15},
@@ -2572,7 +2636,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":213.75,"y":1014},
@@ -2583,7 +2647,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":214.4,"y":1015.65},
@@ -2598,7 +2662,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/forearm up",
+"SN":"everything else/hands and arms/forearmUp",
 "FF":0,
 "ST":"G",
 "TRP":{"x":243.4,"y":1215.85},
@@ -2609,7 +2673,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/forearm up",
+"SN":"everything else/hands and arms/forearmUp",
 "FF":0,
 "ST":"G",
 "TRP":{"x":245.7,"y":1203.95},
@@ -2620,7 +2684,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/forearm up",
+"SN":"everything else/hands and arms/forearmUp",
 "FF":0,
 "ST":"G",
 "TRP":{"x":304.65,"y":1170.4},
@@ -2635,7 +2699,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":207.2,"y":1094.1},
@@ -2646,7 +2710,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":209.35,"y":1097.25},
@@ -2657,7 +2721,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":209,"y":1097.8},
@@ -2672,7 +2736,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.25,"y":1468.9},
@@ -2683,7 +2747,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.3,"y":1468.85},
@@ -2694,7 +2758,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.3,"y":1468.85},
@@ -2714,7 +2778,7 @@
 "DU":17,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke",
+"SN":"smokeGlow/smoke",
 "FF":0,
 "ST":"G",
 "TRP":{"x":52.25,"y":33.5},
@@ -2725,7 +2789,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke",
+"SN":"smokeGlow/smoke",
 "FF":8,
 "ST":"G",
 "TRP":{"x":52,"y":32.4},
@@ -2740,7 +2804,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig",
+"SN":"everything else/hands and arms/handIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":207.2,"y":1070.8},
@@ -2751,7 +2815,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig",
+"SN":"everything else/hands and arms/handIdle",
 "FF":1,
 "ST":"G",
 "TRP":{"x":207.35,"y":1070.65},
@@ -2762,7 +2826,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig",
+"SN":"everything else/hands and arms/handIdle",
 "FF":2,
 "ST":"G",
 "TRP":{"x":203.7,"y":1067.6},
@@ -2773,7 +2837,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig",
+"SN":"everything else/hands and arms/handIdle",
 "FF":3,
 "ST":"G",
 "TRP":{"x":203.55,"y":1067.6},
@@ -2784,7 +2848,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig",
+"SN":"everything else/hands and arms/handIdle",
 "FF":4,
 "ST":"G",
 "TRP":{"x":203.2,"y":1061.35},
@@ -2795,7 +2859,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig",
+"SN":"everything else/hands and arms/handIdle",
 "FF":5,
 "ST":"G",
 "TRP":{"x":203.35,"y":1061.65},
@@ -2806,7 +2870,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig",
+"SN":"everything else/hands and arms/handIdle",
 "FF":6,
 "ST":"G",
 "TRP":{"x":201.45,"y":1058.5},
@@ -2817,7 +2881,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig",
+"SN":"everything else/hands and arms/handIdle",
 "FF":7,
 "ST":"G",
 "TRP":{"x":202,"y":1058.35},
@@ -2828,7 +2892,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig",
+"SN":"everything else/hands and arms/handIdle",
 "FF":8,
 "ST":"G",
 "TRP":{"x":269.6,"y":1127.8},
@@ -2839,7 +2903,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig",
+"SN":"everything else/hands and arms/handIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":270.35,"y":1127.6},
@@ -2850,7 +2914,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig",
+"SN":"everything else/hands and arms/handIdle",
 "FF":1,
 "ST":"G",
 "TRP":{"x":270,"y":1123.15},
@@ -2861,7 +2925,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig",
+"SN":"everything else/hands and arms/handIdle",
 "FF":2,
 "ST":"G",
 "TRP":{"x":269.5,"y":1123.3},
@@ -2872,7 +2936,7 @@
 "DU":6,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig",
+"SN":"everything else/hands and arms/handIdle",
 "FF":3,
 "ST":"G",
 "TRP":{"x":244.4,"y":1082.5},
@@ -2887,7 +2951,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/heads/nervesHead",
+"SN":"everything else/heads/nervesHeadIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":121.6,"y":1064.65},
@@ -2898,7 +2962,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/heads/nervesHead",
+"SN":"everything else/heads/nervesHeadIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":129.95,"y":1029.85},
@@ -2909,7 +2973,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/heads/nervesHead",
+"SN":"everything else/heads/nervesHeadIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":128.8,"y":1026.9},
@@ -2920,7 +2984,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/heads/nervesHead",
+"SN":"everything else/heads/nervesHeadIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":140.45,"y":1032.2},
@@ -2931,7 +2995,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/heads/nervesHead",
+"SN":"everything else/heads/nervesHeadIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":156.55,"y":996.15},
@@ -2942,7 +3006,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/heads/nervesHead",
+"SN":"everything else/heads/nervesHeadIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":156.55,"y":996.15},
@@ -2953,7 +3017,7 @@
 "DU":6,
 "E":[
 {"SI":{
-"SN":"everything else/heads/nervesHead",
+"SN":"everything else/heads/nervesHeadIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":156.55,"y":996.15},
@@ -2968,7 +3032,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody lungs pulse",
+"SN":"everything else/bodies/lungsBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":72.95,"y":-34.6},
@@ -2979,7 +3043,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody lungs pulse",
+"SN":"everything else/bodies/lungsBody",
 "FF":2,
 "ST":"G",
 "TRP":{"x":72.95,"y":-34.6},
@@ -2990,7 +3054,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody lungs pulse",
+"SN":"everything else/bodies/lungsBody",
 "FF":4,
 "ST":"G",
 "TRP":{"x":72.95,"y":-34.6},
@@ -3001,7 +3065,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody lungs pulse",
+"SN":"everything else/bodies/lungsBody",
 "FF":6,
 "ST":"G",
 "TRP":{"x":72.95,"y":-34.6},
@@ -3012,7 +3076,7 @@
 "DU":10,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody lungs pulse",
+"SN":"everything else/bodies/lungsBody",
 "FF":8,
 "ST":"G",
 "TRP":{"x":72.95,"y":-34.6},
@@ -3027,7 +3091,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":175.55,"y":135.7},
@@ -3038,7 +3102,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":175.55,"y":135.7},
@@ -3049,7 +3113,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":175.55,"y":135.7},
@@ -3060,7 +3124,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":175.55,"y":135.7},
@@ -3071,7 +3135,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":175.55,"y":135.7},
@@ -3082,7 +3146,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":175.55,"y":135.7},
@@ -3093,7 +3157,7 @@
 "DU":6,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":175.55,"y":135.7},
@@ -3189,7 +3253,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":237.65,"y":1144.5},
@@ -3200,7 +3264,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":237.65,"y":1141.7},
@@ -3211,7 +3275,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":237.65,"y":1140.5},
@@ -3222,7 +3286,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":237.65,"y":1140.5},
@@ -3233,7 +3297,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":237.65,"y":1140.5},
@@ -3244,7 +3308,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":237.65,"y":1140.5},
@@ -3255,7 +3319,7 @@
 "DU":6,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":237.65,"y":1140.5},
@@ -3270,7 +3334,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.5,"y":1468.95},
@@ -3281,7 +3345,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.4,"y":1469},
@@ -3292,7 +3356,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.35,"y":1336.75},
@@ -3303,7 +3367,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.35,"y":1336.75},
@@ -3314,7 +3378,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.35,"y":1336.75},
@@ -3325,7 +3389,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.35,"y":1336.75},
@@ -3336,7 +3400,7 @@
 "DU":5,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.35,"y":1336.75},
@@ -3347,7 +3411,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.35,"y":1336.75},
@@ -3367,7 +3431,7 @@
 "DU":18,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke blow left",
+"SN":"smokeGlow/smoke blow left",
 "FF":0,
 "ST":"G",
 "TRP":{"x":220.3,"y":1057.5},
@@ -3382,7 +3446,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke left",
+"SN":"smokeGlow/smoke left",
 "FF":0,
 "ST":"G",
 "TRP":{"x":305.85,"y":1189.75},
@@ -3393,7 +3457,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke left",
+"SN":"smokeGlow/smoke left",
 "FF":2,
 "ST":"G",
 "TRP":{"x":307.4,"y":1201.75},
@@ -3404,7 +3468,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke left",
+"SN":"smokeGlow/smoke left",
 "FF":4,
 "ST":"G",
 "TRP":{"x":305.75,"y":1201.6},
@@ -3419,7 +3483,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthleft",
+"SN":"everything else/mouths/mouthLeft",
 "FF":0,
 "ST":"G",
 "TRP":{"x":131.25,"y":1062.15},
@@ -3430,7 +3494,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthleft",
+"SN":"everything else/mouths/mouthLeft",
 "FF":1,
 "ST":"G",
 "TRP":{"x":130.5,"y":1062.4},
@@ -3441,7 +3505,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthleft",
+"SN":"everything else/mouths/mouthLeft",
 "FF":0,
 "ST":"G",
 "TRP":{"x":135.95,"y":1058.55},
@@ -3452,7 +3516,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthleft",
+"SN":"everything else/mouths/mouthLeft",
 "FF":1,
 "ST":"G",
 "TRP":{"x":135.25,"y":1058.8},
@@ -3463,7 +3527,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthleft",
+"SN":"everything else/mouths/mouthLeft",
 "FF":3,
 "ST":"G",
 "TRP":{"x":124.6,"y":1053.3},
@@ -3474,7 +3538,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthleft",
+"SN":"everything else/mouths/mouthLeft",
 "FF":3,
 "ST":"G",
 "TRP":{"x":125.3,"y":1053.15},
@@ -3485,7 +3549,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthleft",
+"SN":"everything else/mouths/mouthLeft",
 "FF":3,
 "ST":"G",
 "TRP":{"x":124.6,"y":1053.3},
@@ -3496,7 +3560,7 @@
 "DU":11,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthleft",
+"SN":"everything else/mouths/mouthLeft",
 "FF":3,
 "ST":"G",
 "TRP":{"x":124.85,"y":1053.2},
@@ -3603,7 +3667,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody",
+"SN":"everything else/bodies/idleBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":80.75,"y":1219.65},
@@ -3614,7 +3678,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody",
+"SN":"everything else/bodies/idleBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":86.8,"y":1219.7},
@@ -3625,7 +3689,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody",
+"SN":"everything else/bodies/idleBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":87.95,"y":1219.65},
@@ -3640,7 +3704,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair left",
+"SN":"everything else/hair/backHairLeft",
 "FF":0,
 "ST":"G",
 "TRP":{"x":168.85,"y":1045.95},
@@ -3651,7 +3715,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair left",
+"SN":"everything else/hair/backHairLeft",
 "FF":1,
 "ST":"G",
 "TRP":{"x":168.3,"y":1046.7},
@@ -3662,7 +3726,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair left",
+"SN":"everything else/hair/backHairLeft",
 "FF":0,
 "ST":"G",
 "TRP":{"x":176.65,"y":1043.15},
@@ -3673,7 +3737,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair left",
+"SN":"everything else/hair/backHairLeft",
 "FF":1,
 "ST":"G",
 "TRP":{"x":176.1,"y":1043.9},
@@ -3684,7 +3748,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair left",
+"SN":"everything else/hair/backHairLeft",
 "FF":3,
 "ST":"G",
 "TRP":{"x":177.5,"y":1041},
@@ -3695,7 +3759,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair left",
+"SN":"everything else/hair/backHairLeft",
 "FF":3,
 "ST":"G",
 "TRP":{"x":178.05,"y":1040.1},
@@ -3706,7 +3770,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair left",
+"SN":"everything else/hair/backHairLeft",
 "FF":3,
 "ST":"G",
 "TRP":{"x":177.5,"y":1041},
@@ -3717,7 +3781,7 @@
 "DU":11,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair left",
+"SN":"everything else/hair/backHairLeft",
 "FF":3,
 "ST":"G",
 "TRP":{"x":177.7,"y":1040.6},
@@ -3732,7 +3796,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/arm left",
+"SN":"everything else/hands and arms/armLeft",
 "FF":0,
 "ST":"G",
 "TRP":{"x":160.9,"y":1098.1},
@@ -3743,7 +3807,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/arm left",
+"SN":"everything else/hands and arms/armLeft",
 "FF":1,
 "ST":"G",
 "TRP":{"x":160.95,"y":1098.1},
@@ -3754,7 +3818,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/arm left",
+"SN":"everything else/hands and arms/armLeft",
 "FF":2,
 "ST":"G",
 "TRP":{"x":175.6,"y":1105},
@@ -3765,7 +3829,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/arm left",
+"SN":"everything else/hands and arms/armLeft",
 "FF":3,
 "ST":"G",
 "TRP":{"x":175.65,"y":1105},
@@ -3776,7 +3840,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/arm left",
+"SN":"everything else/hands and arms/armLeft",
 "FF":1,
 "ST":"G",
 "TRP":{"x":176.4,"y":1105.55},
@@ -3787,7 +3851,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/arm left",
+"SN":"everything else/hands and arms/armLeft",
 "FF":1,
 "ST":"G",
 "TRP":{"x":176.4,"y":1105.6},
@@ -3798,7 +3862,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/arm left",
+"SN":"everything else/hands and arms/armLeft",
 "FF":1,
 "ST":"G",
 "TRP":{"x":176.35,"y":1105.55},
@@ -3809,7 +3873,7 @@
 "DU":11,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/arm left",
+"SN":"everything else/hands and arms/armLeft",
 "FF":1,
 "ST":"G",
 "TRP":{"x":176.35,"y":1105.55},
@@ -3824,7 +3888,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.5,"y":1468.85},
@@ -3835,7 +3899,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.5,"y":1468.85},
@@ -3846,7 +3910,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.45,"y":1468.85},
@@ -3866,7 +3930,7 @@
 "DU":18,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke blow right",
+"SN":"smokeGlow/smoke blow right",
 "FF":0,
 "ST":"G",
 "TRP":{"x":348.25,"y":1049.6},
@@ -3881,7 +3945,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke right",
+"SN":"smokeGlow/smoke right",
 "FF":0,
 "ST":"G",
 "TRP":{"x":362.15,"y":1126.1},
@@ -3892,7 +3956,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke right",
+"SN":"smokeGlow/smoke right",
 "FF":2,
 "ST":"G",
 "TRP":{"x":345,"y":1121.85},
@@ -3903,7 +3967,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke right",
+"SN":"smokeGlow/smoke right",
 "FF":4,
 "ST":"G",
 "TRP":{"x":341.9,"y":1120.85},
@@ -3914,7 +3978,7 @@
 "DU":11,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke right",
+"SN":"smokeGlow/smoke right",
 "FF":6,
 "ST":"G",
 "TRP":{"x":341.9,"y":1120.85},
@@ -3925,7 +3989,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke right",
+"SN":"smokeGlow/smoke right",
 "FF":8,
 "ST":"G",
 "TRP":{"x":341.9,"y":1120.85},
@@ -3940,7 +4004,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig right",
+"SN":"everything else/hands and arms/handRight",
 "FF":0,
 "ST":"G",
 "TRP":{"x":299.4,"y":1151.35},
@@ -3951,7 +4015,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig right",
+"SN":"everything else/hands and arms/handRight",
 "FF":1,
 "ST":"G",
 "TRP":{"x":299.45,"y":1151.35},
@@ -3962,7 +4026,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig right",
+"SN":"everything else/hands and arms/handRight",
 "FF":2,
 "ST":"G",
 "TRP":{"x":282.15,"y":1144.55},
@@ -3973,7 +4037,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig right",
+"SN":"everything else/hands and arms/handRight",
 "FF":3,
 "ST":"G",
 "TRP":{"x":282.2,"y":1144.55},
@@ -3984,7 +4048,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig right",
+"SN":"everything else/hands and arms/handRight",
 "FF":4,
 "ST":"G",
 "TRP":{"x":278,"y":1141.15},
@@ -3995,7 +4059,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig right",
+"SN":"everything else/hands and arms/handRight",
 "FF":5,
 "ST":"G",
 "TRP":{"x":278,"y":1141.95},
@@ -4006,7 +4070,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig right",
+"SN":"everything else/hands and arms/handRight",
 "FF":6,
 "ST":"G",
 "TRP":{"x":277.95,"y":1141.35},
@@ -4017,7 +4081,7 @@
 "DU":11,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/handcig right",
+"SN":"everything else/hands and arms/handRight",
 "FF":7,
 "ST":"G",
 "TRP":{"x":277.95,"y":1141.5},
@@ -4032,7 +4096,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthright",
+"SN":"everything else/mouths/mouthRight",
 "FF":0,
 "ST":"G",
 "TRP":{"x":263.1,"y":1053.9},
@@ -4043,7 +4107,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthright",
+"SN":"everything else/mouths/mouthRight",
 "FF":0,
 "ST":"G",
 "TRP":{"x":263.55,"y":1053.55},
@@ -4054,7 +4118,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthright",
+"SN":"everything else/mouths/mouthRight",
 "FF":0,
 "ST":"G",
 "TRP":{"x":250.45,"y":1056.25},
@@ -4065,7 +4129,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthright",
+"SN":"everything else/mouths/mouthRight",
 "FF":0,
 "ST":"G",
 "TRP":{"x":250.8,"y":1056.05},
@@ -4076,7 +4140,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthright",
+"SN":"everything else/mouths/mouthRight",
 "FF":3,
 "ST":"G",
 "TRP":{"x":245.6,"y":1057},
@@ -4087,7 +4151,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthright",
+"SN":"everything else/mouths/mouthRight",
 "FF":3,
 "ST":"G",
 "TRP":{"x":246.25,"y":1056.55},
@@ -4098,7 +4162,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthright",
+"SN":"everything else/mouths/mouthRight",
 "FF":3,
 "ST":"G",
 "TRP":{"x":245.45,"y":1057.05},
@@ -4109,7 +4173,7 @@
 "DU":11,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthright",
+"SN":"everything else/mouths/mouthRight",
 "FF":3,
 "ST":"G",
 "TRP":{"x":245.9,"y":1056.75},
@@ -4216,7 +4280,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody right",
+"SN":"everything else/bodies/rightBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":166.95,"y":1219.9},
@@ -4227,7 +4291,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody right",
+"SN":"everything else/bodies/rightBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":145.05,"y":1300.4},
@@ -4238,7 +4302,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody right",
+"SN":"everything else/bodies/rightBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":144.4,"y":1300.35},
@@ -4253,7 +4317,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair right",
+"SN":"everything else/hair/backHairRight",
 "FF":0,
 "ST":"G",
 "TRP":{"x":287.2,"y":1052.35},
@@ -4264,7 +4328,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair right",
+"SN":"everything else/hair/backHairRight",
 "FF":1,
 "ST":"G",
 "TRP":{"x":287.65,"y":1051.8},
@@ -4275,7 +4339,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair right",
+"SN":"everything else/hair/backHairRight",
 "FF":0,
 "ST":"G",
 "TRP":{"x":275.4,"y":1054.95},
@@ -4286,7 +4350,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair right",
+"SN":"everything else/hair/backHairRight",
 "FF":1,
 "ST":"G",
 "TRP":{"x":275.75,"y":1054.65},
@@ -4297,7 +4361,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair right",
+"SN":"everything else/hair/backHairRight",
 "FF":1,
 "ST":"G",
 "TRP":{"x":271.75,"y":1056.2},
@@ -4308,7 +4372,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair right",
+"SN":"everything else/hair/backHairRight",
 "FF":1,
 "ST":"G",
 "TRP":{"x":272.4,"y":1055.45},
@@ -4319,7 +4383,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair right",
+"SN":"everything else/hair/backHairRight",
 "FF":1,
 "ST":"G",
 "TRP":{"x":271.6,"y":1056.3},
@@ -4330,7 +4394,7 @@
 "DU":11,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair right",
+"SN":"everything else/hair/backHairRight",
 "FF":1,
 "ST":"G",
 "TRP":{"x":272.05,"y":1055.8},
@@ -4382,7 +4446,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":247.75,"y":1144.05},
@@ -4393,7 +4457,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":234.85,"y":1212.95},
@@ -4404,7 +4468,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":230.35,"y":1212.95},
@@ -4419,7 +4483,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":155.7,"y":1469.75},
@@ -4430,7 +4494,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":155.85,"y":1463.15},
@@ -4441,7 +4505,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":155.75,"y":1463.15},
@@ -4461,7 +4525,7 @@
 "DU":18,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke blow down",
+"SN":"smokeGlow/smoke blow down",
 "FF":0,
 "ST":"G",
 "TRP":{"x":254.95,"y":1141.05},
@@ -4476,7 +4540,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke down",
+"SN":"smokeGlow/smoke down",
 "FF":0,
 "ST":"G",
 "TRP":{"x":343.3,"y":1223.35},
@@ -4487,7 +4551,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke down",
+"SN":"smokeGlow/smoke down",
 "FF":2,
 "ST":"G",
 "TRP":{"x":346.75,"y":1230.45},
@@ -4498,7 +4562,7 @@
 "DU":3,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke down",
+"SN":"smokeGlow/smoke down",
 "FF":4,
 "ST":"G",
 "TRP":{"x":346.75,"y":1230.4},
@@ -4509,7 +4573,7 @@
 "DU":11,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke down",
+"SN":"smokeGlow/smoke down",
 "FF":7,
 "ST":"G",
 "TRP":{"x":346.75,"y":1230.4},
@@ -4524,7 +4588,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/downhand",
+"SN":"everything else/hands and arms/handDown",
 "FF":0,
 "ST":"G",
 "TRP":{"x":283.6,"y":1236.05},
@@ -4535,7 +4599,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/downhand",
+"SN":"everything else/hands and arms/handDown",
 "FF":1,
 "ST":"G",
 "TRP":{"x":283.6,"y":1236.05},
@@ -4546,7 +4610,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/downhand",
+"SN":"everything else/hands and arms/handDown",
 "FF":2,
 "ST":"G",
 "TRP":{"x":283.6,"y":1239.55},
@@ -4557,7 +4621,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/downhand",
+"SN":"everything else/hands and arms/handDown",
 "FF":3,
 "ST":"G",
 "TRP":{"x":283.65,"y":1239.55},
@@ -4568,7 +4632,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/downhand",
+"SN":"everything else/hands and arms/handDown",
 "FF":4,
 "ST":"G",
 "TRP":{"x":283.6,"y":1239.6},
@@ -4579,7 +4643,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/downhand",
+"SN":"everything else/hands and arms/handDown",
 "FF":5,
 "ST":"G",
 "TRP":{"x":283.6,"y":1239.6},
@@ -4590,7 +4654,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/downhand",
+"SN":"everything else/hands and arms/handDown",
 "FF":6,
 "ST":"G",
 "TRP":{"x":283.65,"y":1239.55},
@@ -4601,7 +4665,7 @@
 "DU":11,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/downhand",
+"SN":"everything else/hands and arms/handDown",
 "FF":7,
 "ST":"G",
 "TRP":{"x":283.6,"y":1239.55},
@@ -4616,7 +4680,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouth down",
+"SN":"everything else/mouths/mouthDown",
 "FF":0,
 "ST":"G",
 "TRP":{"x":194.3,"y":1083.1},
@@ -4627,7 +4691,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouth down",
+"SN":"everything else/mouths/mouthDown",
 "FF":0,
 "ST":"G",
 "TRP":{"x":193.6,"y":1083.4},
@@ -4638,7 +4702,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouth down",
+"SN":"everything else/mouths/mouthDown",
 "FF":0,
 "ST":"G",
 "TRP":{"x":200.7,"y":1065.45},
@@ -4649,7 +4713,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouth down",
+"SN":"everything else/mouths/mouthDown",
 "FF":0,
 "ST":"G",
 "TRP":{"x":200.35,"y":1065.7},
@@ -4660,7 +4724,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouth down",
+"SN":"everything else/mouths/mouthDown",
 "FF":3,
 "ST":"G",
 "TRP":{"x":187.9,"y":1073.65},
@@ -4671,7 +4735,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouth down",
+"SN":"everything else/mouths/mouthDown",
 "FF":3,
 "ST":"G",
 "TRP":{"x":189.15,"y":1073.3},
@@ -4682,7 +4746,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouth down",
+"SN":"everything else/mouths/mouthDown",
 "FF":3,
 "ST":"G",
 "TRP":{"x":187.9,"y":1073.65},
@@ -4693,7 +4757,7 @@
 "DU":11,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouth down",
+"SN":"everything else/mouths/mouthDown",
 "FF":3,
 "ST":"G",
 "TRP":{"x":188.35,"y":1073.55},
@@ -4800,7 +4864,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody down",
+"SN":"everything else/bodies/downBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":110.35,"y":1228.6},
@@ -4811,7 +4875,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody down",
+"SN":"everything else/bodies/downBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":124.2,"y":1171.9},
@@ -4822,7 +4886,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody down",
+"SN":"everything else/bodies/downBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":124.15,"y":1170.05},
@@ -4837,7 +4901,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair down",
+"SN":"everything else/hair/backHairDown",
 "FF":0,
 "ST":"G",
 "TRP":{"x":241.15,"y":1064.05},
@@ -4848,7 +4912,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair down",
+"SN":"everything else/hair/backHairDown",
 "FF":1,
 "ST":"G",
 "TRP":{"x":240.65,"y":1064.95},
@@ -4859,7 +4923,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair down",
+"SN":"everything else/hair/backHairDown",
 "FF":0,
 "ST":"G",
 "TRP":{"x":237.6,"y":1061.95},
@@ -4870,7 +4934,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair down",
+"SN":"everything else/hair/backHairDown",
 "FF":1,
 "ST":"G",
 "TRP":{"x":237.25,"y":1062.5},
@@ -4881,7 +4945,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair down",
+"SN":"everything else/hair/backHairDown",
 "FF":3,
 "ST":"G",
 "TRP":{"x":238.35,"y":1061.3},
@@ -4892,7 +4956,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair down",
+"SN":"everything else/hair/backHairDown",
 "FF":3,
 "ST":"G",
 "TRP":{"x":239.35,"y":1059.9},
@@ -4903,7 +4967,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair down",
+"SN":"everything else/hair/backHairDown",
 "FF":3,
 "ST":"G",
 "TRP":{"x":238.35,"y":1061.3},
@@ -4914,7 +4978,7 @@
 "DU":11,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair down",
+"SN":"everything else/hair/backHairDown",
 "FF":3,
 "ST":"G",
 "TRP":{"x":238.7,"y":1060.8},
@@ -4929,7 +4993,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/forearmdown",
+"SN":"everything else/hands and arms/forearmDown",
 "FF":0,
 "ST":"G",
 "TRP":{"x":282.8,"y":1242.65},
@@ -4940,7 +5004,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/forearmdown",
+"SN":"everything else/hands and arms/forearmDown",
 "FF":0,
 "ST":"G",
 "TRP":{"x":267.9,"y":1235.2},
@@ -4951,7 +5015,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/forearmdown",
+"SN":"everything else/hands and arms/forearmDown",
 "FF":0,
 "ST":"G",
 "TRP":{"x":267.9,"y":1235.2},
@@ -4966,7 +5030,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/right arm down",
+"SN":"everything else/hands and arms/downArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":217,"y":1157.8},
@@ -4977,7 +5041,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/right arm down",
+"SN":"everything else/hands and arms/downArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":217.05,"y":1153.25},
@@ -4988,7 +5052,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/right arm down",
+"SN":"everything else/hands and arms/downArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":217,"y":1152.3},
@@ -5003,7 +5067,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.3,"y":1468.85},
@@ -5014,7 +5078,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.25,"y":1468.95},
@@ -5025,7 +5089,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.3,"y":1468.85},
@@ -5045,7 +5109,7 @@
 "DU":18,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke blow up",
+"SN":"smokeGlow/smoke blow up",
 "FF":0,
 "ST":"G",
 "TRP":{"x":224.55,"y":975.25},
@@ -5060,7 +5124,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke",
+"SN":"smokeGlow/smoke",
 "FF":0,
 "ST":"G",
 "TRP":{"x":370.25,"y":1125.35},
@@ -5071,7 +5135,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke",
+"SN":"smokeGlow/smoke",
 "FF":2,
 "ST":"G",
 "TRP":{"x":363.8,"y":1117.3},
@@ -5082,7 +5146,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke",
+"SN":"smokeGlow/smoke",
 "FF":4,
 "ST":"G",
 "TRP":{"x":360.25,"y":1113.7},
@@ -5189,7 +5253,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouth up",
+"SN":"everything else/mouths/mouthUp",
 "FF":0,
 "ST":"G",
 "TRP":{"x":171.2,"y":1039.75},
@@ -5200,7 +5264,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouth up",
+"SN":"everything else/mouths/mouthUp",
 "FF":0,
 "ST":"G",
 "TRP":{"x":171.5,"y":1039.55},
@@ -5211,7 +5275,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouth up",
+"SN":"everything else/mouths/mouthUp",
 "FF":0,
 "ST":"G",
 "TRP":{"x":158.85,"y":1045.8},
@@ -5222,7 +5286,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouth up",
+"SN":"everything else/mouths/mouthUp",
 "FF":0,
 "ST":"G",
 "TRP":{"x":159.2,"y":1045.7},
@@ -5233,7 +5297,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouth up",
+"SN":"everything else/mouths/mouthUp",
 "FF":3,
 "ST":"G",
 "TRP":{"x":148.15,"y":1019.9},
@@ -5244,7 +5308,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouth up",
+"SN":"everything else/mouths/mouthUp",
 "FF":3,
 "ST":"G",
 "TRP":{"x":148.7,"y":1019.75},
@@ -5255,7 +5319,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouth up",
+"SN":"everything else/mouths/mouthUp",
 "FF":3,
 "ST":"G",
 "TRP":{"x":148.3,"y":1019.85},
@@ -5266,7 +5330,7 @@
 "DU":11,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouth up",
+"SN":"everything else/mouths/mouthUp",
 "FF":3,
 "ST":"G",
 "TRP":{"x":148.5,"y":1019.75},
@@ -5373,7 +5437,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody",
+"SN":"everything else/bodies/idleBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":137.6,"y":1286.35},
@@ -5384,7 +5448,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody",
+"SN":"everything else/bodies/idleBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":136.65,"y":1289},
@@ -5395,7 +5459,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody",
+"SN":"everything else/bodies/idleBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":146.15,"y":1042.85},
@@ -5410,7 +5474,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":209,"y":1003.15},
@@ -5421,7 +5485,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":1,
 "ST":"G",
 "TRP":{"x":209.1,"y":1002.75},
@@ -5432,7 +5496,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":213.75,"y":1014},
@@ -5443,7 +5507,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":1,
 "ST":"G",
 "TRP":{"x":213.9,"y":1013.6},
@@ -5454,7 +5518,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":3,
 "ST":"G",
 "TRP":{"x":213.45,"y":1015.45},
@@ -5465,7 +5529,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":3,
 "ST":"G",
 "TRP":{"x":213.85,"y":1014.1},
@@ -5476,7 +5540,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":3,
 "ST":"G",
 "TRP":{"x":213.55,"y":1015.1},
@@ -5487,7 +5551,7 @@
 "DU":11,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":3,
 "ST":"G",
 "TRP":{"x":213.7,"y":1014.5},
@@ -5502,7 +5566,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/forearm up",
+"SN":"everything else/hands and arms/forearmUp",
 "FF":0,
 "ST":"G",
 "TRP":{"x":243.4,"y":1215.85},
@@ -5513,7 +5577,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/forearm up",
+"SN":"everything else/hands and arms/forearmUp",
 "FF":0,
 "ST":"G",
 "TRP":{"x":245.7,"y":1203.95},
@@ -5524,7 +5588,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/forearm up",
+"SN":"everything else/hands and arms/forearmUp",
 "FF":0,
 "ST":"G",
 "TRP":{"x":304.65,"y":1170.4},
@@ -5539,7 +5603,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":207.2,"y":1094.1},
@@ -5550,7 +5614,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":209.35,"y":1097.25},
@@ -5561,7 +5625,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":209,"y":1097.8},
@@ -5576,7 +5640,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.25,"y":1468.9},
@@ -5587,7 +5651,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.3,"y":1468.85},
@@ -5598,7 +5662,7 @@
 "DU":14,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.3,"y":1468.85},
@@ -5618,7 +5682,7 @@
 "DU":15,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke blow cough",
+"SN":"smokeGlow/smoke blow cough",
 "FF":0,
 "ST":"G",
 "TRP":{"x":273.3,"y":1062.65},
@@ -5633,7 +5697,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke",
+"SN":"smokeGlow/smoke",
 "FF":0,
 "ST":"G",
 "TRP":{"x":290.3,"y":1082.4},
@@ -5644,7 +5708,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke",
+"SN":"smokeGlow/smoke",
 "FF":2,
 "ST":"G",
 "TRP":{"x":284.65,"y":1076.65},
@@ -5655,7 +5719,7 @@
 "DU":11,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke",
+"SN":"smokeGlow/smoke",
 "FF":4,
 "ST":"G",
 "TRP":{"x":282.6,"y":1075.4},
@@ -5670,7 +5734,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthcough",
+"SN":"everything else/mouths/mouthCough",
 "FF":0,
 "ST":"G",
 "TRP":{"x":157.95,"y":1051.8},
@@ -5681,7 +5745,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthcough",
+"SN":"everything else/mouths/mouthCough",
 "FF":2,
 "ST":"G",
 "TRP":{"x":151.95,"y":1051.8},
@@ -5692,7 +5756,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthcough",
+"SN":"everything else/mouths/mouthCough",
 "FF":5,
 "ST":"G",
 "TRP":{"x":173.2,"y":1057.95},
@@ -5703,7 +5767,7 @@
 "DU":9,
 "E":[
 {"SI":{
-"SN":"everything else/mouths/mouthcough",
+"SN":"everything else/mouths/mouthCough",
 "FF":7,
 "ST":"G",
 "TRP":{"x":173.2,"y":1055.95},
@@ -5836,7 +5900,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody lungs pulse",
+"SN":"everything else/bodies/lungsBody",
 "FF":9,
 "ST":"G",
 "TRP":{"x":126.1,"y":1212.55},
@@ -5847,7 +5911,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody lungs pulse",
+"SN":"everything else/bodies/lungsBody",
 "FF":9,
 "ST":"G",
 "TRP":{"x":125.25,"y":1210.75},
@@ -5858,7 +5922,7 @@
 "DU":11,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody lungs pulse",
+"SN":"everything else/bodies/lungsBody",
 "FF":9,
 "ST":"G",
 "TRP":{"x":123.75,"y":1210.7},
@@ -5873,7 +5937,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":231.8,"y":1049.95},
@@ -5884,7 +5948,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":224.6,"y":1051.2},
@@ -5895,7 +5959,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":204.2,"y":1037.65},
@@ -5906,7 +5970,7 @@
 "DU":9,
 "E":[
 {"SI":{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "FF":0,
 "ST":"G",
 "TRP":{"x":221.3,"y":1043.65},
@@ -5958,7 +6022,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":227.9,"y":1141.25},
@@ -5969,7 +6033,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":228.8,"y":1138.55},
@@ -5980,7 +6044,7 @@
 "DU":11,
 "E":[
 {"SI":{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "FF":0,
 "ST":"G",
 "TRP":{"x":227.9,"y":1136.75},
@@ -5995,7 +6059,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.4,"y":1468.85},
@@ -6006,7 +6070,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.3,"y":1468.85},
@@ -6017,7 +6081,7 @@
 "DU":11,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "FF":0,
 "ST":"G",
 "TRP":{"x":178.35,"y":1468.85},
@@ -6026,7 +6090,2416 @@
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/smoke",
+"SN":"animations/hardcough",
+"TL":{
+"L":[
+{
+"LN":"eye",
+"FR":[
+{
+"I":0,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/eyeHardCough",
+"FF":0,
+"ST":"G",
+"TRP":{"x":159.6,"y":1023.15},
+"LP":"PO",
+"MX":[1,0,0,1,135.1,1011.25]
+}}]},{
+"I":2,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/eyeHardCough",
+"FF":2,
+"ST":"G",
+"TRP":{"x":153.85,"y":1020.65},
+"LP":"PO",
+"MX":[1,0,0,1,129.35,1008.75]
+}}]},{
+"I":4,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/eyeHardCough",
+"FF":3,
+"ST":"G",
+"TRP":{"x":148.8,"y":1017.45},
+"LP":"PO",
+"MX":[1,0,0,1,124.3,1005.55]
+}}]},{
+"I":6,
+"DU":10,
+"E":[
+{"SI":{
+"SN":"everything else/eyeHardCough",
+"FF":3,
+"ST":"G",
+"TRP":{"x":148.05,"y":1015.8},
+"LP":"PO",
+"MX":[1,0,0,1,123.55,1003.9]
+}}]}
+]},{
+"LN":"smoke_blow_cough",
+"FR":[
+{
+"I":0,
+"DU":16,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke blow cough",
+"FF":0,
+"ST":"G",
+"TRP":{"x":273.3,"y":1062.7},
+"LP":"PO",
+"MX":[1.044,0,0,1.158,188.4,972.35]
+}}]}
+]},{
+"LN":"smoke",
+"FR":[
+{
+"I":0,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":0,
+"ST":"G",
+"TRP":{"x":282.8,"y":1079.9},
+"LP":"LP",
+"MX":[0.997,0,0.095,0.997,257.3,944.65]
+}}]},{
+"I":2,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":2,
+"ST":"G",
+"TRP":{"x":277.15,"y":1074.15},
+"LP":"LP",
+"MX":[0.997,-0.04,0.04,0.997,259.4,939.45]
+}}]},{
+"I":4,
+"DU":12,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":4,
+"ST":"G",
+"TRP":{"x":275.1,"y":1072.9},
+"LP":"LP",
+"MX":[0.995,-0.062,-0.008,1,263.85,937.85]
+}}]}
+]},{
+"LN":"mouth",
+"FR":[
+{
+"I":0,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/mouths/mouthHardCough",
+"FF":0,
+"ST":"G",
+"TRP":{"x":157.95,"y":1051.8},
+"LP":"PO",
+"MX":[0.999,0.03,-0.03,0.999,157.85,1051.7]
+}}]},{
+"I":2,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/mouths/mouthHardCough",
+"FF":2,
+"ST":"G",
+"TRP":{"x":151.95,"y":1051.8},
+"LP":"PO",
+"MX":[0.999,0.03,-0.03,0.999,151.85,1051.7]
+}}]},{
+"I":4,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/mouths/mouthHardCough",
+"FF":5,
+"ST":"G",
+"TRP":{"x":173.2,"y":1057.95},
+"LP":"PO",
+"MX":[1,0.018,-0.018,1,147.2,1046.1]
+}}]},{
+"I":6,
+"DU":10,
+"E":[
+{"SI":{
+"SN":"everything else/mouths/mouthHardCough",
+"FF":7,
+"ST":"G",
+"TRP":{"x":173.2,"y":1055.95},
+"LP":"PO",
+"MX":[1,0.018,-0.018,1,147.2,1044.1]
+}}]}
+]},{
+"LN":"hand",
+"FR":[
+{
+"I":0,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handcoughhard",
+"FF":2,
+"ST":"G",
+"TRP":{"x":325.05,"y":1124.85},
+"LP":"LP",
+"MX":[0.266,-0.964,0.964,0.266,218.1,1131.8]
+}}]},{
+"I":2,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handcoughhard",
+"FF":4,
+"ST":"G",
+"TRP":{"x":321.35,"y":1117.65},
+"LP":"LP",
+"MX":[0.227,-0.974,0.974,0.227,214.8,1128.85]
+}}]},{
+"I":4,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handcoughhard",
+"FF":6,
+"ST":"G",
+"TRP":{"x":320.2,"y":1115.35},
+"LP":"LP",
+"MX":[0.203,-0.979,0.979,0.203,213.95,1129.2]
+}}]},{
+"I":5,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handcoughhard",
+"FF":7,
+"ST":"G",
+"TRP":{"x":320.15,"y":1115.3},
+"LP":"LP",
+"MX":[0.19,-0.982,0.982,0.19,214.1,1130.5]
+}}]},{
+"I":6,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handcoughhard",
+"FF":8,
+"ST":"G",
+"TRP":{"x":320.15,"y":1115.3},
+"LP":"LP",
+"MX":[0.212,-0.977,0.977,0.212,213.85,1128.2]
+}}]},{
+"I":7,
+"DU":9,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handcoughhard",
+"FF":0,
+"ST":"G",
+"TRP":{"x":320.15,"y":1115.25},
+"LP":"LP",
+"MX":[0.198,-0.98,0.98,0.198,214,1129.65]
+}}]}
+]},{
+"LN":"head",
+"FR":[
+{
+"I":0,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/heads/nervesHeadDown",
+"FF":5,
+"ST":"G",
+"TRP":{"x":136.65,"y":1061.05},
+"LP":"SF",
+"MX":[0.995,0.1,-0.1,0.995,70.75,897.3]
+}}]},{
+"I":2,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/heads/nervesHeadDown",
+"FF":5,
+"ST":"G",
+"TRP":{"x":166.85,"y":1002.05},
+"LP":"SF",
+"MX":[0.988,0.151,-0.151,0.988,71.6,890.4]
+}}]},{
+"I":4,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/heads/nervesHeadDown",
+"FF":5,
+"ST":"G",
+"TRP":{"x":95.5,"y":1057.1},
+"LP":"SF",
+"MX":[0.996,0.092,-0.092,0.996,59,892.3]
+}}]},{
+"I":6,
+"DU":10,
+"E":[
+{"SI":{
+"SN":"everything else/heads/nervesHeadDown",
+"FF":5,
+"ST":"G",
+"TRP":{"x":159.4,"y":996.15},
+"LP":"SF",
+"MX":[0.997,0.074,-0.074,0.997,55.95,892.3]
+}}]}
+]},{
+"LN":"body",
+"FR":[
+{
+"I":0,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/bodies/lungsBody",
+"FF":0,
+"ST":"G",
+"TRP":{"x":126.1,"y":1212.55},
+"LP":"PO",
+"MX":[1,0.056,-0.12,0.985,20.35,1040.5]
+}}]},{
+"I":2,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/bodies/lungsBody",
+"FF":2,
+"ST":"G",
+"TRP":{"x":125.25,"y":1210.75},
+"LP":"PO",
+"MX":[1.001,0.042,-0.106,0.993,16.8,1038.95]
+}}]},{
+"I":4,
+"DU":12,
+"E":[
+{"SI":{
+"SN":"everything else/bodies/lungsBody",
+"FF":4,
+"ST":"G",
+"TRP":{"x":123.75,"y":1210.7},
+"LP":"PO",
+"MX":[1.002,0.035,-0.09,0.994,12.7,1039.75]
+}}]}
+]},{
+"LN":"backhair",
+"FR":[
+{
+"I":0,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hair/backHairIdle",
+"FF":0,
+"ST":"G",
+"TRP":{"x":231.8,"y":1049.95},
+"LP":"SF",
+"MX":[0.994,0.1,-0.1,0.994,201.7,998.55]
+}}]},{
+"I":2,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hair/backHairIdle",
+"FF":0,
+"ST":"G",
+"TRP":{"x":224.6,"y":1051.2},
+"LP":"SF",
+"MX":[0.988,0.144,-0.144,0.988,196.75,998.6]
+}}]},{
+"I":4,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hair/backHairIdle",
+"FF":0,
+"ST":"G",
+"TRP":{"x":204.2,"y":1037.65},
+"LP":"SF",
+"MX":[0.988,0.148,-0.148,0.988,193.2,993.9]
+}}]},{
+"I":6,
+"DU":10,
+"E":[
+{"SI":{
+"SN":"everything else/hair/backHairIdle",
+"FF":0,
+"ST":"G",
+"TRP":{"x":221.3,"y":1043.65},
+"LP":"SF",
+"MX":[0.995,0.087,-0.087,0.995,190.55,992.65]
+}}]}
+]},{
+"LN":"forearm",
+"FR":[
+{
+"I":0,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":240.65,"y":1206.5},
+"LP":"LP",
+"MX":[0.739,0.674,-0.674,0.739,306.2,1019]
+}}]},{
+"I":2,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":241.45,"y":1203.75},
+"LP":"LP",
+"MX":[0.784,0.621,-0.621,0.784,294,1012.25]
+}}]},{
+"I":4,
+"DU":12,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":240.55,"y":1201.95},
+"LP":"LP",
+"MX":[0.784,0.621,-0.621,0.784,293.1,1010.45]
+}}]}
+]},{
+"LN":"backarm",
+"FR":[
+{
+"I":0,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/rightArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":227.9,"y":1141.25},
+"LP":"LP",
+"MX":[1,0,0,1,195.35,1085.2]
+}}]},{
+"I":2,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/rightArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":228.8,"y":1138.55},
+"LP":"LP",
+"MX":[1,0,0,1,196.25,1082.5]
+}}]},{
+"I":4,
+"DU":12,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/rightArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":227.9,"y":1136.75},
+"LP":"LP",
+"MX":[1,0,0,1,195.35,1080.7]
+}}]}
+]},{
+"LN":"legs",
+"FR":[
+{
+"I":0,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/bodies/idleLegs",
+"FF":0,
+"ST":"G",
+"TRP":{"x":178.4,"y":1468.85},
+"LP":"LP",
+"MX":[1,0,0.119,0.993,45.8,1206.55]
+}}]},{
+"I":2,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/bodies/idleLegs",
+"FF":0,
+"ST":"G",
+"TRP":{"x":178.3,"y":1468.85},
+"LP":"LP",
+"MX":[1,0,0.123,1,44.85,1204.65]
+}}]},{
+"I":4,
+"DU":12,
+"E":[
+{"SI":{
+"SN":"everything else/bodies/idleLegs",
+"FF":0,
+"ST":"G",
+"TRP":{"x":178.35,"y":1468.85},
+"LP":"LP",
+"MX":[1,0,0.128,1,43.35,1204.65]
+}}]}
+]}
+]}},{
+"SN":"animations/cigmiss",
+"TL":{
+"L":[
+{
+"LN":"neck",
+"FR":[
+{
+"I":0,
+"DU":11,
+"E":[
+{"SI":{
+"SN":"everything else/mouths/mouthDies",
+"FF":0,
+"ST":"G",
+"TRP":{"x":183.2,"y":1061.3},
+"LP":"LP",
+"MX":[1,0,0,1,169.4,1056.55]
+}}]},{
+"I":11,
+"DU":7,
+"E":[
+{"SI":{
+"SN":"everything else/deadstuff/eyesNbrains",
+"FF":0,
+"ST":"G",
+"TRP":{"x":-83.1,"y":971.6},
+"LP":"LP",
+"MX":[1,0,0,1,0.2,0]
+}}]},{
+"I":18,
+"DU":87,
+"E":[]
+}
+]},{
+"LN":"cig",
+"FR":[
+{
+"I":0,
+"DU":11,
+"E":[]
+},{
+"I":11,
+"DU":11,
+"E":[
+{"SI":{
+"SN":"everything else/deadstuff/bloodExplode",
+"FF":0,
+"ST":"G",
+"TRP":{"x":19.5,"y":1078.4},
+"LP":"LP",
+"MX":[1,0,0,1,0,0.05]
+}}]},{
+"I":22,
+"DU":83,
+"E":[]
+}
+]},{
+"LN":"cig",
+"FR":[
+{
+"I":0,
+"DU":11,
+"E":[]
+},{
+"I":11,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/heads/headExplodeSnap",
+"FF":0,
+"ST":"G",
+"TRP":{"x":32.75,"y":1044.1},
+"LP":"LP",
+"MX":[1,0,0,1,-29.6,979.2]
+}}]},{
+"I":13,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/heads/headExploded",
+"FF":0,
+"ST":"G",
+"TRP":{"x":109.05,"y":1109.55},
+"LP":"LP",
+"MX":[1,0,0.06,1,15.45,981.3]
+}}]},{
+"I":15,
+"DU":44,
+"E":[
+{"SI":{
+"SN":"everything else/heads/headExploded",
+"FF":0,
+"ST":"G",
+"TRP":{"x":80.35,"y":1044.5},
+"LP":"LP",
+"MX":[1,-0.017,0.017,1,27.05,982.7]
+}}]},{
+"I":59,
+"DU":3,
+"E":[
+{"SI":{
+"SN":"everything else/heads/headExploded",
+"FF":0,
+"ST":"G",
+"TRP":{"x":74.35,"y":1044.5},
+"LP":"LP",
+"MX":[1,-0.017,0.017,1,21.05,982.7]
+}}]},{
+"I":62,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/heads/headExploded",
+"FF":0,
+"ST":"G",
+"TRP":{"x":40.25,"y":1045.85},
+"LP":"LP",
+"MX":[0.998,-0.043,0.097,0.998,-18,985.6]
+}}]},{
+"I":64,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/deadstuff/deadcello",
+"FF":0,
+"ST":"G",
+"TRP":{"x":18.3,"y":1511.35},
+"LP":"LP",
+"MX":[1.022,0,0,0.975,-235.6,1331.7]
+}}]},{
+"I":66,
+"DU":39,
+"E":[
+{"SI":{
+"SN":"everything else/deadstuff/deadcello",
+"FF":0,
+"ST":"G",
+"TRP":{"x":18.4,"y":1419.15},
+"LP":"LP",
+"MX":[1,0,0,1,-230.2,1327]
+}}]}
+]},{
+"LN":"hand",
+"FR":[
+{
+"I":0,
+"DU":11,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handUnlit",
+"FF":3,
+"ST":"G",
+"TRP":{"x":320.5,"y":1082.55},
+"LP":"LP",
+"MX":[0.455,0.891,-0.891,0.455,348.6,1015.6]
+}}]},{
+"I":11,
+"DU":94,
+"E":[
+{"SI":{
+"SN":"everything else/deadstuff/cigFlip",
+"FF":0,
+"ST":"G",
+"TRP":{"x":314.55,"y":1151.15},
+"LP":"PO",
+"MX":[1,0,0,1,0,0]
+}}]}
+]},{
+"LN":"head",
+"FR":[
+{
+"I":0,
+"DU":11,
+"E":[
+{"SI":{
+"SN":"everything else/heads/nervesHeadNoLight",
+"FF":0,
+"ST":"G",
+"TRP":{"x":156.55,"y":996.15},
+"LP":"LP",
+"MX":[1,0,0,1,45.75,900.25]
+}}]},{
+"I":11,
+"DU":93,
+"E":[
+{"SI":{
+"SN":"everything else/deadstuff/bloodSplatter",
+"FF":0,
+"ST":"G",
+"TRP":{"x":196,"y":1468.95},
+"LP":"LP",
+"MX":[1,0,0,1,-11.9,1426.35]
+}}]},{
+"I":104,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-11.9,1426.35],
+"N":"25"
+}}]}
+]},{
+"LN":"body",
+"FR":[
+{
+"I":0,
+"DU":11,
+"E":[
+{"SI":{
+"SN":"everything else/bodies/lungsBody",
+"FF":8,
+"ST":"G",
+"TRP":{"x":72.95,"y":-34.6},
+"LP":"PO",
+"MX":[1,0,0,1,24.45,1045.25]
+}}]},{
+"I":11,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handDead",
+"FF":0,
+"ST":"G",
+"TRP":{"x":282.1,"y":1142.1},
+"LP":"PO",
+"MX":[1.083,0.028,-0.026,1,271.5,1065.8]
+}}]},{
+"I":12,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handDead",
+"FF":1,
+"ST":"G",
+"TRP":{"x":282.2,"y":1142.15},
+"LP":"PO",
+"MX":[1.05,0.265,-0.245,0.969,288.5,1065.3]
+}}]},{
+"I":13,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handDead",
+"FF":2,
+"ST":"G",
+"TRP":{"x":258.15,"y":1122.05},
+"LP":"SF",
+"MX":[0.862,0.656,-0.606,0.796,294.05,1053.95]
+}}]},{
+"I":15,
+"DU":44,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handDead",
+"FF":1,
+"ST":"G",
+"TRP":{"x":263.55,"y":1124.2},
+"LP":"SF",
+"MX":[0.91,0.587,-0.542,0.84,294.05,1053.5]
+}}]},{
+"I":59,
+"DU":3,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handDead",
+"FF":1,
+"ST":"G",
+"TRP":{"x":263.6,"y":1124.2},
+"LP":"SF",
+"MX":[0.875,0.638,-0.589,0.808,298,1055.3]
+}}]},{
+"I":62,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handDead",
+"FF":1,
+"ST":"G",
+"TRP":{"x":251.4,"y":1125.65},
+"LP":"SF",
+"MX":[0.972,0.505,-0.447,0.882,273.8,1052.6]
+}}]},{
+"I":64,
+"DU":41,
+"E":[]
+}
+]},{
+"LN":"backhair",
+"FR":[
+{
+"I":0,
+"DU":11,
+"E":[
+{"SI":{
+"SN":"everything else/hair/backHair",
+"FF":0,
+"ST":"G",
+"TRP":{"x":175.55,"y":135.7},
+"LP":"SF",
+"MX":[1,0,0,1,186.2,987.85]
+}}]},{
+"I":11,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/bodies/lungsBody",
+"FF":9,
+"ST":"G",
+"TRP":{"x":114.1,"y":21.95},
+"LP":"PO",
+"MX":[0.991,-0.13,0.271,0.972,-74.65,1071.8]
+}}]},{
+"I":13,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/bodies/lungsBody",
+"FF":9,
+"ST":"G",
+"TRP":{"x":114.1,"y":22.1},
+"LP":"PO",
+"MX":[1.002,-0.065,0.127,0.989,-42.25,1058.35]
+}}]},{
+"I":15,
+"DU":47,
+"E":[
+{"SI":{
+"SN":"everything else/bodies/lungsBody",
+"FF":9,
+"ST":"G",
+"TRP":{"x":113.85,"y":22.55},
+"LP":"PO",
+"MX":[1.004,-0.039,0.092,0.992,-33.7,1054.05]
+}}]},{
+"I":62,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/bodies/lungsBody",
+"FF":9,
+"ST":"G",
+"TRP":{"x":114.05,"y":22.9},
+"LP":"PO",
+"MX":[0.998,-0.079,0.185,0.986,-72.75,1060.6]
+}}]},{
+"I":64,
+"DU":41,
+"E":[]
+}
+]},{
+"LN":"forearm",
+"FR":[
+{
+"I":0,
+"DU":11,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":62.45,"y":121.45},
+"LP":"LP",
+"MX":[0.947,0.32,-0.32,0.947,257.6,1014.9]
+}}]},{
+"I":11,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":46.5,"y":114.75},
+"LP":"LP",
+"MX":[0.504,0.86,-0.86,0.504,328.75,1023.15]
+}}]},{
+"I":13,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":46.55,"y":114.8},
+"LP":"LP",
+"MX":[0.8,0.595,-0.595,0.8,265.55,994.45]
+}}]},{
+"I":15,
+"DU":44,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":46.5,"y":114.95},
+"LP":"LP",
+"MX":[0.82,0.567,-0.567,0.82,259.7,997]
+}}]},{
+"I":59,
+"DU":3,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":46.4,"y":115.15},
+"LP":"LP",
+"MX":[0.802,0.591,-0.591,0.802,264.7,998.05]
+}}]},{
+"I":62,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":46.25,"y":115.65},
+"LP":"LP",
+"MX":[0.76,0.682,-0.639,0.732,261.9,995.3]
+}}]},{
+"I":64,
+"DU":41,
+"E":[]
+}
+]},{
+"LN":"backarm",
+"FR":[
+{
+"I":0,
+"DU":11,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/rightArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":237.65,"y":1140.5},
+"LP":"LP",
+"MX":[1,0,0,1,205.1,1084.45]
+}}]},{
+"I":11,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/rightArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":138.8,"y":1103.55},
+"LP":"LP",
+"MX":[0.895,-0.446,0.446,0.895,118.9,1091.65]
+}}]},{
+"I":13,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/rightArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":208.05,"y":1185.75},
+"LP":"LP",
+"MX":[0.944,-0.33,0.33,0.944,134.85,1085.65]
+}}]},{
+"I":15,
+"DU":44,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/rightArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":208.55,"y":1189.75},
+"LP":"LP",
+"MX":[0.944,-0.33,0.33,0.944,135.35,1089.65]
+}}]},{
+"I":59,
+"DU":3,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/rightArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":208.55,"y":1189.75},
+"LP":"LP",
+"MX":[0.923,-0.386,0.386,0.923,129.45,1094.2]
+}}]},{
+"I":62,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/rightArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":140.7,"y":1097.6},
+"LP":"LP",
+"MX":[0.868,-0.457,0.507,0.886,104.05,1092.5]
+}}]},{
+"I":64,
+"DU":41,
+"E":[]
+}
+]},{
+"LN":"legs",
+"FR":[
+{
+"I":0,
+"DU":11,
+"E":[
+{"SI":{
+"SN":"everything else/bodies/idleLegs",
+"FF":0,
+"ST":"G",
+"TRP":{"x":178.35,"y":1336.75},
+"LP":"LP",
+"MX":[1,0,0,1,77.2,1204.65]
+}}]},{
+"I":11,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/bodies/idleLegs",
+"FF":0,
+"ST":"G",
+"TRP":{"x":178.45,"y":1468.85},
+"LP":"LP",
+"MX":[1,0,0.229,1,16.8,1204.65]
+}}]},{
+"I":13,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/bodies/idleLegs",
+"FF":0,
+"ST":"G",
+"TRP":{"x":178.5,"y":1468.85},
+"LP":"LP",
+"MX":[1,0,0.197,1,25.4,1204.65]
+}}]},{
+"I":15,
+"DU":44,
+"E":[
+{"SI":{
+"SN":"everything else/bodies/idleLegs",
+"FF":0,
+"ST":"G",
+"TRP":{"x":178.5,"y":1468.85},
+"LP":"LP",
+"MX":[1,0,0.187,1,27.9,1204.65]
+}}]},{
+"I":59,
+"DU":3,
+"E":[
+{"SI":{
+"SN":"everything else/bodies/idleLegs",
+"FF":0,
+"ST":"G",
+"TRP":{"x":178.6,"y":1467.75},
+"LP":"LP",
+"MX":[1,-0.017,0.204,0.997,23.6,1206.05]
+}}]},{
+"I":62,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/bodies/idleLegs",
+"FF":0,
+"ST":"G",
+"TRP":{"x":178.6,"y":1465.7},
+"LP":"LP",
+"MX":[0.998,-0.043,0.284,0.99,2.55,1208.5]
+}}]},{
+"I":64,
+"DU":41,
+"E":[]
+}
+]}
+]}},{
+"SN":"animations/ciglight",
+"TL":{
+"L":[
+{
+"LN":"eye",
+"FR":[
+{
+"I":0,
+"DU":12,
+"E":[]
+},{
+"I":12,
+"DU":79,
+"E":[
+{"SI":{
+"SN":"everything else/eyeLight",
+"FF":0,
+"ST":"G",
+"TRP":{"x":149.55,"y":1015.1},
+"LP":"LP",
+"MX":[1,0,0,1,-0.05,0]
+}}]},{
+"I":91,
+"DU":24,
+"E":[]
+}
+]},{
+"LN":"smoke",
+"FR":[
+{
+"I":0,
+"DU":11,
+"E":[]
+},{
+"I":11,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":0,
+"ST":"G",
+"TRP":{"x":340.85,"y":1089.6},
+"C":{
+"M":"CA",
+"AM":0.15
+},
+"LP":"LP",
+"MX":[1,0,-0.038,0.631,332.55,1004.4]
+}}]},{
+"I":12,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"ST":"MC",
+"TRP":{"x":340.85,"y":1089.65},
+"C":{
+"M":"CA",
+"AM":0.35
+},
+"MX":[1,0,-0.047,0.78,333.8,984.3]
+}}]},{
+"I":13,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":2,
+"ST":"G",
+"TRP":{"x":342.85,"y":1090.75},
+"C":{
+"M":"CA",
+"AM":0.6
+},
+"LP":"LP",
+"MX":[1,0,0,0.911,329.45,967.35]
+}}]},{
+"I":15,
+"DU":34,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":4,
+"ST":"G",
+"TRP":{"x":342.85,"y":1021.95},
+"LP":"LP",
+"MX":[1,0,0,1,329.45,955.3]
+}}]},{
+"I":49,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":2,
+"ST":"G",
+"TRP":{"x":342.85,"y":1021.95},
+"LP":"LP",
+"MX":[1,0,0,1,329.45,955.3]
+}}]},{
+"I":51,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":4,
+"ST":"G",
+"TRP":{"x":342.95,"y":1021.95},
+"LP":"LP",
+"MX":[1,0,0,1,329.55,955.3]
+}}]},{
+"I":53,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":6,
+"ST":"G",
+"TRP":{"x":343.7,"y":1021.95},
+"LP":"LP",
+"MX":[1,0,0,1,330.3,955.3]
+}}]},{
+"I":55,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":8,
+"ST":"G",
+"TRP":{"x":345.65,"y":1021.95},
+"LP":"LP",
+"MX":[1,0,0,1,332.25,955.3]
+}}]},{
+"I":57,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":1,
+"ST":"G",
+"TRP":{"x":349.5,"y":1021.95},
+"LP":"LP",
+"MX":[1,0,0,1,336.1,955.3]
+}}]},{
+"I":59,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":3,
+"ST":"G",
+"TRP":{"x":354.4,"y":1021.95},
+"LP":"LP",
+"MX":[1,0,0,1,341,955.3]
+}}]},{
+"I":61,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":5,
+"ST":"G",
+"TRP":{"x":357.2,"y":1021.95},
+"LP":"LP",
+"MX":[1,0,0,1,343.8,955.3]
+}}]},{
+"I":63,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":7,
+"ST":"G",
+"TRP":{"x":358.5,"y":1021.95},
+"LP":"LP",
+"MX":[1,0,0,1,345.1,955.3]
+}}]},{
+"I":65,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":0,
+"ST":"G",
+"TRP":{"x":358.85,"y":1021.95},
+"LP":"LP",
+"MX":[1,0,0,1,345.45,955.3]
+}}]},{
+"I":66,
+"DU":26,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":1,
+"ST":"G",
+"TRP":{"x":358.85,"y":1021.95},
+"LP":"LP",
+"MX":[1,0,0,1,345.45,955.3]
+}}]},{
+"I":92,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":0,
+"ST":"G",
+"TRP":{"x":360.05,"y":1022.35},
+"LP":"LP",
+"MX":[1,0,0,1,346.65,955.7]
+}}]},{
+"I":94,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":2,
+"ST":"G",
+"TRP":{"x":366.05,"y":1026.15},
+"LP":"LP",
+"MX":[1,0,0,1,352.65,959.5]
+}}]},{
+"I":96,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":4,
+"ST":"G",
+"TRP":{"x":366.45,"y":1027.95},
+"LP":"LP",
+"MX":[1,0,0,1,353.05,961.3]
+}}]},{
+"I":98,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":6,
+"ST":"G",
+"TRP":{"x":376.2,"y":1099.2},
+"LP":"LP",
+"MX":[1,0,0.077,1,348.85,967.3]
+}}]},{
+"I":100,
+"DU":15,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":8,
+"ST":"G",
+"TRP":{"x":370.45,"y":1033.45},
+"LP":"LP",
+"MX":[1,0,0,1,357.05,966.8]
+}}]}
+]},{
+"LN":"glowy",
+"FR":[
+{
+"I":0,
+"DU":11,
+"E":[]
+},{
+"I":11,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke glow green",
+"ST":"MC",
+"TRP":{"x":333.85,"y":1085.4},
+"MX":[0.524,-0.448,0.498,0.584,305.8,1083.85],
+"B":0,
+"F":[
+{
+"N":"BLF",
+"BLX":25,
+"BLY":25,
+"Q":3
+}
+]
+}}]},{
+"I":12,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke glow green",
+"ST":"MC",
+"TRP":{"x":336.4,"y":1088},
+"C":{
+"M":"CA",
+"AM":0.7
+},
+"MX":[0.42,-0.359,0.409,0.479,313.6,1086.35],
+"B":0,
+"F":[
+{
+"N":"BLF",
+"BLX":25,
+"BLY":25,
+"Q":3
+}
+]
+}}]},{
+"I":13,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke glow green",
+"ST":"MC",
+"TRP":{"x":338.65,"y":1089.35},
+"C":{
+"M":"CA",
+"AM":0.7
+},
+"MX":[0.42,-0.359,0.409,0.479,315.85,1087.7],
+"B":0,
+"F":[
+{
+"N":"BLF",
+"BLX":25,
+"BLY":25,
+"Q":3
+}
+]
+}}]},{
+"I":14,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke glow green",
+"ST":"MC",
+"TRP":{"x":339.4,"y":1089.45},
+"C":{
+"M":"CA",
+"AM":0.32
+},
+"MX":[0.321,-0.274,0.324,0.38,321.7,1087.85],
+"B":0,
+"F":[
+{
+"N":"BLF",
+"BLX":25,
+"BLY":25,
+"Q":3
+}
+]
+}}]},{
+"I":16,
+"DU":99,
+"E":[]
+}
+]},{
+"LN":"bullet",
+"FR":[
+{
+"I":0,
+"DU":11,
+"E":[]
+},{
+"I":11,
+"DU":4,
+"E":[
+{"SI":{
+"SN":"everything else/shootcig",
+"FF":0,
+"ST":"G",
+"TRP":{"x":252.85,"y":1068.8},
+"LP":"LP",
+"MX":[1,0,0,1,0,0]
+}}]},{
+"I":15,
+"DU":100,
+"E":[]
+}
+]},{
+"LN":"mouth",
+"FR":[
+{
+"I":0,
+"DU":115,
+"E":[
+{"SI":{
+"SN":"everything else/mouths/mouthNeat",
+"FF":0,
+"ST":"G",
+"TRP":{"x":175.85,"y":1060.2},
+"LP":"LP",
+"MX":[1,0,0,1,0,0]
+}}]}
+]},{
+"LN":"hand",
+"FR":[
+{
+"I":0,
+"DU":11,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handUnlit",
+"FF":3,
+"ST":"G",
+"TRP":{"x":320.5,"y":1082.55},
+"LP":"LP",
+"MX":[0.455,0.891,-0.891,0.455,348.6,1015.6]
+}}]},{
+"I":11,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handIdle",
+"FF":2,
+"ST":"G",
+"TRP":{"x":300.95,"y":1133.4},
+"LP":"LP",
+"MX":[0.497,0.868,-0.868,0.497,342.5,1013.15]
+}}]},{
+"I":13,
+"DU":36,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handIdle",
+"FF":4,
+"ST":"G",
+"TRP":{"x":320.5,"y":1082.55},
+"LP":"LP",
+"MX":[0.455,0.891,-0.891,0.455,348.6,1015.6]
+}}]},{
+"I":49,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handIdle",
+"FF":4,
+"ST":"G",
+"TRP":{"x":320.5,"y":1082.55},
+"LP":"LP",
+"MX":[0.455,0.891,-0.891,0.455,348.6,1015.6]
+}}]},{
+"I":51,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handIdle",
+"FF":6,
+"ST":"G",
+"TRP":{"x":320.6,"y":1082.6},
+"LP":"LP",
+"MX":[0.455,0.89,-0.89,0.455,348.6,1015.6]
+}}]},{
+"I":53,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handIdle",
+"FF":8,
+"ST":"G",
+"TRP":{"x":321.35,"y":1083.05},
+"LP":"LP",
+"MX":[0.46,0.888,-0.888,0.46,349.05,1015.95]
+}}]},{
+"I":55,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handIdle",
+"FF":1,
+"ST":"G",
+"TRP":{"x":323.3,"y":1084.2},
+"LP":"LP",
+"MX":[0.472,0.881,-0.881,0.472,350.05,1016.7]
+}}]},{
+"I":57,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handIdle",
+"FF":3,
+"ST":"G",
+"TRP":{"x":327.2,"y":1086.5},
+"LP":"LP",
+"MX":[0.496,0.868,-0.868,0.496,352.05,1018.25]
+}}]},{
+"I":59,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handIdle",
+"FF":5,
+"ST":"G",
+"TRP":{"x":332.05,"y":1089.4},
+"LP":"LP",
+"MX":[0.526,0.851,-0.851,0.526,354.6,1020.35]
+}}]},{
+"I":61,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handIdle",
+"FF":7,
+"ST":"G",
+"TRP":{"x":334.95,"y":1091},
+"LP":"LP",
+"MX":[0.543,0.84,-0.84,0.543,356.1,1021.55]
+}}]},{
+"I":63,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handIdle",
+"FF":0,
+"ST":"G",
+"TRP":{"x":336.25,"y":1091.85},
+"LP":"LP",
+"MX":[0.55,0.835,-0.835,0.55,356.7,1022.15]
+}}]},{
+"I":65,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handIdle",
+"FF":2,
+"ST":"G",
+"TRP":{"x":336.55,"y":1092.05},
+"LP":"LP",
+"MX":[0.552,0.834,-0.834,0.552,356.9,1022.3]
+}}]},{
+"I":66,
+"DU":26,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handIdle",
+"FF":3,
+"ST":"G",
+"TRP":{"x":336.6,"y":1091.95},
+"LP":"LP",
+"MX":[0.552,0.834,-0.834,0.552,357,1022.3]
+}}]},{
+"I":92,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handIdle",
+"FF":2,
+"ST":"G",
+"TRP":{"x":365.1,"y":1062.15},
+"LP":"LP",
+"MX":[0.598,0.801,-0.801,0.598,354.75,1022.8]
+}}]},{
+"I":94,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handIdle",
+"FF":3,
+"ST":"G",
+"TRP":{"x":329.75,"y":1150.65},
+"LP":"LP",
+"MX":[0.639,0.769,-0.769,0.639,354.95,1025.05]
+}}]},{
+"I":96,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handIdle",
+"FF":5,
+"ST":"G",
+"TRP":{"x":329.75,"y":1150.65},
+"LP":"LP",
+"MX":[0.63,0.777,-0.777,0.63,356.5,1025.4]
+}}]},{
+"I":98,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handIdle",
+"FF":7,
+"ST":"G",
+"TRP":{"x":329.75,"y":1150.65},
+"LP":"LP",
+"MX":[0.527,0.85,-0.85,0.527,372.05,1029.75]
+}}]},{
+"I":100,
+"DU":15,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handIdle",
+"FF":7,
+"ST":"G",
+"TRP":{"x":329.75,"y":1150.65},
+"LP":"LP",
+"MX":[0.537,0.843,-0.843,0.537,370.55,1029.25]
+}}]}
+]},{
+"LN":"head",
+"FR":[
+{
+"I":0,
+"DU":94,
+"E":[
+{"SI":{
+"SN":"everything else/heads/nervesHeadNoLight",
+"FF":0,
+"ST":"G",
+"TRP":{"x":156.55,"y":996.15},
+"LP":"LP",
+"MX":[1,0,0,1,45.75,900.25]
+}}]},{
+"I":94,
+"DU":21,
+"E":[
+{"SI":{
+"SN":"everything else/heads/nervesHeadNoLight",
+"FF":0,
+"ST":"G",
+"TRP":{"x":156.55,"y":996.15},
+"LP":"LP",
+"MX":[1,0,0,1,45.75,900.25]
+}}]}
+]},{
+"LN":"body",
+"FR":[
+{
+"I":0,
+"DU":115,
+"E":[
+{"SI":{
+"SN":"everything else/bodies/lungsBody",
+"FF":8,
+"ST":"G",
+"TRP":{"x":72.95,"y":-34.6},
+"LP":"PO",
+"MX":[1,0,0,1,24.45,1045.25]
+}}]}
+]},{
+"LN":"backhair",
+"FR":[
+{
+"I":0,
+"DU":115,
+"E":[
+{"SI":{
+"SN":"everything else/hair/backHair",
+"FF":0,
+"ST":"G",
+"TRP":{"x":175.55,"y":135.7},
+"LP":"SF",
+"MX":[1,0,0,1,186.2,987.85]
+}}]}
+]},{
+"LN":"forearm",
+"FR":[
+{
+"I":0,
+"DU":11,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":62.45,"y":121.45},
+"LP":"LP",
+"MX":[0.947,0.32,-0.32,0.947,257.6,1014.9]
+}}]},{
+"I":11,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":62.6,"y":121.55},
+"LP":"LP",
+"MX":[0.952,0.305,-0.305,0.952,254.45,1015.1]
+}}]},{
+"I":13,
+"DU":36,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":62.45,"y":121.45},
+"LP":"LP",
+"MX":[0.947,0.32,-0.32,0.947,257.6,1014.9]
+}}]},{
+"I":49,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":62.45,"y":121.45},
+"LP":"LP",
+"MX":[0.947,0.32,-0.32,0.947,257.6,1014.9]
+}}]},{
+"I":51,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":62.5,"y":121.45},
+"LP":"LP",
+"MX":[0.947,0.322,-0.322,0.947,258,1014.95]
+}}]},{
+"I":53,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":62.65,"y":121.4},
+"LP":"LP",
+"MX":[0.942,0.335,-0.335,0.942,260.7,1014.75]
+}}]},{
+"I":55,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":62.8,"y":121.4},
+"LP":"LP",
+"MX":[0.929,0.369,-0.369,0.929,267.9,1014.6]
+}}]},{
+"I":57,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":63.15,"y":121.2},
+"LP":"LP",
+"MX":[0.901,0.435,-0.435,0.901,281.9,1014.9]
+}}]},{
+"I":59,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":63.7,"y":120.95},
+"LP":"LP",
+"MX":[0.858,0.514,-0.514,0.858,299.45,1016.65]
+}}]},{
+"I":61,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":63.95,"y":120.75},
+"LP":"LP",
+"MX":[0.83,0.558,-0.558,0.83,309.6,1018.35]
+}}]},{
+"I":63,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":64.1,"y":120.7},
+"LP":"LP",
+"MX":[0.816,0.577,-0.577,0.816,314.15,1019.25]
+}}]},{
+"I":65,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":64.1,"y":120.65},
+"LP":"LP",
+"MX":[0.813,0.583,-0.583,0.813,315.3,1019.55]
+}}]},{
+"I":66,
+"DU":26,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":64.05,"y":120.6},
+"LP":"LP",
+"MX":[0.813,0.583,-0.583,0.813,315.3,1019.35]
+}}]},{
+"I":92,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":64.2,"y":120.6},
+"LP":"LP",
+"MX":[0.792,0.61,-0.61,0.792,321.6,1021]
+}}]},{
+"I":94,
+"DU":21,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":64.2,"y":120.65},
+"LP":"LP",
+"MX":[0.739,0.674,-0.674,0.739,336.8,1026.05]
+}}]}
+]},{
+"LN":"backarm",
+"FR":[
+{
+"I":0,
+"DU":115,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/rightArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":237.65,"y":1140.5},
+"LP":"LP",
+"MX":[1,0,0,1,205.1,1084.45]
+}}]}
+]},{
+"LN":"legs",
+"FR":[
+{
+"I":0,
+"DU":115,
+"E":[
+{"SI":{
+"SN":"everything else/bodies/idleLegs",
+"FF":0,
+"ST":"G",
+"TRP":{"x":178.35,"y":1336.75},
+"LP":"LP",
+"MX":[1,0,0,1,77.2,1204.65]
+}}]}
+]}
+]}},{
+"SN":"animations/we gotta stop",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":23,
+"E":[]
+},{
+"I":23,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,189.05,1053.7],
+"N":"26"
+}}]},{
+"I":25,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,186.5,1050.55],
+"N":"27"
+}}]},{
+"I":27,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,181.85,1050.8],
+"N":"28"
+}}]},{
+"I":29,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,181.85,1050.8],
+"N":"29"
+}}]},{
+"I":30,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,173.65,1051.15],
+"N":"30"
+}}]},{
+"I":31,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,155.5,1051.9],
+"N":"31"
+}}]},{
+"I":32,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,153.6,1052.85],
+"N":"32"
+}}]},{
+"I":34,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,154.45,1057.1],
+"N":"33"
+}}]},{
+"I":36,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,153.6,1052.85],
+"N":"34"
+}}]},{
+"I":37,
+"DU":4,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,155.5,1055.7],
+"N":"35"
+}}]},{
+"I":41,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,153.6,1052.85],
+"N":"36"
+}}]},{
+"I":43,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,152.9,1053.95],
+"N":"37"
+}}]},{
+"I":44,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,156.8,1057.1],
+"N":"38"
+}}]},{
+"I":46,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,154.05,1056.15],
+"N":"39"
+}}]},{
+"I":48,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,181.85,1050.8],
+"N":"40"
+}}]},{
+"I":50,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,175.15,1051.15],
+"N":"41"
+}}]},{
+"I":52,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,155.5,1055.7],
+"N":"42"
+}}]},{
+"I":54,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,155.95,1054.95],
+"N":"43"
+}}]},{
+"I":55,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,152.9,1053.95],
+"N":"44"
+}}]},{
+"I":57,
+"DU":4,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,155.5,1055.7],
+"N":"45"
+}}]},{
+"I":61,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,152.9,1053.95],
+"N":"46"
+}}]},{
+"I":63,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,155.5,1055.7],
+"N":"47"
+}}]},{
+"I":65,
+"DU":3,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,156.8,1057.1],
+"N":"48"
+}}]},{
+"I":68,
+"DU":4,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,153.6,1052.85],
+"N":"49"
+}}]},{
+"I":72,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,155.05,1056.3],
+"N":"50"
+}}]},{
+"I":74,
+"DU":13,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,155.5,1055.7],
+"N":"51"
+}}]}
+]},{
+"LN":"smoke",
+"FR":[
+{
+"I":0,
+"DU":25,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":8,
+"ST":"G",
+"TRP":{"x":52,"y":32.4},
+"LP":"LP",
+"MX":[1,0,0,1,237.3,923.8]
+}}]},{
+"I":25,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":1,
+"ST":"G",
+"TRP":{"x":72.35,"y":50.75},
+"LP":"LP",
+"MX":[0.999,0.019,-0.019,0.999,272.05,941.45]
+}}]},{
+"I":27,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":3,
+"ST":"G",
+"TRP":{"x":69.8,"y":48.25},
+"LP":"LP",
+"MX":[0.997,0.03,-0.03,0.997,263.6,942]
+}}]},{
+"I":29,
+"DU":58,
+"E":[
+{"SI":{
+"SN":"smokeGlow/smoke",
+"FF":1,
+"ST":"G",
+"TRP":{"x":72.4,"y":50.45},
+"LP":"LP",
+"MX":[0.997,0.034,-0.034,0.997,261.8,941.35]
+}}]}
+]},{
+"LN":"hand",
+"FR":[
+{
+"I":0,
+"DU":21,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handIdle",
+"FF":3,
+"ST":"G",
+"TRP":{"x":244.4,"y":1082.5},
+"LP":"LP",
+"MX":[1,0,0,1,197.6,1027]
+}}]},{
+"I":21,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handIdle",
+"FF":6,
+"ST":"G",
+"TRP":{"x":269.1,"y":1129.15},
+"LP":"LP",
+"MX":[0.999,-0.034,0.034,0.999,194.9,1029.45]
+}}]},{
+"I":23,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handIdle",
+"FF":8,
+"ST":"G",
+"TRP":{"x":276.65,"y":1129.2},
+"LP":"LP",
+"MX":[0.998,-0.068,0.068,0.998,199.05,1032.05]
+}}]},{
+"I":25,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handcough",
+"FF":1,
+"ST":"G",
+"TRP":{"x":332.3,"y":1088.75},
+"LP":"LP",
+"MX":[0.192,-0.981,0.981,0.192,218.35,1138.55]
+}}]},{
+"I":27,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handcoughhard",
+"FF":5,
+"ST":"G",
+"TRP":{"x":304.9,"y":1138.9},
+"LP":"LP",
+"MX":[-0.157,-0.988,0.988,-0.157,235.5,1154.25]
+}}]},{
+"I":29,
+"DU":58,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/handcoughhard",
+"FF":5,
+"ST":"G",
+"TRP":{"x":304.9,"y":1138.9},
+"LP":"LP",
+"MX":[-0.225,-0.974,0.974,-0.225,236.75,1159.05]
+}}]}
+]},{
+"LN":"head",
+"FR":[
+{
+"I":0,
+"DU":29,
+"E":[
+{"SI":{
+"SN":"everything else/heads/nervesHeadIdle",
+"FF":0,
+"ST":"G",
+"TRP":{"x":156.55,"y":996.15},
+"LP":"LP",
+"MX":[1,0,0,1,45.75,900.25]
+}}]},{
+"I":29,
+"DU":58,
+"E":[
+{"SI":{
+"SN":"everything else/heads/nervesHeadIdle",
+"FF":0,
+"ST":"G",
+"TRP":{"x":156.55,"y":996.15},
+"LP":"LP",
+"MX":[1,0,0,1,45.75,900.25]
+}}]}
+]},{
+"LN":"body",
+"FR":[
+{
+"I":0,
+"DU":29,
+"E":[
+{"SI":{
+"SN":"everything else/bodies/lungsBody",
+"FF":8,
+"ST":"G",
+"TRP":{"x":72.95,"y":-34.6},
+"LP":"PO",
+"MX":[1,0,0,1,24.45,1045.25]
+}}]},{
+"I":29,
+"DU":58,
+"E":[
+{"SI":{
+"SN":"everything else/bodies/lungsBody",
+"FF":9,
+"ST":"G",
+"TRP":{"x":72.95,"y":-34.6},
+"LP":"PO",
+"MX":[1,0,0,1,24.45,1045.25]
+}}]}
+]},{
+"LN":"backhair",
+"FR":[
+{
+"I":0,
+"DU":29,
+"E":[
+{"SI":{
+"SN":"everything else/hair/backHairIdle",
+"FF":0,
+"ST":"G",
+"TRP":{"x":175.55,"y":135.7},
+"LP":"SF",
+"MX":[1,0,0,1,186.2,987.85]
+}}]},{
+"I":29,
+"DU":58,
+"E":[
+{"SI":{
+"SN":"everything else/hair/backHairIdle",
+"FF":0,
+"ST":"G",
+"TRP":{"x":175.55,"y":135.7},
+"LP":"SF",
+"MX":[1,0,0,1,186.2,987.85]
+}}]}
+]},{
+"LN":"forearm",
+"FR":[
+{
+"I":0,
+"DU":19,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":69.5,"y":82.85},
+"LP":"LP",
+"MX":[1,0,0,1,197.05,1028.15]
+}}]},{
+"I":19,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":67.7,"y":84.9},
+"LP":"LP",
+"MX":[1,0,0,1,197.05,1028.15]
+}}]},{
+"I":21,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":67.8,"y":84.9},
+"LP":"LP",
+"MX":[1,0.002,-0.002,1,197.5,1028]
+}}]},{
+"I":23,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":71.1,"y":85.55},
+"LP":"LP",
+"MX":[0.997,0.073,-0.073,0.997,211.05,1023.7]
+}}]},{
+"I":25,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":85,"y":88.2},
+"LP":"LP",
+"MX":[0.93,0.366,-0.366,0.93,271.3,1013.55]
+}}]},{
+"I":27,
+"DU":2,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":88.2,"y":88.8},
+"LP":"LP",
+"MX":[0.902,0.432,-0.432,0.902,285.9,1013.2]
+}}]},{
+"I":29,
+"DU":58,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/forearm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":88.2,"y":88.8},
+"LP":"LP",
+"MX":[0.902,0.432,-0.432,0.902,285.9,1013.2]
+}}]}
+]},{
+"LN":"backarm",
+"FR":[
+{
+"I":0,
+"DU":29,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/rightArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":237.65,"y":1140.5},
+"LP":"LP",
+"MX":[1,0,0,1,205.1,1084.45]
+}}]},{
+"I":29,
+"DU":58,
+"E":[
+{"SI":{
+"SN":"everything else/hands and arms/rightArm",
+"FF":0,
+"ST":"G",
+"TRP":{"x":237.65,"y":1140.5},
+"LP":"LP",
+"MX":[1,0,0,1,205.1,1084.45]
+}}]}
+]},{
+"LN":"legs",
+"FR":[
+{
+"I":0,
+"DU":29,
+"E":[
+{"SI":{
+"SN":"everything else/bodies/idleLegs",
+"FF":0,
+"ST":"G",
+"TRP":{"x":178.35,"y":1336.75},
+"LP":"LP",
+"MX":[1,0,0,1,77.2,1204.65]
+}}]},{
+"I":29,
+"DU":58,
+"E":[
+{"SI":{
+"SN":"everything else/bodies/idleLegs",
+"FF":0,
+"ST":"G",
+"TRP":{"x":178.35,"y":1336.75},
+"LP":"LP",
+"MX":[1,0,0,1,77.2,1204.65]
+}}]}
+]}
+]}},{
+"SN":"smokeGlow/smoke",
 "TL":{
 "L":[
 {
@@ -6037,7 +8510,7 @@
 "DU":3,
 "E":[
 {"SI":{
-"SN":"glowing shit/sm1",
+"SN":"smokeGlow/sm1",
 "ST":"MC",
 "TRP":{"x":12.3,"y":67.6},
 "MX":[1,0,0,1,-2.85,-0.35],
@@ -6047,7 +8520,7 @@
 "DU":3,
 "E":[
 {"SI":{
-"SN":"glowing shit/sm2",
+"SN":"smokeGlow/sm2",
 "ST":"MC",
 "TRP":{"x":14.8,"y":65.6},
 "MX":[1,0,0,1,1.85,-1.8],
@@ -6057,7 +8530,7 @@
 "DU":3,
 "E":[
 {"SI":{
-"SN":"glowing shit/sm3",
+"SN":"smokeGlow/sm3",
 "ST":"MC",
 "TRP":{"x":17.15,"y":64.95},
 "MX":[1,0,0,1,4.6,-2.3],
@@ -6065,7 +8538,7 @@
 }}]}
 ]}
 ]}},{
-"SN":"everything else/hands and arms/handcig",
+"SN":"everything else/hands and arms/handIdle",
 "TL":{
 "L":[
 {
@@ -6077,21 +8550,21 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,57.4,35.65],
-"N":"23"
+"N":"52"
 }}]},{
 "I":3,
 "DU":3,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,57.1,35.8],
-"N":"24"
+"N":"53"
 }}]},{
 "I":6,
 "DU":3,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,57.7,36.05],
-"N":"25"
+"N":"54"
 }}]}
 ]},{
 "LN":"Layer_3_copy",
@@ -6101,7 +8574,7 @@
 "DU":9,
 "E":[
 {"SI":{
-"SN":"glowing shit/more light green i wanna fucking die",
+"SN":"glowing shit/een/greenRim5",
 "ST":"MC",
 "TRP":{"x":50.4,"y":31.1},
 "C":{
@@ -6120,11 +8593,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-0.5,-0.5],
-"N":"26"
+"N":"55"
 }}]}
 ]}
 ]}},{
-"SN":"everything else/heads/head",
+"SN":"everything else/heads/headIdle",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -6136,7 +8609,7 @@
 "MX":[1,0,0,1,-0.75,-0.75],
 "N":"0"
 }}]}]}]}},{
-"SN":"everything else/bodies/garbody",
+"SN":"everything else/bodies/idleBody",
 "TL":{
 "L":[
 {
@@ -6148,11 +8621,11 @@
 "E":[
 {"ASI":{
 "MX":[0.978,0,0,0.994,-0.5,-0.5],
-"N":"27"
+"N":"56"
 }}]}
 ]}
 ]}},{
-"SN":"everything else/hair/right hair",
+"SN":"everything else/hair/backHairIdle",
 "TL":{
 "L":[
 {
@@ -6163,7 +8636,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/ughhhh",
+"SN":"glowing shit/een/greenRim4",
 "ST":"MC",
 "TRP":{"x":50.15,"y":45.3},
 "C":{
@@ -6177,7 +8650,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/ughhhh",
+"SN":"glowing shit/een/greenRim4",
 "ST":"MC",
 "TRP":{"x":50.15,"y":45.3},
 "C":{
@@ -6192,15 +8665,19 @@
 "E":[]
 }
 ]},{
-"LN":"Layer_1",
+"LN":"Layer_3",
 "FR":[
 {
 "I":0,
 "DU":6,
 "E":[
-{"ASI":{
-"MX":[1,0,0,1,-0.5,-0.5],
-"N":"28"
+{"SI":{
+"SN":"everything else/hair/backHair",
+"FF":0,
+"ST":"G",
+"TRP":{"x":35.1,"y":48.1},
+"LP":"LP",
+"MX":[1,0,0,1,0,0]
 }}]}
 ]}
 ]}},{
@@ -6216,11 +8693,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,46.85,78.2],
-"N":"29"
+"N":"57"
 }}]}
 ]}
 ]}},{
-"SN":"everything else/hands and arms/right arm idle",
+"SN":"everything else/hands and arms/rightArm",
 "TL":{
 "L":[
 {
@@ -6231,12 +8708,12 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[1,0,0,1,-0.5,-0.5],
-"N":"30"
+"MX":[1,0,0,0.98,-0.5,-0.5],
+"N":"58"
 }}]}
 ]}
 ]}},{
-"SN":"everything else/bodies/garlegs",
+"SN":"everything else/bodies/idleLegs",
 "TL":{
 "L":[
 {
@@ -6248,11 +8725,11 @@
 "E":[
 {"ASI":{
 "MX":[0.971,0,0,0.955,0,-0.5],
-"N":"31"
+"N":"59"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/smoke glow purple",
+"SN":"smokeGlow/smoke glow purple",
 "TL":{
 "L":[
 {
@@ -6264,11 +8741,11 @@
 "E":[
 {"ASI":{
 "MX":[0.48,0,0,0.427,0,0],
-"N":"32"
+"N":"60"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/smoke left",
+"SN":"smokeGlow/smoke left",
 "TL":{
 "L":[
 {
@@ -6279,7 +8756,7 @@
 "DU":3,
 "E":[
 {"SI":{
-"SN":"glowing shit/leftsm1",
+"SN":"smokeGlow/leftsm1",
 "ST":"MC",
 "TRP":{"x":12.3,"y":67.6},
 "MX":[1,0,0,1,-2.85,-0.35],
@@ -6289,7 +8766,7 @@
 "DU":3,
 "E":[
 {"SI":{
-"SN":"glowing shit/leftsm2",
+"SN":"smokeGlow/leftsm2",
 "ST":"MC",
 "TRP":{"x":14.8,"y":65.6},
 "MX":[1,0,0,1,1.85,-1.8],
@@ -6299,7 +8776,7 @@
 "DU":3,
 "E":[
 {"SI":{
-"SN":"glowing shit/leftsm3",
+"SN":"smokeGlow/leftsm3",
 "ST":"MC",
 "TRP":{"x":17.15,"y":64.95},
 "MX":[1,0,0,1,4.6,-2.3],
@@ -6307,7 +8784,7 @@
 }}]}
 ]}
 ]}},{
-"SN":"everything else/mouths/mouthleft",
+"SN":"everything else/mouths/mouthLeft",
 "TL":{
 "L":[
 {
@@ -6319,18 +8796,18 @@
 "E":[
 {"ASI":{
 "MX":[1.001,0,0,1.001,-5,-1.25],
-"N":"33"
+"N":"61"
 }}]},{
 "I":2,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1.001,0,0,1.001,0,0],
-"N":"34"
+"N":"62"
 }}]}
 ]}
 ]}},{
-"SN":"everything else/heads/head left",
+"SN":"everything else/heads/headLeft",
 "TL":{
 "L":[
 {
@@ -6341,7 +8818,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/ourple light",
+"SN":"glowing shit/ourple/purpleRim3",
 "ST":"MC",
 "TRP":{"x":167.55,"y":145.7},
 "C":{
@@ -6355,7 +8832,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/ourple light",
+"SN":"glowing shit/ourple/purpleRim3",
 "ST":"MC",
 "TRP":{"x":167.55,"y":145.7},
 "C":{
@@ -6366,30 +8843,26 @@
 "B":0
 }}]}
 ]},{
-"LN":"Layer_1",
-"FR":[
-{
-"I":0,
-"DU":6,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,-0.75,-0.75],
-"N":"35"
-}}]}
-]}
-]}},{
-"SN":"everything else/hair/right hair left",
-"TL":{
-"L":[
-{
 "LN":"Layer_2",
 "FR":[
 {
 "I":0,
 "DU":6,
-"E":[]
-}
-]},{
+"E":[
+{"SI":{
+"SN":"everything else/heads/headBase",
+"FF":0,
+"ST":"G",
+"TRP":{"x":110.8,"y":95.9},
+"LP":"LP",
+"MX":[1,0,0,1,0,0]
+}}]}
+]}
+]}},{
+"SN":"everything else/hair/backHairLeft",
+"TL":{
+"L":[
+{
 "LN":"Layer_3",
 "FR":[
 {
@@ -6397,7 +8870,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/puple ",
+"SN":"glowing shit/ourple/purpleRim2",
 "ST":"MC",
 "TRP":{"x":50.15,"y":45.3},
 "C":{
@@ -6411,7 +8884,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/puple ",
+"SN":"glowing shit/ourple/purpleRim2",
 "ST":"MC",
 "TRP":{"x":50.15,"y":45.3},
 "C":{
@@ -6420,21 +8893,29 @@
 },
 "MX":[1,0,0,1,35.15,3.2],
 "B":0
-}}]}
+}}]},{
+"I":4,
+"DU":2,
+"E":[]
+}
 ]},{
-"LN":"Layer_1",
+"LN":"Layer_2",
 "FR":[
 {
 "I":0,
 "DU":6,
 "E":[
-{"ASI":{
-"MX":[1.001,0,0,1.001,-0.5,-0.5],
-"N":"36"
+{"SI":{
+"SN":"everything else/hair/backHair",
+"FF":0,
+"ST":"G",
+"TRP":{"x":35.1,"y":48.1},
+"LP":"LP",
+"MX":[1,0,0,1,0,0]
 }}]}
 ]}
 ]}},{
-"SN":"everything else/hands and arms/arm left",
+"SN":"everything else/hands and arms/armLeft",
 "TL":{
 "L":[
 {
@@ -6446,21 +8927,21 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,146.8,114.65],
-"N":"37"
+"N":"63"
 }}]},{
 "I":3,
 "DU":3,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,146.75,115.3],
-"N":"38"
+"N":"64"
 }}]},{
 "I":6,
 "DU":3,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,146.3,116.3],
-"N":"39"
+"N":"65"
 }}]}
 ]},{
 "LN":"Layer_3_copy",
@@ -6470,7 +8951,7 @@
 "DU":9,
 "E":[
 {"SI":{
-"SN":"glowing shit/purpo",
+"SN":"glowing shit/ourple/purpleRim1",
 "ST":"MC",
 "TRP":{"x":116.9,"y":122.1},
 "C":{
@@ -6489,11 +8970,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-0.5,-0.5],
-"N":"40"
+"N":"66"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/smoke glow red",
+"SN":"smokeGlow/smoke glow red",
 "TL":{
 "L":[
 {
@@ -6505,11 +8986,11 @@
 "E":[
 {"ASI":{
 "MX":[0.48,0,0,0.427,0,0],
-"N":"41"
+"N":"67"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/smoke right",
+"SN":"smokeGlow/smoke right",
 "TL":{
 "L":[
 {
@@ -6520,7 +9001,7 @@
 "DU":3,
 "E":[
 {"SI":{
-"SN":"glowing shit/rightsm1",
+"SN":"smokeGlow/rightsm1",
 "ST":"MC",
 "TRP":{"x":12.3,"y":67.6},
 "MX":[1,0,0,1,-2.85,-0.35],
@@ -6530,7 +9011,7 @@
 "DU":3,
 "E":[
 {"SI":{
-"SN":"glowing shit/rightsm2",
+"SN":"smokeGlow/rightsm2",
 "ST":"MC",
 "TRP":{"x":14.8,"y":65.6},
 "MX":[1,0,0,1,1.85,-1.8],
@@ -6540,7 +9021,7 @@
 "DU":3,
 "E":[
 {"SI":{
-"SN":"glowing shit/rightsm3",
+"SN":"smokeGlow/rightsm3",
 "ST":"MC",
 "TRP":{"x":17.15,"y":64.95},
 "MX":[1,0,0,1,4.6,-2.3],
@@ -6548,7 +9029,7 @@
 }}]}
 ]}
 ]}},{
-"SN":"everything else/hands and arms/handcig right",
+"SN":"everything else/hands and arms/handRight",
 "TL":{
 "L":[
 {
@@ -6560,21 +9041,21 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,57.4,35.65],
-"N":"42"
+"N":"68"
 }}]},{
 "I":3,
 "DU":3,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,57.1,35.8],
-"N":"43"
+"N":"69"
 }}]},{
 "I":6,
 "DU":3,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,57.7,36.05],
-"N":"44"
+"N":"70"
 }}]}
 ]},{
 "LN":"Layer_3_copy",
@@ -6584,7 +9065,7 @@
 "DU":9,
 "E":[
 {"SI":{
-"SN":"glowing shit/more red",
+"SN":"glowing shit/red/redRim1",
 "ST":"MC",
 "TRP":{"x":31.65,"y":41.1},
 "C":{
@@ -6603,11 +9084,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-0.5,-0.5],
-"N":"45"
+"N":"71"
 }}]}
 ]}
 ]}},{
-"SN":"everything else/mouths/mouthright",
+"SN":"everything else/mouths/mouthRight",
 "TL":{
 "L":[
 {
@@ -6619,18 +9100,18 @@
 "E":[
 {"ASI":{
 "MX":[0.89,0,0,1,0,0],
-"N":"46"
+"N":"72"
 }}]},{
 "I":2,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[0.89,0,0,1,0,3.55],
-"N":"47"
+"N":"73"
 }}]}
 ]}
 ]}},{
-"SN":"everything else/heads/head right",
+"SN":"everything else/heads/headRght",
 "TL":{
 "L":[
 {
@@ -6641,7 +9122,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/redfd",
+"SN":"glowing shit/red/redRim3",
 "ST":"MC",
 "TRP":{"x":142.25,"y":139.95},
 "C":{
@@ -6660,11 +9141,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-28.1,-12.45],
-"N":"48"
+"N":"74"
 }}]}
 ]}
 ]}},{
-"SN":"everything else/bodies/garbody right",
+"SN":"everything else/bodies/rightBody",
 "TL":{
 "L":[
 {
@@ -6676,22 +9157,14 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.998,31.7,-7.3],
-"N":"49"
+"N":"75"
 }}]}
 ]}
 ]}},{
-"SN":"everything else/hair/right hair right",
+"SN":"everything else/hair/backHairRight",
 "TL":{
 "L":[
 {
-"LN":"Layer_2",
-"FR":[
-{
-"I":0,
-"DU":2,
-"E":[]
-}
-]},{
 "LN":"Layer_3",
 "FR":[
 {
@@ -6699,7 +9172,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/redewde",
+"SN":"glowing shit/red/redRim2",
 "ST":"MC",
 "TRP":{"x":50.15,"y":45.3},
 "C":{
@@ -6710,19 +9183,23 @@
 "B":0
 }}]}
 ]},{
-"LN":"Layer_1",
+"LN":"Layer_2",
 "FR":[
 {
 "I":0,
 "DU":2,
 "E":[
-{"ASI":{
-"MX":[1,0,0,1,-0.5,-0.5],
-"N":"50"
+{"SI":{
+"SN":"everything else/hair/backHair",
+"FF":0,
+"ST":"G",
+"TRP":{"x":35.1,"y":48.1},
+"LP":"LP",
+"MX":[1,0,0,1,0,0]
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/smoke glow blue",
+"SN":"smokeGlow/smoke glow blue",
 "TL":{
 "L":[
 {
@@ -6734,11 +9211,11 @@
 "E":[
 {"ASI":{
 "MX":[0.48,0,0,0.427,0,0],
-"N":"51"
+"N":"76"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/smoke down",
+"SN":"smokeGlow/smoke down",
 "TL":{
 "L":[
 {
@@ -6749,7 +9226,7 @@
 "DU":3,
 "E":[
 {"SI":{
-"SN":"glowing shit/downsm1",
+"SN":"smokeGlow/downsm1",
 "ST":"MC",
 "TRP":{"x":12.3,"y":67.6},
 "MX":[1,0,0,1,-2.85,-0.35],
@@ -6759,7 +9236,7 @@
 "DU":3,
 "E":[
 {"SI":{
-"SN":"glowing shit/downsm2",
+"SN":"smokeGlow/downsm2",
 "ST":"MC",
 "TRP":{"x":14.8,"y":65.6},
 "MX":[1,0,0,1,1.85,-1.8],
@@ -6769,7 +9246,7 @@
 "DU":3,
 "E":[
 {"SI":{
-"SN":"glowing shit/downsm3",
+"SN":"smokeGlow/downsm3",
 "ST":"MC",
 "TRP":{"x":17.15,"y":64.95},
 "MX":[1,0,0,1,4.6,-2.3],
@@ -6777,7 +9254,7 @@
 }}]}
 ]}
 ]}},{
-"SN":"everything else/hands and arms/downhand",
+"SN":"everything else/hands and arms/handDown",
 "TL":{
 "L":[
 {
@@ -6789,21 +9266,21 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,56.15,57.45],
-"N":"52"
+"N":"77"
 }}]},{
 "I":3,
 "DU":3,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,58.05,57.65],
-"N":"53"
+"N":"78"
 }}]},{
 "I":6,
 "DU":3,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,56.7,57],
-"N":"54"
+"N":"79"
 }}]}
 ]},{
 "LN":"Layer_3_copy",
@@ -6813,7 +9290,7 @@
 "DU":9,
 "E":[
 {"SI":{
-"SN":"glowing shit/blueeeeeee",
+"SN":"glowing shit/blu/blueRim1",
 "ST":"MC",
 "TRP":{"x":34.25,"y":35.3},
 "C":{
@@ -6832,11 +9309,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-0.5,-0.5],
-"N":"55"
+"N":"80"
 }}]}
 ]}
 ]}},{
-"SN":"everything else/mouths/mouth down",
+"SN":"everything else/mouths/mouthDown",
 "TL":{
 "L":[
 {
@@ -6848,18 +9325,18 @@
 "E":[
 {"ASI":{
 "MX":[0.858,0,0,1.001,0,0],
-"N":"56"
+"N":"81"
 }}]},{
 "I":2,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[0.858,0,0,1.001,-0.3,2.55],
-"N":"57"
+"N":"82"
 }}]}
 ]}
 ]}},{
-"SN":"everything else/heads/head down",
+"SN":"everything else/heads/headDown",
 "TL":{
 "L":[
 {
@@ -6870,7 +9347,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/blue",
+"SN":"glowing shit/blu/blueRim6",
 "ST":"MC",
 "TRP":{"x":119.8,"y":158.65},
 "C":{
@@ -6884,7 +9361,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/blue",
+"SN":"glowing shit/blu/blueRim6",
 "ST":"MC",
 "TRP":{"x":119.8,"y":158.65},
 "C":{
@@ -6903,11 +9380,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-0.75,-0.75],
-"N":"58"
+"N":"83"
 }}]}
 ]}
 ]}},{
-"SN":"everything else/bodies/garbody down",
+"SN":"everything else/bodies/downBody",
 "TL":{
 "L":[
 {
@@ -6918,7 +9395,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/fuck fuck fuck i hate blue",
+"SN":"glowing shit/blu/blueRim4",
 "ST":"MC",
 "TRP":{"x":164,"y":114.95},
 "C":{
@@ -6932,7 +9409,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/fuck fuck fuck i hate blue",
+"SN":"glowing shit/blu/blueRim4",
 "ST":"MC",
 "TRP":{"x":164,"y":114.95},
 "C":{
@@ -6951,11 +9428,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-0.5,-0.5],
-"N":"59"
+"N":"84"
 }}]}
 ]}
 ]}},{
-"SN":"everything else/hair/right hair down",
+"SN":"everything else/hair/backHairDown",
 "TL":{
 "L":[
 {
@@ -6966,7 +9443,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/tiny blue",
+"SN":"glowing shit/blu/blueRim5",
 "ST":"MC",
 "TRP":{"x":54.1,"y":66.8},
 "C":{
@@ -6980,7 +9457,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/tiny blue",
+"SN":"glowing shit/blu/blueRim5",
 "ST":"MC",
 "TRP":{"x":54.1,"y":66.8},
 "C":{
@@ -6989,21 +9466,29 @@
 },
 "MX":[1,0,0,1,47.1,46.2],
 "B":0
-}}]}
+}}]},{
+"I":4,
+"DU":2,
+"E":[]
+}
 ]},{
-"LN":"Layer_1",
+"LN":"Layer_2",
 "FR":[
 {
 "I":0,
 "DU":6,
 "E":[
-{"ASI":{
-"MX":[1,0,0,1,-0.5,-0.5],
-"N":"60"
+{"SI":{
+"SN":"everything else/hair/backHair",
+"FF":0,
+"ST":"G",
+"TRP":{"x":35.1,"y":48.1},
+"LP":"LP",
+"MX":[1,0,0,1,0,0]
 }}]}
 ]}
 ]}},{
-"SN":"everything else/hands and arms/forearmdown",
+"SN":"everything else/hands and arms/forearmDown",
 "TL":{
 "L":[
 {
@@ -7014,7 +9499,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/blueblvuelu",
+"SN":"glowing shit/blu/blueRim2",
 "ST":"MC",
 "TRP":{"x":74.95,"y":26.15},
 "C":{
@@ -7028,7 +9513,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/blueblvuelu",
+"SN":"glowing shit/blu/blueRim2",
 "ST":"MC",
 "TRP":{"x":74.95,"y":26.15},
 "C":{
@@ -7047,11 +9532,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-0.5,-0.5],
-"N":"62"
+"N":"86"
 }}]}
 ]}
 ]}},{
-"SN":"everything else/right arm down",
+"SN":"everything else/hands and arms/downArm",
 "TL":{
 "L":[
 {
@@ -7062,7 +9547,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/fart bkue",
+"SN":"glowing shit/blu/blueRim3",
 "ST":"MC",
 "TRP":{"x":46.8,"y":64.4},
 "C":{
@@ -7076,7 +9561,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/fart bkue",
+"SN":"glowing shit/blu/blueRim3",
 "ST":"MC",
 "TRP":{"x":46.8,"y":64.4},
 "C":{
@@ -7095,11 +9580,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-0.5,-0.5],
-"N":"63"
+"N":"87"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/smoke glow green",
+"SN":"smokeGlow/smoke glow green",
 "TL":{
 "L":[
 {
@@ -7111,7 +9596,7 @@
 "E":[
 {"ASI":{
 "MX":[0.48,0,0,0.427,0,0],
-"N":"64"
+"N":"88"
 }}]}
 ]}
 ]}},{
@@ -7127,21 +9612,21 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,57.4,35.65],
-"N":"65"
+"N":"89"
 }}]},{
 "I":3,
 "DU":3,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,57.1,35.8],
-"N":"66"
+"N":"90"
 }}]},{
 "I":6,
 "DU":3,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,57.7,36.05],
-"N":"67"
+"N":"91"
 }}]}
 ]},{
 "LN":"Layer_3_copy",
@@ -7151,7 +9636,7 @@
 "DU":9,
 "E":[
 {"SI":{
-"SN":"glowing shit/green yay",
+"SN":"glowing shit/een/greenRim1",
 "ST":"MC",
 "TRP":{"x":37.15,"y":27.9},
 "C":{
@@ -7170,11 +9655,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-0.5,-0.5],
-"N":"68"
+"N":"92"
 }}]}
 ]}
 ]}},{
-"SN":"everything else/mouths/mouth up",
+"SN":"everything else/mouths/mouthUp",
 "TL":{
 "L":[
 {
@@ -7186,18 +9671,18 @@
 "E":[
 {"ASI":{
 "MX":[0.884,0,0,0.964,0,0],
-"N":"69"
+"N":"93"
 }}]},{
 "I":2,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[0.884,0,0,0.964,3.25,2.8],
-"N":"70"
+"N":"94"
 }}]}
 ]}
 ]}},{
-"SN":"everything else/heads/head up",
+"SN":"everything else/heads/headUp",
 "TL":{
 "L":[
 {
@@ -7208,7 +9693,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/greeen",
+"SN":"glowing shit/een/greenRim6",
 "ST":"MC",
 "TRP":{"x":171.95,"y":97.4},
 "C":{
@@ -7222,7 +9707,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/greeen",
+"SN":"glowing shit/een/greenRim6",
 "ST":"MC",
 "TRP":{"x":171.95,"y":97.4},
 "C":{
@@ -7241,11 +9726,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-0.75,-0.75],
-"N":"71"
+"N":"95"
 }}]}
 ]}
 ]}},{
-"SN":"everything else/hands and arms/forearm up",
+"SN":"everything else/hands and arms/forearmUp",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -7257,7 +9742,7 @@
 "MX":[1,0,0,1,46.85,78.2],
 "N":"21"
 }}]}]}]}},{
-"SN":"everything else/heads/nervesHead",
+"SN":"everything else/heads/nervesHeadIdle",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -7269,23 +9754,23 @@
 "MX":[1,0,0,1,-0.75,-0.75],
 "N":"22"
 }}]}]}]}},{
-"SN":"everything else/bodies/garbody lungs pulse",
+"SN":"everything else/bodies/lungsBody",
 "TL":{
 "L":[
 {
-"LN":"lungs_pulse_glow",
+"LN":"Layer_5",
 "FR":[
 {
 "I":0,
 "DU":10,
 "E":[
 {"SI":{
-"SN":"glowing shit/lungs pulse glow",
+"SN":"glowing shit/een/lungs/lungs pulse glow",
 "FF":0,
 "ST":"G",
-"TRP":{"x":159,"y":83.9},
+"TRP":{"x":154.1,"y":83.65},
 "LP":"LP",
-"MX":[1,0,0,1,88.2,-2.1]
+"MX":[1,0,0,1,85.25,-0.25]
 }}]}
 ]},{
 "LN":"Layer_2",
@@ -7295,7 +9780,7 @@
 "DU":10,
 "E":[
 {"SI":{
-"SN":"everything else/bodies/garbody",
+"SN":"everything else/bodies/idleBody",
 "FF":0,
 "ST":"G",
 "TRP":{"x":125.7,"y":124.8},
@@ -7304,7 +9789,7 @@
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/smoke blow left",
+"SN":"smokeGlow/smoke blow left",
 "TL":{
 "L":[
 {
@@ -7316,35 +9801,35 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,37.6,82.9],
-"N":"72"
+"N":"96"
 }}]},{
 "I":1,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,57.6,68.15],
-"N":"73"
+"N":"97"
 }}]},{
 "I":3,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,57.25,64.95],
-"N":"74"
+"N":"98"
 }}]},{
 "I":4,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,67,55.4],
-"N":"75"
+"N":"99"
 }}]},{
 "I":6,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,67.75,54.6],
-"N":"76"
+"N":"100"
 }}]},{
 "I":8,
 "DU":10,
@@ -7358,7 +9843,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow purple",
+"SN":"smokeGlow/smoke glow purple",
 "ST":"MC",
 "TRP":{"x":77.8,"y":116.45},
 "MX":[1.156,0,0,1.131,43.8,88],
@@ -7376,7 +9861,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow purple",
+"SN":"smokeGlow/smoke glow purple",
 "ST":"MC",
 "TRP":{"x":92.95,"y":116.5},
 "MX":[1.665,0,0,1.839,43.85,70.15],
@@ -7394,7 +9879,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow purple",
+"SN":"smokeGlow/smoke glow purple",
 "ST":"MC",
 "TRP":{"x":95.6,"y":114.75},
 "C":{
@@ -7416,7 +9901,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow purple",
+"SN":"smokeGlow/smoke glow purple",
 "ST":"MC",
 "TRP":{"x":95.7,"y":93.2},
 "C":{
@@ -7438,7 +9923,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow purple",
+"SN":"smokeGlow/smoke glow purple",
 "ST":"MC",
 "TRP":{"x":95.7,"y":93.2},
 "C":{
@@ -7474,7 +9959,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,55.3,118.75],
-"N":"77"
+"N":"101"
 }}]}
 ]},{
 "LN":"Layer_3",
@@ -7484,7 +9969,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/purplight head",
+"SN":"glowing shit/ourple/purpleRim3",
 "ST":"MC",
 "TRP":{"x":167.55,"y":145.7},
 "C":{
@@ -7498,7 +9983,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/purplight head",
+"SN":"glowing shit/ourple/purpleRim3",
 "ST":"MC",
 "TRP":{"x":167.55,"y":145.7},
 "C":{
@@ -7509,14 +9994,14 @@
 "B":0
 }}]}
 ]},{
-"LN":"Layer_4",
+"LN":"Layer_5",
 "FR":[
 {
 "I":0,
 "DU":6,
 "E":[
 {"SI":{
-"SN":"everything else/heads/head base",
+"SN":"everything else/heads/headBase",
 "FF":0,
 "ST":"G",
 "TRP":{"x":110.8,"y":95.9},
@@ -7525,7 +10010,7 @@
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/smoke blow right",
+"SN":"smokeGlow/smoke blow right",
 "TL":{
 "L":[
 {
@@ -7537,35 +10022,35 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,33.05,83.3],
-"N":"78"
+"N":"102"
 }}]},{
 "I":1,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,53.05,68.55],
-"N":"79"
+"N":"103"
 }}]},{
 "I":3,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,52.7,65.35],
-"N":"80"
+"N":"104"
 }}]},{
 "I":4,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,62.45,55.8],
-"N":"81"
+"N":"105"
 }}]},{
 "I":6,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,63.2,55],
-"N":"82"
+"N":"106"
 }}]},{
 "I":8,
 "DU":10,
@@ -7579,7 +10064,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow red",
+"SN":"smokeGlow/smoke glow red",
 "ST":"MC",
 "TRP":{"x":77.8,"y":116.45},
 "MX":[1.156,0,0,1.131,43.8,88],
@@ -7597,7 +10082,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow red",
+"SN":"smokeGlow/smoke glow red",
 "ST":"MC",
 "TRP":{"x":92.95,"y":116.5},
 "MX":[1.665,0,0,1.839,43.85,70.15],
@@ -7615,7 +10100,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow red",
+"SN":"smokeGlow/smoke glow red",
 "ST":"MC",
 "TRP":{"x":95.6,"y":114.75},
 "C":{
@@ -7637,7 +10122,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow red",
+"SN":"smokeGlow/smoke glow red",
 "ST":"MC",
 "TRP":{"x":95.7,"y":93.2},
 "C":{
@@ -7659,7 +10144,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow red",
+"SN":"smokeGlow/smoke glow red",
 "ST":"MC",
 "TRP":{"x":95.7,"y":93.2},
 "C":{
@@ -7695,7 +10180,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,43.95,100.3],
-"N":"83"
+"N":"107"
 }}]}
 ]},{
 "LN":"Layer_2_copy",
@@ -7705,7 +10190,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/redlight head",
+"SN":"glowing shit/red/redRim3",
 "ST":"MC",
 "TRP":{"x":142.25,"y":139.95},
 "C":{
@@ -7724,7 +10209,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-28.1,-12.45],
-"N":"84"
+"N":"108"
 }}]}
 ]},{
 "LN":"Layer_1",
@@ -7735,11 +10220,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-27.6,-11.95],
-"N":"85"
+"N":"109"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/smoke blow down",
+"SN":"smokeGlow/smoke blow down",
 "TL":{
 "L":[
 {
@@ -7751,35 +10236,35 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,35.55,42.2],
-"N":"86"
+"N":"110"
 }}]},{
 "I":1,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,34,53.65],
-"N":"87"
+"N":"111"
 }}]},{
 "I":3,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,34.6,52.15],
-"N":"88"
+"N":"112"
 }}]},{
 "I":4,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,52.5,47.4],
-"N":"89"
+"N":"113"
 }}]},{
 "I":6,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,61.35,42.4],
-"N":"90"
+"N":"114"
 }}]},{
 "I":8,
 "DU":10,
@@ -7793,7 +10278,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow blue",
+"SN":"smokeGlow/smoke glow blue",
 "ST":"MC",
 "TRP":{"x":67.8,"y":80.6},
 "MX":[0.693,0.926,-0.906,0.678,70.15,36.3],
@@ -7811,7 +10296,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow blue",
+"SN":"smokeGlow/smoke glow blue",
 "ST":"MC",
 "TRP":{"x":76.8,"y":92.75},
 "MX":[0.997,1.333,-1.472,1.101,84.5,25.65],
@@ -7829,7 +10314,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow blue",
+"SN":"smokeGlow/smoke glow blue",
 "ST":"MC",
 "TRP":{"x":79.75,"y":93.8},
 "C":{
@@ -7851,7 +10336,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow blue",
+"SN":"smokeGlow/smoke glow blue",
 "ST":"MC",
 "TRP":{"x":97.1,"y":80.95},
 "C":{
@@ -7873,7 +10358,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow blue",
+"SN":"smokeGlow/smoke glow blue",
 "ST":"MC",
 "TRP":{"x":97.1,"y":80.95},
 "C":{
@@ -7909,7 +10394,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,55.3,118.75],
-"N":"91"
+"N":"115"
 }}]}
 ]},{
 "LN":"Layer_2_copy",
@@ -7919,7 +10404,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/bluelight head",
+"SN":"glowing shit/blu/blueRim6",
 "ST":"MC",
 "TRP":{"x":119.8,"y":158.65},
 "C":{
@@ -7933,7 +10418,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/bluelight head",
+"SN":"glowing shit/blu/blueRim6",
 "ST":"MC",
 "TRP":{"x":119.8,"y":158.65},
 "C":{
@@ -7952,11 +10437,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-0.75,-0.75],
-"N":"92"
+"N":"116"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/smoke blow up",
+"SN":"smokeGlow/smoke blow up",
 "TL":{
 "L":[
 {
@@ -7968,35 +10453,35 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,55.5,78.35],
-"N":"93"
+"N":"117"
 }}]},{
 "I":1,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,55.7,55.05],
-"N":"94"
+"N":"118"
 }}]},{
 "I":3,
 "DU":1,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,53.7,51.75],
-"N":"95"
+"N":"119"
 }}]},{
 "I":4,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,47.75,50.25],
-"N":"96"
+"N":"120"
 }}]},{
 "I":6,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,41.95,51.1],
-"N":"97"
+"N":"121"
 }}]},{
 "I":8,
 "DU":10,
@@ -8010,7 +10495,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow green",
+"SN":"smokeGlow/smoke glow green",
 "ST":"MC",
 "TRP":{"x":83.5,"y":113.8},
 "MX":[0.88,-0.751,0.735,0.861,39.15,114.2],
@@ -8028,7 +10513,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow green",
+"SN":"smokeGlow/smoke glow green",
 "ST":"MC",
 "TRP":{"x":90.1,"y":109},
 "MX":[1.266,-1.081,1.194,1.398,22.6,105.6],
@@ -8046,7 +10531,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow green",
+"SN":"smokeGlow/smoke glow green",
 "ST":"MC",
 "TRP":{"x":90.9,"y":105.95},
 "C":{
@@ -8068,7 +10553,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow green",
+"SN":"smokeGlow/smoke glow green",
 "ST":"MC",
 "TRP":{"x":82.1,"y":94.5},
 "C":{
@@ -8090,7 +10575,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow green",
+"SN":"smokeGlow/smoke glow green",
 "ST":"MC",
 "TRP":{"x":78.6,"y":89.5},
 "C":{
@@ -8126,7 +10611,7 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,55.3,118.75],
-"N":"98"
+"N":"122"
 }}]}
 ]},{
 "LN":"Layer_3_copy",
@@ -8136,7 +10621,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/greenlight head2",
+"SN":"glowing shit/een/greenRim6",
 "ST":"MC",
 "TRP":{"x":171.95,"y":97.4},
 "C":{
@@ -8150,7 +10635,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/greenlight head2",
+"SN":"glowing shit/een/greenRim6",
 "ST":"MC",
 "TRP":{"x":171.95,"y":97.4},
 "C":{
@@ -8169,11 +10654,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-0.75,-0.75],
-"N":"99"
+"N":"123"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/smoke blow cough",
+"SN":"smokeGlow/smoke blow cough",
 "TL":{
 "L":[
 {
@@ -8184,29 +10669,29 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[1,0,0,1,11.95,51.45],
-"N":"100"
+"MX":[0.958,0,0,0.864,11.95,51.45],
+"N":"124"
 }}]},{
 "I":1,
 "DU":2,
 "E":[
 {"ASI":{
-"MX":[1,0,0,1,32.4,43.9],
-"N":"101"
+"MX":[0.958,0,0,0.864,32.4,43.9],
+"N":"125"
 }}]},{
 "I":3,
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[1,0,0,1,41.5,35.25],
-"N":"102"
+"MX":[0.958,0,0,0.864,41.5,35.25],
+"N":"126"
 }}]},{
 "I":4,
 "DU":2,
 "E":[
 {"ASI":{
-"MX":[1,0,0,1,47.5,32.55],
-"N":"103"
+"MX":[0.958,0,0,0.864,47.5,32.55],
+"N":"127"
 }}]},{
 "I":6,
 "DU":9,
@@ -8220,7 +10705,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow green",
+"SN":"smokeGlow/smoke glow green",
 "ST":"MC",
 "TRP":{"x":56.6,"y":83.95},
 "MX":[0.798,-0.56,0.504,0.719,20.2,82.05],
@@ -8238,7 +10723,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow green",
+"SN":"smokeGlow/smoke glow green",
 "ST":"MC",
 "TRP":{"x":74.95,"y":81.75},
 "MX":[1.016,-0.713,0.713,1.016,26.9,77.1],
@@ -8256,7 +10741,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow green",
+"SN":"smokeGlow/smoke glow green",
 "ST":"MC",
 "TRP":{"x":80.3,"y":76.2},
 "C":{
@@ -8278,7 +10763,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/smoke glow green",
+"SN":"smokeGlow/smoke glow green",
 "ST":"MC",
 "TRP":{"x":78.45,"y":73.25},
 "C":{
@@ -8302,7 +10787,7 @@
 }
 ]}
 ]}},{
-"SN":"everything else/mouths/mouthcough",
+"SN":"everything else/mouths/mouthCough",
 "TL":{
 "L":[
 {
@@ -8314,28 +10799,28 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,18.9,-1.1],
-"N":"104"
+"N":"128"
 }}]},{
 "I":2,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,2.55,-1.9],
-"N":"105"
+"N":"129"
 }}]},{
 "I":4,
 "DU":3,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0],
-"N":"106"
+"N":"130"
 }}]},{
 "I":7,
 "DU":2,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-1.45,1.1],
-"N":"107"
+"N":"131"
 }}]}
 ]}
 ]}},{
@@ -8350,7 +10835,7 @@
 "DU":9,
 "E":[
 {"SI":{
-"SN":"glowing shit/cig glow cough",
+"SN":"smokeGlow/cigGlowCough",
 "FF":0,
 "ST":"G",
 "TRP":{"x":57.6,"y":53.9},
@@ -8365,7 +10850,7 @@
 "DU":9,
 "E":[
 {"SI":{
-"SN":"glowing shit/greenlight hand3",
+"SN":"glowing shit/een/greenRim2",
 "ST":"MC",
 "TRP":{"x":34.25,"y":35.3},
 "C":{
@@ -8384,11 +10869,125 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,-0.5,-0.5],
-"N":"108"
+"N":"132"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/sm1",
+"SN":"everything else/eyeHardCough",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"133"
+}}]},{
+"I":2,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,3.95,-2.85],
+"N":"134"
+}}]}
+]}
+]}},{
+"SN":"everything else/mouths/mouthHardCough",
+"TL":{
+"L":[
+{
+"LN":"Layer_2",
+"FR":[
+{
+"I":0,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-1.6,-7],
+"N":"135"
+}}]},{
+"I":2,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-0.95,-11.1],
+"N":"136"
+}}]},{
+"I":4,
+"DU":3,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-1.55,-5.45],
+"N":"137"
+}}]},{
+"I":7,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-7.75,-0.65],
+"N":"138"
+}}]},{
+"I":9,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-6.8,-2.6],
+"N":"139"
+}}]}
+]}
+]}},{
+"SN":"everything else/hands and arms/handcoughhard",
+"TL":{
+"L":[
+{
+"LN":"cig_glow_cough",
+"FR":[
+{
+"I":0,
+"DU":9,
+"E":[
+{"SI":{
+"SN":"smokeGlow/cigGlowCough",
+"FF":0,
+"ST":"G",
+"TRP":{"x":62.25,"y":47.05},
+"LP":"LP",
+"MX":[0.5,-0.866,0.866,0.5,53.15,50.05]
+}}]}
+]},{
+"LN":"Layer_3_copy",
+"FR":[
+{
+"I":0,
+"DU":9,
+"E":[]
+}
+]},{
+"LN":"Layer_2",
+"FR":[
+{
+"I":0,
+"DU":9,
+"E":[]
+}
+]},{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":9,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-17.05,15.75],
+"N":"140"
+}}]}
+]}
+]}},{
+"SN":"everything else/mouths/mouthDies",
 "TL":{
 "L":[
 {
@@ -8399,12 +10998,100 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[0.779,0,0,0.999,0,0],
-"N":"109"
+"MX":[1,0,0,1,0,0],
+"N":"141"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/sm2",
+"SN":"everything else/deadstuff/eyesNbrains",
+"TL":{
+"L":[
+{
+"LN":"eyes_n_shi",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-170.4,832.65],
+"N":"142"
+}}]},{
+"I":1,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-246,795.55],
+"N":"143"
+}}]},{
+"I":3,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-266.85,768.9],
+"N":"144"
+}}]},{
+"I":5,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-197.1,786.65],
+"N":"145"
+}}]}
+]}
+]}},{
+"SN":"everything else/deadstuff/bloodExplode",
+"TL":{
+"L":[
+{
+"LN":"blood",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-171.1,771.85],
+"N":"146"
+}}]},{
+"I":1,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-165.2,754.2],
+"N":"147"
+}}]},{
+"I":3,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-179.75,765.7],
+"N":"148"
+}}]},{
+"I":5,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-183.65,831.25],
+"N":"149"
+}}]},{
+"I":7,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-163.85,861.55],
+"N":"150"
+}}]},{
+"I":9,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-169.85,880],
+"N":"151"
+}}]}
+]}
+]}},{
+"SN":"everything else/heads/headExplodeSnap",
 "TL":{
 "L":[
 {
@@ -8415,12 +11102,12 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[0.779,0,0,0.999,0,0],
-"N":"110"
+"MX":[1,0,0,1,0,0],
+"N":"152"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/sm3",
+"SN":"everything else/heads/headExploded",
 "TL":{
 "L":[
 {
@@ -8431,12 +11118,524 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[0.779,0,0,0.999,0,0],
-"N":"111"
+"MX":[1,0,0,0.997,-0.5,-0.55],
+"N":"153"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/more light green i wanna fucking die",
+"SN":"everything else/deadstuff/deadcello",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[0.979,0,0,1,-0.55,-0.5],
+"N":"154"
+}}]}
+]}
+]}},{
+"SN":"everything else/hands and arms/handUnlit",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":6,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-0.5,-0.5],
+"N":"23"
+}}]}]}]}},{
+"SN":"everything else/deadstuff/cigFlip",
+"TL":{
+"L":[
+{
+"LN":"cig",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,301.55,970.5],
+"N":"155"
+}}]},{
+"I":1,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,304.95,859.25],
+"N":"156"
+}}]},{
+"I":2,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,269.9,840],
+"N":"157"
+}}]},{
+"I":4,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,259,843.95],
+"N":"158"
+}}]},{
+"I":6,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,279.7,849.65],
+"N":"159"
+}}]},{
+"I":8,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,260.6,891.65],
+"N":"160"
+}}]},{
+"I":10,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,270.6,953.35],
+"N":"161"
+}}]},{
+"I":12,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,263.4,1076.05],
+"N":"162"
+}}]},{
+"I":14,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,270.6,1226.3],
+"N":"163"
+}}]},{
+"I":16,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,263.4,1413],
+"N":"164"
+}}]},{
+"I":18,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,259.2,1431.65],
+"N":"165"
+}}]},{
+"I":20,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,259.4,1441.25],
+"N":"166"
+}}]},{
+"I":22,
+"DU":1,
+"E":[
+{"SI":{
+"SN":"everything else/deadstuff/deadCig",
+"FF":0,
+"ST":"G",
+"TRP":{"x":293.2,"y":1452.8},
+"LP":"LP",
+"MX":[1,0,0,1,258.45,1443.05]
+}}]}
+]}
+]}},{
+"SN":"everything else/heads/nervesHeadNoLight",
+"TL":{
+"L":[
+{"LN":"Layer 1",
+"FR":[
+{"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-0.75,-0.75],
+"N":"24"
+}}]}]}]}},{
+"SN":"everything else/deadstuff/bloodSplatter",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,0,0],
+"N":"167"
+}}]}
+]}
+]}},{
+"SN":"everything else/hands and arms/handDead",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[0.913,0,0,1,1.3,-14.5],
+"N":"168"
+}}]},{
+"I":1,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[0.913,0,0,1,-0.5,-0.5],
+"N":"169"
+}}]},{
+"I":2,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[0.913,0,0,1,-0.5,-0.5],
+"N":"170"
+}}]}
+]}
+]}},{
+"SN":"everything else/hair/backHair",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-0.5,-0.5],
+"N":"171"
+}}]}
+]}
+]}},{
+"SN":"everything else/eyeLight",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,134.2,1018.15],
+"N":"172"
+}}]},{
+"I":2,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,132.85,1003.85],
+"N":"173"
+}}]},{
+"I":4,
+"DU":23,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,131.6,1007.1],
+"N":"174"
+}}]},{
+"I":27,
+"DU":4,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,134.2,1018.15],
+"N":"175"
+}}]},{
+"I":31,
+"DU":16,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,131.6,1007.1],
+"N":"176"
+}}]},{
+"I":47,
+"DU":4,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,134.2,1018.15],
+"N":"177"
+}}]},{
+"I":51,
+"DU":25,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,130.4,999.55],
+"N":"178"
+}}]},{
+"I":76,
+"DU":4,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,134.2,1018.15],
+"N":"179"
+}}]}
+]}
+]}},{
+"SN":"everything else/shootcig",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,194.9,1040.05],
+"N":"180"
+}}]},{
+"I":1,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,72.4,1019.75],
+"N":"181"
+}}]},{
+"I":2,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,158.5,1006.35],
+"N":"182"
+}}]},{
+"I":3,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,127.9,996.6],
+"N":"183"
+}}]}
+]}
+]}},{
+"SN":"everything else/mouths/mouthNeat",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":11,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,169.4,1056.55],
+"N":"184"
+}}]},{
+"I":11,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,163.45,1056.7],
+"N":"185"
+}}]},{
+"I":13,
+"DU":42,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,163.65,1056.3],
+"N":"186"
+}}]},{
+"I":55,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,163.95,1056.25],
+"N":"187"
+}}]},{
+"I":57,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,164.65,1055.6],
+"N":"188"
+}}]},{
+"I":59,
+"DU":10,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,169.4,1056.55],
+"N":"189"
+}}]},{
+"I":69,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,165.05,1056.55],
+"N":"190"
+}}]},{
+"I":71,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,155.5,1055.7],
+"N":"191"
+}}]},{
+"I":72,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,154.45,1057.1],
+"N":"192"
+}}]},{
+"I":73,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,155.5,1051.9],
+"N":"193"
+}}]},{
+"I":75,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,153.6,1052.85],
+"N":"194"
+}}]},{
+"I":77,
+"DU":15,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,153.2,1053.25],
+"N":"195"
+}}]},{
+"I":92,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,154.45,1057.1],
+"N":"196"
+}}]},{
+"I":94,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,156,1055.35],
+"N":"197"
+}}]},{
+"I":95,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,153.6,1052.85],
+"N":"198"
+}}]},{
+"I":96,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,152.7,1053.55],
+"N":"199"
+}}]},{
+"I":97,
+"DU":3,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,155.5,1055.7],
+"N":"200"
+}}]},{
+"I":100,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,153.6,1052.85],
+"N":"201"
+}}]},{
+"I":102,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,152.9,1053.95],
+"N":"202"
+}}]},{
+"I":104,
+"DU":2,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,154.05,1056.15],
+"N":"203"
+}}]},{
+"I":106,
+"DU":9,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,155.5,1055.7],
+"N":"204"
+}}]}
+]}
+]}},{
+"SN":"smokeGlow/sm1",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[0.779,0,0,0.997,0,0],
+"N":"205"
+}}]}
+]}
+]}},{
+"SN":"smokeGlow/sm2",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[0.779,0,0,0.997,0,0],
+"N":"206"
+}}]}
+]}
+]}},{
+"SN":"smokeGlow/sm3",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[0.779,0,0,0.997,0,0],
+"N":"207"
+}}]}
+]}
+]}},{
+"SN":"glowing shit/een/greenRim5",
 "TL":{
 "L":[
 {
@@ -8448,11 +11647,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,5.85,0.5],
-"N":"112"
+"N":"208"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/ughhhh",
+"SN":"glowing shit/een/greenRim4",
 "TL":{
 "L":[
 {
@@ -8464,11 +11663,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0.5],
-"N":"113"
+"N":"209"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/leftsm1",
+"SN":"smokeGlow/leftsm1",
 "TL":{
 "L":[
 {
@@ -8480,11 +11679,11 @@
 "E":[
 {"ASI":{
 "MX":[1.001,0,0,0.953,0,0],
-"N":"114"
+"N":"210"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/leftsm2",
+"SN":"smokeGlow/leftsm2",
 "TL":{
 "L":[
 {
@@ -8496,11 +11695,11 @@
 "E":[
 {"ASI":{
 "MX":[1.001,0,0,0.953,0,0],
-"N":"115"
+"N":"211"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/leftsm3",
+"SN":"smokeGlow/leftsm3",
 "TL":{
 "L":[
 {
@@ -8512,11 +11711,11 @@
 "E":[
 {"ASI":{
 "MX":[1.001,0,0,0.953,0,0],
-"N":"116"
+"N":"212"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/ourple light",
+"SN":"glowing shit/ourple/purpleRim3",
 "TL":{
 "L":[
 {
@@ -8528,11 +11727,27 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0.85,0.65],
-"N":"117"
+"N":"213"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/puple ",
+"SN":"everything else/heads/headBase",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[1,0,0,1,-0.75,-0.75],
+"N":"214"
+}}]}
+]}
+]}},{
+"SN":"glowing shit/ourple/purpleRim2",
 "TL":{
 "L":[
 {
@@ -8544,11 +11759,11 @@
 "E":[
 {"ASI":{
 "MX":[1.001,0,0,1.001,0,0.5],
-"N":"118"
+"N":"215"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/purpo",
+"SN":"glowing shit/ourple/purpleRim1",
 "TL":{
 "L":[
 {
@@ -8560,11 +11775,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,1.45,1.7],
-"N":"119"
+"N":"216"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/rightsm1",
+"SN":"smokeGlow/rightsm1",
 "TL":{
 "L":[
 {
@@ -8576,11 +11791,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.967,0,0],
-"N":"120"
+"N":"217"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/rightsm2",
+"SN":"smokeGlow/rightsm2",
 "TL":{
 "L":[
 {
@@ -8592,11 +11807,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.967,0,0],
-"N":"121"
+"N":"218"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/rightsm3",
+"SN":"smokeGlow/rightsm3",
 "TL":{
 "L":[
 {
@@ -8608,11 +11823,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.967,0,0],
-"N":"122"
+"N":"219"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/more red",
+"SN":"glowing shit/red/redRim1",
 "TL":{
 "L":[
 {
@@ -8624,11 +11839,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0.55,0.75],
-"N":"123"
+"N":"220"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/redfd",
+"SN":"glowing shit/red/redRim3",
 "TL":{
 "L":[
 {
@@ -8640,11 +11855,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0.25,0.65],
-"N":"124"
+"N":"221"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/redewde",
+"SN":"glowing shit/red/redRim2",
 "TL":{
 "L":[
 {
@@ -8656,11 +11871,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0.5],
-"N":"125"
+"N":"222"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/downsm1",
+"SN":"smokeGlow/downsm1",
 "TL":{
 "L":[
 {
@@ -8672,11 +11887,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.916,0,0],
-"N":"126"
+"N":"223"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/downsm2",
+"SN":"smokeGlow/downsm2",
 "TL":{
 "L":[
 {
@@ -8688,11 +11903,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.916,0,0],
-"N":"127"
+"N":"224"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/downsm3",
+"SN":"smokeGlow/downsm3",
 "TL":{
 "L":[
 {
@@ -8704,11 +11919,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,0.916,0,0],
-"N":"128"
+"N":"225"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/blueeeeeee",
+"SN":"glowing shit/blu/blueRim1",
 "TL":{
 "L":[
 {
@@ -8720,11 +11935,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0.4,0.55],
-"N":"129"
+"N":"226"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/blue",
+"SN":"glowing shit/blu/blueRim6",
 "TL":{
 "L":[
 {
@@ -8736,11 +11951,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,1.25],
-"N":"130"
+"N":"227"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/fuck fuck fuck i hate blue",
+"SN":"glowing shit/blu/blueRim4",
 "TL":{
 "L":[
 {
@@ -8752,11 +11967,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0.55,0],
-"N":"131"
+"N":"228"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/tiny blue",
+"SN":"glowing shit/blu/blueRim5",
 "TL":{
 "L":[
 {
@@ -8768,11 +11983,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0.75,2.2],
-"N":"132"
+"N":"229"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/blueblvuelu",
+"SN":"glowing shit/blu/blueRim2",
 "TL":{
 "L":[
 {"LN":"Layer 1",
@@ -8782,9 +11997,9 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0.5],
-"N":"61"
+"N":"85"
 }}]}]}]}},{
-"SN":"glowing shit/fart bkue",
+"SN":"glowing shit/blu/blueRim3",
 "TL":{
 "L":[
 {
@@ -8796,11 +12011,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,2,1.25],
-"N":"133"
+"N":"230"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/green yay",
+"SN":"glowing shit/een/greenRim1",
 "TL":{
 "L":[
 {
@@ -8812,11 +12027,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,5.65,0.55],
-"N":"134"
+"N":"231"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/greeen",
+"SN":"glowing shit/een/greenRim6",
 "TL":{
 "L":[
 {
@@ -8828,11 +12043,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,1.4,0.55],
-"N":"135"
+"N":"232"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/lungs pulse glow",
+"SN":"glowing shit/een/lungs/lungs pulse glow",
 "TL":{
 "L":[
 {
@@ -8843,7 +12058,7 @@
 "DU":1,
 "E":[
 {"SI":{
-"SN":"glowing shit/lungsframe1",
+"SN":"glowing shit/een/lungs/lungsframe1",
 "ST":"MC",
 "TRP":{"x":69.25,"y":107.15},
 "C":{
@@ -8865,7 +12080,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/lungsframe2",
+"SN":"glowing shit/een/lungs/lungsframe2",
 "ST":"MC",
 "TRP":{"x":69.9,"y":94.05},
 "C":{
@@ -8887,7 +12102,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/lungsframe3",
+"SN":"glowing shit/een/lungs/lungsframe3",
 "ST":"MC",
 "TRP":{"x":68.65,"y":84.4},
 "C":{
@@ -8909,7 +12124,7 @@
 "DU":2,
 "E":[
 {"SI":{
-"SN":"glowing shit/lungsframe4",
+"SN":"glowing shit/een/lungs/lungsframe4",
 "ST":"MC",
 "TRP":{"x":69,"y":83.9},
 "C":{
@@ -8933,87 +12148,7 @@
 }
 ]}
 ]}},{
-"SN":"glowing shit/purplight head",
-"TL":{
-"L":[
-{
-"LN":"Layer_1",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0.8,0.7],
-"N":"136"
-}}]}
-]}
-]}},{
-"SN":"everything else/heads/head base",
-"TL":{
-"L":[
-{
-"LN":"Layer_1",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,-0.75,-0.75],
-"N":"137"
-}}]}
-]}
-]}},{
-"SN":"glowing shit/redlight head",
-"TL":{
-"L":[
-{
-"LN":"Layer_1",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0.25,0.6],
-"N":"138"
-}}]}
-]}
-]}},{
-"SN":"glowing shit/bluelight head",
-"TL":{
-"L":[
-{
-"LN":"Layer_1",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,0,1.4],
-"N":"139"
-}}]}
-]}
-]}},{
-"SN":"glowing shit/greenlight head2",
-"TL":{
-"L":[
-{
-"LN":"Layer_1",
-"FR":[
-{
-"I":0,
-"DU":1,
-"E":[
-{"ASI":{
-"MX":[1,0,0,1,1.25,0.55],
-"N":"140"
-}}]}
-]}
-]}},{
-"SN":"glowing shit/cig glow cough",
+"SN":"smokeGlow/cigGlowCough",
 "TL":{
 "L":[
 {
@@ -9025,25 +12160,25 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0,0.45],
-"N":"141"
+"N":"233"
 }}]},{
 "I":3,
 "DU":3,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,1.9,0.65],
-"N":"142"
+"N":"234"
 }}]},{
 "I":6,
 "DU":3,
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0.55,0],
-"N":"143"
+"N":"235"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/greenlight hand3",
+"SN":"glowing shit/een/greenRim2",
 "TL":{
 "L":[
 {
@@ -9055,11 +12190,11 @@
 "E":[
 {"ASI":{
 "MX":[1,0,0,1,0.45,14.35],
-"N":"144"
+"N":"236"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/lungsframe1",
+"SN":"everything else/deadstuff/deadCig",
 "TL":{
 "L":[
 {
@@ -9070,12 +12205,12 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[0.978,0,0,1,0,0],
-"N":"145"
+"MX":[1,0,0,1,0,0],
+"N":"237"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/lungsframe2",
+"SN":"glowing shit/een/lungs/lungsframe1",
 "TL":{
 "L":[
 {
@@ -9086,12 +12221,12 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[0.978,0,0,1,0,0],
-"N":"146"
+"MX":[0.972,0,0,1,0,0],
+"N":"238"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/lungsframe3",
+"SN":"glowing shit/een/lungs/lungsframe2",
 "TL":{
 "L":[
 {
@@ -9102,12 +12237,12 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[0.978,0,0,1,0,0],
-"N":"147"
+"MX":[0.972,0,0,1,0,0],
+"N":"239"
 }}]}
 ]}
 ]}},{
-"SN":"glowing shit/lungsframe4",
+"SN":"glowing shit/een/lungs/lungsframe3",
 "TL":{
 "L":[
 {
@@ -9118,8 +12253,24 @@
 "DU":1,
 "E":[
 {"ASI":{
-"MX":[0.978,0,0,1,0,0],
-"N":"148"
+"MX":[0.972,0,0,1,0,0],
+"N":"240"
+}}]}
+]}
+]}},{
+"SN":"glowing shit/een/lungs/lungsframe4",
+"TL":{
+"L":[
+{
+"LN":"Layer_1",
+"FR":[
+{
+"I":0,
+"DU":1,
+"E":[
+{"ASI":{
+"MX":[0.972,0,0,1,0,0],
+"N":"241"
 }}]}
 ]}
 ]}}

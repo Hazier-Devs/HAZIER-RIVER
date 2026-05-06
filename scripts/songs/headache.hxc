@@ -98,7 +98,7 @@ class HeadacheSong extends Song
     PlayState.instance.add(black);
 
     var cutsceneText = new FlxText(0, 0, 850);
-    cutsceneText.text = 'Boyfriend and Girlfriend were\non a fancy date...\nthen saw a strange glow\ncoming from an alleyway...';
+    cutsceneText.text = 'Boyfriend and Girlfriend were\nout on a fancy date...\nwhen they saw a strange glow\ncoming from the alleyway...';
     cutsceneText.setFormat(Paths.font('Quantico-Bold.ttf'), 48);
     cutsceneText.alignment = 'center';
     cutsceneText.screenCenter();

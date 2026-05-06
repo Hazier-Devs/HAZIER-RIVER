@@ -16,6 +16,7 @@ import funkin.Conductor;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import funkin.util.FlxTweenUtil;
+import Date;
 
 class NervesSong extends Song
 {
@@ -35,6 +36,20 @@ class NervesSong extends Song
 
     return super.isSongNew(currentDifficulty, currentVariation);
   }
+
+   function onCreate(event:ScriptEvent):Void {
+		super.onCreate(event);
+        hasPlayedCutscene = false;
+		if (!FlxG.onMobile) {
+			PlayState.instance.discordRPCAlbum = "https://raw.githubusercontent.com/LeGooeyy/GooeyMixDiscordIcons/refs/heads/main/assets/album-covers/"
+				+ PlayState.instance.currentChart.album
+				+ ".png?raw=true";
+			PlayState.instance.discordRPCIcon = "https://raw.githubusercontent.com/LeGooeyy/GooeyMixDiscordIcons/refs/heads/main/assets/icons/"
+				+ PlayState.instance.currentChart.characters.opponent
+				+ ".png?raw=true?t="
+				+ Date.now().getTime();
+		}
+	}
 
   override public function onCountdownStart(event:CountdownScriptEvent):Void
   {
@@ -88,15 +103,6 @@ class NervesSong extends Song
     hasPlayedCutscene = true;
     FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.quadOut});
     
-  }
-
-  /**
-   * Replay the cutscene after leaving the song.
-   */
-  function onCreate(event:ScriptEvent):Void
-  {
-    super.onCreate(event);
-    hasPlayedCutscene = false;
   }
 
   override public function onPause(event:PauseScriptEvent):Void

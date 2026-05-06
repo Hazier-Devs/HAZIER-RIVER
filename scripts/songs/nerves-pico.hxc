@@ -8,6 +8,7 @@ import funkin.Conductor;
 import flixel.tweens.FlxTween;
 import flixel.tweens.FlxEase;
 import flixel.util.FlxTimer;
+import Date;
 
 using funkin.util.AnsiUtil;
 using StringTools;
@@ -37,6 +38,9 @@ class NervesPicoMixSong extends Song
         variation: 'pico'
       });
   }
+  
+  var hasPlayedCutscene:Bool = false;
+  var sequence:SongSequence;
 
   override public function isSongNew(currentDifficulty:String, currentVariation:String):Bool
   {
@@ -47,6 +51,26 @@ class NervesPicoMixSong extends Song
 
     return super.isSongNew(currentDifficulty, currentVariation);
   }
+
+  function onCreate(event:ScriptEvent):Void {
+		super.onCreate(event);
+
+		if (!FlxG.onMobile) {
+			PlayState.instance.discordRPCAlbum = "https://raw.githubusercontent.com/LeGooeyy/GooeyMixDiscordIcons/refs/heads/main/assets/album-covers/"
+				+ PlayState.instance.currentChart.album
+				+ ".png?raw=true";
+			PlayState.instance.discordRPCIcon = "https://raw.githubusercontent.com/LeGooeyy/GooeyMixDiscordIcons/refs/heads/main/assets/icons/"
+				+ PlayState.instance.currentChart.characters.opponent
+				+ ".png?raw=true?t="
+				+ Date.now().getTime();
+		}
+
+    hasPlayedCutscene = false;
+
+    // Seal Garcello's fate.
+    awaitingGarcelloDeath = FlxG.random.bool(GARCELLO_KILL_CHANCE);
+    isGarcelloDead = false;
+	}
 
   /**
    * Garcello doesn't feel too well...
@@ -139,20 +163,6 @@ class NervesPicoMixSong extends Song
 
     PlayState.instance?.vocals?.opponentVolume = 0;
     PlayState.instance?.subtitles?.subtitlesData = null;
-  }
-
-  var hasPlayedCutscene:Bool = false;
-  var sequence:SongSequence;
-
-  override public function onCreate(event:ScriptEvent):Void
-  {
-    super.onCreate(event);
-
-    hasPlayedCutscene = false;
-
-    // Seal Garcello's fate.
-    awaitingGarcelloDeath = FlxG.random.bool(GARCELLO_KILL_CHANCE);
-    isGarcelloDead = false;
   }
 
   override public function onCountdownStart(event:CountdownScriptEvent):Void

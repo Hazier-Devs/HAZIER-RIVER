@@ -106,7 +106,7 @@ class NervesPicoMixSong extends Song
           if (PlayState.instance?.camHUD == null) return;
 
           var duration:Float = -(Conductor.instance?.songPosition ?? 0);
-          FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, -getBeatTime(-2));
+          if (!PlayState.instance.isChartingMode) FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, -getBeatTime(-2));
         }
       },
       {
@@ -147,7 +147,7 @@ class NervesPicoMixSong extends Song
         callback: () -> {
           if (PlayState.instance?.camHUD != null)
           {
-            FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.9);
+            if (!PlayState.instance.isChartingMode) FlxTween.tween(PlayState.instance.camHUD, {alpha: 1}, 0.9);
           }
         }
       },

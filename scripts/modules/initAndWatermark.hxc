@@ -21,7 +21,7 @@ class hazierwatermark extends Module
     {
       header: 'Artists',
       body: [
-        {line: 'DigitLuck'}, {line: 'PlantGamer09'}, {line: 'artalogue.'}]
+        {line: 'DigitLuck'}, {line: 'LeGooey'}, {line: 'PlantGamer09'}, {line: 'artalogue.'}]
     },
     {
       header: 'Pixel Art',
@@ -50,6 +50,7 @@ class hazierwatermark extends Module
         {line: 'Sammy The Goog'},
         {line: 'Kludge54n5'},
         {line: 'Arthren'},
+        {line: 'LeGooey'},
         {line: 'c1tcher'},
         {line: 'TechnikTil'},
         {line: 'Idk\'s FNF Stuff'}
@@ -63,7 +64,8 @@ class hazierwatermark extends Module
         {line: 'DigitLuck'},
         {line: 'EEssential'},
         {line: 'Sammy The Goog'},
-        {line: 'HazedPhantom'}
+        {line: 'HazedPhantom'},
+        {line: 'LeGooey'}
       ]
     },
     {

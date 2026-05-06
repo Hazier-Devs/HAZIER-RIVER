@@ -5,12 +5,28 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.1.5] - 2026-05-??
+## [0.1.5] - 2026-05-06
+
+### Added
+
+- Added discord album status support
 
 ### Changed
 
 - Increased the lineart thickness of Garcello's sprites
-- Optimized character data files
+- Optimized character and stage data files
+- Centered and removed stray pixels from garcellos icon
+- Made Nene (Garcello) compatible with the rim light shader
+- Optimized the trail effects in the erect remixes
+
+### Fixed
+
+- Fixed a bug that would crash the chart editor on Nerves (Any Variant)
+- Fixed the ui not being visible in charting mode in some songs
+- Fixed the camera being off centered when focused on BF in Nerves
+- Fixed an extra note being present in Nerves Erect
+- Fixed the lighting cutoff being visible at the start of Headache
+- Fixed Garcello not missing the note on the Hard Cough animation
 
 ## [0.1.4] - 2026-05-03
 

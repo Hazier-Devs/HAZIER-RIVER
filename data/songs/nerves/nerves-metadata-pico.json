@@ -11,8 +11,8 @@
       "girlfriend": "nene-garcello",
       "opponent": "garcello-nerves",
       "instrumental": "pico",
-      "opponentVocals": ["garcello-nerves"],
-      "playerVocals": ["pico-garcello-high"]
+      "opponentVocals": ["garcello"],
+      "playerVocals": ["pico"]
     },
     "stage": "ashtonParkingLot",
     "noteStyle": "funkin",

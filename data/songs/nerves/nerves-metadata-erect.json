@@ -11,8 +11,8 @@
       "girlfriend": "gf-garcello",
       "opponent": "garcello-nerves",
       "instrumental": "erect",
-      "opponentVocals": ["garcello-nerves"],
-      "playerVocals": ["bf-garcello"]
+      "opponentVocals": ["garcello"],
+      "playerVocals": ["bf"]
     },
     "stage": "ashtonParkingLot",
     "noteStyle": "funkin",

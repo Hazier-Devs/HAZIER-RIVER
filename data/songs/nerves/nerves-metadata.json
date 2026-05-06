@@ -11,8 +11,8 @@
       "player": "bf-garcello",
       "girlfriend": "gf-garcello",
       "opponent": "garcello-nerves",
-      "opponentVocals": ["garcello-nerves"],
-      "playerVocals": ["bf-garcello"]
+      "opponentVocals": ["garcello"],
+      "playerVocals": ["bf"]
     },
     "stage": "ashtonAlleyway",
     "noteStyle": "funkin",

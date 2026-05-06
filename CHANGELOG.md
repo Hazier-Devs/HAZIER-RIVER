@@ -27,6 +27,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed an extra note being present in Nerves Erect
 - Fixed the lighting cutoff being visible at the start of Headache
 - Fixed Garcello not missing the note on the Hard Cough animation
+- Fixed the animation not looping properly at the end of Nerves (Pico Mix)
 
 ## [0.1.4] - 2026-05-03
 

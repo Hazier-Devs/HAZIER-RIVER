@@ -118,6 +118,13 @@
       "prefix": "weGottaStop",
       "name": "outro",
       "offsets": [25, -40]
+    },
+    {
+      "prefix": "weGottaStop",
+      "name": "outro-hold",
+      "looped": true,
+      "frameIndices": [78, 79, 80, 81, 82, 83, 84, 85, 86],
+      "offsets": [25, -40]
     }
   ]
 }

@@ -46,6 +46,7 @@ class HeadacheSong extends Song
   {
     super.onCountdownStart(event);
 
+    if (!PlayState.instance.isChartingMode){
     if (backgroundSprite == null)
     {
       backgroundSprite = new FunkinSprite();
@@ -73,6 +74,7 @@ class HeadacheSong extends Song
 
     //   startConversation();
     // }
+    }
   }
 
   function playTextIntro()
@@ -125,6 +127,7 @@ class HeadacheSong extends Song
   {
     super.onSongStart(event);
 
+    if (!PlayState.instance.isChartingMode){
     var durationMs:Float = PlayState.instance?.conductorInUse?.getBeatTimeInMs(16) ?? 0;
     backgroundSpriteTween = FlxTween.tween(backgroundSprite, {alpha: 0}, durationMs / 1000,
       {
@@ -132,12 +135,14 @@ class HeadacheSong extends Song
           backgroundSpriteTween = null;
         }
       });
+    }
   }
 
   override public function onSongRetry(event:ScriptEvent):Void
   {
     super.onSongRetry(event);
 
+    if (!PlayState.instance.isChartingMode){
     backgroundSpriteTween?.cancel();
     backgroundSpriteTween = FlxTween.tween(backgroundSprite, {alpha: 1}, 0.5,
       {
@@ -146,6 +151,7 @@ class HeadacheSong extends Song
           backgroundSpriteTween = null;
         }
       });
+    }
   }
 
   override public function onPause(event:ScriptEvent):Void

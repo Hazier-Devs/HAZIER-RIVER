@@ -1,7 +1,7 @@
 {
   "renderType": "multianimateatlas",
   "offsets": [180, 190],
-  "assetPath": "shared:characters/garcello-nerves",
+  "assetPath": "shared:characters/garcello",
   "healthIcon": {
     "id": "garcellonerves"
   },
@@ -11,62 +11,62 @@
   "cameraOffsets": [0, -70],
   "animations": [
      {
-      "prefix": "idle",
+      "prefix": "nervesIdle",
       "name": "idle"
     },
     {
-      "prefix": "left",
+      "prefix": "nervesLeft",
       "name": "singLEFT"
     },
     {
-      "prefix": "right",
+      "prefix": "nervesRight",
       "name": "singRIGHT"
     },
     {
-      "prefix": "down",
+      "prefix": "nervesDown",
       "name": "singDOWN"
     },
     {
-      "prefix": "up",
+      "prefix": "nervesUp",
       "name": "singUP"
     },
     {
       "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
-      "prefix": "right",
+      "prefix": "nervesRight",
       "looped": true,
       "name": "singRIGHT-hold"
     },
     {
       "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
-      "prefix": "down",
+      "prefix": "nervesDown",
       "looped": true,
       "name": "singDOWN-hold"
     },
     {
       "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
-      "prefix": "up",
+      "prefix": "nervesUp",
       "looped": true,
       "name": "singUP-hold"
     },
     {
       "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
-      "prefix": "idle",
+      "prefix": "nervesIdle",
       "looped": true,
       "name": "idle-hold"
     },
     {
       "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
-      "prefix": "left",
+      "prefix": "nervesLeft",
       "looped": true,
       "name": "singLEFT-hold"
     },
     {
-      "prefix": "cough",
+      "prefix": "nervesCough",
       "name": "cough"
     },
     {
       "frameIndices": [6, 7, 8, 9, 10, 11, 12, 13, 14],
-      "prefix": "cough",
+      "prefix": "nervesCough",
       "name": "cough-hold",
       "looped": true
     },

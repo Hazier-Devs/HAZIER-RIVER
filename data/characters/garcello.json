@@ -8,52 +8,52 @@
   "assetPath": "shared:characters/garcello",
   "animations": [
     {
-      "prefix": "idle",
+      "prefix": "garcelloIdle",
       "name": "idle"
     },
     {
-      "prefix": "left",
+      "prefix": "garcelloLeft",
       "name": "singLEFT"
     },
     {
-      "prefix": "right",
+      "prefix": "garcelloRight",
       "name": "singRIGHT"
     },
     {
-      "prefix": "down",
+      "prefix": "garcelloDown",
       "name": "singDOWN"
     },
     {
-      "prefix": "up",
+      "prefix": "garcelloUp",
       "name": "singUP"
     },
     {
       "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
-      "prefix": "right",
+      "prefix": "garcelloRight",
       "looped": true,
       "name": "singRIGHT-hold"
     },
     {
       "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
-      "prefix": "down",
+      "prefix": "garcelloDown",
       "looped": true,
       "name": "singDOWN-hold"
     },
     {
       "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
-      "prefix": "up",
+      "prefix": "garcelloUp",
       "looped": true,
       "name": "singUP-hold"
     },
     {
       "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
-      "prefix": "idle",
+      "prefix": "garcelloIdle",
       "looped": true,
       "name": "idle-hold"
     },
     {
       "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
-      "prefix": "left",
+      "prefix": "garcelloLeft",
       "looped": true,
       "name": "singLEFT-hold"
     }

@@ -3,7 +3,6 @@ import funkin.play.PlayState;
 import funkin.Preferences;
 import flixel.FlxSprite;
 import funkin.graphics.FunkinSprite;
-import funkin.util.SongSequence;
 import flixel.FlxG;
 import funkin.save.Save;
 import funkin.play.PlayStatePlaylist;
@@ -21,7 +20,6 @@ import funkin.util.FlxTweenUtil;
 class NervesSong extends Song
 {
   var hasPlayedCutscene:Bool;
-  var sequence:SongSequence;
 
   public function new()
   {
@@ -41,6 +39,7 @@ class NervesSong extends Song
   override public function onCountdownStart(event:CountdownScriptEvent):Void
   {
     super.onCountdownStart(event);
+    if (!PlayState.instance.isChartingMode){
     PlayState.instance.camHUD.alpha = 0;
 
     // Skip the cutscene unless we are in Story Mode, or Pico Mix specifically.
@@ -66,6 +65,7 @@ class NervesSong extends Song
         startDialogue();
       });
     }
+    }
   }
 
   function startDialogue()
@@ -80,7 +80,6 @@ class NervesSong extends Song
   function onSongRetry(event:ScriptEvent)
   {
     super.onSongRetry(event);
-
     for (sprite in hudArray.concat([PlayState.instance?.camHUD]))
     {
       if (sprite != null) FlxTween.cancelTweensOf(sprite);
@@ -88,6 +87,7 @@ class NervesSong extends Song
 
     hasPlayedCutscene = true;
     FlxTween.tween(PlayState.instance.camHUD, {alpha: 0}, 0.5, {ease: FlxEase.quadOut});
+    
   }
 
   /**
@@ -96,7 +96,6 @@ class NervesSong extends Song
   function onCreate(event:ScriptEvent):Void
   {
     super.onCreate(event);
-
     hasPlayedCutscene = false;
   }
 
@@ -104,31 +103,28 @@ class NervesSong extends Song
   {
     super.onPause(event);
 
+
     for (sprite in hudArray.concat([PlayState.instance?.camHUD]))
     {
       if (sprite != null) FlxTweenUtil.pauseTweensOf(sprite);
     }
+  
   }
 
   override public function onResume(event:ScriptEvent):Void
   {
     super.onResume(event);
-
     for (sprite in hudArray.concat([PlayState.instance?.camHUD]))
     {
       if (sprite != null) FlxTweenUtil.resumeTweensOf(sprite);
     }
   }
 
-  override public function onSongLoaded(event:SongLoadScriptEvent):Void
-  {
-    sequence?.destroy();
 
-    var events:Array<SequenceEvent> = [
-      {
-        time: getStepTime(16),
-        callback: () -> {
-          for (i in hudArray)
+  function onStepHit(event:SongTimeScriptEvent):Void {
+		super.onStepHit(event);
+		if (event.step == 16) {
+			for (i in hudArray)
             i.visible = false;
 
           for (i in 0...4)
@@ -140,33 +136,21 @@ class NervesSong extends Song
           opponentStrumline?.getByIndex(0)?.visible = true;
           opponentStrumline?.getByIndex(1)?.visible = true;
           PlayState.instance?.camHUD.alpha = 1;
-        }
-      },
-      {
-        time: getStepTime(20),
-        callback: () -> {
-          opponentStrumline?.getByIndex(2)?.visible = true;
-          opponentStrumline?.getByIndex(3)?.visible = true;
-        }
-      },
-      {
-        time: getStepTime(24),
-        callback: () -> {
-          playerStrumline?.getByIndex(0)?.visible = true;
-          playerStrumline?.getByIndex(1)?.visible = true;
-        }
-      },
-      {
-        time: getStepTime(28),
-        callback: () -> {
-          playerStrumline?.getByIndex(2)?.visible = true;
-          playerStrumline?.getByIndex(3)?.visible = true;
-        }
-      },
-      {
-        time: getStepTime(32),
-        callback: () -> {
-          var duration:Float = 4 * (Conductor.instance.stepLengthMs / 1000);
+		}
+		else if (event.step == 20) {
+			opponentStrumline?.getByIndex(2)?.visible = true;
+      opponentStrumline?.getByIndex(3)?.visible = true;
+		}
+    else if (event.step == 24) {
+			playerStrumline?.getByIndex(0)?.visible = true;
+      playerStrumline?.getByIndex(1)?.visible = true;
+		}
+    else if (event.step == 28) {
+			playerStrumline?.getByIndex(2)?.visible = true;
+      playerStrumline?.getByIndex(3)?.visible = true;
+		}
+     else if (event.step == 32) {
+			 var duration:Float = 4 * (Conductor.instance.stepLengthMs / 1000);
 
           for (sprite in hudArray)
           {
@@ -174,18 +158,7 @@ class NervesSong extends Song
             sprite.alpha = 0;
             FlxTween.tween(sprite, {alpha: 1}, duration, {ease: FlxEase.quadOut});
           }
-        }
-      }
-    ];
-
-    sequence = new SongSequence(events);
-    sequence.startTime = 0;
-  }
-
-  override public function onDestroy(event:ScriptEvent):Void
-  {
-    sequence?.destroy();
-    super.onDestroy(event);
+		}
   }
 
   var playerStrumline(get, never):Strumline;

@@ -7,7 +7,13 @@ class CoughNoteKind extends NoteKind
 {
   public function new()
   {
-    super('cough', 'Cough (Nerves)');
+    super('cough', 'Cough (Nerves)', null, [
+      {
+        name: 'anim',
+        description: 'Animation',
+        type: 'String'
+      }
+    ]);
   }
 
   override public function onNoteHit(event:HitNoteScriptEvent):Void
@@ -15,8 +21,10 @@ class CoughNoteKind extends NoteKind
     super.onNoteHit(event);
     if (event.eventCanceled || event.note.noteData.getMustHitNote()) return;
 
+    final anim:String = event.note.getParam('anim') ?? 'cough';
+
     var dad:BaseCharacter = PlayState.instance?.currentStage?.getDad();
-    dad?.playAnimation('cough', true);
+    dad?.playAnimation(anim, true);
 
     event.note.hasBeenHit = true;
     event.note.handledMiss = true;

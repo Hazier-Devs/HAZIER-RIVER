@@ -32,36 +32,31 @@
       "offsets": [-90, 5]
     },
     {
-      "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
-      "prefix": "nervesRight",
+      "prefix": "nervesLoopRight",
       "looped": true,
       "name": "singRIGHT-hold",
       "offsets": [-90, 5]
     },
     {
-      "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
-      "prefix": "nervesDown",
+      "prefix": "nervesLoopDown",
       "looped": true,
       "name": "singDOWN-hold",
       "offsets": [-90, 5]
     },
     {
-      "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
-      "prefix": "nervesUp",
+      "prefix": "nervesLoopUp",
       "looped": true,
       "name": "singUP-hold",
       "offsets": [-90, 5]
     },
     {
-      "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
-      "prefix": "nervesIdle",
+      "prefix": "nervesLoopIdle",
       "looped": true,
       "name": "idle-hold",
       "offsets": [-90, 5]
     },
     {
-      "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
-      "prefix": "nervesLeft",
+      "prefix": "nervesLoopLeft",
       "looped": true,
       "name": "singLEFT-hold",
       "offsets": [-90, 5]
@@ -72,8 +67,7 @@
       "offsets": [-90, 5]
     },
     {
-      "frameIndices": [6, 7, 8, 9, 10, 11, 12, 13, 14],
-      "prefix": "nervesCough",
+      "prefix": "nervesLoopCough",
       "name": "cough-hold",
       "looped": true,
       "offsets": [-90, 5]
@@ -85,8 +79,7 @@
       "offsets": [134, 73]
     },
     {
-      "prefix": "bigBoiCough",
-      "frameIndices": [10, 11, 12, 13, 14, 15],
+      "prefix": "bigLoopCough",
       "name": "hardCough-hold",
       "looped": true,
       "offsets": [134, 73],
@@ -99,8 +92,7 @@
       "offsets": [134, 73]
     },
     {
-      "frameIndices": [104],
-      "prefix": "releaseCameEarly",
+      "prefix": "fuckingDead",
       "name": "cigmiss-hold",
       "assetPath": "shared:characters/garcello-pico",
       "looped": true,
@@ -127,11 +119,10 @@
       "offsets": [134, 73]
     },
     {
-      "prefix": "weGottaStop",
+      "prefix": "weGottaLoop",
       "name": "outro-hold",
       "assetPath": "shared:characters/garcello-pico",
       "looped": true,
-      "frameIndices": [78, 79, 80, 81, 82, 83, 84, 85, 86],
       "offsets": [134, 73]
     }
   ]

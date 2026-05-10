@@ -12,8 +12,7 @@
       "offsets": [-90, 5]
     },
     {
-      "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
-      "prefix": "garcelloIdle",
+      "prefix": "garcelloLoopIdle",
       "looped": true,
       "name": "idle-hold",
       "offsets": [-90, 5]
@@ -39,29 +38,25 @@
       "offsets": [-90, 5]
     },
     {
-      "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
-      "prefix": "garcelloRight",
+      "prefix": "garcelloLoopRight",
       "looped": true,
       "name": "singRIGHT-hold",
       "offsets": [-90, 5]
     },
     {
-      "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
-      "prefix": "garcelloDown",
+      "prefix": "garcelloLoopDown",
       "looped": true,
       "name": "singDOWN-hold",
       "offsets": [-90, 5]
     },
     {
-      "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
-      "prefix": "garcelloUp",
+      "prefix": "garcelloLoopUp",
       "looped": true,
       "name": "singUP-hold",
       "offsets": [-90, 5]
     },
     {
-      "frameIndices": [9, 10, 11, 12, 13, 14, 15, 16, 17],
-      "prefix": "garcelloLeft",
+      "prefix": "garcelloLoopLeft",
       "looped": true,
       "name": "singLEFT-hold",
       "offsets": [-90, 5]

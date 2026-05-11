@@ -2,107 +2,96 @@
   "danceEvery": 2,
   "renderType": "multianimateatlas",
   "scale": 1.1,
-  "cameraOffsets": [100, -50],
+  "cameraOffsets": [50, 0],
+  "offsets": [47, -3],
   "name": "Garcello (Nerves)",
   "assetPath": "shared:characters/garcello",
   "animations": [
     {
       "prefix": "nervesIdle",
-      "name": "idle",
-      "offsets": [-90, 5]
+      "name": "idle"
     },
     {
       "prefix": "nervesLeft",
-      "name": "singLEFT",
-      "offsets": [-90, 5]
+      "name": "singLEFT"
     },
     {
       "prefix": "nervesRight",
-      "name": "singRIGHT",
-      "offsets": [-90, 5]
+      "name": "singRIGHT"
     },
     {
       "prefix": "nervesDown",
-      "name": "singDOWN",
-      "offsets": [-90, 5]
+      "name": "singDOWN"
     },
     {
       "prefix": "nervesUp",
-      "name": "singUP",
-      "offsets": [-90, 5]
+      "name": "singUP"
     },
     {
       "prefix": "nervesLoopRight",
       "looped": true,
-      "name": "singRIGHT-hold",
-      "offsets": [-90, 5]
+      "name": "singRIGHT-hold"
     },
     {
       "prefix": "nervesLoopDown",
       "looped": true,
-      "name": "singDOWN-hold",
-      "offsets": [-90, 5]
+      "name": "singDOWN-hold"
     },
     {
       "prefix": "nervesLoopUp",
       "looped": true,
-      "name": "singUP-hold",
-      "offsets": [-90, 5]
+      "name": "singUP-hold"
     },
     {
       "prefix": "nervesLoopIdle",
       "looped": true,
-      "name": "idle-hold",
-      "offsets": [-90, 5]
+      "name": "idle-hold"
     },
     {
       "prefix": "nervesLoopLeft",
       "looped": true,
-      "name": "singLEFT-hold",
-      "offsets": [-90, 5]
+      "name": "singLEFT-hold"
     },
     {
       "prefix": "nervesCough",
-      "name": "cough",
-      "offsets": [-90, 5]
+      "name": "cough"
     },
     {
       "prefix": "nervesLoopCough",
       "name": "cough-hold",
-      "looped": true,
-      "offsets": [-90, 5]
+      "looped": true
     },
     {
       "prefix": "bigBoiCough",
       "name": "hardCough",
       "assetPath": "shared:characters/garcello-pico",
-      "offsets": [134, 73]
+      "offsets": [224, 68]
     },
     {
       "prefix": "bigLoopCough",
       "name": "hardCough-hold",
       "looped": true,
-      "offsets": [134, 73],
+      "offsets": [224, 68],
       "assetPath": "shared:characters/garcello-pico"
     },
     {
       "prefix": "releaseCameEarly",
       "name": "cigmiss",
       "assetPath": "shared:characters/garcello-pico",
-      "offsets": [134, 73]
+      "offsets": [224, 68]
     },
     {
       "prefix": "fuckingDead",
       "name": "cigmiss-hold",
       "assetPath": "shared:characters/garcello-pico",
       "looped": true,
-      "offsets": [134, 73]
+      "offsets": [224, 68]
     },
     {
       "prefix": "thatsNeat",
       "name": "ciglight",
       "assetPath": "shared:characters/garcello-pico",
-      "offsets": [134, 73]
+      "offsets": [224, 68]
     },
     {
       "frameIndices": [0],
@@ -110,20 +99,20 @@
       "name": "cig-intro",
       "assetPath": "shared:characters/garcello-pico",
       "looped": true,
-      "offsets": [134, 73]
+      "offsets": [224, 68]
     },
     {
       "prefix": "weGottaStop",
       "name": "outro",
       "assetPath": "shared:characters/garcello-pico",
-      "offsets": [134, 73]
+      "offsets": [224, 68]
     },
     {
       "prefix": "weGottaLoop",
       "name": "outro-hold",
       "assetPath": "shared:characters/garcello-pico",
       "looped": true,
-      "offsets": [134, 73]
+      "offsets": [224, 68]
     }
   ]
 }

@@ -2,64 +2,55 @@
   "danceEvery": 2,
   "renderType": "animateatlas",
   "scale": 1.1,
-  "cameraOffsets": [100, -50],
+  "cameraOffsets": [50, 0],
+  "offsets": [47, -3],
   "name": "Garcello",
   "assetPath": "shared:characters/garcello",
   "animations": [
     {
       "prefix": "garcelloIdle",
-      "name": "idle",
-      "offsets": [-90, 5]
+      "name": "idle"
     },
     {
       "prefix": "garcelloLoopIdle",
       "looped": true,
-      "name": "idle-hold",
-      "offsets": [-90, 5]
+      "name": "idle-hold"
     },
     {
       "prefix": "garcelloLeft",
-      "name": "singLEFT",
-      "offsets": [-90, 5]
+      "name": "singLEFT"
     },
     {
       "prefix": "garcelloRight",
-      "name": "singRIGHT",
-      "offsets": [-90, 5]
+      "name": "singRIGHT"
     },
     {
       "prefix": "garcelloDown",
-      "name": "singDOWN",
-      "offsets": [-90, 5]
+      "name": "singDOWN"
     },
     {
       "prefix": "garcelloUp",
-      "name": "singUP",
-      "offsets": [-90, 5]
+      "name": "singUP"
     },
     {
       "prefix": "garcelloLoopRight",
       "looped": true,
-      "name": "singRIGHT-hold",
-      "offsets": [-90, 5]
+      "name": "singRIGHT-hold"
     },
     {
       "prefix": "garcelloLoopDown",
       "looped": true,
-      "name": "singDOWN-hold",
-      "offsets": [-90, 5]
+      "name": "singDOWN-hold"
     },
     {
       "prefix": "garcelloLoopUp",
       "looped": true,
-      "name": "singUP-hold",
-      "offsets": [-90, 5]
+      "name": "singUP-hold"
     },
     {
       "prefix": "garcelloLoopLeft",
       "looped": true,
-      "name": "singLEFT-hold",
-      "offsets": [-90, 5]
+      "name": "singLEFT-hold"
     }
   ]
 }

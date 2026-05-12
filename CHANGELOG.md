@@ -17,7 +17,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Fixed smoke not looping properly and fading away properly on all of Garcello's sprites
 - Fixed some details being missing on Garcello's nerves sprites
 - Fixed the dialogue sound not playing
-- Fixed the lighting cutoff being visible at the start of Headache
 
 ## [0.1.6] - 2026-05-06
 

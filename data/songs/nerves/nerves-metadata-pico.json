@@ -12,7 +12,8 @@
       "opponent": "garcello-nerves",
       "instrumental": "pico",
       "opponentVocals": ["garcello"],
-      "playerVocals": ["pico"]
+      "playerVocals": ["pico"],
+      "altInstrumentals": [""]
     },
     "stage": "ashtonParkingLot",
     "noteStyle": "funkin",

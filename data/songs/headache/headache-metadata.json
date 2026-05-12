@@ -12,7 +12,8 @@
       "girlfriend": "gf-garcello",
       "opponent": "garcello",
       "opponentVocals": ["garcello"],
-      "playerVocals": ["bf"]
+      "playerVocals": ["bf"],
+      "altInstrumentals": ["pico"]
     },
     "stage": "ashtonAlleyway",
     "noteStyle": "funkin",

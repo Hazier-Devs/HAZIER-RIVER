@@ -1,13 +1,12 @@
 import funkin.modding.module.Module;
-import funkin.ui.mainmenu.MainMenuState;
-import funkin.ui.credits.CreditsDataHandler;
+import funkin.ui.credits.CreditsState;
 
-/*
-  patches credits and adds the hazier watermark on MainMenuState
+/**
+ * Injects Hazier Developers into the Credits Menu!
  */
-class hazierwatermark extends Module
+class HazierCredits extends Module
 {
-  var creditsData:Array<CreditsData> = [
+  public static final CREDITS_DATA:Array<CreditsData> = [
     {
       header: 'HAZIER RIVER',
       body: [
@@ -98,20 +97,44 @@ class hazierwatermark extends Module
 
   public function new()
   {
-    super('hazierwatermark', 0, {state: MainMenuState});
-    FlxG.signals.postGameStart.addOnce(function() {
-      creditsData.reverse();
-      for (i in creditsData)
-      {
-        CreditsDataHandler.CREDITS_DATA.entries.unshift(i);
-      }
-    });
+    super('HazierCredits', 1000, {state: CreditsState});
   }
 
-  function onStateChangeEnd()
+  override public function onStateChangeEnd(event:StateChangeScriptEvent):Void
   {
-    FlxG.mouse.visible = false; // do we even need this line? lol
-    FlxG.state.leftWatermarkText.y -= FlxG.state.leftWatermarkText.height;
-    FlxG.state.leftWatermarkText.text += "\nHazier River DEMO";
+    super.onStateChangeEnd(event);
+    if (!Std.isOfType(event.targetState, CreditsState)) return;
+
+    var hazierEntries:Array<CreditsEntry> = [];
+    for (entry in CREDITS_DATA)
+    {
+      hazierEntries.push({
+        data: entry,
+        lineIndexToBuild: 0,
+        backerIndexToBuild: 0,
+        hasBuiltHeader: (entry.header == null),
+        hasBuiltBody: (entry.body.length == 0),
+        hasBuiltBackers: true
+      });
+    }
+
+    // Add 3 spaces before default credits.
+    for (i in 0...3)
+    {
+      hazierEntries.push({
+        data: {
+          header: '',
+          body: []
+        },
+        lineIndexToBuild: 0,
+        backerIndexToBuild: 0,
+        hasBuiltHeader: false,
+        hasBuiltBody: true,
+        hasBuiltBackers: true
+      });
+    }
+
+    // Actually inject our credits data.
+    event.targetState.entriesToBuild = hazierEntries.concat(event.targetState.entriesToBuild);
   }
 }

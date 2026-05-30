@@ -13,25 +13,9 @@ using StringTools;
 
 class HazierWorldCombo extends Module
 {
-  /**
-   * The color used by the health bar when Garcello is in the mix.
-   */
-  public static final COLOR_HEALTH_BAR_PURPLE:FlxColor = 0xFF8E40A5;
-
   function new()
   {
     super('HazierWorldCombo', 0, {state: PlayState});
-  }
-
-  override public function onCountdownStart(event:CountdownScriptEvent):Void
-  {
-    super.onCountdownStart(event);
-
-    if (PlayState.instance.healthBar != null && (PlayState.instance?.currentStage?.getDad()?.characterId ?? '').startsWith('garcello'))
-    {
-      PlayState.instance.healthBar.createFilledBar(COLOR_HEALTH_BAR_PURPLE, Constants.COLOR_HEALTH_BAR_GREEN);
-      PlayState.instance.healthBar.updateBar();
-    }
   }
 
   override public function onSongLoaded(event:SongLoadScriptEvent):Void

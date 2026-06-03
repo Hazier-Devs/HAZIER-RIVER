@@ -1,33 +1,30 @@
 import funkin.ui.mainmenu.MainMenuState;
-import funkin.modding.PolymodHandler;
 import funkin.modding.module.Module;
+import funkin.modding.PolymodHandler;
 import thx.semver.Version;
 
 class HazierWatermark extends Module
 {
-  /**
-   * Mod ID used for Hazier River.
-   */
-  public static final HAZIER_MOD_ID:String = 'hazier-river';
-
   public function new()
   {
-    super('hazierWatermark', 1000, {state: MainMenuState});
+    super('HazierWatermark', {
+      state: MainMenuState
+    });
   }
 
-  override public function onStateChangeEnd(event:StateChangeScriptEvent):Void
+  override public function onStateChangeEnd(event:StateChangeScriptEvent)
   {
     super.onStateChangeEnd(event);
     if (!Std.isOfType(event.targetState, MainMenuState)) return;
 
-    var metadata:ModMetadata = PolymodHandler.modFileSystem.getMetadataById(HAZIER_MOD_ID);
+    var originalText:String = FlxG.state.rightWatermarkText.text;
 
+    var metadata:ModMetadata = PolymodHandler.modFileSystem.getMetadataById("hazier-river");
     var version:String = Version.toString(metadata.modVersion);
-    var title:String = metadata.title;
 
-    var leftWatermarkText:FlxText = event.targetState.leftWatermarkText;
+    FlxG.state.rightWatermarkText.text = "HAZIER RIVER v" + version;
 
-    leftWatermarkText.y -= leftWatermarkText.height;
-    leftWatermarkText.text = '${title} v${version}\n${leftWatermarkText.text}';
+    if (originalText.length > 0) FlxG.state.rightWatermarkText.text += '\n${originalText}';
+    FlxG.state.rightWatermarkText.y = FlxG.height - FlxG.state.rightWatermarkText.height;
   }
 }

@@ -3,7 +3,7 @@
   "name": "Ashton Parking Lot",
   "props": [
     {
-      "assetPath": "AshtonParkingLot/skyshit",
+      "assetPath": "hazier/AshtonParkingLot/skyshit",
       "name": "skyshit",
       "position": [-744, -421],
       "scale": 0.75,
@@ -11,7 +11,7 @@
       "zIndex": 0
     },
     {
-      "assetPath": "AshtonParkingLot/backbuildings",
+      "assetPath": "hazier/AshtonParkingLot/backbuildings",
       "name": "backbuildings",
       "position": [-727, -398],
       "scale": 0.75,
@@ -19,7 +19,7 @@
       "zIndex": 1
     },
     {
-      "assetPath": "AshtonParkingLot/buildings",
+      "assetPath": "hazier/AshtonParkingLot/buildings",
       "name": "buidlings",
       "position": [-650, -370],
       "scale": 0.7,
@@ -27,7 +27,7 @@
       "zIndex": 2
     },
     {
-      "assetPath": "AshtonParkingLot/colorseperatorthing",
+      "assetPath": "hazier/AshtonParkingLot/colorseperatorthing",
       "name": "colorthing",
       "position": [-745, -408],
       "scale": 0.75,
@@ -35,7 +35,7 @@
       "zIndex": 3
     },
     {
-      "assetPath": "AshtonParkingLot/roadnfence",
+      "assetPath": "hazier/AshtonParkingLot/roadnfence",
       "name": "roadandfence",
       "position": [-748, -414],
       "scale": 0.75,
@@ -43,7 +43,7 @@
       "zIndex": 4
     },
     {
-      "assetPath": "AshtonParkingLot/lamplights",
+      "assetPath": "hazier/AshtonParkingLot/lamplights",
       "name": "lamplights",
       "position": [-747, -415],
       "scale": 0.75,
@@ -51,7 +51,7 @@
       "zIndex": 5
     },
     {
-      "assetPath": "AshtonParkingLot/lightinglamps",
+      "assetPath": "hazier/AshtonParkingLot/lightinglamps",
       "blend": "add",
       "name": "lightinglamps",
       "position": [-744, -430],
@@ -60,7 +60,7 @@
       "zIndex": 6
     },
     {
-      "assetPath": "AshtonParkingLot/truck1",
+      "assetPath": "hazier/AshtonParkingLot/truck1",
       "name": "truck1",
       "position": [-626, -315],
       "scale": 0.75,
@@ -68,7 +68,7 @@
       "zIndex": 310
     },
     {
-      "assetPath": "AshtonParkingLot/truck2",
+      "assetPath": "hazier/AshtonParkingLot/truck2",
       "name": "truck2",
       "position": [-856, -321],
       "scale": 0.75,
@@ -76,7 +76,7 @@
       "zIndex": 320
     },
     {
-      "assetPath": "AshtonParkingLot/vingettepart2",
+      "assetPath": "hazier/AshtonParkingLot/vingettepart2",
       "blend": "hardlight",
       "name": "vingette",
       "position": [-1287, -423],

@@ -3,7 +3,7 @@
   "name": "ashtonAlleyway",
   "props": [
     {
-      "assetPath": "AshtonAlleyway/bgstars",
+      "assetPath": "hazier/AshtonAlleyway/bgstars",
       "name": "bgstars",
       "position": [-789, -339],
       "scale": 0.75,
@@ -11,7 +11,7 @@
       "zIndex": 1
     },
     {
-      "assetPath": "AshtonAlleyway/dayburn buildings",
+      "assetPath": "hazier/AshtonAlleyway/dayburn buildings",
       "name": "dayburn buildings",
       "position": [-784, -345],
       "scale": 0.75,
@@ -19,7 +19,7 @@
       "zIndex": 2
     },
     {
-      "assetPath": "AshtonAlleyway/hill asf",
+      "assetPath": "hazier/AshtonAlleyway/hill asf",
       "name": "hill asf",
       "position": [-791, -341],
       "scale": 0.75,
@@ -27,7 +27,7 @@
       "zIndex": 2
     },
     {
-      "assetPath": "AshtonAlleyway/bench n road",
+      "assetPath": "hazier/AshtonAlleyway/bench n road",
       "name": "bench n road",
       "position": [-783, -341],
       "scale": 0.75,
@@ -35,7 +35,7 @@
       "zIndex": 3
     },
     {
-      "assetPath": "AshtonAlleyway/mediocre cinema",
+      "assetPath": "hazier/AshtonAlleyway/mediocre cinema",
       "name": "mediocre cinema",
       "position": [-762, -339],
       "scale": 0.75,
@@ -43,7 +43,7 @@
       "zIndex": 4
     },
     {
-      "assetPath": "AshtonAlleyway/bg buildings",
+      "assetPath": "hazier/AshtonAlleyway/bg buildings",
       "name": "bg buldings",
       "position": [-792, -347],
       "scale": 0.75,
@@ -51,7 +51,7 @@
       "zIndex": 6
     },
     {
-      "assetPath": "AshtonAlleyway/blue ambient shader",
+      "assetPath": "hazier/AshtonAlleyway/blue ambient shader",
       "blend": "add",
       "name": "blueshader",
       "position": [-733, -398],
@@ -60,7 +60,7 @@
       "zIndex": 7
     },
     {
-      "assetPath": "AshtonAlleyway/lampost",
+      "assetPath": "hazier/AshtonAlleyway/lampost",
       "name": "lamposts",
       "position": [-787, -345],
       "scale": 0.75,
@@ -68,7 +68,7 @@
       "zIndex": 8
     },
     {
-      "assetPath": "AshtonAlleyway/foreground",
+      "assetPath": "hazier/AshtonAlleyway/foreground",
       "name": "foreground",
       "position": [-792, -340],
       "scale": 0.75,
@@ -76,7 +76,7 @@
       "zIndex": 10
     },
     {
-      "assetPath": "AshtonAlleyway/lamp lightsADD",
+      "assetPath": "hazier/AshtonAlleyway/lamp lightsADD",
       "blend": "add",
       "name": "lamp lights",
       "position": [-785, -357],
@@ -85,7 +85,7 @@
       "zIndex": 50
     },
     {
-      "assetPath": "AshtonAlleyway/vingette i think",
+      "assetPath": "hazier/AshtonAlleyway/vingette i think",
       "blend": "hardlight",
       "name": "vingette",
       "position": [-781, -360],

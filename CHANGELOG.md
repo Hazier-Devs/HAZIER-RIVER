@@ -5,6 +5,24 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [0.2.0] - 2026-08-28
+
+### Changed
+
+- Updated every song to have better mixing and vocals
+- Changed the polymod icon
+- Improved camera events on Nerves Erect
+- Optimized and improved the quality of the trail effect on the Erect remixes
+- Tweaked Garcello's freeplay pixel icon
+- Re-exported all the chart files for the new formatting
+- Changed the Discord RPC system to the new base game system
+- Adjusted the chart of Headache Erect
+
+### Fixed
+
+- Fixed shaders and the trail effect on 0.8.6-7
+
+
 ## [0.1.7] - 2026-05-12
 
 ### Added

@@ -24,7 +24,8 @@
     },
     "stickerPack": "standard-hazier",
     "album": "hazyvol1",
-    "previewEnd": 0
+    "previewEnd": 0,
+    "discordRPCImage": "https://raw.githubusercontent.com/FNF-Gooey-Mix/GooeyMixDiscordIcons/refs/heads/main/assets/icons/garcello.png"
   },
   "generatedBy": "Friday Night Funkin' - v0.8.3",
   "timeChanges": [

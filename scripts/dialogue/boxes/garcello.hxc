@@ -1,0 +1,32 @@
+import funkin.play.cutscene.dialogue.DialogueBox;
+import funkin.play.cutscene.dialogue.FunkinTypeText;
+import flixel.text.FlxTextBorderStyle;
+import funkin.audio.FunkinSound;
+import flixel.util.FlxColor;
+
+class GarcelloDialogueBox extends DialogueBox
+{
+  public function new()
+  {
+    super('garcello');
+  }
+
+  override function loadText():Void
+  {
+    textDisplay = new FunkinTypeText(0, 0, 300, '', 32);
+    textDisplay.fieldWidth = _data.text.width;
+    textDisplay.setFormat(_data.text.fontFamily, _data.text.size, FlxColor.fromString(_data.text.color), "left", FlxTextBorderStyle.SHADOW,
+      FlxColor.fromString(_data.text.shadowColor ?? '#00000000'), false);
+    textDisplay.borderSize = _data.text.shadowWidth ?? 2;
+    textDisplay.sounds = [
+      FunkinSound.load(Paths.sound('pixelText', 'week6'), 0.6)
+    ];
+
+    textDisplay.completeCallback = onTypingComplete;
+
+    textDisplay.x += _data.text.offsets[0];
+    textDisplay.y += _data.text.offsets[1];
+
+    add(textDisplay);
+  }
+}

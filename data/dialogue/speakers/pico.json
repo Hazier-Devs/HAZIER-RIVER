@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
   "name": "Pico",
-  "assetPath": "picodialouge",
+  "assetPath": "hazier/picodialouge",
   "flipX": false,
   "isPixel": false,
   "scale": 0.4,
@@ -64,6 +64,24 @@
     {
       "name": "high",
       "prefix": "high",
+      "offsets": [0, 0],
+      "frameRate": 24
+    },
+    {
+      "name": "sober blink",
+      "prefix": "sober blink",
+      "offsets": [0, 0],
+      "frameRate": 24
+    },
+    {
+      "name": "somber",
+      "prefix": "somber",
+      "offsets": [0, 0],
+      "frameRate": 24
+    },
+    {
+      "name": "huh",
+      "prefix": "huh",
       "offsets": [0, 0],
       "frameRate": 24
     }

@@ -4,6 +4,7 @@
   "renderType": "sparrow",
   "assetPath": "characters/bf-gar-trail",
   "flipX": true,
+  "offsets": [-12, -4],
   "healthIcon": {
     "id": "bf"
   },

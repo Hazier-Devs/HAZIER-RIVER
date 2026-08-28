@@ -1,78 +1,45 @@
 import funkin.modding.module.Module;
 import funkin.ui.credits.CreditsState;
+import funkin.ui.credits.CreditsDataHandler;
+import funkin.modding.ModStore;
 
-/**
- * Injects Hazier Developers into the Credits Menu!
- */
 class HazierCredits extends Module
 {
-  public static final CREDITS_DATA:Array<CreditsData> = [
-    {
-      header: 'HAZIER RIVER',
+  public function new()
+  {
+    super('HazierCredits', 1, {
+      state: CreditsState
+    });
+
+    active = false;
+    if (ModStore.get('HazierAddedCreditsData') ?? false) return;
+    ModStore.stores.set('HazierAddedCreditsData', true);
+
+    CreditsDataHandler.CREDITS_DATA.entries.unshift( // for example this one is on the bottom
+      {
+        header: "---------------------------------------",
+        body: [
+          {
+            line: "",
+          }
+        ]
+      });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift({
+      header: "Special Thanks",
       body: [
-        {line: 'A fanmade remake of HAZY RIVER.'}, {line: 'By the fans, for the fans'}]
-    },
-    {
-      header: 'Direction, Art and Music Lead',
-      body: [
-        {line: 'DigitLuck'}]
-    },
-    {
-      header: 'Artists',
-      body: [
-        {line: 'DigitLuck'},
-        {line: 'LeGooey'},
-        {line: 'PlantGamer09'},
-        {line: 'artalogue.'}
+        {line: 'atsuover'},
+        {line: 'Guyy!!'},
+        {line: 'llwoodstockll'}
       ]
-    },
-    {
-      header: 'Pixel Art',
+    });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift({
+      header: "Trailer Editor",
       body: [
-        {line: 'CoolJ4334'}]
-    },
-    {
-      header: 'Music Production',
-      body: [
-        {line: 'Cyber Tryzoid'},
-        {line: 'PlantGamer09'},
-        {line: 'EEssential'},
-        {line: 'LexyDoesStuff'},
-        {line: 'SojaWooz'},
-        {line: 'Lunarznova'}
+        {line: 'MarkedAman'}
       ]
-    },
-    {
-      header: 'Voice Actors',
-      body: [
-        {line: 'amothfurry'}, {line: 'SojaWooz'}]
-    },
-    {
-      header: 'Programming',
-      body: [
-        {line: 'Sammy The Goog'},
-        {line: 'Kludge54n5'},
-        {line: 'Arthren'},
-        {line: 'LeGooey'},
-        {line: 'c1tcher'},
-        {line: 'TechnikTil'},
-        {line: 'Idk\'s FNF Stuff'}
-      ]
-    },
-    {
-      header: 'Charting',
-      body: [
-        {line: 'Arthren'},
-        {line: 'Idk\'s FNF Stuff'},
-        {line: 'DigitLuck'},
-        {line: 'EEssential'},
-        {line: 'Sammy The Goog'},
-        {line: 'HazedPhantom'},
-        {line: 'LeGooey'}
-      ]
-    },
-    {
-      header: 'Playtesting',
+    });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift({
+      header: "Playtesting",
       body: [
         {line: 'PTLC118'},
         {line: 'SPG64'},
@@ -82,62 +49,88 @@ class HazierCredits extends Module
         {line: 'c1tcher'},
         {line: 'peakcinnamon'}
       ]
-    },
-    {
-      header: 'Trailer Editor',
+    });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift({
+      header: "Charting",
       body: [
-        {line: 'MarkedAman'}]
-    },
-    {
-      header: 'Special Thanks',
+        {line: 'Arthren'},
+        {line: 'Idk\'s FNF Stuff'},
+        {line: 'DigitLuck'},
+        {line: 'EEssential'},
+        {line: 'Sammy The Goog'},
+        {line: 'HazedPhantom'},
+        {line: 'LeGooey'}
+      ]
+    });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift({
+      header: "Programming",
       body: [
-        {line: 'atsuover'}, {line: 'Guyy!!'}, {line: 'llwoodstockll'}]
-    }
-  ];
-
-  public function new()
-  {
-    super('HazierCredits', 1000, {state: CreditsState});
-  }
-
-  override public function onStateChangeEnd(event:StateChangeScriptEvent):Void
-  {
-    super.onStateChangeEnd(event);
-    if (!Std.isOfType(event.targetState, CreditsState)) return;
-
-    var hazierEntries:Array<CreditsEntry> = [];
-    for (entry in CREDITS_DATA)
-    {
-      hazierEntries.push(
+        {line: 'Sammy The Goog'},
+        {line: 'Kludge54n5'},
+        {line: 'Arthren'},
+        {line: 'LeGooey'},
+        {line: 'c1tcher'},
+        {line: 'TechnikTil'},
+        {line: 'Idk\'s FNF Stuff'}
+      ]
+    });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift({
+      header: "Voice Acting",
+      body: [
         {
-          data: entry,
-          lineIndexToBuild: 0,
-          backerIndexToBuild: 0,
-          hasBuiltHeader: (entry.header == null),
-          hasBuiltBody: (entry.body.length == 0),
-          hasBuiltBackers: true
-        });
-    }
-
-    // Add 3 spaces before default credits.
-    for (i in 0...3)
-    {
-      hazierEntries.push(
+          line: "amothfurry",
+        },
         {
-          data:
-            {
-              header: '',
-              body: []
-            },
-          lineIndexToBuild: 0,
-          backerIndexToBuild: 0,
-          hasBuiltHeader: false,
-          hasBuiltBody: true,
-          hasBuiltBackers: true
-        });
-    }
-
-    // Actually inject our credits data.
-    event.targetState.entriesToBuild = hazierEntries.concat(event.targetState.entriesToBuild);
+          line: "SojaWooz",
+        }
+      ]
+    });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift({
+      header: "Music Production",
+      body: [
+        {line: 'Cyber Tryzoid'},
+        {line: 'PlantGamer09'},
+        {line: 'EEssential'},
+        {line: 'LexyDoesStuff'},
+        {line: 'SojaWooz'},
+        {line: 'Lunarznova'},
+        {line: 'd4rkwinged'}
+      ]
+    });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift({
+      header: "Artists",
+      body: [
+        {
+          line: "DigitLuck",
+        },
+        {
+          line: "LeGooey",
+        },
+        {
+          line: "PlantGamer09",
+        },
+        {
+          line: "artalogue.",
+        },
+        {
+          line: "CoolJ4334",
+        }
+      ]
+    });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift({
+      header: "Direction, Art and Music Lead",
+      body: [
+        {
+          line: "DigitLuck",
+        }
+      ]
+    });
+    CreditsDataHandler.CREDITS_DATA.entries.unshift( // and this is on da top
+      {
+        header: "HAZIER RIVER",
+        body: [
+          {line: 'A fanmade remake of HAZY RIVER.'}, {line: 'By the fans, for the fans'}
+        ]
+      });
   }
 }

@@ -112,7 +112,6 @@ class CharacterSingTrailSongEvent extends SongEvent
         if (newOffset != null)
         {
           var trail:BaseCharacter = getTrail();
-          trail.color = 0x66FFFF;
           trail.alpha = 1;
 
           trail.playAnimation(currentStage.getBoyfriend()?.getCurrentAnimation(), true);

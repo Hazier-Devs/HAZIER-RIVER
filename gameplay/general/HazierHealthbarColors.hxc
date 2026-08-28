@@ -1,0 +1,57 @@
+import funkin.modding.module.Module;
+import funkin.util.ReflectUtil;
+import funkin.play.PlayState;
+import flixel.util.FlxColor;
+import haxe.ds.StringMap;
+import haxe.Json;
+
+class HazierHealthbarColors extends Module
+{
+  public var colors:StringMap;
+
+  public function new()
+  {
+    super('hazierHealthBarColors');
+  }
+
+  override public function onCreate(event:ScriptEvent):Void
+  {
+    super.onCreate(event);
+
+    colors = new StringMap();
+
+    var path:String = Paths.json('gameplay/general/hazier-healthbar-colors');
+    var content:String = Assets.getText(path);
+    var json:Dynamic = Json.parse(content);
+
+    for (field in ReflectUtil.getAnonymousFieldsOf(json))
+    {
+      var colorString:String = ReflectUtil.getAnonymousField(json, field);
+      var color:FlxColor = FlxColor.fromString(colorString);
+      colors.set(field, color);
+    }
+  }
+
+  public function init():Void
+  {
+    final opponentId:String = PlayState.instance?.currentChart?.characters?.opponent ?? '';
+    final healthColor:FlxColor = colors.get(opponentId);
+
+    if (healthColor != null)
+    {
+      PlayState.instance?.healthBar?.createColoredEmptyBar(healthColor);
+    }
+  }
+
+  override public function onStateChangeEnd(event:StateChangeScriptEvent):Void
+  {
+    super.onStateChangeEnd(event);
+    if (Std.isOfType(event.targetState, PlayState)) init();
+  }
+
+  override public function onSubStateOpenEnd(event:SubStateScriptEvent):Void
+  {
+    super.onStateChangeEnd(event);
+    if (Std.isOfType(event.targetState, PlayState)) init();
+  }
+}

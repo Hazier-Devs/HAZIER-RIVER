@@ -1,0 +1,29 @@
+{
+  "version": "1.0.0",
+  "name": "Nene",
+  "assetPath": "gameplay/dialogue/speakers/nene/nenedialouge",
+  "flipX": false,
+  "isPixel": false,
+  "scale": 0.4,
+  "offsets": [350, 200],
+  "animations": [
+    {
+      "name": "talk",
+      "prefix": "neutral",
+      "offsets": [0, 0],
+      "frameRate": 24
+    },
+    {
+      "name": "pissed",
+      "prefix": "pissed",
+      "offsets": [0, 0],
+      "frameRate": 24
+    },
+    {
+      "name": "happy",
+      "prefix": "happy",
+      "offsets": [0, 0],
+      "frameRate": 24
+    }
+  ]
+}

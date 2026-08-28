@@ -1,0 +1,18 @@
+{
+  "version": "1.0.0",
+  "name": "Hazier River Sitckers",
+  "artist": "DigitLuck",
+  "stickers": [
+    "ui/loading/stickers/graphics/standard-hazier/annieSticker1",
+    "ui/loading/stickers/graphics/standard-hazier/annieSticker2",
+    "ui/loading/stickers/graphics/standard-hazier/annieSticker3",
+    "ui/loading/stickers/graphics/standard-hazier/garSticker1",
+    "ui/loading/stickers/graphics/standard-hazier/garSticker2",
+    "ui/loading/stickers/graphics/standard-hazier/garSticker3",
+    "ui/loading/stickers/graphics/standard-hazier/miscSticker1",
+    "ui/loading/stickers/graphics/standard-hazier/miscSticker2",
+    "ui/loading/stickers/graphics/standard-hazier/miscSticker3",
+    "ui/loading/stickers/graphics/standard-hazier/miscSticker4",
+    "ui/loading/stickers/graphics/standard-hazier/miscSticker5"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "version": "1.0.0",
+  "name": "Hazier River OST Vol. 1",
+  "artists": ["DigitLuck", "PlantGamer09"],
+  "albumArtAsset": "ui/freeplay/albums/hazyvol1",
+  "albumTitleAsset": "ui/freeplay/albums/hazyvol1-text",
+  "albumTitleOffsets": [-45, 0],
+  "albumOSTName": "HAZIER OST",
+  "discordRPCImage": "https://raw.githubusercontent.com/FNF-Gooey-Mix/GooeyMixDiscordIcons/refs/heads/main/assets/album-covers/hazyvol1.png"
+}

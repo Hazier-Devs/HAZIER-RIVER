@@ -114,7 +114,8 @@ class NervesPicoMixSong extends Song
         time: 0,
         callback: () -> {
           pico?.playAnimation('cigshoot', true, false);
-          garcello?.playAnimation('cig${awaitingGarcelloDeath ? 'miss' : 'light'}', true, false);
+          if (awaitingGarcelloDeath) garcello?.playAnimation('cigmiss', true, false);
+          else garcello?.playAnimation('ciglight', true, false);
         }
       },
       {
